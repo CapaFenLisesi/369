@@ -1,0 +1,1216 @@
+\chapter{Classical Thermodynamics}
+
+\section{Introduction}
+We have learned that macroscopic quantities such as energy, temperature, and pressure
+are, in fact, statistical in nature: {\em i.e.}, in equilibrium they exhibit random
+fluctuations about some mean value. If we were to plot out the probability 
+distribution for the energy, say, of a system in thermal equilibrium with its
+surroundings we would obtain a Gaussian with a very small fractional width.
+In fact, we expect
+\begin{equation}
+\frac{{\mit\Delta}^\ast E}{\overline{E}} \sim \frac{1}{\sqrt{f}},
+\end{equation}
+where the number of degrees of freedom $f$ is about $10^{24}$ for laboratory
+scale systems. This means that the statistical fluctuations of macroscopic
+quantities about their mean values are typically only about 1 in $10^{12}$.
+
+Since the statistical fluctuations of equilibrium quantities are so small, we can
+neglect them  to an excellent approximation, and replace macroscopic
+quantities, such as  energy, temperature, and pressure, by their {\em mean}
+values. So, $p\rightarrow \bar{p}$, and $T\rightarrow\overline{T}$, {\em etc}. 
+In the following discussion, we shall drop the overbars altogether, so that $p$ should
+be understood to represent the mean pressure $\bar{p}$, {\em etc}. This 
+prescription, which is the essence of classical thermodynamics, is equivalent to
+replacing all statistically varying quantities by their most probable values.
+
+
+Although there are formally four laws of thermodynamics ({\em i.e.}, the zeroth to the
+third), the zeroth law is really a consequence of the second law, and the third
+law is actually only important at temperatures close to absolute zero. So, for
+most purposes, the two laws which really matter are the first law and the second law.
+For an infinitesimal process, the first law is written
+\begin{equation}
+\dbar Q = dE +\dbar W,
+\end{equation}
+where $dE$ is the change in internal energy of the system, \,$\dbar Q$ is the heat
+{\em absorbed}\/ by the system, and \,$\dbar W$ is the work done 
+{\em by}\/ the system on its surroundings. Note that this is
+just a convention. We could equally well write the first law in terms of the heat
+{\em emitted}\/ by the system or the work done {\em on}\/ the system. It does not 
+really matter, as
+long as we are consistent in our definitions.
+
+
+The second law of thermodynamics implies that
+\begin{equation}
+\dbar Q = T\,dS,
+\end{equation}
+for a {\em quasi-static}\/ process,
+where $T$ is the thermodynamic temperature, and $dS$ is the change in entropy of
+the system. Furthermore, for systems in which the only external parameter is the
+volume  ({\em i.e.}, gases),
+the work done on the environment is 
+\begin{equation}
+\dbar W = p\,dV,
+\end{equation}
+where $p$ is the pressure, and $dV$ is the change in volume. 
+Thus, it follows from the first
+and second laws of thermodynamics that
+\begin{equation}
+T\,dS = dE + p\,dV.
+\end{equation}
+
+\section{Equation of State of Ideal Gas}
+Let us start our discussion by considering the simplest possible macroscopic
+system: {\em i.e.}, an ideal gas. All of the thermodynamic properties of an ideal gas
+are summed up in its equation of state, which determines the relationship 
+between its pressure, volume, and temperature. Unfortunately, classical thermodynamics is unable to tell us what this equation of state  is from first principles.
+In fact,  classical thermodynamics  cannot tell us anything from
+first principles. We always have to provide  some information to begin
+with before classical thermodynamics  can
+generate any new results.
+ This initial information may come from statistical physics ({\em i.e.}, from our
+knowledge of the microscopic structure of the system under
+consideration), but, more usually, it is
+entirely empirical in nature 
+({\em i.e.}, it is the result of experiments). Of course, the ideal gas
+law was first discovered empirically by Robert Boyle, but, nowadays,
+we can justify it from statistical arguments. Recall
+(from Sect.~\ref{s3.13}), that the number of accessible states of
+a monotonic ideal gas varies like
+\begin{equation}
+{\mit\Omega} \propto V^N \chi(E), \label{e6.6}
+\end{equation}
+where $N$ is the number of atoms, and $\chi(E)$ depends only on the energy 
+of the gas (and is
+independent of the volume). We obtained this result  by integrating over the 
+volume of accessible phase-space. Since the energy of an ideal gas is independent of 
+the
+particle coordinates (because there are no interatomic forces), the integrals over the
+ coordinates just reduced to $N$ simultaneous volume integrals, giving the
+$V^N$ factor 
+in  the above expression. The integrals over the particle momenta were more
+complicated, but were clearly completely independent of $V$,
+giving  the $\chi(E)$ factor in the above expression.
+ Now, we have a statistical rule which tells us that
+\begin{equation}
+X_\alpha = \frac{1}{\beta} \frac{\partial \ln {\mit\Omega}}{\partial x_\alpha}
+\end{equation}
+[see Eq.~(\ref{e5.38})],
+where $X_\alpha$ is the mean force conjugate to the external parameter $x_\alpha$
+({\em i.e.}, \,$\dbar W = \sum_\alpha X_\alpha dx_\alpha$), and $\beta = 1/k\,T$. 
+For
+an ideal gas,  the only external parameter is the volume, and its conjugate
+force is the pressure (since \,$\dbar W =p\,dV$). So, we can write
+\begin{equation}
+p = \frac{1}{\beta} \frac{\partial \ln {\mit\Omega}}{\partial V}.
+\end{equation} 
+If we simply apply this rule to Eq.~(\ref{e6.6}), we obtain
+\begin{equation}
+p = \frac{N\,k\, T}{V}.
+\end{equation}
+However, $N= \nu \,N_A$, where $\nu$ is the number of moles, and $N_A$ is Avagadro's
+number. Also, $k\,N_A = R$, where $R$ is the ideal gas constant. This allows us to
+write the equation of state in its usual form
+\begin{equation}
+p\,V = \nu\, R\,T.
+\end{equation}
+
+The above derivation of the ideal gas equation of state
+is rather elegant. It is certainly far easier to
+ obtain the equation of  state in this manner
+than to  treat the atoms which make up the
+gas as little billiard balls
+which continually 
+ bounce of the walls of a container. The latter derivation is difficult  to
+perform  correctly  because it is necessary 
+to average over all possible directions of
+atomic motion. It is clear, from the above derivation, that the crucial element
+needed to obtain the ideal gas equation of state is the absence of interatomic forces.
+This automatically gives rise to a variation of the number of accessible states
+with $E$ and $V$  of
+the form (6.6), which, in turn, implies the ideal gas law. So, the ideal gas law
+should also apply to polyatomic gases with no interatomic forces. Polyatomic
+gases are more complicated that monatomic gases because the molecules can rotate 
+and vibrate, giving  rise to extra degrees of freedom, in addition to the
+translational degrees of freedom of a monatomic gas. In other words,
+$\chi(E)$, in Eq.~(\ref{e6.6}), becomes a lot more complicated
+in polyatomic gases. However, as long as there 
+are no interatomic forces, the volume dependence of ${\mit\Omega}$ 
+is still $V^N$, and the 
+ideal gas law should still hold true. In fact, we
+shall discover that the extra degrees of freedom of polyatomic gases manifest 
+themselves by increasing the specific heat capacity. 
+
+There is one other conclusion we can draw from Eq.~(\ref{e6.6}). The statistical
+definition of temperature is [Eq.~(\ref{e5.28})]
+\begin{equation}
+\frac{1}{k\,T} = \frac{\partial \ln {\mit\Omega}}{\partial E}.
+\end{equation}
+It follows that 
+\begin{equation}
+\frac{1}{k\,T} = \frac{\partial \ln \chi}{\partial E}.
+\end{equation}
+We can see that since $\chi$ is a function of the energy, but {\em not}\/ the volume,
+ then
+the temperature must be  a function of the
+energy, but not the volume. We can turn this around and write
+\begin{equation}
+E = E(T).
+\end{equation}
+In other words, the internal energy of an ideal gas depends only on the temperature 
+of the gas, and is independent of the volume. 
+This is pretty obvious, since if there are no interatomic forces
+then increasing the volume, which 
+effectively increases the mean separation between molecules,
+is not going to affect the molecular energies in any way. Hence, the energy of the
+whole gas is unaffected. 
+
+The volume independence of the internal energy can also
+be obtained directly from  the ideal gas equation of state. 
+The internal energy of a gas can be considered as a general function of the
+temperature and volume, so
+\begin{equation}
+E= E(T, V).
+\end{equation}
+It follows from mathematics that
+\begin{equation}
+dE = \left(\frac{\partial E}{\partial T}\right)_V dT + \left( \frac{\partial E}
+{\partial V}\right)_T dV,
+\end{equation}
+where the subscript $V$ reminds us that the first partial derivative is taken
+at constant volume, and the subscript $T$ reminds us that the second
+partial  derivative
+is taken at constant temperature. Thermodynamics tells us that for a quasi-static
+change of parameters
+\begin{equation}
+T\, dS = dE + p\, dV.
+\end{equation}
+The ideal gas law can be used to express the pressure in term of the volume and
+the temperature in the above expression. Thus,
+\begin{equation}
+dS = \frac{1}{T}\, dE+ \frac{\nu\, R}{V}\, dV.
+\end{equation}
+Using Eq.~(6.15), this becomes
+\begin{equation}
+dS = \frac{1}{T} \left(\frac{\partial E}{\partial T}\right)_V dT
++\left[ \frac{1}{T} \left(\frac{\partial E}{\partial V}\right)_T +
+\frac{\nu\, R}{V}\right] dV.\label{e6.18}
+\end{equation}
+However, $dS$ is the exact differential of a well-defined state function, 
+$S$.
+This means that we can consider the entropy to be a function of temperature and
+volume. Thus, $S=S(T,V)$, and mathematics immediately tells us that
+\begin{equation}
+dS = \left(\frac{\partial S}{\partial T}\right)_V dT + \left( \frac{\partial S}
+{\partial V}\right)_T dV.
+\end{equation}
+The above  expression is true for all small values of $dT$ and $dV$, so a comparison
+with Eq.~(\ref{e6.18}) gives
+\begin{eqnarray}
+\left(\frac{\partial S}{\partial T}\right)_V &=& \frac{1}{T} \left(\frac{\partial E}
+{\partial T}\right)_V,\label{e6.20}\\[0.5ex]
+\left(\frac{\partial S}{\partial V}\right)_T &=& \frac{1}{T} \left(\frac{\partial E}
+{\partial V} \right)_T + \frac{\nu \,R}{V}.\label{e6.20a}
+\end{eqnarray}
+One well-known property of partial differentials is the equality of second
+derivatives, irrespective of the order of differentiation, so 
+\begin{equation}
+\frac{\partial ^2 S}{\partial V \partial T} = \frac{\partial ^2 S}
+{\partial T \partial V}.
+\end{equation}
+This implies that
+\begin{equation}
+\left(\frac{\partial}{\partial V}\right)_T \left(\frac{\partial S}{\partial T}
+\right)_V = \left(\frac{\partial }{\partial T}\right)_V \left(\frac{\partial S}
+{\partial V}\right)_T.
+\end{equation}
+The above expression can be combined with  Eqs.~(\ref{e6.20}) and
+(\ref{e6.20a}) to give
+\begin{equation}
+\frac{1}{T} \left(\frac{\partial ^2 E}{\partial V \partial T}\right)
+= \left[ - \frac{1}{T^2} \left(\frac{\partial E}{\partial V}\right)_T
++ \frac{1}{T} \left (\frac{\partial^2 E}{\partial T \partial V}\right)\right].
+\end{equation}
+Since second derivatives are equivalent, irrespective of the order of 
+differentiation,
+the above relation reduces to
+\begin{equation}
+\left(\frac{\partial E}{\partial V}\right)_T =0,
+\end{equation}
+which implies that the internal energy is independent of the volume for any gas obeying
+the ideal equation of state. This result
+was confirmed experimentally by James Joule in
+the middle of the nineteenth century.
+
+\section{Heat Capacity or Specific Heat}
+Suppose that a body absorbs an amount of heat ${\mit\Delta} Q$ 
+and its temperature consequently rises by ${\mit\Delta} T$. The usual definition
+of the heat capacity, or {\em specific heat}, of the body is
+\begin{equation}
+C = \frac{{\mit\Delta} Q}{{\mit\Delta} T}.
+\end{equation}
+If the body consists of $\nu$ moles of some substance  then the {\em molar
+specific heat}\/ ({\em i.e.}, the specific heat of one mole of this substance ) is
+defined 
+\begin{equation}
+c = \frac{1}{\nu}\frac{{\mit\Delta} Q}{{\mit\Delta} T}.
+\end{equation}
+In writing  the above expressions, we have tacitly assumed that the specific heat
+of a body is independent of its temperature. In general, this is not true. We
+can overcome this problem by only allowing the body in question to absorb a very
+small  amount of heat, so that its temperature only rises slightly, and its 
+specific heat remains approximately constant. In the limit as the amount of
+absorbed heat becomes infinitesimal, we obtain
+\begin{equation}
+c = \frac{1}{\nu}\frac{\dbar Q}{dT}.
+\end{equation}
+In classical thermodynamics, it is usual to define two specific heats. Firstly,
+the molar specific heat at constant volume, denoted
+\begin{equation}
+c_V = \frac{1}{\nu}\left(\frac{\dbar Q}{dT}\right)_V,\label{e6.28}
+\end{equation}
+and, secondly, the molar specific heat at constant pressure, denoted
+\begin{equation}
+c_p = \frac{1}{\nu}\left(\frac{\dbar Q}{dT}\right)_p.
+\end{equation}
+
+Consider the molar specific heat at constant volume of an ideal gas. 
+Since $dV=0$, no work is done by
+the gas,
+and the first law of thermodynamics reduces to
+\begin{equation}
+\dbar Q = dE.
+\end{equation}
+It follows from Eq.~(\ref{e6.28}) that 
+\begin{equation}
+c_V = \frac{1}{\nu}\left(\frac{\partial E}{\partial T}\right)_V.
+\end{equation}
+Now, for an ideal gas the internal energy is volume independent.
+Thus, the above expression  implies that the specific heat at constant volume is also
+volume independent. Since $E$ is  a function only of $T$, we can write
+\begin{equation}
+dE = \left(\frac{\partial E}{\partial T}\right)_V dT.
+\end{equation}
+The previous two expressions can be combined to give
+\begin{equation}
+dE = \nu\, c_V\,dT
+\end{equation}
+for an {\em ideal}\/ gas. 
+
+Let us now consider the molar specific heat at constant pressure of an ideal
+gas. In general, if the
+pressure is kept constant then the volume changes, and so the gas does work on its
+environment. According to the first law of thermodynamics,
+\begin{equation}
+\dbar Q = dE + p\,dV = \nu\, c_V \,dT + p\, dV.
+\end{equation}
+The equation of state of an ideal gas tells us that if the
+volume changes by $dV$, the temperature changes by $dT$, and the pressure 
+remains constant, then 
+\begin{equation}
+p\,dV = \nu R\,dT.
+\end{equation}
+The previous two equations can be combined to give
+\begin{equation}
+\dbar Q = \nu \,c_V \, dT + \nu R\, dT.
+\end{equation}
+Now, by definition
+\begin{equation}
+c_p = \frac{1}{\nu}\left(\frac{\dbar Q}{dT}\right)_p,
+\end{equation}
+so we obtain
+\begin{equation}
+c_p = c_V + R
+\end{equation}
+for an ideal gas. This is a very famous result. Note that at constant volume
+all of the heat absorbed by the gas goes into increasing its internal energy,
+and, hence, its temperature, whereas at constant pressure some of the absorbed
+heat is used to do work on the environment as the volume increases. This
+means that, in the latter case,
+less heat is available to increase the temperature of the gas. 
+Thus, we expect the specific heat at constant pressure to exceed that at 
+constant volume, as indicated by  the above formula.
+
+The ratio of the two specific heats $c_p/ c_V$ is conventionally denoted
+$\gamma$. We have 
+\begin{equation}
+\gamma \equiv \frac{c_p}{c_V} = 1 +\frac{R}{c_V}\label{e6.39}
+\end{equation}
+for an ideal gas. In fact, $\gamma$ is very easy to measure because the speed
+of sound in an ideal gas is written
+\begin{equation}
+c_s = \sqrt{\frac{\gamma \,p}{\rho}},
+\end{equation}
+where $\rho$ is the density. Table~\ref{tab1}
+lists some experimental measurements
+of $c_V$ and $\gamma$ for common gases. The extent of the agreement between $\gamma$
+calculated from Eq.~(\ref{e6.39}) and the experimental $\gamma$ is quite remarkable.
+\begin{table}
+\centering
+\begin{tabular} {llccc} \hline
+Gas & Symbol & $c_V$ & $\gamma$ & $\gamma$ \\
+    &        & (experiment) & (experiment) & (theory) \\ \hline
+Helium & He & 12.5 & 1.666 & 1.666 \\
+Argon & Ar &  12.5 & 1.666 & 1.666 \\
+Nitrogen & ${\rm N}_2$ & 20.6 & 1.405 & 1.407 \\
+Oxygen & ${\rm O}_2$ & 21.1 & 1.396 & 1.397 \\
+Carbon Dioxide & ${\rm CO}_2$& 28.2 & 1.302 & 1.298\\
+Ethane & ${\rm C}_2 {\rm H}_6$ & 39.3 & 1.220 & 1.214\\ \hline
+\end{tabular}
+\caption{\em Specific heats of common gases in joules/mole/deg.\ (at 15$^\circ$C and 1
+ atm.) From Reif.}\label{tab1}
+\end{table}
+
+\section{Calculation of Specific Heats}
+Now that we know the relationship  between the specific heats at constant volume and
+constant pressure for an ideal gas, 
+it would be nice if we could calculate either one of these quantities
+from first principles. Classical thermodynamics cannot help us here. However,
+it is quite easy to calculate the specific heat at constant volume using our
+knowledge of statistical physics. Recall, that the variation of the number of
+accessible states of an ideal gas with  energy and volume is written
+\begin{equation}
+{\mit\Omega}(E, V) \propto V^N \chi(E).
+\end{equation}
+For the specific case of a {\em monatomic}\/ ideal gas, we worked out a more exact
+expression for ${\mit\Omega}$ in Sect.~\ref{s3.13}: {\em i.e.}, 
+\begin{equation}
+{\mit\Omega} (E, V) = B\, V^N E^{\,3N/2},
+\end{equation}
+where $B$ is a constant independent of the energy and  volume. It follows that
+\begin{equation}
+\ln {\mit\Omega} = \ln B + N\ln V +\frac{3N}{2}\, \ln E.
+\end{equation}
+The temperature is given by
+\begin{equation}
+\frac{1}{k\,T} = \frac{\partial \ln{\mit\Omega}}{\partial E} = \frac{3N}{2} \frac{1}{E},
+\end{equation}
+so
+\begin{equation}
+E = \frac{3}{2}\, N \,k\,T.
+\end{equation}
+Since, $N = \nu \,N_A$, and $N_A \,k=R$, we can rewrite the above expression as
+\begin{equation}
+E = \frac{3}{2}\, \nu\, R\,T,
+\end{equation}
+where $R= 8.3143\,{\rm joules/mole/deg.}$ is the ideal gas constant. The above 
+formula tells us exactly how the internal energy of a monatomic ideal gas
+depends on its temperature. 
+
+The molar specific heat at constant volume of a monatomic ideal gas is 
+clearly
+\begin{equation}
+c_V = \frac{1}{\nu} \left(\frac{\partial E}{\partial T}\right)_V = \frac{3}{2} R.
+\end{equation}
+This has the numerical value 
+\begin{equation}
+c_V = 12.47 \,\,{\rm joules/mole/deg.}
+\end{equation}
+Furthermore, we have
+\begin{equation}
+c_p = c_V + R = \frac{5}{2} R,
+\end{equation}
+and
+\begin{equation}
+\gamma \equiv \frac{c_p}{c_V} = \frac{5}{3} = 1.667.
+\end{equation}
+We can see from the previous table that these predictions are borne out pretty
+well for the monatomic gases Helium and Argon. Note that the specific heats of
+polyatomic gases are larger than those of monatomic gases. This is because 
+polyatomic molecules can rotate around their centres of mass, as well as translate,
+so polyatomic gases can store energy in the rotational, as well as 
+the translational,
+energy states of their constituent particles. We shall analyze this effect in
+greater detail later on in this course.
+
+\section{Isothermal and Adiabatic Expansion}
+Suppose that  the temperature of an ideal 
+ gas is held constant by keeping the gas in thermal
+contact with a heat reservoir. If the gas is allowed to expand quasi-statically
+under these so called {\em isothermal}\/ conditions then the ideal equation of state
+tells us that
+\begin{equation}
+p\,V = {\rm constant}.
+\end{equation}
+This is usually called the {\em isothermal gas law}.
+
+Suppose, now, that the gas is thermally isolated from its surroundings. If
+the gas is allowed to expand quasi-statically under these so called 
+{\em adiabatic}
+conditions then 
+it does work on its environment, and, hence, its internal energy is reduced,
+and its temperature changes. Let us work out the relationship between the
+pressure and volume of the gas during adiabatic expansion.
+
+According to the first law of thermodynamics, 
+\begin{equation}
+\dbar Q =  \nu \,c_V \,dT +p\,dV = 0,
+\end{equation}
+in  an adiabatic process (in which no heat is absorbed). The ideal gas
+equation
+of state can be differentiated, yielding
+\begin{equation}
+p\,dV + V\,dp = \nu\, R \,dT.
+\end{equation}
+The temperature increment $dT$ can be eliminated between the above two expressions
+to give
+\begin{equation}
+0 = \frac{c_V}{R} (p\,dV + V\,dp) + p \,dV = \left(\frac{c_V}{R} + 1\right)
+\,p\, dV +\frac{c_V}{R} \,V\,dp,
+\end{equation}
+which reduces to
+\begin{equation}
+(c_V +R)\,p\,dV + c_V \,V\, dp = 0.
+\end{equation}
+Dividing through by $c_V\, p\, V$ yields
+\begin{equation}
+\gamma\,\frac{dV}{V} + \frac{dp}{p}=0,\label{e6.56}
+\end{equation}
+where
+\begin{equation}
+\gamma \equiv \frac{c_p}{c_V} = \frac{c_V + R}{c_V}.
+\end{equation}
+It turns out that $c_V$ is a very slowly varying function of temperature in most
+gases. So, it is always a fairly good approximation to treat the ratio
+of specific heats $\gamma$ as a constant, at least over a limited temperature
+range. If $\gamma$ is constant then we can integrate Eq.~(\ref{e6.56}) to give
+\begin{equation}
+\gamma \ln V + \ln p = {\rm constant},
+\end{equation}
+or
+\begin{equation}
+p \,V^{\,\gamma} = {\rm constant}.\label{e6.59}
+\end{equation}
+This is the famous {\em adiabatic gas law}. 
+It is very easy to obtain similar relationships between $V$ and $T$ and $p$ and $T$
+during adiabatic expansion or contraction. Since $p = \nu\, R\,T/V$, the above formula
+also implies that
+\begin{equation}
+T \,V^{\,\gamma-1} = {\rm constant},
+\end{equation}
+and
+\begin{equation}
+p^{\,1-\gamma} \,T^{\,\gamma} = {\rm constant}.\label{e6.61}
+\end{equation}
+Equations (\ref{e6.59})--(\ref{e6.61}) are all completely equivalent.
+
+\section{Hydrostatic equilibrium of the atmosphere}
+The gas which we are most familiar with in everyday life is, of course, the Earth's
+atmosphere. In fact, we can use the isothermal 
+and adiabatic gas laws to
+explain most of the observable
+ features of the atmosphere. 
+
+Let us, first of all, consider the hydrostatic equilibrium of the atmosphere.
+Consider a thin vertical slice
+of the atmosphere of cross-sectional area $A$ which starts at height $z$ above 
+ground level and extends to
+height $z+dz$. The upwards force exerted on this slice from the gas below 
+is $p(z)\,A$, where $p(z)$ is the pressure at height $z$.
+ Likewise, the downward force exerted by the gas above the slice is
+$p(z+dz)\,A$. The net upward force is clearly $[p(z) - p(z+dz)]A$. In equilibrium,
+this upward force must be balanced by the downward force due to the weight of
+ the slice: this is $\rho\,A\,dz\,g$, where $\rho$ is the density of
+the gas, and $g$ is the acceleration due to gravity. In follows that the
+ force balance condition can be written
+\begin{equation}
+[p(z)- p(z+dz)]A = \rho \,A\,dz\,g,
+\end{equation}
+which reduces to
+\begin{equation}
+\frac{dp}{d z} = - \rho \,g.
+\end{equation}
+This is called the {\em equation of hydrostatic equilibrium}\/ for the atmosphere.
+
+We can write the density of a gas in the following form,
+\begin{equation}
+\rho = \frac{\nu \,\mu}{V},
+\end{equation}
+where $\mu$ is the {\em molecular weight}\/ of the gas, 
+and is equal to the mass of one mole of gas particles.
+For instance, the molecular weight of Nitrogen gas is 28 grams.
+ The above formula for the density of a gas
+combined with the ideal gas law $p\,V= \nu \,R\,T$ yields
+\begin{equation}
+\rho = \frac{p\,\mu}{R\,T}.\label{e6.65}
+\end{equation}
+It follows that the equation of hydrostatic equilibrium can be rewritten
+\begin{equation}
+\frac{dp}{p} = -\frac{\mu\, g}{R\,T} \,dz.\label{e6.66}
+\end{equation}
+
+\section{Isothermal Atmosphere}
+As a first approximation,
+let us assume  that the temperature of the atmosphere is  uniform. In such an
+{\em isothermal atmosphere}, we can directly integrate the previous equation
+to give
+\begin{equation}
+p = p_0 \exp\left(-\frac{z}{z_0}\right).\label{e6.68}
+\end{equation}
+Here, $p_0$ is the pressure at ground level ($z=0$), which is generally about
+1 bar, or 1 atmosphere ($10^5$ N\,${\rm m}^{-2}$ in SI units). 
+The quantity
+\begin{equation}
+z_0 = \frac{R\,T}{\mu \,g}
+\end{equation}
+is called the {\em isothermal scale-height}\/ of the atmosphere. 
+At ground level, the temperature is on average about 15$^\circ$ centigrade,
+which is 288$^\circ$ kelvin  on the absolute scale. The mean molecular weight of air
+at sea level is 29 ({\em i.e.},  the molecular weight of a gas made up of
+78\% Nitrogen, 21\% Oxygen, and 1\% Argon). 
+The acceleration due to gravity is $9.81\,{\rm m}\,{\rm s}^{-2}$ at
+ground level. Also, the ideal gas constant is
+$8.314$ joules/mole/degree. Putting all of this information together, 
+the isothermal scale-height of the atmosphere comes out to be about $8.4$ kilometers.
+
+We have discovered that in an isothermal atmosphere the pressure 
+decreases  exponentially with increasing height. 
+Since the temperature is assumed to be constant, and $\rho\propto 
+p/T$ [see Eq.~(\ref{e6.65})],
+it follows that the density also decreases exponentially with the same scale-height
+as the pressure.
+According to Eq.~(\ref{e6.68}), the
+pressure, or density, 
+ decreases by a factor 10 every \,$\ln \!10\, z_0$, or 19.3 kilometers,
+we move vertically upwards. Clearly, the effective height of the atmosphere is
+pretty small compared to the  Earth's radius, which is about $6,400$ kilometers.
+In other words, the atmosphere constitutes a very thin layer covering
+the surface of the Earth.
+Incidentally, this justifies our neglect of the decrease of $g$ with increasing
+altitude.
+
+One of the highest points in the United States of America is
+the peak of Mount Elbert in Colorado.
+This peak lies $14,432$ feet, or about $4.4$ kilometers, above sea level. At this altitude, our
+ formula says that the air pressure should be about $0.6$ atmospheres. 
+Surprisingly enough, after a few days
+acclimatization, people can survive quite comfortably at this sort of
+pressure.
+ In the highest inhabited regions of the Andes and Tibet, the air pressure 
+falls to about $0.5$ atmospheres. Humans can just about survive at such
+pressures. However, people cannot survive for any extended period in air pressures
+below half an atmosphere. This sets an upper limit on the altitude of permanent
+human habitation,  which is about $19,000$ feet, or $5.8$ kilometers, above
+sea level. Incidentally, this is also the maximum altitude at which a pilot
+can fly an unpressurized
+aircraft without requiring additional Oxygen. 
+
+
+The highest point in the world is, of course, the peak of
+Mount Everest in Nepal. This peak lies at
+an altitude of $29,028$ feet, or $8.85$ kilometers, above sea level,
+where we expect the air pressure to
+be a mere  $0.35$ atmospheres. This explains why Mount Everest was only conquered
+after lightweight portable oxygen cylinders were  invented. Admittedly, 
+some climbers have subsequently ascended Mount Everest without the aid of 
+additional oxygen, 
+but this is a very foolhardy venture, because 
+ above $19,000$ feet the climbers are slowly dying.
+
+Commercial airliners fly at a cruising altitude of $32,000$ feet. At
+this altitude, we expect the air pressure to be only $0.3$ atmospheres,
+which explains
+why airline cabins are pressurized. In fact, the cabins are only pressurized to
+$0.85$ atmospheres (which  accounts for the ``popping'' of passangers
+ears during
+air travel). The reason for this partial pressurization is quite simple. At 
+$32,000$ feet, the pressure difference between the air in the cabin and that
+outside  is
+about half an atmosphere. Clearly, the walls of the cabin  must be strong enough
+to support this pressure difference, which means that they must be of a
+certain thickness, and, hence, the aircraft must be of a certain weight. If
+the cabin were fully pressurized then the pressure difference at cruising altitude
+would increase by about 30\%, which  means that the cabin walls would
+have to be much thicker, and, hence, the aircraft would have to be
+substantially  heavier. So, a fully pressurized
+aircraft would be more comfortable to fly in (because your ears would not ``pop''),
+but it would also be far less economical to operate.
+
+\section{Adiabatic Atmosphere}
+Of course, we know that the atmosphere is not isothermal. In fact,  air
+temperature falls quite noticeably with 
+increasing altitude. In ski resorts,  you are told to
+expect the temperature to drop by about 1 degree per 100 meters you go upwards.
+ Many people cannot understand
+why the atmosphere gets colder the higher up  you go.  They reason that as higher altitudes
+are closer to the Sun they ought to be hotter. 
+In fact, the explanation is quite
+simple. It depends on three important properties of air. The first important 
+property  is that air  is transparent to most, but by no means all, of the
+electromagnetic spectrum. In particular, most infrared radiation, which carries heat
+energy, passes straight through the lower atmosphere and heats the ground. In other
+words, the lower atmosphere is heated from below, not from above. The 
+second important
+property of air is that it is constantly in motion. In fact, the lower 20 kilometers
+of the atmosphere (the so called {\em troposphere}) 
+are fairly thoroughly mixed. You might think that this 
+would imply that the atmosphere is
+ isothermal. However, this is not the case because of
+the final important properly of air: {\em i.e.}, it is a very poor conductor of heat.
+This, of course, is  why woolly sweaters work: they trap a layer of air close to
+the body, and because air is such a poor conductor of heat you stay warm.
+
+Imagine a packet of air which is being swirled around in the atmosphere. We would
+expect it to always remain at the same pressure as its surroundings, otherwise it
+would be mechanically unstable. It is also plausible that the packet moves around
+too quickly to effectively exchange heat with its surroundings, since
+air is very a poor heat conductor, and heat flow is consequently quite a
+slow process.  So,
+to a first approximation, the air in the packet is {\em adiabatic}. 
+In a {\em steady-state}\/ atmosphere, we expect that as the packet moves upwards,
+expands due to the reduced pressure, and cools adiabatically, its temperature 
+always remains the same as that of its immediate surroundings. 
+This means that we
+can use the adiabatic gas law to characterize the cooling of the
+atmosphere with increasing altitude.  In this particular
+case, the most useful manifestation of the adiabatic law is
+\begin{equation}
+p^{\,1-\gamma} \,T^{\,\gamma} = {\rm constant},
+\end{equation}
+giving
+\begin{equation}
+\frac{dp}{p} = \frac{\gamma}{\gamma -1} \frac{dT}{T}.
+\end{equation}
+Combining the above relation with the equation of hydrostatic equilibrium, 
+(\ref{e6.66}), we obtain
+\begin{equation}
+\frac{\gamma}{\gamma-1}\frac{dT}{T} = -\frac{\mu \,g}{R\,T} \,dz,
+\end{equation}
+or
+\begin{equation}
+\frac{dT}{dz} = -\frac{\gamma -1}{\gamma} \frac{\mu\, g}{R}.\label{e6.73}
+\end{equation}
+Now,  the ratio of specific heats for air (which is effectively
+a diatomic gas) is about 1.4 (see Tab.~\ref{tab1}). 
+Hence, we can calculate, from the
+ above expression, that  the temperature of the atmosphere decreases with 
+increasing height
+at a constant rate of  $9.8^\circ$ centigrade per kilometer. 
+This value is called the {\em adiabatic lapse rate}\/ of the atmosphere.
+Our calculation accords well with the
+``$1$ degree colder per 100 meters higher'' rule of thumb used in ski resorts.
+The basic reason why air is colder at higher altitudes is
+that it expands as its pressure decreases with height. It, therefore, does work
+on its environment, without absorbing any heat (because of its low thermal
+conductivity), 
+so its internal energy, and, hence, its temperature decreases. 
+
+According to the adiabatic lapse rate calculated above,  the air temperature at
+the cruising altitude of airliners ($32,000$ feet) should be about $-80^\circ$
+centigrade (assuming a sea level temperature of $15^\circ$ centigrade). 
+In fact, this is somewhat of an underestimate. A more realistic value is about
+$-60^\circ$ centigrade. 
+The explanation for  this 
+discrepancy is the presence of 
+water vapour in the atmosphere. As  air rises, expands, and cools, water
+vapour condenses out releasing latent heat which prevents the temperature
+from falling as rapidly with height as the adiabatic lapse rate would indicate.
+In fact, in the Tropics, where the humidity is very high, the lapse rate of
+the atmosphere ({\em i.e.}, the rate of decrease of temperature with altitude)
+ is significantly less than the adiabatic value. The adiabatic
+lapse rate is only observed when the humidity is low. This is the case in deserts,
+in the Arctic (where water vapour is frozen out of the atmosphere), and, of course,
+in ski resorts.
+
+Suppose that the lapse rate of the atmosphere differs  from the adiabatic value.
+Let us ignore the complication of water vapour and assume that the atmosphere
+is dry. Consider a packet of air which moves slightly upwards
+from its equilibrium height. The temperature of the packet will
+decrease with altitude according to the adiabatic lapse rate, because its
+expansion is adiabatic. We assume that the packet  always maintains pressure
+balance with its surroundings. It follows that since $\rho\, T \propto p$,
+according to the ideal gas law, then
+\begin{equation}
+(\rho\, T)_{\rm packet} = (\rho \,T)_{\rm atmosphere}.
+\end{equation}
+If the atmospheric lapse rate is less than the adiabatic value then 
+$T_{\rm atmosphere} > T_{\rm packet}$ implying that $\rho_{\rm packet} > 
+\rho_{\rm atmosphere}$. So, the packet will be denser than its immediate
+surroundings, and will, therefore, tend to fall back to its original height.
+Clearly, an atmosphere whose lapse rate is less than the adiabatic value is
+{\em stable}. On the other hand, if the atmospheric lapse rate exceeds the adiabatic
+value then, after rising a little way, 
+ the packet will be less dense than its immediate surroundings, and will, therefore,
+continue to rise due to buoyancy effects. 
+Clearly, an atmosphere whose lapse rate is greater
+than the adiabatic value is {\em unstable}. This effect is of great importance
+in Meteorology. The normal stable state of the atmosphere is for the lapse rate
+to be slightly less than
+ the adiabatic value. Occasionally, however, the lapse rate exceeds
+the adiabatic value, and this is always associated with
+ extremely disturbed weather patterns.
+
+Let us consider the  temperature, pressure, and density profiles in an
+adiabatic atmosphere. We can directly integrate Eq.~(\ref{e6.73}) to
+give
+\begin{equation}
+T = T_0 \left(1 - \frac{\gamma -1}{\gamma} \frac{z}{z_0} \right),\label{e6.75}
+\end{equation}
+where $T_0$ is the ground level temperature, and
+\begin{equation}
+z_0 = \frac{R \,T_0}{\mu\, g}
+\end{equation}
+is the isothermal scale-height calculated using this temperature. The
+pressure profile is easily calculated from the adiabatic gas law
+$p^{\,1-\gamma} \,T^{\,\gamma} =$ constant, or $p \propto T^{\,\gamma/(\gamma -1)}$. It
+follows that
+\begin{equation} \label{e6.77}
+p= p_0 \left(1 - \frac{\gamma -1}{\gamma} \frac{z}{z_0} \right)^{\gamma/(\gamma-1)}.
+\end{equation}
+Consider the limit $\gamma\rightarrow 1$. In this limit, Eq.~(\ref{e6.75}) yields
+$T$ independent of height ({\em i.e.}, the atmosphere becomes  isothermal). We can evaluate
+Eq.~(\ref{e6.77}) in the limit 
+ as $\gamma\rightarrow 1$ using the mathematical identity
+\begin{equation}
+~_{ {\rm lt}\, m\rightarrow 0} \left(1 + m\,x\right)^{1/m} \equiv \exp(x).
+\end{equation}
+We obtain
+\begin{equation}
+p = p_0\exp\left(-\frac{z}{z_0}\right),\label{e6.79}
+\end{equation}
+which, not surprisingly, is the predicted pressure variation
+in an isothermal atmosphere. In reality,
+the ratio of specific heats of the atmosphere is not unity, it is about 1.4
+({\em i.e.}, the ratio for diatomic gases), which 
+ implies that in the real atmosphere
+\begin{equation}
+p= p_0 \left(1 - \frac{z}{3.5\,z_0} \right)^{3.5}.
+\end{equation}
+In fact, this formula gives very similar results to the exponential formula,
+Eq.~(\ref{e6.79}), for heights below one scale-height ({\em i.e.}, $z<z_0$). For heights
+above one scale-height, the exponential formula tends to predict too low
+a pressure. So, in an adiabatic atmosphere, the pressure falls off less quickly
+with altitude than in an isothermal atmosphere, but this effect is only really
+noticeable at pressures significantly below one atmosphere. In fact, the isothermal
+formula is a pretty good approximation below altitudes of about 10 kilometers.
+Since $\rho \propto p/T$, the variation of density with height goes like
+\begin{equation}
+\rho= \rho_0 \left(1 - \frac{\gamma -1}{\gamma} \frac{z}{z_0} \right)^{1/(\gamma-1)},
+\end{equation}
+where $\rho_0$ is the density at ground level. Thus, the density falls off
+more rapidly with altitude than the temperature, but less rapidly than the
+pressure. 
+
+Note that an adiabatic atmosphere has a sharp upper boundary. Above height
+$z_1 = [\gamma/(\gamma-1)]\,z_0$ the temperature, pressure, and density are
+all zero: {\em i.e.}, there is no atmosphere. For real air, with $\gamma=1.4$, 
+$z_1 \simeq 3.5\,z_0 \simeq 29.4$ kilometers. This behaviour is quite different
+to that of an isothermal atmosphere, which has a diffuse upper boundary. In reality,
+there is no sharp upper boundary to the atmosphere. The adiabatic gas law
+does not apply above about 20 kilometers ({\em i.e.}, in the {\em stratosphere}) because
+at these altitudes the air is no longer strongly mixed. Thus, in the stratosphere
+the pressure falls off exponentially with increasing height. 
+
+In conclusion, we have demonstrated that the temperature 
+of the lower atmosphere should fall off
+approximately {\em linearly}\/ with increasing height above ground level, whilst the
+pressure should fall off far more rapidly than this, and  the density should
+fall off at some intermediate rate. We have also shown that the
+lapse rate of the temperature should be about $10^\circ$ centigrade per kilometer
+in dry air, but somewhat 
+less than this in wet air. In fact, all off these predictions
+are, more or less, correct. It is amazing that such accurate predictions can
+be obtained from the two simple laws, $p\,V =$ constant for an isothermal gas, and
+$p\,V^{\,\gamma}=$ constant for an adiabatic gas.
+
+\section{Heat Engines}
+Thermodynamics was invented, almost by accident,  in 1825 by a young French engineer
+called Sadi Carnot who was investigating  the theoretical
+limitations on the efficiency of
+steam engines. 
+Although we are not particularly interested in steam engines, nowadays, it is
+still highly instructive to review  some of Carnot's arguments.
+We know, by observation, that it is possible to do mechanical work $w$
+upon a device $M$, and then to extract an equivalent amount of heat $q$, which
+goes to increase the internal energy of some heat reservoir. (Here, we use small
+letters $w$ and $q$ to denote intrinsically {\em positive}\/ amounts of work and
+heat, respectively.)
+ An example of this is Joule's classic experiment by which he verified
+the first law of thermodynamics: a paddle wheel is spun in a liquid by a falling
+weight, and the work done by  the weight on the wheel  
+is converted into heat, and absorbed by the liquid. Carnot's question was
+this: is it 
+possible to reverse this process and build a device, called a {\em heat engine}, which
+extracts heat energy from a reservoir and converts it into useful macroscopic work?
+For instance,  is it possible to extract heat from the ocean and use it to run
+an electric generator? 
+
+
+There are a few caveats to Carnot's question. First of all,
+ the work should not be done
+at the expense of the heat engine itself, otherwise the conversion of heat into
+work could not continue indefinitely. We can ensure that this is the 
+case if the heat engine performs some sort of cycle,
+by which it periodically returns to the same macrostate, but, in the meantime, has
+extracted heat from the reservoir and done an equivalent amount of useful work.
+Furthermore, 
+a cyclic process seems reasonable because we know that both 
+steam engines and internal 
+combustion
+engines perform continuous cycles. The second caveat is that the work done by
+the heat engine should be such as to  change a single parameter of
+some external  device ({\em e.g.}, by lifting a weight) without doing it at the 
+expense of affecting the other degrees of freedom, or the entropy, of that device.
+For instance, if we are extracting heat from the ocean to
+generate electricity, we want to spin the shaft
+of the electrical generator without increasing the generator's
+ entropy; {\em i.e.}, causing the generator
+to heat up or fall to bits.
+
+Let us examine the feasibility of a heat engine using the laws of
+thermodynamics. Suppose that a heat engine $M$ performs a single cycle. Since
+$M$
+ has returned to its initial macrostate,   its internal energy is
+unchanged, and the first law of thermodynamics tell us that the work done
+by the engine $w$ must equal the heat extracted from the reservoir $q$, so
+\begin{equation}
+w = q.
+\end{equation} 
+The above condition is certainly a {\em necessary}\/ 
+ condition for a feasible heat engine,
+but is it also a {\em sufficient}\/  condition? In other words, does  
+every device which 
+satisfies this condition actually work? Let us think a little more carefully
+about what we are actually expecting a heat engine to do. We want to construct a 
+device which will extract energy from a heat reservoir, where it is randomly
+distributed over very many degrees of freedom, and convert it into energy 
+distributed over a single degree of freedom associated 
+ with some  parameter of an external 
+device. Once we have expressed the problem in these terms, it is fairly obvious that
+what 
+we are really asking for is a spontaneous transition from a probable to an improbable
+state, which we know is forbidden by the second law of thermodynamics. So,
+unfortunately, we cannot run an electric generator off heat extracted from the
+ocean, because it is like asking all of the molecules in the ocean, which are jiggling
+about every which way, to all suddenly jig in the same direction, so as to
+exert a force on some lever, say, which can then be converted into a torque on the
+generator shaft. We know from our investigation of statistical thermodynamics that
+such a process is  possible, in principle, but is {\em fantastically improbable}.
+
+The improbability of the scenario just outlined is summed up in the second law
+of thermodynamics. This says that the total entropy of an isolated system
+can never spontaneously decrease, so
+\begin{equation}
+{\mit\Delta} S \geq 0.\label{e6.83}
+\end{equation}
+For the case of a heat engine, the isolated system consists of the engine, the
+reservoir from which it extracts heat, and the outside device upon which it
+does work. The engine itself returns periodically 
+to the same state, so its
+entropy is clearly unchanged after each cycle. We have already specified that there
+is no change in the  entropy of the external  device upon which the work is done. On
+the other hand, the entropy change per cycle of the heat reservoir,
+which is  at absolute temperature
+$T_1$, say,  is given by 
+\begin{equation}
+{\mit\Delta} S_{\rm reservoir} = \oint \frac{\dbar Q}{T_1} = -\frac{q}{T_1},
+\end{equation}
+where $\dbar Q$ is the infinitesimal heat absorbed by the reservoir, and the integral
+is taken over a whole cycle of the heat engine. The integral can be converted into
+the expression $-q/T_1$ because the amount of heat extracted by the engine is
+assumed to be too small to modify the temperature of the reservoir (this is
+the definition of a heat reservoir), so that $T_1$ is a constant during the cycle.
+The second law of thermodynamics clearly reduces to
+\begin{equation}
+\frac{-q}{T_1} \geq 0
+\end{equation}
+or, making use of the first law of thermodynamics,
+\begin{equation}
+\frac{q}{T_1} = \frac{w}{T_1} \leq 0.\label{e6.86}
+\end{equation}
+Since we wish  the work $w$ done by the engine to be positive, the above relation
+clearly 
+cannot be satisfied, which   proves that an engine which converts heat
+directly into work is thermodynamically impossible. 
+
+A perpetual motion device,
+which continuously executes a cycle without extracting heat from, 
+or doing work on, its surroundings,
+is just about possible according to Eq.~(\ref{e6.86}). In fact, such a device
+corresponds to the equality sign in Eq.~(\ref{e6.83}), which  
+means that it must be completely
+{\em reversible}. In reality, there is no such thing as a completely reversible engine.
+All engines, even the most efficient, have frictional losses which make them,
+ at least,
+slightly irreversible. Thus, the equality sign in Eq.~(\ref{e6.83}) corresponds to 
+an  asymptotic limit which reality can closely approach, but never quite attain.
+It follows that  a perpetual motion device is  thermodynamically impossible.
+Nevertheless, the U.S.\ patent office  receives about 100 patent
+applications a year regarding perpetual motion devices. The British patent office,
+being slightly less open-minded that its American counterpart, refuses to entertain
+such applications on the basis that perpetual motion devices are forbidden by
+the second law of thermodynamics.
+
+
+According to Eq.~(\ref{e6.86}), there is no thermodynamic objection to
+a heat engine which runs backwards, and converts work directly into heat. This
+is not surprising, since we know that this is essentially what frictional  forces
+do. Clearly, we have, here, another example of a natural process which is 
+fundamentally irreversible according to the second law of thermodynamics. 
+In fact, the statement
+\begin{quote}
+{\sf It is impossible to construct a perfect heat engine which  converts
+heat directly into work}
+\end{quote}
+ is called Kelvin's formulation of the second law. 
+
+We have demonstrated that a {\em perfect heat engine}, which converts 
+heat directly into work, is impossible. But, there must be some way of
+obtaining useful work from heat energy, otherwise steam engines would not operate.
+ Well, the reason that our
+previous scheme did not work was that it decreased the entropy of a heat reservoir,
+at some temperature $T_1$, 
+by extracting an amount of heat $q$ per cycle, 
+without any compensating increase in the entropy of anything else, so the
+second law of thermodynamics was violated. How can we remedy this situation?
+ We still want
+the heat engine itself to perform periodic cycles (so,
+by definition, its entropy cannot increase over a
+cycle), and we also  do not
+ want to increase the entropy of the external device upon which the
+work is done. Our only other option is to increase the entropy of some other
+body. In Carnot's analysis, this other body is
+ a second heat reservoir at temperature $T_2$. We can increase the entropy
+of the second reservoir by dumping  some of the heat we extracted from the
+first reservoir into it. Suppose that the heat per cycle  we extract from the first
+reservoir 
+is $q_1$, and the heat per cycle we reject  into the second reservoir 
+ is $q_2$. Let the
+work done on the external device be $w$ per cycle. The first law of thermodynamics
+tells us that 
+\begin{equation}
+q_1 = w + q_2.
+\end{equation}
+Note that $q_2 < q_1$ if positive ({\em i.e.}, useful) work is done on the 
+external  device.
+The total entropy change per cycle is due to the heat extracted from the first
+reservoir and the heat dumped into the second, and has to be positive (or zero)
+according to the second law of thermodynamics. So, 
+\begin{equation}
+{\mit\Delta} S = \frac{-q_1}{T_1} + \frac{q_2}{T_2} \geq 0.
+\end{equation}
+We can combine the previous two equations to give
+\begin{equation}
+\frac{-q_1}{T_1} + \frac{q_1 - w}{T_2} \geq 0,
+\end{equation}
+or
+\begin{equation}
+\frac{w}{T_2} \leq q_1\left(\frac{1}{T_2} - \frac{1}{T_1}\right).
+\end{equation}
+It is clear that the engine is only going to perform useful work ({\em i.e.}, $w$ is
+ only going to be positive) if $T_2 < T_1$. So, the second reservoir has to be {\em colder}\/ than
+the first  if the heat dumped into the former is to increase the
+entropy of the Universe more than
+the heat extracted from the latter decreases it. It is useful to define the
+efficiency $\eta$ of a heat engine. This is the ratio of the work done per cycle
+on the external device to
+the heat energy absorbed per cycle from the first reservoir. The efficiency of a
+perfect heat engine is unity, but we have already shown that such an engine
+is impossible. What is the efficiency of a realizable engine? It is clear
+from the previous equation that
+\begin{equation}
+\eta \equiv \frac{w}{q_1} \leq 1 - \frac{T_2} {T_1} = \frac{T_1 - T_2}{T_1}.
+\label{e6.91}
+\end{equation}
+Note that the efficiency is always less than unity. A real engine must always
+reject some energy into the second heat reservoir in order to satisfy the second
+law of thermodynamics, so less energy is available to do external
+work, and the efficiency
+of the engine is reduced. The equality sign in the above expression corresponds
+to a completely reversible heat engine ({\em i.e.}, one which is quasi-static). It
+is
+clear that real engines, which are always irreversible to some extent, are
+less efficient than reversible engines. Furthermore, all reversible engines
+which operate between the two temperatures $T_1$ and $T_2$ must have the
+{\em same}\/ efficiency,
+\begin{equation}
+\eta = \frac{T_1 - T_2}{T_1},\label{e6.92}
+\end{equation}
+irrespective of the way in which they operate. 
+
+Let us consider how we might construct one of these reversible heat engines. 
+Suppose that we have some gas in a cylinder equipped with a frictionless piston.
+The gas is not necessarily a perfect gas. Suppose that we also have two heat
+reservoirs at  temperatures $T_1$ and $T_2$ (where $T_1 > T_2$). These
+reservoirs might take the form of large water baths. 
+Let us start off with the
+gas in thermal contact with the first reservoir. We now pull the piston out
+very slowly so that heat energy flows reversibly into the gas from the
+reservoir. Let us now thermally isolate  the gas and slowly pull out
+the piston some more. During this adiabatic process the temperature of the
+gas  falls (since there is no longer any heat flowing into it  to
+compensate for the work it does on the piston). Let us continue this process 
+until the temperature  of the gas falls to $T_2$. We now place the
+gas in thermal contact with the second reservoir and slowly push the piston
+in. During this isothermal 
+process heat  flows out of the gas into the reservoir. We next
+thermally isolate the gas a second time and slowly compress it some more. In this
+process the  temperature of the gas increases. We stop the compression when the temperature
+reaches $T_1$. If we carry out each step properly we can return the gas to
+its initial state and then repeat the cycle {\em ad infinitum}.
+We now have  a set of reversible processes by which a quantity
+of heat is extracted from the
+first reservoir and a quantity of heat is dumped into the second. We can best
+evaluate
+the work done by the system during each cycle
+by plotting out the locus of the gas in a $p$-$V$
+diagram. The locus takes the form of a closed curve---see Fig.~\ref{fcan}.
+The net work done per cycle is the ``area'' contained inside this curve, since
+$\,\dbar W = p \,dV$ [if $p$ is plotted vertically and $V$ horizontally,
+then $p \,dV$ is clearly an element of area under the curve $p(V)$].
+ The engine we have
+just described is called a {\em Carnot engine}, and is the simplest conceivable
+device capable of converting heat energy into useful work.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter06/pv.eps}}
+\caption{\em An ideal gas Carnot engine.}\label{fcan}
+\end{figure}
+
+For the specific case of an ideal gas, we can actually 
+calculate the work done per cycle, and, thereby, verify Eq.~(\ref{e6.92}).
+Consider the isothermal expansion phase of the gas. For an ideal gas, the internal
+energy is a function of the temperature alone. The temperature does not
+change during isothermal expansion, 
+so the internal energy remains  constant, and the net heat absorbed by the
+gas must equal the work it does on the piston. Thus,
+\begin{equation}
+q_1 = \int_a^b p \,dV,
+\end{equation}
+where the expansion takes the gas from state $a$ to state $b$. Since
+$p\,V = \nu \,R \,T$, for an ideal gas, we have
+\begin{equation}
+q_1 = \int_a^b \nu\,R \,T_1\frac{ dV}{V} = \nu\, R\, T_1\, \ln\frac{V_b}{V_a}.
+\end{equation}
+Likewise,  during the isothermal compression phase, in which
+ the gas goes from state $c$ to
+state $d$, the net heat rejected to the second reservoir
+is
+\begin{equation}
+q_2 = \nu\, R\, T_2\, \ln\frac{V_c}{V_d}.
+\end{equation}
+Now, during adiabatic expansion or compression
+\begin{equation}
+T \,V^{\,\gamma -1} = {\rm constant}.
+\end{equation}
+It follows that during the adiabatic expansion phase, which takes the gas from state
+$b$ to state $c$, 
+\begin{equation}
+T_1 \,V_b^{\,\gamma -1} = T_2 \,V_c^{\,\gamma -1}.
+\end{equation}
+Likewise, during the adiabatic compression  phase, which takes the gas from
+state $d$ to state $a$,
+\begin{equation}
+ T_1 \,V_a^{\,\gamma -1}= T_2 \,V_d^{\,\gamma -1}.
+\end{equation}
+If we take the ratio of the previous two equations we obtain
+\begin{equation}
+\frac{ V_b}{V_a} = \frac{V_c}{V_d}.
+\end{equation}
+Hence, the work done by the engine, which we can calculate using the first
+law of thermodynamics,
+\begin{equation}
+w = q_1 - q_2,
+\end{equation}
+is 
+\begin{equation}
+w = \nu \,R \, (T_1 - T_2)\,\ln\frac{V_b}{V_a}.
+\end{equation}
+Thus, the efficiency of the engine
+is
+\begin{equation}
+\eta = \frac{w}{q_1} = \frac{T_1 - T_2}{T_1}
+\end{equation}
+which, not surprisingly, is exactly the same as Eq.~(\ref{e6.92}).
+
+The engine described above is very idealized. Of course,
+real  engines are far
+more complicated than this. Nevertheless,  the maximum efficiency of an ideal
+heat engine places severe constraints on real  engines.
+Conventional power stations  have many different ``front ends''
+({\em e.g.}, coal fired furnaces,  oil fired furnaces, nuclear reactors), but their
+``back ends'' are all 
+very similar, and consist of a steam driven turbine connected to
+an electric generator. The ``front end'' heats water extracted
+from a local river and turns it into steam, which is then used to
+drive the turbine, and, hence, to generate electricity. Finally,
+the steam is  sent through
+a heat exchanger so that it can  heat up the incoming river water,
+which means that the incoming water does not have to be heated so much by 
+the ``front end.''\@
+At this stage,  some heat is rejected to the environment, usually as clouds
+of steam escaping from the top of cooling towers. We can see that a power station
+possesses many of the same features as our idealized heat engine. There is a
+cycle which operates between two temperatures. The upper temperature is the
+temperature to which 
+the steam is heated  by the ``front end,'' and the lower temperature
+is the temperature of the environment into which heat is rejected. Suppose
+that the steam is only heated to $100^\circ$\,C (or $373^\circ$\,K), and the
+temperature of the environment is $15^\circ$\,C (or $288^\circ$\,K). It follows from
+Eq.~(\ref{e6.91}) that the {\em maximum}\/ possible efficiency of the steam cycle is
+\begin{equation}
+\eta = \frac{373-288}{373} \simeq 0.23.
+\end{equation}
+So, at least 77\% of the heat energy generated by the ``front end'' 
+goes straight up the cooling towers! Not be surprisingly, commercial
+power stations do not operate with $100^\circ$\,C steam. The only
+way in which  the thermodynamic efficiency of the steam cycle
+can be raised to an acceptable level
+ is to use very hot steam (clearly, we  cannot refrigerate the environment).
+Using $400^\circ$~C steam, which is not uncommon, the maximum efficiency becomes
+\begin{equation}
+\eta = \frac{673-288}{673} \simeq 0.57,
+\end{equation}
+which is more reasonable.
+In fact, the steam cycles of modern power stations are so well designed that
+they come surprisingly close  to their 
+maximum thermodynamic
+efficiencies.
+
+\section{Refrigerators}
+Let us now move on to consider refrigerators. An idealized
+ refrigerator is an engine
+which extracts heat from a cold heat reservoir (temperature $T_2$, say) and rejects it
+to a somewhat hotter heat reservoir, which is usually the environment (temperature
+$T_1$, say). To make this machine work we always have to do some external
+work on the engine. For instance, the refrigerator in your home contains a small
+electric pump which does work on the freon (or whatever) in the cooling
+circuit. We can see that, in fact, a refrigerator is just a heat engine run
+in reverse. Hence, we can immediately carry over most of our heat engine
+analysis. Let $q_2$ be the heat absorbed per cycle from the colder reservoir,
+$q_1$ the heat rejected per cycle into the hotter reservoir, and $w$ the 
+external work done
+per cycle on the engine.  The first law of thermodynamics tells us that
+\begin{equation}
+w + q_2 = q_1.
+\end{equation}
+The second law says that
+\begin{equation}
+\frac{q_1}{T_1} + \frac{-q_2}{T_2} \geq 0.
+\end{equation}
+We can combine these two laws to give
+\begin{equation}
+\frac{w}{T_1} \geq q_2\left(\frac{1}{T_2} - \frac{1}{T_1}\right).
+\end{equation}
+The most sensible way of defining the efficiency of a refrigerator is as
+the ratio of the heat extracted per cycle from the cold reservoir  to
+the work done per cycle on the engine. With this definition
+\begin{equation}
+\eta = \frac{T_2}{T_1 - T_2}.
+\end{equation}
+We can see that this efficiency is, in general, greater than unity. In other
+words, for one joule of work done on the engine, or pump, more than one
+joule of energy is extracted from whatever it is
+ we are cooling. Clearly, refrigerators
+are intrinsically very efficient devices. Domestic refrigerators cool stuff down
+to about $4^\circ$~C (277$^\circ$~K) and reject heat to the environment
+at about $15^\circ$~C (288$^\circ$~K). The maximum theoretical efficiency of
+such  devices is
+\begin{equation}
+\eta = \frac{277}{288-277} = 25.2.
+\end{equation}
+So, for every joule of electricity we put into a refrigerator we can extract up
+to 25 joules of heat from its contents. 
+

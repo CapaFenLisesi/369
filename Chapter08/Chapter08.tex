@@ -1,0 +1,1523 @@
+\chapter{Quantum Statistics}
+
+\section{Introduction}
+Previously, we investigated the statistical thermodynamics  of ideal gases
+using a rather {\em ad hoc}\/ combination of classical and
+quantum mechanics (see Sects.~\ref{s7.8} and
+\ref{s7.9}). In fact, we employed classical mechanics to deal with
+the translational degrees of freedom of the constituent particles,  and quantum
+mechanics to deal with the non-translational degrees of freedom. Let us
+now discuss ideal gases from a purely quantum mechanical standpoint. It turns
+out that this approach is necessary to deal with either low temperature or high
+density gases. Furthermore, it also allows us to investigate 
+completely non-classical
+``gases,'' such as photons or the conduction electrons in a metal.
+
+\section{Symmetry Requirements in Quantum Mechanics}
+Consider a gas consisting of $N$ {\em identical}, non-interacting, structureless
+particles enclosed within
+a container of volume $V$. Let $Q_i$ denote collectively
+all the coordinates of the $i$th particle: {\em i.e.}, the three
+Cartesian coordinates which determine its
+spatial position, as well as the  spin coordinate which determines its
+internal state. Let $s_i$ be an index labeling the possible quantum states
+of the $i$th particle: {\em i.e.}, each possible value of $s_i$ corresponds
+to a specification of the three momentum components of the particle, as well
+as the direction of its spin orientation. According to quantum mechanics,
+the overall 
+state of the system when the $i$th particle is in state $s_i$, {\em etc}.,
+is {\em completely determined}\/ by the complex {\em wave-function}\/  
+\begin{equation}
+{\mit\Psi}_{s_1,\cdots,s_N} (Q_1, Q_2, \cdots, Q_N).
+\end{equation}
+In particular, the probability of an observation of the system
+finding the $i$th particle with coordinates in the range $Q_i$ to $Q_i+dQ_i$,
+{\em etc}.,
+is simply
+\begin{equation}
+|{\mit\Psi}_{s_1,\cdots,s_N} (Q_1, Q_2, \cdots, Q_N)|^2\,dQ_1\,dQ_2\,\cdots\,dQ_N.
+\end{equation}
+
+One of the fundamental postulates of quantum mechanics is the essential
+{\em indistinguishability}\/ of particles of the same species. What this
+means, in practice, is that we cannot {\em label}\/ particles of the same
+species:
+ {\em i.e.}, a proton is just a proton---we cannot meaningfully  talk of proton number 1 and proton number 2, {\em etc}.
+Note that no such constraint arises in classical mechanics. Thus, in
+classical mechanics particles of the
+same species are regarded as being {\em distinguishable}, 
+and can, therefore, be labelled. Of course, the quantum mechanical approach is the correct one.
+
+Suppose that we {\em interchange}\/ the $i$th and $j$th particles:
+{\em i.e.},
+\begin{eqnarray}
+Q_i &\leftrightarrow & Q_j,\\[0.5ex]
+s_i & \leftrightarrow & s_j.
+\end{eqnarray}
+ If the particles
+are truly indistinguishable then nothing has changed: 
+{\em i.e.}, we have a particle
+in quantum state $s_i$ and a particle in quantum state $s_j$ both before
+and after the particles are swapped. Thus, the probability of observing the
+system in a given state also cannot have changed: {\em i.e.},
+\begin{equation}
+|{\mit\Psi}(\cdots Q_i\cdots Q_j\cdots)|^2=
+|{\mit\Psi}(\cdots Q_j\cdots Q_i\cdots)|^2.\label{e8.5}
+\end{equation}
+Here, we have omitted the subscripts $s_1,\cdots,s_N$ for the sake of
+clarity.
+Note that we cannot conclude that the wave-function ${\mit \Psi}$ is unaffected
+when the particles are swapped, because ${\mit\Psi}$ cannot be observed
+experimentally. Only the {\em probability density} $|{\mit\Psi}|^2$ is observable.
+Equation~(\ref{e8.5}) implies that
+\begin{equation}\label{e8.6}
+{\mit\Psi}(\cdots Q_i\cdots Q_j\cdots)=A\,{\mit\Psi}(\cdots Q_j\cdots Q_i\cdots),
+\end{equation}
+where $A$ is a complex constant of modulus unity: {\em i.e.}, $|A|^2=1$. 
+
+Suppose that we interchange  the $i$th and $j$th particles a second time. 
+Swapping the $i$th and $j$th particles twice leaves the system completely
+unchanged: {\em i.e.}, it is equivalent to doing nothing to the system.
+Thus, the wave-functions before and after this process must be identical.
+It follows from Eq.~(\ref{e8.6}) that
+\begin{equation}
+A^2 = 1.
+\end{equation}
+Of course, the only solutions to the above equation are $A=\pm 1$. 
+
+We conclude, from the above discussion, that the wave-function ${\mit\Psi}$ is
+either completely {\em symmetric}\/ under the interchange of particles, or
+it is completely {\em anti-symmetric}. In other words,
+either
+\begin{equation}
+{\mit\Psi}(\cdots Q_i\cdots Q_j\cdots)=
++{\mit\Psi}(\cdots Q_j\cdots Q_i\cdots),\label{e8.8}
+\end{equation}
+or 
+\begin{equation}
+{\mit\Psi}(\cdots Q_i\cdots Q_j\cdots)=
+-{\mit\Psi}(\cdots Q_j\cdots Q_i\cdots).\label{e8.9}
+\end{equation}
+
+In 1940 the Nobel prize winning physicist Wolfgang Pauli demonstrated,
+via arguments involving  relativistic invariance, that
+the wave-function associated with  a collection of 
+identical integer-spin ({\em i.e.}, spin $0, 1, 2$, {\em etc}.)
+particles satisfies Eq.~(\ref{e8.8}), whereas the wave-function
+associated with a collection of identical half-integer-spin
+({\em i.e.}, spin $1/2, 3/2, 5/2$, {\em etc}.)
+particles satisfies Eq.~(\ref{e8.9}). The former type of particles
+are known as {\em bosons}\/ [after the Indian physicist S.N.~Bose, who
+first put forward Eq.~(\ref{e8.8}) on empirical grounds].
+The latter type of particles are called  {\em fermions}\/ (after the Italian
+physicist  Enrico Fermi, who first studied the properties of
+ fermion gases). Common examples of bosons are photons and ${\rm He}^4$ atoms.
+Common examples of fermions are protons, neutrons, and electrons. 
+
+Consider a gas made up of
+identical bosons. Equation~(\ref{e8.8}) implies that the interchange of any  
+two particles
+does not lead to a new state of the system. Bosons must, therefore, be
+considered as genuinely indistinguishable when enumerating the different possible
+states of the gas. Note that Eq.~(\ref{e8.8}) imposes no restriction on how many
+particles can occupy a given single-particle quantum state $s$. 
+
+Consider a gas made up of identical fermions. Equation~(\ref{e8.9}) 
+implies that the interchange of any two particles does not
+lead to a new physical state of the system (since $|{\mit\Psi}|^2$
+is invariant). Hence, fermions must also be
+considered  genuinely indistinguishable when enumerating the different possible
+states of the gas. Consider the special case where particles $i$ and $j$ lie in
+the same quantum state. In this case, the act of swapping the two
+particles is equivalent to leaving the system unchanged, so
+\begin{equation}
+{\mit\Psi}(\cdots Q_i\cdots Q_j\cdots)=
+{\mit\Psi}(\cdots Q_j\cdots Q_i\cdots). \label{e8.10}
+\end{equation}
+However, Eq.~(\ref{e8.9}) is also applicable, since the two particles
+are fermions. The only way in which Eqs.~(\ref{e8.9}) and (\ref{e8.10}) can
+be reconciled is if
+\begin{equation}
+{\mit\Psi} = 0
+\end{equation}
+wherever particles $i$ and $j$ lie in the same quantum state. This
+is another way of saying that it is  {\em impossible}\/ for any two
+particles  in a gas of  fermions to lie
+ in the same single-particle quantum state. This proposition is known
+as the {\em Pauli exclusion principle}, since it was first proposed
+by W.~Pauli in 1924 on empirical grounds. 
+
+Consider, for the sake of comparison, a gas made up of identical
+classical particles. In this case, the particles must be considered
+distinguishable when enumerating the different possible
+states of the gas. Furthermore, there are no constraints on 
+how many particles can occupy a
+ given quantum state.
+
+According to the above discussion, there are {\em three}\/  different sets of rules
+which can be  used to enumerate the states of a gas made up of identical
+particles. For a boson gas, the particles must be treated as
+being indistinguishable, and there is no limit to how many particles
+can occupy a given quantum state. This set of rules is called {\em Bose-Einstein
+statistics}, after S.N.~Bose and A.~Einstein, who first developed them.
+For a fermion gas, the particles must be treated as
+being indistinguishable, and there can never be more than one particle in
+any given quantum state. This set of rules is called {\em Fermi-Dirac
+statistics}, after E.~Fermi and P.A.M.~Dirac, who first developed them.
+Finally, for a classical gas, the particles 
+ must be treated as
+being distinguishable, and there is no limit to how many particles
+can occupy a given quantum state. This set of rules is called
+{\em Maxwell-Boltzmann statistics}, after J.C.~Maxwell and L.~Boltzmann,
+who first developed them.
+
+\section{Illustrative Example}
+Consider a very simple gas made up of two identical particles. Suppose
+that each particle can be in one of three possible quantum states, $s=1,2,3$. 
+Let us enumerate the possible states of the whole gas according to
+Maxwell-Boltzmann, Bose-Einstein, and Fermi-Dirac statistics, respectively.
+
+For the case of Maxwell-Boltzmann (MB) statistics, the two particles are
+considered to be distinguishable. Let us denote them $A$ and $B$.
+Furthermore, any number of particles can occupy the same quantum state. 
+The possible different states of the gas are shown in Tab.~\ref{tmb}.
+\begin{table}[h]\centering
+\begin{tabular}{ccc}\hline 1&2&3 \\\hline
+$AB$     & $\cdots$ & $\cdots$ \\
+$\cdots$ & $AB$     & $\cdots$ \\
+$\cdots$ & $\cdots$ & $AB$     \\
+$A$      & $B$      & $\cdots$ \\
+$B$      & $A$      & $\cdots$ \\
+$A$      & $\cdots$ & $B$      \\
+$B$      & $\cdots$ & $A$      \\
+$\cdots$ & $A$      & $B$      \\
+$\cdots$ & $B$      & $A$      \\\hline
+\end{tabular}
+\caption{\em Two particles distributed amongst three states according to
+Maxwell-Boltzmann statistics.}\label{tmb}
+\end{table}
+There are clearly 9 distinct states.
+
+For the case of Bose-Einstein (BE) statistics, the two particles are
+considered to be indistinguishable. Let us denote them both as $A$.
+Furthermore, any number of particles can occupy the same quantum state. 
+The possible different states of the gas are shown in Tab.~\ref{tbe}.
+\begin{table}[h]\centering
+\begin{tabular}{ccc}\hline 1&2&3 \\\hline
+$AA$     & $\cdots$ & $\cdots$ \\
+$\cdots$ & $AA$     & $\cdots$ \\
+$\cdots$ & $\cdots$ & $AA$     \\
+$A$      & $A$      & $\cdots$ \\
+$A$      & $\cdots$ & $A$      \\
+$\cdots$ & $A$      & $A$      \\\hline
+\end{tabular}
+\caption{\em Two particles distributed amongst three states according to
+Bose-Einstein statistics.}\label{tbe}
+\end{table}
+There are clearly 6 distinct states.
+
+Finally, for the case of Fermi-Dirac (FD) statistics, the two particles are
+considered to be indistinguishable. Let us again denote them both as $A$.
+Furthermore, no more than one particle  can occupy a given quantum state. The possible different states of the gas are shown in Tab.~\ref{tfd}.
+\begin{table}[h]\centering
+\begin{tabular}{ccc}\hline 1&2&3 \\\hline
+$A$      & $A$      & $\cdots$ \\
+$A$      & $\cdots$ & $A$      \\
+$\cdots$ & $A$      & $A$      \\\hline
+\end{tabular}
+\caption{\em Two particles distributed amongst three states according to
+Fermi-Dirac statistics.}\label{tfd}
+\end{table}
+There are clearly only 3  distinct states.
+
+It follows, from the above example, that Fermi-Dirac statistics are
+more restrictive ({\em i.e.}, there are less possible states of the
+system) than Bose-Einstein statistics, which are, in turn, more restrictive
+than Maxwell-Boltzmann statistics. Let
+\begin{equation}
+\xi \equiv \frac{\mbox{ probability that the two particles are found in the
+same state}}{\mbox{ probability that the two particles are found in different
+states}}.
+\end{equation}
+For the case under investigation,
+\begin{eqnarray}
+\xi_{\rm MB} &=& 1/2,\\[0.5ex]
+\xi_{\rm BE} &=& 1,\\[0.5ex]
+\xi_{\rm FD} &=& 0.
+\end{eqnarray}
+We conclude that in Bose-Einstein statistics there is a greater relative
+tendency for particles to cluster in the same state than in classical
+statistics. On the other hand, in Fermi-Dirac statistics there is
+less tendency for particles to cluster in the same state than
+in classical statistics.
+
+\section{Formulation of the statistical problem}
+Consider a gas consisting of $N$ identical non-interacting particles
+occupying volume $V$ and in thermal equilibrium at temperature $T$. 
+Let us label the possible quantum states of a single particle by $r$ (or $s$). 
+Let the energy of a particle in state $r$ be denoted $\epsilon_r$. 
+Let the number of particles in state $r$ be written $n_r$. Finally,
+let us label the possible quantum states of the whole gas by $R$.
+
+The particles are assumed to be non-interacting, so  the
+total energy of the gas in state $R$, where there are $n_r$ particles
+in quantum state $r$, {\em etc.}, is simply
+\begin{equation}
+E_R = \sum_r\,n_r\,\epsilon_r,
+\end{equation}
+where the sum extends over all possible quantum states $r$. Furthermore,
+since the total number of particles in the gas is known to be $N$, we must
+have
+\begin{equation}
+N = \sum_r n_r.
+\end{equation}
+
+In order to calculate the thermodynamic properties of the gas ({\em i.e.}, 
+its internal energy  or its entropy), it is necessary to
+calculate its {\em partition function},
+\begin{equation}
+Z =\sum_R {\rm e}^{-\beta\,E_R} = \sum_R {\rm e}^{-\beta\,(n_1\,\epsilon_1+n_2\,
+\epsilon_2+\cdots)}.\label{e8z}
+\end{equation}
+Here, the sum is over all possible states $R$ of the whole gas:
+{\em i.e.}, over all the various possible values of the
+numbers $n_1, n_2,\cdots$. 
+
+Now, $\exp[-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+\cdots)]$ is
+the relative probability of finding the gas in a particular state in which
+there are $n_1$ particles in state 1, $n_2$ particles in state 2, {\em etc}. 
+Thus, the mean number of particles in quantum state $s$ can be written
+\begin{equation}\label{e8z1}
+\bar{n}_s = \frac{\sum_R n_s\,\exp[-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+\cdots)]}
+{\sum_R \exp[-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+\cdots)]}.
+\end{equation}
+A comparison of Eqs.~(\ref{e8z}) and (\ref{e8z1})  yields the result
+\begin{equation}\label{e820}
+\bar{n}_s = -\frac{1}{\beta}\frac{\partial \ln Z}{\partial\epsilon_s}.
+\end{equation}
+Here, $\beta\equiv 1/k\,T$.
+
+\section{Fermi-Dirac Statistics}\label{s8fd}
+Let us, first of all, consider Fermi-Dirac statistics. According to Eq.~(\ref{e8z1}),
+the average number of particles in quantum state $s$ can be written
+\begin{equation}
+\bar{n}_s = \frac{\sum_{n_s} n_s\,{\rm e}^{-\beta\,n_s\,\epsilon_s}\,
+\sum_{n_1,n_2,\cdots}^{(s)} {\rm e}^{-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+
+\cdots)}}{\sum_{n_s} {\rm e}^{-\beta\,n_s\,\epsilon_s}\,
+\sum_{n_1,n_2,\cdots}^{(s)} {\rm e}^{-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+
+\cdots)}}.\label{ens}
+\end{equation}
+Here, we have rearranged the order of summation, using the multiplicative
+properties of the exponential function. Note that the first sums in the
+numerator and denominator
+only involve $n_s$, whereas the last sums
+ omit the particular state $s$ from consideration
+(this is indicated by the superscript $s$ on the summation symbol). Of course,
+the sums in the above expression range over all values of the
+numbers $n_1, n_2, \cdots$ such that $n_r=0$ and 1 for
+each $r$, subject to the overall constraint that
+\begin{equation}
+\sum_r n_r = N.
+\end{equation}
+
+Let us introduce the function
+\begin{equation}\label{e8zs}
+Z_s(N) = \sum_{n_1,n_2,\cdots}^{(s)}
+{\rm e}^{-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+
+\cdots)},
+\end{equation}
+which is defined as the partition function for $N$ particles distributed over all
+quantum states, {\em excluding}\/ state $s$, according to Fermi-Dirac statistics.
+By explicitly performing the sum over $n_s=0$ and 1, the
+expression (\ref{ens}) reduces to
+\begin{equation}\label{e8da}
+\bar{n}_s = \frac{0 + {\rm e}^{-\beta\,\epsilon_s}\,Z_s(N-1)}
+{Z_s(N) + {\rm e}^{-\beta\,\epsilon_s}\,Z_s(N-1)},
+\end{equation}
+which yields
+\begin{equation}\label{e8dz}
+\bar{n}_s =\frac{1}{[Z_s(N)/Z_s(N-1)]\,{\rm e}^{\,\beta\,\epsilon_s} + 1}.
+\end{equation}
+
+
+In order to make further progress, we must somehow relate $Z_s(N-1)$ to
+$Z_s(N)$. Suppose that ${\mit\Delta}N\ll N$. It follows that 
+$\ln Z_s(N-{\mit\Delta}N)$ can be Taylor expanded  to give
+\begin{equation}\label{e8dc}
+\ln Z_s(N-{\mit\Delta}N) \simeq \ln Z_s(N) - \frac{\partial \ln Z_s}{\partial N}\,
+{\mit\Delta} N = \ln Z_s(N) - \alpha_s\,{\mit\Delta}N,
+\end{equation}
+where 
+\begin{equation}
+\alpha_s\equiv \frac{\partial \ln Z_s}{\partial N}.\label{e8de}
+\end{equation}
+As always, we Taylor expand the slowly varying function $\ln Z_s(N)$, rather
+than the rapidly varying function $Z_s(N)$, because the radius of
+convergence of the latter Taylor series is too small for the series to
+be of any practical use. Equation~(\ref{e8dc}) can be rearranged to give
+\begin{equation}\label{e8db}
+Z_s(N-{\mit\Delta}N) = Z_s(N)\,{\rm e}^{-\alpha_s\,{\mit\Delta}N}.
+\end{equation}
+
+Now, since $Z_s(N)$ is a sum over very many
+different quantum states, we would not expect the logarithm of this
+function to be  sensitive to which particular state $s$
+is  excluded from consideration. Let us, therefore, introduce the
+approximation that $\alpha_s$ is independent of $s$, so that we can write
+\begin{equation}\label{e8df}
+\alpha_s \simeq \alpha
+\end{equation}
+for all $s$. It follows that the derivative (\ref{e8de}) can be expressed
+approximately in terms of the derivative of the full partition function
+$Z(N)$ (in which the $N$ particles are distributed over
+{\em all}\/ quantum states). In fact,
+\begin{equation}\label{e830}
+\alpha\simeq \frac{\partial \ln Z}{\partial N}.
+\end{equation}
+
+Making use of Eq.~(\ref{e8db}), with ${\mit\Delta} N =1$, plus the
+approximation (\ref{e8df}), the expression (\ref{e8dz}) reduces to
+\begin{equation}
+\bar{n}_s = \frac{1}{{\rm e}^{\,\alpha+\beta\,\epsilon_s}+ 1}.\label{efd}
+\end{equation}
+This is called the {\em Fermi-Dirac distribution}. The parameter $\alpha$
+is determined by the constraint that $\sum_r\bar{n}_r = N$: {\em i.e.}, 
+\begin{equation}
+\sum_r \frac{1}{{\rm e}^{\,\alpha+\beta\,\epsilon_r}+ 1} = N.
+\end{equation}
+
+
+Note that $\bar{n}_s\rightarrow 0$ if $\epsilon_s$ becomes sufficiently 
+large.
+On the other hand, since the denominator in Eq.~(\ref{efd}) can never become
+less than unity, no matter how small $\epsilon_s$ becomes, it follows
+that $\bar{n}_s\leq 1$. Thus,
+\begin{equation} 
+0 \leq \bar{n}_s \leq 1,
+\end{equation}
+in accordance with the Pauli exclusion principle.
+
+Equations (\ref{e820}) and (\ref{e830}) can be integrated to
+give
+\begin{equation}
+\ln Z = \alpha\,N + \sum_r\ln \,(1+{\rm e}^{-\alpha-\beta\,\epsilon_r}),
+\end{equation}
+where use has been made of Eq.~(\ref{efd}).
+
+\section{Photon Statistics}
+Up to now, we have assumed that the number of particles $N$ contained
+in a given system is a fixed
+number. This is a reasonable assumption if the particles possess non-zero
+mass, since we are not generally considering 
+relativistic systems in this  course.
+However, this assumption breaks down for the case of photons, which are
+{\em zero-mass}\/ bosons. In fact,   photons enclosed in a container
+of volume $V$, maintained at temperature $T$, can readily be absorbed
+or emitted by the walls. Thus, for the special case of a gas of
+photons there is no requirement which limits the total number of particles.
+
+It follows, from the above discussion, that photons obey a simplified
+form of Bose-Einstein statistics in which there is an unspecified
+total number of particles. This type of statistics is called {\em photon
+statistics}.
+
+Consider the expression (\ref{ens}). For the case of photons, the
+numbers $n_1, n_2,\cdots$ assume all values $n_r=0,1,2,\cdots$ for each $r$,
+without any further restriction. It follows that the sums $\sum^{(s)}$ in the
+numerator and denominator are identical and, therefore, cancel. Hence,
+Eq.~(\ref{ens}) reduces to
+\begin{equation}
+\bar{n}_s = \frac{\sum_{n_s} n_s\,{\rm e}^{-\beta\,n_s\,\epsilon_s}}
+{\sum_{n_s} {\rm e}^{-\beta\,n_s\,\epsilon_s}}.\label{e8sum}
+\end{equation}
+However, the above expression can be rewritten
+\begin{equation}
+\bar{n}_s =-\frac{1}{\beta}\frac{\partial}{\partial \epsilon_s}\left(\ln\sum_{n_s}
+{\rm e}^{-\beta\,n_s\,\epsilon_s}\right).\label{e8zz}
+\end{equation}
+Now, the sum on the right-hand side of the above equation is an infinite
+geometric series, which can easily be evaluated. In fact,
+\begin{equation}
+\sum_{n_s=0}^\infty {\rm e}^{-\beta\,n_s\,\epsilon_s} 
+= 1 + {\rm e}^{-\beta\,\epsilon_s} + {\rm e}^{-2\,\beta\,\epsilon_s} +
+\cdots = \frac{1}{1-{\rm e}^{-\beta\,\epsilon_s}}.
+\end{equation}
+Thus, Eq.~(\ref{e8zz}) gives
+\begin{equation}
+\bar{n}_s =\frac{1}{\beta} \frac{\partial}{\partial\epsilon_s}
+\ln\,(1-{\rm e}^{-\beta\,\epsilon_s}) =\frac{{\rm e}^{-\beta\,\epsilon_s}}
+{1-{\rm e}^{-\beta\,\epsilon_s}},
+\end{equation}
+or
+\begin{equation}\label{e8zzz}
+\bar{n}_s = \frac{1}{{\rm e}^{\,\beta\,\epsilon_s}-1}.
+\end{equation}
+This is known as the {\em Planck distribution}, after the German physicist
+Max Planck who first proposed it in 1900 on purely empirical grounds.
+
+Equation (\ref{e820}) can be integrated to
+give
+\begin{equation}
+\ln Z = -\sum_r \ln\,(1-{\rm e}^{-\beta\,\epsilon_r}),
+\end{equation}
+where use has been made of Eq.~(\ref{e8zzz}).
+
+\section{Bose-Einstein Statistics}
+Let us now consider Bose-Einstein statistics. The particles in the
+system are assumed to be massive, so  the total number of
+particles $N$ is a fixed number. 
+
+Consider the expression (\ref{ens}). For the case of massive bosons, the numbers
+$n_1,n_2, \cdots$ assume all values $n_r=0,1,2,\cdots$ for each $r$, subject to
+the constraint that $\sum_r n_r=N$. 
+Performing explicitly the sum over $n_s$, this expression reduces to
+\begin{equation}
+\bar{n}_s=\frac{0 +{\rm e}^{-\beta\,\epsilon_s}\,Z_s(N-1)
++ 2\,{\rm e}^{-2\,\beta\,\epsilon_s}\,Z_s(N-2)+\cdots}
+{Z_s(N) +{\rm e}^{-\beta\,\epsilon_s}\,Z_s(N-1)
++ {\rm e}^{-2\,\beta\,\epsilon_s}\,Z_s(N-2)+\cdots},
+\end{equation}
+where $Z_s(N)$ is the partition function for $N$ particles
+distributed over all quantum states, {\em excluding}\/ state $s$, according
+to Bose-Einstein statistics [{\em cf.}, Eq.~(\ref{e8zs})]. Using Eq.~(\ref{e8db}),
+and the approximation (\ref{e8df}), the above equation reduces to
+\begin{equation}
+\bar{n}_s = \frac{\sum_s n_s\,{\rm e}^{-n_s\,(\alpha+\beta\,\epsilon_s)}}
+{\sum_s {\rm e}^{-n_s\,(\alpha+\beta\,\epsilon_s)}}.
+\end{equation}
+Note that this expression is identical to (\ref{e8sum}), except that
+$\beta\,\epsilon_s$ is replaced by $\alpha+\beta\,\epsilon_s$. Hence,
+an analogous calculation to that outlined in the previous subsection yields
+\begin{equation}
+\bar{n}_s = \frac{1}{{\rm e}^{\,\alpha+\beta\,\epsilon_s}-1}.\label{e8ddd}
+\end{equation}
+This is called the {\em Bose-Einstein distribution}. Note that $\bar{n}_s$
+can become very large in this distribution. The parameter $\alpha$ is again determined
+by the constraint on the total number of particles: {\em i.e.},
+\begin{equation}
+\sum_r
+\frac{1}{{\rm e}^{\,\alpha+\beta\,\epsilon_r}-1} =N.\label{e8eee}
+\end{equation}
+
+
+Equations (\ref{e820}) and (\ref{e830}) can be integrated to
+give
+\begin{equation}
+\ln Z = \alpha\,N - \sum_r\ln \,(1-{\rm e}^{-\alpha-\beta\,\epsilon_r}),
+\end{equation}
+where use has been made of Eq.~(\ref{e8ddd}).
+
+Note that photon statistics correspond to the special case of Bose-Einstein
+statistics in which the parameter $\alpha$ takes the value zero,  and the constraint
+(\ref{e8eee}) does not apply.
+
+\section{Maxwell-Boltzmann Statistics}
+For the purpose of comparison, it is instructive to consider the purely
+classical case of Maxwell-Boltzmann statistics. The partition
+function is written
+\begin{equation}\label{e846}
+Z=\sum_{R} {\rm e}^{-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+\cdots)},
+\end{equation}
+where the sum is over all distinct states $R$ of the gas, and the particles
+are treated as distinguishable. For given values of $n_1, n_2,\cdots$ there
+are
+\begin{equation}
+\frac{N!}{n_1 !\,n_2!\,\cdots}
+\end{equation}
+possible ways in which $N$ distinguishable 
+particles can be put into individual quantum states such that there are $n_1$
+particles in state 1, $n_2$ particles in state 2, {\em etc}. Each of these possible
+arrangements corresponds to a distinct state for the whole gas.
+Hence, Eq.~(\ref{e846}) can be written 
+\begin{equation}\label{e847}
+Z = \sum_{n_1,n_2,\cdots} \frac{N!}{n_1 !\,n_2!\,\cdots} {\rm e}^{-\beta\,(n_1\,\epsilon_1+n_2\,\epsilon_2+\cdots)},
+\end{equation}
+where the sum is over all values of $n_r=0,1,2,\cdots$ for each $r$, subject to
+the constraint that
+\begin{equation}\label{e848}
+\sum_r n_r = N.
+\end{equation}
+Now, Eq.~(\ref{e847}) can be written
+\begin{equation}
+Z = \sum_{n_1,n_2,\cdots} \frac{N!}{n_1 !\,n_2!\,\cdots} 
+({\rm e}^{-\beta\,\epsilon_1})^{n_1}\,({\rm e}^{-\beta\,\epsilon_2})^{n_2}
+\cdots,
+\end{equation}
+which, by virtue of Eq.~(\ref{e848}), is just the result of
+expanding a polynomial. In fact,
+\begin{equation}
+Z = ({\rm e}^{-\beta\,\epsilon_1}+{\rm e}^{-\beta\,\epsilon_2}+
+\cdots)^N,
+\end{equation}
+or
+\begin{equation}\label{e849}
+\ln Z = N\,\ln\!\left(\sum_r {\rm e}^{-\beta\,\epsilon_r}\right).
+\end{equation}
+Note that the argument of the logarithm is simply the partition function
+for a single particle. 
+
+Equations~(\ref{e820}) and (\ref{e849}) can be combined to give
+\begin{equation}
+\bar{n}_s = N\,\frac{{\rm e}^{-\beta\,\epsilon_s}}
+{\sum_r {\rm e}^{-\beta\,\epsilon_r}}.
+\end{equation}
+This is known as the {\em Maxwell-Boltzmann distribution}. It is, of course,
+just the result obtained by applying the Boltzmann distribution to a single
+particle (see Sect.~\ref{s7}).
+
+\section{Quantum Statistics in Classical Limit}
+The preceding analysis regarding the quantum statistics of ideal
+gases is summarized in the following statements. The mean number of
+particles occupying quantum state $s$ is given by
+\begin{equation}\label{e8.54}
+\bar{n}_s = \frac{1}{{\rm e}^{\,\alpha+\beta\,\epsilon_s} \pm 1},
+\end{equation}
+where the upper sign corresponds to Fermi-Dirac statistics and the
+lower sign corresponds to Bose-Einstein statistics. The parameter
+$\alpha$ is determined via
+\begin{equation}\label{e8.55}
+\sum_r \bar{n}_r = \sum_r \frac{1}{{\rm e}^{\,\alpha+\beta\,\epsilon_r} \pm 1}
+=N.
+\end{equation}
+Finally, the partition function of the gas is given by
+\begin{equation}\label{e8.56}
+\ln Z = \alpha\,N \pm \sum_r \ln\,(1\pm {\rm e}^{-\alpha-\beta\,\epsilon_r}).
+\end{equation}
+
+Let us investigate the magnitude of $\alpha$ in some important limiting
+cases. Consider, first of all, the case of a gas at a given temperature
+when its concentration is made sufficiently low: {\em i.e.}, when
+$N$ is made sufficiently small. The relation (\ref{e8.55}) can only
+be satisfied if each term in the sum over states is made 
+sufficiently small; {\em i.e.}, if $\bar{n}_r\ll 1$ or $\exp\,(\alpha +
+\beta\,\epsilon_r)\gg 1$ for all states $r$. 
+
+Consider, next, the case of a gas made up of a fixed number of particles
+when its temperature is made sufficiently large: {\em i.e.}, when $\beta$ is
+made sufficiently small. In the sum in Eq.~(\ref{e8.55}), the terms of
+appreciable magnitude are those for which $\beta\,\epsilon_r\ll \alpha$. 
+Thus, it follows that as $\beta\rightarrow 0$ an increasing number of
+terms with large values of $\epsilon_r$ contribute substantially to this
+sum. In order to prevent the sum from exceeding $N$, the parameter $\alpha$
+must become large enough that each term is made sufficiently small: {\em i.e.},
+it is again necessary that $\bar{n}_r\ll 1$ or  $\exp\,(\alpha +
+\beta\,\epsilon_r)\gg 1$ for all states $r$. 
+
+The above discussion suggests that if the concentration of an ideal
+gas is made sufficiently low, or the temperature is made sufficiently high,
+then $\alpha$ must become so large that
+\begin{equation}
+{\rm e}^{\,\alpha+\beta\,\epsilon_r}\gg 1\label{e8c1}
+\end{equation}
+for all $r$. Equivalently, this means that the  number of particles occupying
+each quantum state must
+become so small that
+\begin{equation}
+\bar{n}_r \ll 1\label{e8c2}
+\end{equation}
+for all $r$. It is conventional to refer to the limit of sufficiently
+low concentration, or sufficiently high temperature, in which Eqs.~(\ref{e8c1})
+and Eqs.~(\ref{e8c2}) are satisfied, as the {\em classical limit}.
+
+According to Eqs.~(\ref{e8.54}) and (\ref{e8c1}), both
+the  Fermi-Dirac and Bose-Einstein
+distributions reduce to
+\begin{equation}
+\bar{n}_s = {\rm e}^{-\alpha-\beta\,\epsilon_s}
+\end{equation}
+in the classical limit, whereas the constraint (\ref{e8.55}) yields
+\begin{equation}\label{e888}
+\sum_r {\rm e}^{-\alpha-\beta\,\epsilon_r} = N.
+\end{equation}
+The above expressions can be combined to give
+\begin{equation}
+\bar{n}_s = N\,
+ \frac{{\rm e}^{-\beta\,\epsilon_s}}{\sum_r {\rm e}^{-\beta\,\epsilon_r}}.
+\end{equation}
+It follows that in the classical limit of sufficiently low density,
+or sufficiently high temperature, the quantum distribution functions,
+whether Fermi-Dirac or Bose-Einstein, reduce to the Maxwell-Boltzmann
+distribution. It is easily demonstrated that the physical criterion for the
+validity of the classical approximation is that the mean separation between
+particles should be much greater than their mean de~Broglie wavelengths.
+
+Let us now consider the behaviour of the partition function (\ref{e8.56})
+in the classical limit. We can expand the logarithm to
+give
+\begin{equation}
+\ln Z = \alpha\,N \pm \sum_r\left(\pm {\rm e}^{-\alpha-\beta\,\epsilon_r}\right)
+=\alpha\,N +N.
+\end{equation}
+However, according to Eq.~(\ref{e888}),
+\begin{equation}
+\alpha =-\ln N + \ln \left({\sum_r {\rm e}^{-\beta\,\epsilon_r}}\right).
+\end{equation}
+It follows that
+\begin{equation}
+\ln Z = -N\,\ln N + N +N\,\ln\! \left({\sum_r {\rm e}^{-\beta\,\epsilon_r}}\right).
+\end{equation}
+Note that this {\em does not}\/ equal the partition function $Z_{\rm MB}$
+computed in Eq.~(\ref{e849}) from Maxwell-Boltzmann statistics: {\em i.e.}, 
+\begin{equation}
+\ln Z_{\rm MB} = N\,\ln\!\left(\sum_r {\rm e}^{-\beta\,\epsilon_r}\right).
+\end{equation}
+In fact,
+\begin{equation}
+\ln Z = \ln Z_{\rm MB} - \ln N!,
+\end{equation}
+or
+\begin{equation}
+Z = \frac{Z_{\rm MB}}{N!},
+\end{equation}
+where use has been made of Stirling's approximation ($N!\simeq N\,\ln N - N$),
+since $N$ is large. Here, the factor $N!$ simply corresponds to the number
+of different permutations of the $N$ particles: permutations which are
+physically meaningless when the particles are identical. Recall, that
+we had to introduce precisely this factor, in an {\em ad hoc}\/ fashion,
+in Sect.~\ref{s7.9} in order to avoid the non-physical consequences of
+the Gibb's paradox. Clearly, there is no Gibb's paradox when an ideal
+gas is treated properly via quantum mechanics. 
+
+In the classical limit,
+a full quantum mechanical analysis of an ideal gas reproduces the results
+obtained in Sects.~\ref{s7.8} and \ref{s7.9}, except that the
+arbitrary parameter $h_0$ is replaced by Planck's constant
+$h=6.61\times 10^{-34}\,{\rm J\,s}$.  
+
+A gas in the classical limit, where the typical de~Broglie wavelength of the
+constituent particles is  much smaller than the typical inter-particle
+spacing, is said to be {\em non-degenerate}. In the opposite limit,
+where the concentration and temperature are such that the typical
+de~Broglie wavelength 
+becomes comparable with the typical inter-particle spacing, and the actual
+Fermi-Dirac or Bose-Einstein distributions must be employed, the
+gas is said to be {\em degenerate}.
+
+\section{Planck Radiation Law}
+Let us now consider the application of statistical thermodynamics to electromagnetic
+radiation. According to Maxwell's theory, an electromagnetic wave is a coupled
+self-sustaining 
+oscillation of electric and magnetic fields which propagates though a vacuum at
+the speed of light, $c=3\times 10^8\,{\rm m}\,{\rm s}^{-1}$. The electric
+ component of the wave  can be written
+\begin{equation}
+{\bf E} = {\bf E}_0 \exp[\,{\rm i}\,({\bf k}\!\cdot \!{\bf r} - \omega\, t)],
+\end{equation}
+where ${\bf E}_0$ is a constant, ${\bf k}$ is the wave-vector which determines
+the wavelength and direction of propagation of the wave, and $\omega$ is
+the frequency. The dispersion relation
+\begin{equation}
+\omega = k\, c\label{e8.69}
+\end{equation}
+ensures that the wave propagates at the speed of light. Note that this dispersion
+relation is very similar to that of sound waves in solids [see Eq.~(\ref{e7.146})].
+Electromagnetic waves always propagate in the direction perpendicular to the
+coupled electric and magnetic fields ({\em i.e.}, 
+electromagnetic waves are transverse waves).
+This means that ${\bf k}\!\cdot\! {\bf E}_0 = 0$. Thus, once ${\bf k}$ is specified,
+there are only {\em two}\/ possible
+independent
+ directions for the electric field. 
+These correspond to the two independent polarizations of electromagnetic waves.
+
+Consider an enclosure whose walls are maintained at fixed
+temperature $T$. What is the nature of the 
+steady-state electromagnetic radiation inside
+the enclosure? Suppose that the enclosure is a parallelepiped with
+sides of lengths $L_x$, $L_y$, and $L_z$. Alternatively, suppose that the
+radiation field inside the enclosure is periodic in the $x$-, $y$-, and $z$-directions,
+with periodicity lengths $L_x$, $L_y$, and $L_z$, respectively. As long as the
+smallest of these lengths, $L$, say, is much greater than the longest wavelength
+of interest in the problem, $\lambda = 2\pi /k$, then these assumptions should not
+significantly 
+affect the nature of the radiation inside the enclosure. We find, just as in
+our earlier discussion of sound waves (see Sect.~\ref{s7sound}), that the periodicity constraints ensure that
+there are only a discrete set of allowed wave-vectors ({\em i.e.}, a discrete
+set of allowed modes of oscillation of the electromagnetic field inside the
+enclosure).
+ Let $\rho({\bf k})\,
+d^3{\bf k}$ be the number of allowed modes {\em per unit volume}
+with wave-vectors in the range  ${\bf k}$ to ${\bf k} + d{\bf k}$. We know,
+by analogy  with
+Eq.~(\ref{e7.150}), that
+\begin{equation}
+\rho({\bf k})\,d^3{\bf k} = \frac{d^3{\bf k}}{(2\pi)^3}.
+\end{equation}
+The number of modes per unit volume for which the {\em magnitude}\/ of
+the wave-vector lies in the range $k$ to $k+dk$ is just the density of modes,
+$\rho({\bf k})$, 
+multiplied by the ``volume'' in ${\bf k}$-space of the spherical shell
+lying between radii $k$ and $k+dk$. Thus,
+\begin{equation}
+\rho_k(k)\,dk = \frac{4\pi \,k^2\,dk}{(2\pi)^3} = \frac{k^2}{2\pi^2}\, dk.
+\end{equation}
+Finally, the number of  modes per unit volume whose frequencies lie between
+$\omega$ and $\omega + d \omega$ is, by Eq.~(\ref{e8.69}),
+\begin{equation}
+\sigma (\omega)\,d\omega = 2 \,\frac{\omega^2}{2\pi^2 \,c^3}\,d\omega.
+\end{equation}
+Here, the additional 
+factor 2  is to take account of the two independent polarizations
+of the electromagnetic field for a given wave-vector ${\bf k}$. 
+
+
+Let us consider the situation classically. By analogy with sound waves, we can treat
+each allowable mode of oscillation of the electromagnetic field as an independent
+harmonic oscillator. According to the equipartition theorem
+(see Sect.~\ref{s7eq}), each mode possesses a
+mean energy $k\,T$ in thermal equilibrium at temperature $T$. In fact, $(1/2)\,k\,T$
+resides with the oscillating electric field, and another $(1/2)\,k\,T$ with
+the oscillating magnetic field.
+Thus,
+the classical {\em energy density} of electromagnetic radiation ({\em i.e.}, the
+energy per unit volume associated with modes whose frequencies lie in the
+range $\omega$ to $\omega + d\omega$) is
+\begin{equation}
+\overline{u}(\omega)\,d\omega = k\,T \,\sigma(\omega) \,d\omega = \frac{k\,T}
+{\pi^2 \,c^3}
+\,\omega^2\,d\omega.
+\end{equation}
+This result is known as the {\em Rayleigh-Jeans radiation law}, after Lord Rayleigh
+and James Jeans who first proposed it in the late nineteenth century.
+
+
+According to Debye theory (see Sect.~\ref{s7sound}),
+  the energy density of sound waves in a solid is 
+analogous to the Rayleigh-Jeans law, with one very important difference. 
+In Debye theory
+there is a cut-off frequency (the Debye frequency) above which 
+no modes exist. This cut-off comes about because of the discrete nature of
+solids ({\em i.e.}, because solids 
+ are made up of atoms instead of being continuous).
+It is, of course, 
+ impossible to have sound waves whose wavelengths are much less than
+the inter-atomic spacing. 
+On the other hand, electromagnetic waves propagate through a vacuum,
+which possesses no discrete structure. It follows that
+there is no cut-off frequency for electromagnetic waves, and so the Rayleigh-Jeans
+law holds for all frequencies. This immediately poses a severe problem. The total
+classical energy density of  electromagnetic radiation is given by
+\begin{equation}
+U = \int_0^{\infty} \overline{u}(\omega)
+\,d\omega = \frac{k\,T}{\pi^2 \,c^3} \int_0^{\infty}
+\omega^2\,d\omega.
+\end{equation}
+This  is an integral which obviously does not converge. Thus, according to classical
+physics, the total energy density of electromagnetic radiation inside  an enclosed cavity
+is infinite! This is clearly an absurd result, and was recognized as such
+in the latter half of the nineteenth century. In fact, this  prediction
+is known as the {\em ultra-violet catastrophe}, because the Rayleigh-Jeans
+law usually starts to diverge badly from experimental
+observations (by over-estimating the amount of radiation) in the 
+ultra-violet region of the spectrum.
+
+So, how do we obtain a sensible answer? Well, as usual, quantum mechanics comes
+to our rescue. According to quantum mechanics, 
+each allowable mode of oscillation of the
+electromagnetic field corresponds to a {\em photon state} with energy and
+momentum
+\begin{eqnarray}
+\epsilon &= &\hbar\,\omega,\\[0,5ex]
+{\bf p} &=& \hbar\,{\bf k},
+\end{eqnarray}
+respectively.
+Incidentally, it follows from Eq.~(\ref{e8.69}) that
+\begin{equation}
+\epsilon = p\,c,
+\end{equation}
+which implies that photons are massless particles which move at the speed of
+light.
+According to the Planck distribution (\ref{e8zzz}), the mean number of
+photons occupying a photon state of frequency $\omega$ is
+\begin{equation}
+n(\omega) = \frac{1}{{\rm e}^{\,\beta\,\hbar\,\omega}-1}.
+\end{equation}
+Hence, the mean energy of such a state is given by
+\begin{equation}
+\bar{\epsilon}(\omega) = \hbar\,\omega\,\,n(\omega) = \frac{\hbar\,\omega}{{\rm e}^{\,\beta\,\hbar\,\omega}-1}.
+\end{equation}
+Note that low frequency states ({\em i.e.}, $\hbar\,\omega\ll k\,T$) behave
+classically: {\em i.e.},
+\begin{equation}
+\bar{\epsilon} \simeq k\,T.
+\end{equation}
+On the other hand, high frequency states ({\em i.e.}, $\hbar\,\omega\gg k\,T$)
+are completely ``frozen out'': {\em  i.e.},
+\begin{equation}
+\bar{\epsilon} \ll k\,T.
+\end{equation}
+The reason for this is simply that it is very difficult for a thermal
+fluctuation to create a photon with an energy greatly in excess of $k\,T$,
+since $k\,T$ is the characteristic energy associated with such  fluctuations.
+
+According to the above discussion, the true energy density of
+electromagnetic radiation inside an enclosed cavity  is written
+\begin{equation}
+\bar{u}\,d\omega = \epsilon(\omega)\,\sigma(\omega)\,d\omega,
+\end{equation}
+giving
+\begin{equation}
+\overline{u}(\omega)\,d\omega = \frac{\hbar}{\pi^2 \,c^3} \frac{\omega^3\,d\omega}
+{\exp(\beta\,\hbar\,\omega) - 1}.
+\end{equation}
+This is  famous
+result is known as the  {\em Planck radiation law}. 
+The Planck law approximates to the
+classical Rayleigh-Jeans law for $\hbar\,\omega \ll k\,T$, peaks at about
+$\hbar\,\omega\simeq 3\, k\,T$, and falls off exponentially for $\hbar\,\omega \gg 
+k\,T$.
+The exponential fall off at high frequencies ensures that the total energy density
+remains finite.
+
+\section{Black-Body Radiation}
+Suppose that we were to make a small hole in the wall of our enclosure,
+and observe the emitted radiation. A small hole is the best approximation in
+Physics to a {\em black-body}, which is defined as an object which absorbs, and,
+therefore, emits, radiation perfectly at all wavelengths. 
+What is the  power radiated by the hole? Well, the power density inside the enclosure
+can be written
+\begin{equation}
+\overline{u}(\omega)\,d\omega = \hbar\,\omega\,\, n(\omega)\, d\omega,
+\end{equation}
+where $n(\omega)$ is the mean 
+number of photons per unit volume whose frequencies lie
+in the range $\omega$ to $\omega + d\omega$. The radiation field inside the
+enclosure is isotropic (we are assuming that the hole is sufficiently small that
+it does not distort the field). It follows that the mean number of photons
+per unit volume 
+whose frequencies lie in the specified range, and
+whose directions of propagation make an angle in the range
+$\theta$ to $\theta + d\theta$ with the  normal to the hole, is 
+\begin{equation}
+n(\omega, \theta)\,d\omega\,d\theta = 
+\frac{1}{2}\,n(\omega)\,d\omega\,\sin\theta\,d\theta,
+\end{equation}
+where $\sin\theta$ is proportional to the solid angle in the specified 
+range of directions,
+and
+\begin{equation}
+\int_0^\pi n(\omega, \theta)\,d\omega\,d\theta = n(\omega)
+\,d\omega.
+\end{equation}
+Photons travel at the velocity of light, so the power per unit area escaping from
+the hole in the frequency range $\omega$ to $\omega+d\omega$  is
+\begin{equation}
+P(\omega)\, d\omega =\int_0^{\pi/2} c\,\cos\theta\,\,\hbar\,\omega\,\,n(\omega, \theta)
+\,d\omega\,d\theta,
+\end{equation}
+where $c\,\cos\theta$ is the component of the photon velocity in the direction
+of the hole.
+This gives
+\begin{equation}
+P(\omega)\, d\omega = c \,\,\overline{u}(\omega)\, d\omega\,\frac{1}{2}\!\int_0^{\pi/2}
+\cos\theta\,\sin\theta\,d\theta = \frac{c}{4} \,\overline{u}(\omega)\,d\omega,
+\end{equation}
+so
+\begin{equation}
+P(\omega)\,d\omega = \frac{\hbar}{4\pi^2\, c^2} \frac{\omega^3\,d\omega}
+{\exp(\beta\,\hbar\,\omega)-1}
+\end{equation}
+is the power per unit area radiated by a black-body in the frequency range
+$\omega$ to $\omega + d\omega$. 
+
+A black-body is very much an idealization. The power
+spectra of real radiating bodies
+can deviate quite substantially from black-body spectra. Nevertheless, we
+can make some useful predictions using this model. The black-body power spectrum
+peaks when $\hbar\,\omega\,\simeq 3 \,k\,T$. This means that the peak radiation
+frequency scales {\rm linearly}\/ with the temperature of the body. In other words,
+hot bodies tend to radiate  at higher frequencies than cold bodies. This
+result (in particular, the linear scaling) is known as {\em Wien's displacement
+law}. It allows us to estimate the surface temperatures of stars from their
+colours (surprisingly enough, stars are fairly good black-bodies). Table~\ref{t8} shows
+some stellar temperatures determined by this method (in fact,
+the whole emission spectrum is fitted to a black-body spectrum). 
+It can be seen that the
+apparent colours (which correspond quite well to the colours of the peak radiation)
+scan the whole visible spectrum, from red to blue, as the stellar surface temperatures
+gradually rise.
+\begin{table}[h]\centering
+\begin{tabular}{llccl}\hline
+Name & Constellation & Spectral Type & Surf.\ Temp.\ ($^\circ$~K)& Colour\\\hline
+Antares & Scorpio & M & 3300 & Very Red\\
+Aldebaran & Taurus & K & 3800 & Reddish\\
+Sun&   & G& 5770 & Yellow\\
+Procyon & Canis Minor &F& 6570 & Yellowish\\
+Sirius & Canis Major &A&  9250 & White\\
+Rigel & Orion & B &11,200 & Bluish White\\
+\end{tabular}
+\caption{\em Physical properties of some well-known stars}\label{t8}
+\end{table}
+
+Probably the most famous black-body spectrum is cosmological in origin. Just after
+the ``big bang'' the Universe was essentially a ``fireball,'' with the energy associated with
+radiation completely dominating that associated with
+matter. The early Universe was also pretty
+well described by equilibrium statistical thermodynamics,
+which means that the radiation had a black-body spectrum. As the Universe expanded,
+the radiation was gradually Doppler shifted to ever larger wavelengths (in other
+words, the radiation did work against the expansion of the Universe, and, thereby,
+lost energy), but its spectrum remained invariant. Nowadays, this primordial
+radiation is detectable as a faint {\em microwave background}\/ which pervades the
+whole universe. The microwave background was discovered accidentally by Penzias
+and Wilson in 1961. Until recently, it was difficult to measure the full
+spectrum with any degree of
+precision, because of strong microwave absorption and scattering by
+the Earth's atmosphere. However, all of this changed  when the COBE satellite
+was launched in 1989. It took precisely nine minutes to measure the perfect
+black-body spectrum reproduced in Fig.~\ref{fbb}.
+ This data can be fitted to a black-body
+curve of characteristic
+temperature $2.735~^\circ$~K. In a very real sense, this can be regarded
+as the ``temperature of the Universe.''
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter08/cobe.eps}}
+\caption{\em Cosmic background radiation spectrum measured by the
+Far Infrared Absolute Spectrometer (FIRAS) aboard the Cosmic Background
+Explorer satellite (COBE).}\label{fbb}
+\end{figure}
+
+\section{Stefan-Boltzmann Law}
+The total power radiated per unit area by a black-body at {\em all}
+frequencies is given by
+\begin{equation}
+P_{\rm tot}(T) = \int_0^\infty P(\omega) \, d\omega
+= \frac{\hbar}{4\pi^2\, c^2} \int_0^\infty \frac{\omega^3\,d\omega}
+{\exp(\hbar\,\omega/k\,T) - 1},
+\end{equation}
+or
+\begin{equation}
+P_{\rm tot}(T) =  \frac{k^4\, T^4 }{4\pi^2\, c^2\,\hbar^3} \int_0^\infty
+\frac{\eta^3\,d\eta}{\exp\eta -1},
+\end{equation}
+where $\eta = \hbar\,\omega/k \,T$. The above integral can easily be looked up in
+standard mathematical tables. In fact,
+\begin{equation}
+\int_0^\infty
+\frac{\eta^3\,d\eta}{\exp\eta -1} = \frac{\pi^4}{15}.
+\end{equation}
+Thus, the total power radiated per unit area by a black-body is
+\begin{equation}
+P_{\rm tot}(T) = \frac{\pi^2}{60} \frac{k^4}{c^2\, \hbar^3} \,T^4 = \sigma \,T^4.
+\end{equation}
+This $T^4$ dependence of the radiated power is called the {\em Stefan-Boltzmann law},
+after Josef Stefan, who first obtained it
+experimentally, and Ludwig Boltzmann, who first derived it theoretically.
+The parameter
+\begin{equation}
+\sigma = \frac{\pi^2}{60} \frac{k^4}{c^2\, \hbar^3} = 5.67\times 10^{-8}\,\,{\rm W}
+\,{\rm m}^{-2} \,{\rm K}^{-4},
+\end{equation}
+is called the {\em Stefan-Boltzmann constant}.
+
+We can use the Stefan-Boltzmann law to estimate the temperature of the Earth
+from first principles. The Sun is a ball of glowing gas of radius $R_\odot\simeq
+7\times 10^5$ km and surface temperature $T_\odot\simeq 5770^\circ$~K. Its
+luminosity is 
+\begin{equation}
+L_\odot = 4\pi\, R_\odot^{~2} \, \sigma\, T_\odot^{~4},
+\end{equation}
+according to  the Stefan-Boltzmann law. The Earth is a globe of radius
+$R_\oplus\sim 6000$~km located an average distance $r_\oplus\simeq 1.5\times 10^8$~km
+from the Sun. The Earth intercepts an amount of energy
+\begin{equation}
+P_\oplus=L_\odot\,\frac{ \pi \,R_\oplus^{~2}/r_\oplus^{~2}}{4\pi}
+\end{equation}
+per second from the Sun's radiative output: {\em i.e.}, the power output of the Sun 
+reduced by the ratio of the solid angle subtended by the Earth at the Sun to
+the total solid angle $4\pi$. The Earth absorbs this energy, and then
+re-radiates it at longer wavelengths. The luminosity of the Earth is
+\begin{equation}
+L_\oplus = 4\pi\, R_\oplus^{~2} \, \sigma\, T_\oplus^{~4},
+\end{equation}
+according to the Stefan-Boltzmann law,
+where $T_\oplus$ is the average temperature of the Earth's surface. 
+Here, we are  ignoring
+any surface
+temperature variations between polar and equatorial regions, or between day
+and night. In steady-state, the luminosity of the Earth must balance the radiative
+power input from the Sun,
+so equating $L_\oplus$ and $P_\oplus$ we arrive at
+\begin{equation}
+T_\oplus = \left(\frac{R_\odot}{2\,r_\oplus}\right)^{1/2} T_\odot.
+\end{equation}
+Remarkably, the ratio of the Earth's surface temperature to that of the Sun depends
+only on the Earth-Sun distance and the solar radius. The above expression
+yields $T_\oplus\sim 279^\circ$~K or $6^\circ$~C (or $43^\circ$~F). This is slightly on the cold side, by a few
+degrees, because of the
+greenhouse action of the Earth's atmosphere,
+which was neglected in our
+calculation. Nevertheless, it is quite encouraging that such a crude calculation
+comes so close to the correct answer.
+
+\section{Conduction Electrons in a Metal}
+The conduction electrons in a metal are non-localized ({\em i.e.}, they are
+not tied to any particular atoms). In conventional metals, each atom contributes
+a single such electron. To a first approximation, it is possible
+to neglect the mutual interaction of the conduction electrons, since this
+interaction
+is largely shielded out by the stationary atoms. The conduction electrons
+can, therefore, be treated as an {\em ideal gas}. However, the concentration of
+such  electrons in a metal {\em far exceeds}\/ the concentration of
+particles in a conventional gas. It is, therefore, not surprising that 
+conduction electrons cannot normally be analyzed using classical statistics:
+in fact,  they are subject to Fermi-Dirac statistics
+(since electrons are fermions).
+
+Recall, from Sect.~\ref{s8fd}, that the mean number of particles occupying
+state $s$ (energy $\epsilon_s$) is given by
+\begin{equation}
+\bar{n}_s = \frac{1}{{\rm e}^{\,\beta\,(\epsilon_s-\mu)} + 1},
+\end{equation}
+according to the Fermi-Dirac distribution. Here,
+\begin{equation}
+\mu \equiv -k\,T\,\,\alpha
+\end{equation}
+is termed the {\em Fermi energy}\/ of the system. This energy is
+determined by the condition that
+\begin{equation}
+\sum_r \bar{n}_r = \sum_r\frac{1}{{\rm e}^{\,\beta\,(\epsilon_r-\mu)} + 1}
+=N,
+\end{equation}
+where $N$ is the total number of particles contained in the volume $V$. 
+It is clear, from the above equation, that the Fermi energy $\mu$  is generally
+a function of the temperature $T$.
+
+Let us investigate the behaviour of the {\em Fermi function}
+\begin{equation}
+F(\epsilon) = \frac{1}{{\rm e}^{\,\beta\,(\epsilon-\mu)} + 1}
+\end{equation}
+as $\epsilon$ varies. Here, the energy is measured from
+its lowest possible value $\epsilon=0$. If the Fermi energy $\mu$ is
+such that $\beta\,\mu\ll 1$ then $\beta\,(\epsilon-\mu)\gg 1$,
+and $F$ reduces to the Maxwell-Boltzmann distribution. However,
+for the case of conduction electrons in a metal we are interested in
+the opposite limit, where 
+\begin{equation}
+\beta\,\mu \equiv \frac{\mu}{k\,T} \gg 1.
+\end{equation}
+In this limit, if $\epsilon\ll \mu$ then $\beta\,(\epsilon-\mu)\ll 1$,
+so that $F(\epsilon)=1$. On the other hand, if $\epsilon\gg \mu$ then
+$\beta\,(\epsilon-\mu)\gg 1$, so that $F(\epsilon)= 
+\exp[-\beta\,(\epsilon-\mu)]$ falls off exponentially with increasing
+$\epsilon$, just like a classical Boltzmann distribution. Note that
+$F=1/2$ when $\epsilon=\mu$. The transition region in which $F$ goes from 
+a value close to unity to a value close to zero corresponds to an
+energy interval of order $k\,T$, centred on $\epsilon=\mu$. This is
+illustrated in Fig.~\ref{ffermi}.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter08/fermi.eps}}
+\caption{\em The Fermi function.}\label{ffermi}
+\end{figure}
+
+In the limit as $T\rightarrow 0$, the transition region becomes
+infinitesimally narrow. In this case, $F=1$ for $\epsilon<\mu$ and
+$F=0$ for $\epsilon>\mu$, as illustrated in Fig.~\ref{ffermi}.
+This is an obvious result, since when $T=0$ the conduction
+electrons attain their lowest energy, or  {\em ground-state}, configuration.
+Since the Pauli exclusion principle requires that there be no
+more than one electron per single-particle quantum state, the lowest
+energy configuration is obtained by piling
+electrons into the lowest available unoccupied states until all of
+the electrons are used up. Thus, the last electron added to the
+pile has quite a considerable energy, $\epsilon= \mu$, since all of the
+lower energy states are already occupied. Clearly, the exclusion principle
+implies that a Fermi-Dirac gas possesses a large mean energy, even at absolute
+zero.
+
+Let us calculate the Fermi energy $\mu=\mu_0$ of a Fermi-Dirac
+gas at $T=0$. The energy of each particle is related to its
+momentum\/ ${\bf p} =\hbar\,{\bf k}$ via
+\begin{equation}
+\epsilon = \frac{p^2}{2\,m} =\frac{\hbar^2\,k^2}{2\,m},
+\end{equation}
+where ${\bf k}$ is the de~Broglie wave-vector. At $T=0$ all quantum states
+whose energy is less than the Fermi energy $\mu_0$ are filled. The
+Fermi energy corresponds to a {\em Fermi momentum}\/ $p_F=\hbar\,k_F$ which
+is such that
+\begin{equation}\label{e8fe}
+\mu_0 = \frac{p_F^{\,2}}{2\,m} = \frac{\hbar^2\,k_F^{\,2}}{2\,m}.
+\end{equation}
+Thus, at $T=0$ all quantum states with $k<k_F$ are filled, and all
+those with $k>k_F$ are empty.
+
+Now, we know, by analogy with Eq.~(\ref{e7.150}), that there are $(2\pi)^{-3}\,V$
+allowable translational states per unit volume of ${\bf k}$-space. The volume of
+the sphere of radius $k_F$ in ${\bf k}$-space is $(4/3)\,\pi\,k_F^{\,3}$. It
+follows that the {\em Fermi sphere}\/ of radius $k_F$ contains 
+$(4/3)\,\pi\,k_F^{\,3}\,(2\pi)^{-3}\,V$ translational states. The number of
+quantum states inside the sphere is {\em twice}\/ this, because electrons
+possess two possible spin states for every possible translational state. Since the
+total number of occupied states ({\em i.e.}, the total number of quantum
+states inside the Fermi sphere) must equal the total number of particles
+in the gas, it follows that
+\begin{equation}
+2\,\frac{V}{(2\pi)^3}\left(\frac{4}{3}\,\pi\,k_F^{\,3}\right) = N.
+\end{equation}
+
+The above expression can be rearranged to
+give
+\begin{equation}
+k_F = \left(3\,\pi^2\,\frac{N}{V}\right)^{1/3}.
+\end{equation}
+Hence,
+\begin{equation}
+\lambda_F \equiv \frac{2\pi}{k_F} =\frac{2\pi}{(3\pi^2)^{1/3}}
+\left(\frac{V}{N}\right)^{1/3},
+\end{equation}
+which implies that the de~Broglie wavelength $\lambda_F$
+corresponding to the Fermi energy is of order the mean separation
+between particles $(V/N)^{1/3}$. All quantum states with de~Broglie
+wavelengths $\lambda\equiv 2\pi/k > \lambda_F$ are occupied
+at $T=0$, whereas all those with $\lambda<\lambda_F$ are empty.
+
+According to Eq.~(\ref{e8fe}), the Fermi energy at $T=0$ takes the form
+\begin{equation}
+\mu_0 = \frac{\hbar^2}{2\,m}\left(3\,\pi^2\,\frac{N}{V}\right)^{2/3}.
+\end{equation}
+It is easily demonstrated that $\mu_0\gg k\,T$ for conventional metals
+at room temperature.
+
+The majority of the conduction electrons in a metal occupy a
+band of completely filled states with energies far below the Fermi
+energy. In many cases, such electrons have very little effect
+on the macroscopic properties of the metal. Consider, for example, the
+contribution of the conduction electrons to the specific heat of the metal.
+The heat capacity $C_V$ at constant volume of these electrons can
+be calculated from a knowledge of their mean energy $\bar{E}(T)$ as a
+function of $T$: {\em i.e.},
+\begin{equation}
+C_V = \left(\frac{\partial \bar{E}}{\partial T}\right)_V.
+\end{equation} 
+If the electrons obeyed classical Maxwell-Boltzmann statistics, so that
+$F\propto \exp(-\beta\,\epsilon)$ for {\em all}\/ electrons, then the
+equipartition theorem would give
+\begin{eqnarray}
+\bar{E} &=& \frac{3}{2}\,N\,k\,T,\\[0.5ex]
+C_V &=& \frac{3}{2}\,N\,k.\label{e8hc}
+\end{eqnarray}
+However, the actual situation, in which $F$ has the form shown in Fig.~\ref{ffermi},
+is very different. A small change in $T$ does not affect the
+mean  energies of
+the majority of the electrons, with $\epsilon\ll \mu$, since these electrons
+lie in states which are completely filled, and remain so when the temperature
+is changed. It follows that these electrons contribute nothing whatsoever to
+the heat capacity. On the other hand, the relatively small number of
+electrons $N_{\rm eff}$ in the energy range of order $k\,T$, centred on the
+Fermi energy, in which $F$ is significantly different from 0 and 1,
+do contribute to the specific heat. In the tail end of this region
+$F\propto \exp(-\beta\,\epsilon)$, so the
+distribution reverts to a Maxwell-Boltzmann distribution.
+Hence, from Eq.~(\ref{e8hc}),
+we expect each electron in this region to contribute roughly an amount
+$(3/2)\,k$ to the heat capacity. Hence, the heat capacity
+can be written
+\begin{equation}
+C_V\simeq \frac{3}{2}\,N_{\rm eff}\,k.
+\end{equation}
+However, since only a fraction $k\,T/\mu$ of the total conduction
+electrons lie in the tail region of the Fermi-Dirac distribution, we
+expect
+\begin{equation}
+N_{\rm eff} \simeq \frac{k\,T}{\mu}\,N.
+\end{equation}
+It follows that
+\begin{equation}
+C_V \simeq \frac{3}{2}\,N\,k\,\frac{k\,T}{\mu}.\label{e8res}
+\end{equation}
+
+Since $k\,T\ll \mu$ in conventional metals, the molar specific heat of
+the conduction electrons is clearly very much less than the classical value
+$(3/2)\,R$. This accounts for the fact that
+the molar specific heat capacities of metals at room temperature are
+about the same as those of insulators. Before the advent of
+quantum mechanics, the classical theory predicted incorrectly that the
+presence of conduction electrons should raise the heat capacities of
+metals by 50 percent [{\em i.e.}, $(3/2)\,R$] compared to those of insulators.
+
+Note that the specific heat (\ref{e8res}) is not temperature independent.
+In fact, using the superscript $e$ to denote the {\em electronic}
+specific heat, the molar specific heat can be written
+\begin{equation}
+c_V^{(e)} = \gamma\,T,
+\end{equation}
+where $\gamma$ is a (positive) constant of proportionality.
+At room temperature $c_V^{(e)}$ is completely masked by the much
+larger specific heat $c_V^{(L)}$ due to lattice vibrations. However, at
+very low temperatures $c_V^{(L)}=A\,T^3$, where $A$ is a (positive)
+constant of proportionality (see Sect.~\ref{s7sound}). Clearly, 
+at low temperatures $c_V^{(L)}=A\,T^3$ approaches zero far more rapidly that
+the electronic specific heat, as $T$ is reduced. Hence, it should be possible
+to measure the electronic contribution to the molar specific
+heat at low temperatures. 
+
+The total molar specific heat of a metal at low temperatures takes the
+form
+\begin{equation}
+c_V = c_V^{(e)} + c_V^{(L)} = \gamma\,T + A\,T^3.\label{e8td}
+\end{equation}
+Hence,
+\begin{equation}
+\frac{c_V}{T} = \gamma + A\,T^2.
+\end{equation}
+It follows that a plot of $c_V/T$ versus $T^2$ should yield a
+{\em straight line}\/ whose intercept on the vertical axis gives the
+coefficient $\gamma$. Figure~\ref{fkcv} shows such a plot.
+The fact that a good straight line is obtained verifies that the temperature
+dependence of the heat capacity predicted by Eq.~(\ref{e8td}) is  indeed
+correct.
+
+\begin{figure}
+\epsfysize=2in
+\centerline{\epsffile{Chapter08/kcv.eps}}
+\caption{\em The low temperature heat capacity of potassium, plotted as $C_V/T$ versus
+$T^2$. From C.~Kittel, and H.~Kroemer, Themal physics (W.H.~Freeman \& co., New York NY, 1980).}\label{fkcv}
+\end{figure}
+
+\section{White-Dwarf Stars}
+A main-sequence hydrogen-burning star, such as the Sun, is maintained
+in equilibrium via the balance of the gravitational attraction tending
+to  make it collapse, and the thermal pressure tending to make it expand. 
+Of course, the
+thermal energy of the star is generated by nuclear reactions occurring deep inside
+its core. Eventually, however, the star will run out of burnable fuel, and, therefore,
+start to collapse, as it radiates away its remaining thermal energy.
+What is the ultimate fate of such a star?
+
+A burnt-out star is basically a gas of electrons and ions. As the
+star collapses, its density increases, so the mean separation between its
+constituent particles decreases. Eventually, the mean separation becomes
+of order the de~Broglie wavelength of the electrons, and the electron
+gas becomes {\em degenerate}. Note, that the de~Broglie wavelength of the
+ions is  much smaller than that of the electrons, so the ion gas remains
+non-degenerate. Now, even at
+zero temperature, a degenerate electron gas exerts a substantial pressure,
+because the Pauli exclusion principle prevents the mean electron separation
+from becoming significantly  smaller than the typical 
+de~Broglie wavelength (see the
+previous section). Thus, it is possible for a burnt-out star to maintain
+itself against complete collapse under gravity via the {\em degeneracy pressure}
+of its constituent electrons. Such stars are termed {\em white-dwarfs}. 
+Let us investigate the physics of white-dwarfs in more detail.
+
+The total energy of a white-dwarf star can be written
+\begin{equation}
+E = K + U,\label{e8wd1}
+\end{equation}
+where $K$ is the total kinetic energy of the degenerate electrons (the kinetic
+energy of the ion is negligible) and $U$ is the gravitational potential
+energy. Let us assume, for the sake of simplicity, that the density of the
+star is {\em uniform}. In this case, the gravitational potential
+energy takes the form
+\begin{equation}
+U = -\frac{3}{5}\frac{G\,M^2}{R},\label{e8wd2}
+\end{equation}
+where $G$ is the gravitational constant, $M$ is the stellar mass, and $R$ is
+the stellar radius.
+
+Let us assume that the electron gas is highly degenerate, which is
+equivalent to taking the limit $T\rightarrow 0$. In this case, we know,
+from the previous section, that the Fermi momentum can be written
+\begin{equation}
+p_F = {\mit\Lambda}\left(\frac{N}{V}\right)^{1/3},
+\end{equation}
+where
+\begin{equation}
+{\mit\Lambda} = (3\pi^2)^{1/3}\,\hbar.\label{e8wd3}
+\end{equation}
+Here,
+\begin{equation}
+V = \frac{4\pi}{3}\,R^3\label{e8wd4}
+\end{equation}
+is the stellar volume, and $N$ is the total number of electrons contained
+in the star. Furthermore, the number of
+electron states contained in an annular radius of ${\bf p}$-space
+lying between radii $p$ and $p+dp$ is
+\begin{equation}
+dN = \frac{3\,V}{{\mit\Lambda}^3}\, p^2\,dp.
+\end{equation}
+Hence, the total kinetic energy of the electron gas can be written
+\begin{equation}
+K = \frac{3\,V}{{\mit\Lambda}^3}\int_0^{p_F} \frac{p^2}{2\,m}\,p^2\,dp =
+\frac{3}{5}\,\frac{V}{{\mit\Lambda}^3}\,\frac{p_F^{\,5}}{2\,m},\label{e8wdd}
+\end{equation}
+where $m$ is the electron mass. It follows that
+\begin{equation}
+K = \frac{3}{5}\,N\,\frac{{\mit\Lambda}^2}{2\,m}\left(\frac{N}{V}\right)^{2/3}.\label{e8wd5}
+\end{equation}
+
+The interior of a white-dwarf star is composed of atoms like
+$C^{12}$ and $O^{16}$ which contain equal numbers of protons, neutrons, and
+electrons. Thus,
+\begin{equation}
+M = 2\,N\,m_p,\label{e8wd6}
+\end{equation}
+where $m_p$ is the proton mass. 
+
+Equations (\ref{e8wd1}), (\ref{e8wd2}), (\ref{e8wd3}), (\ref{e8wd4}),
+(\ref{e8wd5}), and (\ref{e8wd6}) can be combined to give
+\begin{equation}
+E = \frac{A}{R^2} - \frac{B}{R},
+\end{equation}
+where
+\begin{eqnarray}
+A &=& \frac{3}{20}\left(\frac{9\pi}{8}\right)^{2/3}\frac{\hbar^2}{m}
+\left(\frac{M}{m_p}\right)^{5/3},\\[0.5ex]
+B&=& \frac{3}{5}\,G\,M^2.
+\end{eqnarray}
+The equilibrium radius of the star $R_\ast$ is that which
+{\em minimizes} the total energy $E$. In fact,
+it is easily demonstrated that
+\begin{equation}
+R_\ast = \frac{2\,A}{B},
+\end{equation}
+which yields
+\begin{equation}
+R_\ast = \frac{(9\pi)^{2/3}}{8}\,\frac{\hbar^2}{m}\,\frac{1}{G\,m_p^{\,5/3}\,
+M^{1/3}}.
+\end{equation}
+The above formula can also be written
+\begin{equation}
+\frac{R_\ast}{R_\odot}= 0.010\left(\frac{M_\odot}{M}\right)^{1/3},\label{e8wd9}
+\end{equation}
+where $R_\odot= 7\times 10^5\,{\rm km}$ is the solar radius, and
+$M_\odot = 2\times 10^{30}\,{\rm kg}$ is the solar mass. It follows that
+the radius of a typical solar mass white-dwarf is about 7000\,km: 
+{\em i.e.}, about the same as the radius of the Earth. The first
+white-dwarf to be discovered (in 1862) was the companion of Sirius. Nowadays,
+thousands of white-dwarfs have been observed, all with properties similar
+to those described above.
+
+\section{Chandrasekhar Limit}
+One curious feature of white-dwarf stars is that their radius decreases
+as their mass increases [see Eq.~(\ref{e8wd9})]. It follows, from Eq.~(\ref{e8wd5}),
+that the mean energy of the degenerate electrons inside the
+star increases strongly as the stellar
+mass increases: in fact, $K\propto M^{4/3}$. Hence, if 
+$M$ becomes sufficiently large  the electrons become {\em relativistic}, and
+the above analysis needs to be modified. Strictly speaking, the non-relativistic
+analysis described in the previous section
+ is only valid in the low mass limit $M\ll M_\odot$. 
+Let us, for the sake of simplicity, consider the ultra-relativistic
+limit in which $p\gg m\,c$. 
+
+The total electron energy (including the rest mass energy) can be
+written
+\begin{equation}
+K = \frac{3\,V}{{\mit\Lambda}^3}\int_0^{p_F} (p^2\,c^2
++m^2\,c^4)^{1/2}\,p^2\,dp,
+\end{equation}
+by analogy with Eq.~(\ref{e8wdd}). Thus,
+\begin{equation}
+K\simeq \frac{3\,V\,c}{{\mit\Lambda}^3}\int_0^{p_F} \left(p^3
++ \frac{m^2\,c^2}{2}\,p + \cdots\right)dp,
+\end{equation}
+giving
+\begin{equation}
+K \simeq \frac{3}{4}\,\frac{V\,c}{{\mit\Lambda}^3}
+\left[p_F^{\,4} + m^2\,c^2\,p_F^{\,2}+\cdots \right].
+\end{equation}
+
+It follows, from the above, that the total energy of an ultra-relativistic
+white-dwarf star can be written
+in the
+form
+\begin{equation}
+E \simeq \frac{A-B}{R} + C\,R,
+\end{equation}
+where
+\begin{eqnarray}
+A &=& \frac{3}{8}\left(\frac{9\pi}{8}\right)^{1/3} \!\hbar\,c\left(\frac{M}{m_p}
+\right)^{4/3},\\[0.5ex]
+B&=& \frac{3}{5}\,G\,M^2,\\[0.5ex]
+C&=& \frac{3}{4}\,\frac{1}{(9\pi)^{1/3}}\,
+\frac{m^2\,c^3}{\hbar} \left(\frac{M}{m_p}\right)^{2/3}.
+\end{eqnarray}
+As before, the equilibrium radius $R_\ast$ is that which minimizes the
+total energy $E$. 
+However, in the ultra-relativistic case, a non-zero value of $R_\ast$ only exists
+for $A-B>0$. When $A-B<0$ the energy decreases monotonically with decreasing
+stellar radius: in other words, the degeneracy pressure 
+of the electrons is incapable of halting the collapse of the star under gravity.
+The criterion which must be satisfied for a relativistic white-dwarf
+star to be maintained against gravity is that
+\begin{equation}
+\frac{A}{B} > 1.
+\end{equation}
+This criterion can be re-written
+\begin{equation}
+M< M_C,
+\end{equation}
+where
+\begin{equation}
+M_C = \frac{15}{64}\,(5\pi)^{1/2} \,\frac{(\hbar\,c/G)^{1/2}}{m_p^{\,2}}=
+1.72\,M_\odot
+\end{equation}
+is known as the {\em Chandrasekhar limit}, after  A.~Chandrasekhar
+who first derived it in 1931.
+A  more realistic calculation, which does not assume constant density,
+yields
+\begin{equation}
+M_C = 1.4\,M_\odot.
+\end{equation}
+Thus, if the stellar mass exceeds the Chandrasekhar limit then the star in question
+cannot become a white-dwarf when its nuclear fuel is exhausted, but, instead,
+must continue to 
+collapse. What is the ultimate fate of such a star?
+
+\section{Neutron Stars}
+At stellar densities which greatly exceed white-dwarf densities, the
+extreme pressures cause electrons to combine with 
+protons to form neutrons. Thus, any star which collapses to such an extent that 
+its
+radius becomes significantly less than that characteristic
+of a  white-dwarf
+is  effectively  transformed into  a gas  of
+neutrons. Eventually, the mean separation between the neutrons becomes
+comparable with their de~Broglie wavelength. At this point, it is possible
+for the degeneracy pressure of the neutrons to halt the collapse of the star.
+A star which is maintained against gravity in this manner is called
+a {\em neutron star}. 
+
+Neutrons stars can be analyzed in a very similar manner to
+white-dwarf stars. In fact, the previous analysis can be simply modified
+by letting $m_p\rightarrow m_p/2$ and $m\rightarrow m_p$. 
+Thus, 
+we conclude that
+ non-relativistic neutrons stars satisfy the mass-radius law:
+\begin{equation}
+\frac{R_\ast}{R_\odot}= 0.000011\left(\frac{M_\odot}{M}\right)^{1/3},
+\end{equation}
+It follows that the radius of a typical solar mass neutron star is
+a mere 10\,km. In 1967 Antony Hewish and 
+Jocelyn Bell discovered a class of compact radio sources, called {\em pulsars},
+ which emit
+extremely regular pulses of radio waves. Pulsars have subsequently
+been identified as
+rotating neutron stars. To date, many hundreds of these objects have been
+observed.
+
+When relativistic effects are taken into account, 
+it is found that there is
+a critical mass above which a neutron star cannot be maintained against
+gravity. 
+According to our analysis,
+this critical mass, which is known as the {\em Oppenheimer-Volkoff
+limit}, is given by
+\begin{equation}
+M_{OV} = 4\,M_C = 6.9\,M_\odot.
+\end{equation}
+A more realistic calculation, which 
+does not assume constant density, does not
+treat the neutrons as point particles, and takes general relativity into account,
+gives a somewhat lower value of
+\begin{equation}
+M_{OV} = \mbox{1.5---2.5}\,M_\odot.
+\end{equation}
+A star whose mass exceeds the Oppenheimer-Volkoff
+limit cannot be maintained against gravity by degeneracy pressure, and
+must ultimately collapse to form a {\em black-hole}.

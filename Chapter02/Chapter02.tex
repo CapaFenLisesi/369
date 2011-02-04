@@ -1,0 +1,845 @@
+\chapter{Probability Theory}\label{s2}
+
+\section{Introduction}
+The first part of this course is devoted to a brief, and
+fairly low level, introduction to a branch of mathematics known as
+{\em probability theory}.
+In fact, we do not need  to know very much about probability
+theory in order to understand statistical thermodynamics, since the
+probabilistic ``calculation'' which underpins all of this subject
+is extraordinarily simple.  
+
+\section{What is Probability?}
+What is the {\em scientific}
+ definition of probability? Well, let us consider
+an observation made on a general system $S$. This can result in 
+ any one of a number
+of different possible outcomes. We want to find the probability of
+some general outcome $X$. In order to ascribe a probability, we have to
+consider the system as a member of a large set ${\mit\Sigma}$  
+of similar systems.
+Mathematicians have a fancy name for a large 
+group of similar systems. They call such a group an {\em ensemble}, which is
+just the French for ``group.'' So, let us consider an ensemble ${\mit\Sigma}$ of 
+similar systems $S$. The probability of the outcome $X$ is defined as the
+ratio of the number of systems in the ensemble which exhibit this outcome
+to the total number of systems, in the limit where the latter
+number tends to
+infinity. We can write this symbolically as
+\begin{equation}
+P(X) = ~_{lt\,{\mit\Omega}({\mit\Sigma})\rightarrow\infty}\frac{{\mit\Omega}(X)}{{\mit\Omega}({\mit\Sigma})},
+\end{equation}
+where ${\mit\Omega}({\mit\Sigma})$ is the total number of systems in the ensemble, 
+and ${\mit\Omega}(X)$ is the
+number of systems exhibiting the outcome $X$. We can see that the probability
+$P(X)$ must be a number between 0 and 1. The probability is {\em zero}\/ if no
+systems exhibit the outcome $X$, even when the number of systems goes to 
+infinity. This is just another way of saying that there is {\em no chance}\/
+ of the
+outcome $X$. The probability is {\em unity}\/ if all systems exhibit the outcome
+$X$ in the limit as the number of systems goes to infinity. This is another
+way of saying that the outcome $X$ is {\em bound}\/ to occur.
+
+\section{Combining Probabilities}
+Consider two {\em distinct}\/ possible outcomes, $X$ and $Y$, 
+of an observation made on the system $S$, with probabilities of
+occurrence  $P(X)$ and
+$P(Y)$, respectively. Let us  determine the probability of
+obtaining the outcome $X$ {\em or}\/ $Y$, which we shall denote $P(X\mid Y)$.
+From the basic definition of probability
+\begin{equation}
+P(X\mid Y) = ~_{lt\,{\mit\Omega}({\mit\Sigma})\rightarrow\infty}
+\frac{
+{\mit\Omega}(X \mid Y)}{{\mit\Omega}({\mit\Sigma})},
+\end{equation}
+where ${\mit\Omega}(X \mid Y)$ is the number of systems in the ensemble which exhibit
+either the outcome $X$ or the outcome $Y$. It is clear that
+\begin{equation}
+{\mit\Omega}(X\mid Y) = {\mit\Omega}(X) + {\mit\Omega}(Y)
+\end{equation}
+if the outcomes $X$ and $Y$ are mutually exclusive (which they must be the case
+if they are two distinct outcomes). Thus,
+\begin{equation}
+P(X\mid Y) = P(X) + P(Y). \label{e2.4}
+\end{equation}
+So, the probability of the outcome $X$ {\em or}\/ the outcome $Y$ is just the
+{\em  sum}
+of the individual probabilities of $X$ and $Y$. For instance, with  a six
+sided die the probability of throwing any particular number (one to six) is
+$1/6$, because all of the possible outcomes are considered to be equally
+likely. It follows from what  has just been said that the probability of
+throwing either a one or a two is simply  $1/6+1/6$, which equals $1/3$.
+
+Let us denote all of the $M$, say,  possible outcomes of an observation
+made on the system $S$ by
+$X_i$, where $i$ runs from $1$ to $M$. Let us
+determine  the probability of obtaining
+any of these outcomes. This quantity is clearly unity,
+from the basic definition of probability, because every one  
+of the systems in the ensemble must
+exhibit one of the possible outcomes. But, this quantity is also equal to
+the sum of the probabilities of all the individual outcomes, by (\ref{e2.4}),
+so we conclude that
+this sum is equal to unity. Thus,
+\begin{equation}
+\sum_{i=1}^{M} P(X_i) =1,\label{e2.5}
+\end{equation}
+which is called the {\em normalization condition}, and must be satisfied by
+any complete set of probabilities. This condition is equivalent to the
+self-evident statement that an observation of a system must definitely
+result in one of its possible outcomes. 
+
+There is another way in which we can combine probabilities. Suppose 
+that we 
+make an observation on a state picked at random from the ensemble and then
+pick a second state {\em completely independently}\/ and
+make another observation. We  are assuming here that the first 
+observation does not influence the second observation in 
+any way. The fancy mathematical way of saying this is that the two
+observations are {\em statistically independent}.
+Let us determine the probability of obtaining
+the outcome $X$ in the first state {\em and}
+ the outcome $Y$ in the second state, which we shall denote
+$P(X\otimes Y)$.
+ In order to determine this probability, we have to form an ensemble of all
+of the possible pairs of states which we could choose from the ensemble
+${{\mit\Sigma}}$. Let us denote this ensemble ${{\mit\Sigma}}\otimes {{\mit\Sigma}}$. 
+It is obvious that the number of pairs of states in this new 
+ensemble is just the
+square of the number of states in the original ensemble, so
+\begin{equation}
+{\mit\Omega}({{\mit\Sigma}}\otimes{{\mit\Sigma}}) = {\mit\Omega}({{\mit\Sigma}})\, {\mit\Omega}({{\mit\Sigma}}).
+\end{equation}
+It is also fairly obvious that the number of pairs of states
+in the ensemble ${{\mit\Sigma}}\otimes {{\mit\Sigma}}$
+ which exhibit the
+outcome $X$ in the first state and $Y$ in the second state
+  is just the
+product of the number of states which exhibit the outcome $X$ 
+and the number of states which exhibit the outcome $Y$ in the original
+ensemble, so
+\begin{equation}
+{\mit\Omega}(X\otimes Y) = {\mit\Omega}(X) \,{\mit\Omega}(Y).
+\end{equation}
+It follows from the basic definition of probability that
+\begin{equation}
+P(X\otimes Y) = ~_{lt\,{\mit\Omega}({\mit\Sigma})\rightarrow\infty}
+  \frac{{\mit\Omega}(X\otimes Y)}{{\mit\Omega}({{\mit\Sigma}}\otimes {{\mit\Sigma}})}= P(X) \,P(Y).
+\end{equation}
+Thus, the probability of obtaining the outcomes $X$ {\em and}
+ $Y$ in two statistically independent
+observations is just the {\em product}\/ of the individual probabilities of
+$X$ and $Y$. For instance, the probability of throwing a one and then a two
+on a six sided die is $1/6 \times 1/6$, which equals $1/36$.
+
+\section{Two-State System}
+The simplest non-trivial system which we can investigate using probability theory
+is one for which there are only {\em two}
+ possible outcomes. There would obviously 
+be little
+point in investigating a one outcome system. Let us 
+suppose that there are two possible outcomes to an observation made
+on some system $S$. Let us denote these outcomes 1 and 2, and let their 
+probabilities of occurrence be
+\begin{eqnarray}
+P(1) &=& p,\\
+P(2) &=& q.
+\end{eqnarray}
+It follows immediately from the normalization condition (\ref{e2.5}) that
+\begin{equation}
+p+q=1,
+\end{equation}
+so $q=1-p$. The best known example of a two-state system is
+a tossed coin. The two outcomes are ``heads'' and ``tails,'' each with
+equal probabilities $1/2$. So, $p=q=1/2$ for this system.
+
+Suppose that we make $N$ statistically independent observations of $S$.
+Let us determine the probability of $n_1$ occurrences of the outcome $1$
+and $N-n_1$ occurrences of the outcome 2, {\em with no regard to the order
+of these occurrences}. Denote this probability $P_N(n_1)$.
+This type of calculation crops up again and again
+in probability theory. For instance, we might want to know the probability
+of getting nine ``heads'' and only one ``tails'' in an experiment where a coin is
+tossed ten times, or where ten coins are tossed simultaneously.
+
+Consider a simple case in which there are only three observations.
+Let us try to evaluate the probability of two occurrences of the outcome 1
+and  one occurrence of the outcome 2. There are three different ways
+of getting this result. We could get the outcome 1 on the first 
+two observations and the outcome 2 on the third. Or, we could get the outcome
+2 on the first observation and the outcome 1 on the latter two observations.
+Or, we could get the outcome 1 on the first and last observations and the
+outcome 2 on the middle observation. Writing this symbolically
+\begin{equation}
+P_3(2)= 
+P(1\otimes 1\otimes 2 \mid 2\otimes 1\otimes 1 \mid 1\otimes 2 \otimes 1).
+\end{equation}
+This formula looks a bit scary, but all we have done here is to
+write out symbolically what was just said in words. Where we said ``and''
+we have written the symbolic  operator $\otimes$, 
+ and where we said ``or'' we have written
+the symbolic  operator $\mid$. This symbolic representation is helpful
+ because of the two basic
+rules for combining probabilities which we derived earlier
+\begin{eqnarray}
+P(X\mid Y) &=& P(X) + P(Y),\\
+P(X \otimes Y) &=& P(X)\,P(Y).
+\end{eqnarray}
+The straightforward application of these rules gives
+\begin{equation}
+P_3(2) = p\,p\,q + q\,p\,p + p\,q\,p = 3 \,p^2\,q
+\end{equation}
+in the case under consideration.
+
+The  
+ probability  of obtaining $n_1$ occurrences of the outcome $1$ in
+$N$ observations is given by
+\begin{equation}\label{e2.14}
+P_N(n_1) = C^{ N}_{n_1,\,N-n_1}\,p^{n_1}\,
+ q^{N-n_1},
+\end{equation}
+where $C^{ N}_{ n_1,\, N-n_1}$ is  the number of ways
+of arranging two distinct sets of $n_1$ and $N-n_1$ indistinguishable
+objects. Hopefully, that this is, at least, plausible from the example we 
+just discussed. There, the probability of
+getting two occurrences of the outcome 1 and one occurrence of the
+outcome 2 was obtained  by writing  out all of the possible arrangements of two
+$p$\,s (the probability of outcome 1) and one $q$ (the probability of
+outcome 2), and then added them all together. 
+
+\section{Combinatorial Analysis}
+The branch of mathematics which studies the number of different ways of
+arranging things is called {\em combinatorial analysis}. We need to know
+how many different ways there are of arranging $N$ objects which are made up
+of  two groups of $n_1$ and $N-n_1$ indistinguishable objects. This is a
+pretty tough problem! Let us try something a little easier to begin with.
+How many ways are there of arranging $N$ {\em distinguishable}
+objects? For instance, suppose that we have six pool balls, numbered one 
+through six, and we pot one each into every one of 
+the six pockets of a pool table (that is, top-left, top-right, middle-left,
+middle-right, bottom-left, and bottom-right). How many different ways
+are there of doing this? Well, let us start with the top-left pocket.
+We could pot any one of the six balls into this pocket, so there are
+6 possibilities. For the top-right pocket we only have 5 possibilities,
+because we have already potted a ball into the top-left pocket, and it
+cannot be in two pockets simultaneously. So, our 6 original possibilities 
+combined with these 5 new possibilities gives $6\times 5$ ways of potting
+two balls into the top two pockets. For the middle-left pocket we have
+4 possibilities, because we have already potted two balls. These possibilities
+combined with our $6\times 5$ possibilities gives $6\times 5\times 4$ ways
+of potting three balls into three pockets. 
+At this stage, it should be clear that
+the final answer is going to be $6\times 5\times 4 \times 3 \times 2 \times 1$.
+Well, $6\times 5 \times 4 \times 3 \times 2 \times 1$ is a bit of a mouthful,
+so to prevent us having to say (or write)  things like this, mathematicians have invented
+a special function called a {\em factorial}. The factorial of a general
+ positive
+integer $n$ is defined
+\begin{equation}
+n! = n(n-1)(n-2) \cdots 3\cdot 2 \cdot 1.
+\end{equation}
+So, $1! = 1$,  and
+$2! = 2\times 1 = 2$, and $3!= 3\times 2 \times 1 = 6$, and so on. Clearly, the
+number of ways of potting six pool balls into six pockets is $6!$ (which
+incidentally equals 720). Since there is nothing special about pool balls, or 
+the number six, we can safely infer that the number of different ways of
+arranging $N$ distinguishable objects, denoted $C^N$, is given by
+\begin{equation}
+C^N = N!\, .
+\end{equation}
+
+Suppose that we take the number four  ball off the pool 
+table and replace it
+by a second number five ball. How many different ways are there of potting
+the balls now? Well, consider a previous arrangement in which the number five
+ball was potted into the top-left pocket and the number four ball was potted
+into the top-right pocket, and then consider a second arrangement which only
+differs from the first because the number four and five balls have been
+swapped around.
+ These arrangements are now
+indistinguishable, and are therefore counted as a single arrangement, whereas
+previously they were counted as two separate arrangements. Clearly, the 
+previous arrangements can be divided into two groups, containing equal numbers
+of arrangements, which differ only by the permutation of the
+number four and five balls. Since these balls are now indistinguishable, we 
+conclude that there are only half as many different arrangements as
+there were before. If we take the number three ball off the table and replace 
+it by a third number five ball, we can split the original arrangements into
+six equal groups of arrangements which differ only by the permutation
+of the number three, four, and five balls. There are six groups because there
+are $3!=6$ separate permutations of these three balls. Since the number three,
+four, and five balls are now indistinguishable, we conclude that there are 
+only $1/6$ the number of original arrangements. Generalizing this result, we
+conclude that the number of arrangements of $n_1$ {\em indistinguishable}\/ and
+$N-n_1$ {\em distinguishable}\/ objects is
+\begin{equation}
+C_{n_1}^N = \frac{N!}{n_1 !}.
+\end{equation}
+We can see that if all the balls on the table are replaced by number
+five balls then there is only $N!/N! = 1$ possible arrangement. This
+corresponds, of course,  to a number five ball in each pocket.
+A further straightforward generalization tells us that the
+number of arrangements of two groups of $n_1$ and $N-n_1$ indistinguishable
+objects is
+\begin{equation}
+C_{n_1,\,N-n_1}^N = \frac{N!}{n_1 ! \,(N-n_1)!}.\label{e2.18}
+\end{equation}
+
+\section{Binomial Distribution}
+It follows from Eqs.~(\ref{e2.14}) and (\ref{e2.18}) that the probability of obtaining
+$n_1$ occurrences of the 
+outcome 1 in $N$ statistically independent observations of a two-state system
+is
+\begin{equation}
+P_N(n_1) = \frac{N!}{n_1 !\,(N-n_1)!} \,p^{n_1}\,q^{N-n_1}.\label{e2.19}
+\end{equation}
+This probability function is called the {\em binomial distribution}\/ function.
+The reason for this is obvious if we tabulate the probabilities for the
+first few possible values of $N$ (see Tab.~\ref{tm1}).
+\begin{table}\centering
+\begin{tabular}{c|c|ccccc}
+    &   &       &         &$n_1$    &        &      \\[0.5ex] \hline
+    &   &0      &1        &2        &3       &4     \\[0.5ex] \hline
+    &1  &$q$    &$p$      &         &        &      \\[0.5ex] 
+$N$ &2  &$q^2$  &$2\,p\,q$    &$p^2$    &        &      \\[0.5ex] 
+    &3  &$q^3$  &$3\,p\,q^2$  &$3\,p^2\,q$  &$p^3$   &      \\[0.5ex] 
+    &4  &$q^4$  &$4\,p\,q^3$  &$6\,p^2\,q^2$  &$4\,p^3\,q$ &$p^4$ \\[0.5ex] 
+\end{tabular}
+\caption{\em The binomial probability distribution}\label{tm1}
+\end{table}
+Of course, we immediately recognize these expressions:
+ they appear in the standard
+algebraic expansions of $(p+q)$, $(p+q)^2$, $(p+q)^3$, and $(p+q)^4$,
+respectively. In algebra, the expansion of $(p+q)^N$ is called the
+{\em binomial expansion}\/ (hence, the name given to the probability distribution
+function),
+and can be written
+\begin{equation}
+(p+q)^N \equiv \sum_{n=0}^{N} \frac{N!}{n!\,(N-n)!}\,p^n \,q^{N-n}.\label{e2.20}
+\end{equation}
+Equations (\ref{e2.19}) and (\ref{e2.20}) can be used to establish the normalization
+condition for the binomial distribution function:
+\begin{equation}
+\sum_{n_1=0}^N P_N(n_1) =\sum_{n_1=0}^N \frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,
+q^{N-n_1}\equiv (p+q)^N = 1,
+\end{equation}
+since $p+q=1$. 
+
+\section{Mean, Variance, and Standard Deviation}
+What is meant by the mean or average of a quantity? Well, suppose that we
+wanted to calculate  the average age of undergraduates at the University of Texas at Austin.
+We could go to the central administration building and find
+out how many eighteen year-olds, nineteen year-olds, {\em etc}. were currently
+enrolled. We would then write something like
+\begin{equation}
+{\rm Average~Age}\/ \simeq \frac{N_{18}\times 18 + N_{19}\times 19 +N_{20}
+\times 20+\cdots}
+{N_{18}+N_{19}+N_{20}\cdots},
+\end{equation}
+where $N_{18}$ is the number of enrolled eighteen year-olds, {\em etc}.
+Suppose that we were to pick a student {\em at random}\/ and then ask ``What is
+the probability of this student being eighteen?'' From what we have
+already discussed, this probability is defined
+\begin{equation}
+P_{18} =
+\frac{N_{18}}{N_{\rm students}},
+\end{equation}
+where $N_{\rm students}$ is the total number of enrolled
+students.
+ We can now see that the average age takes
+the form
+\begin{equation}
+{\rm Average~Age}\/ \simeq P_{18}\times 18 + P_{19}\times 19 + P_{20}\times 20
++\cdots.
+\end{equation}
+
+Well, there is nothing special about the age distribution of students
+at UT Austin. So, for a general variable $u$, which can take on any one of $M$
+possible values $u_1$, $u_2, \cdots, u_M$, with  corresponding probabilities
+$P(u_1)$, $P(u_2),\cdots, P(u_M)$,
+the mean or average value of $u$, which
+is denoted $\bar{u}$, is defined as
+\begin{equation}
+\bar{u} \equiv \sum_{i=1}^{M} P(u_i)\, u_i.
+\end{equation}
+
+Suppose that $f(u)$ is some function of  $u$. Then, for each of
+ the $M$ possible values of $u$, there is a corresponding value 
+of $f(u)$ which occurs with the same probability.  Thus, $f(u_1)$ corresponds
+to $u_1$ and occurs with the probability $P(u_1)$, and so on. It follows from
+our previous definition  that the mean value of $f(u)$ is
+given by
+\begin{equation}
+\overline{f(u)} \equiv \sum_{i=1}^{M} P(u_i)\, f(u_i).
+\end{equation} 
+
+Suppose that $f(u)$ and $g(u)$ are two general functions of $u$. It follows that
+\begin{equation}
+\overline{f(u)+g(u)} = \sum_{i=1}^{M}P(u_i)\,[f(u_i)+g(u_i)]
+= \sum_{i=1}^{M}P(u_i)\,f(u_i)+ \sum_{i=1}^{M}P(u_i)\,g(u_i),
+\end{equation}
+so
+\begin{equation}
+\overline{f(u)+g(u)}= \overline{f(u)}+\overline{g(u)}.
+\end{equation}
+
+
+Finally, if $c$ is a general constant then it is clear  that
+\begin{equation}
+\overline{c \,f(u)} = c\,\overline{f(u)}.
+\end{equation}
+
+We now know how to define the mean value of the general variable $u$. 
+But, how can we  characterize the scatter around the mean value?
+We could investigate the deviation of $u$ from its mean value $\bar{u}$,
+which is denoted
+\begin{equation}
+{\mit\Delta} u \equiv  u- \bar{u}.
+\end{equation}
+In fact, this is not a particularly interesting quantity, since its average
+is obviously zero:
+\begin{equation}
+\overline{{\mit\Delta} u} = \overline{(u-\bar{u})} = \bar{u}-\bar{u} = 0.
+\end{equation}
+This is another way of saying that the average deviation from the
+mean vanishes. A more interesting quantity is the square of the 
+deviation. The average value of this quantity,
+\begin{equation}
+\overline{({\mit\Delta} u)^2} = \sum_{i=1}^M P(u_i)\,(u_i - \bar{u})^2,
+\end{equation}
+is usually called the
+{\em variance}.
+The variance is clearly a  {\em positive} number,
+ unless there is no scatter at all in the
+distribution, so that all possible values of $u$ correspond to the
+mean value $\bar{u}$, in which case it is {\em zero}. 
+The following general relation
+is often useful
+\begin{equation}
+\overline{(u-\bar{u})^2} = \overline{(
+u^2-2\,u\,\bar{u}+\bar{u}^2)}= \overline{u^2}-2\,\bar{u}\,\bar{u}+\bar{u}^2,
+\end{equation}
+giving
+\begin{equation}
+\overline{(u-\bar{u})^2}= \overline{u^2}-\bar{u}^2.
+\end{equation}
+The variance of $u$ 
+is proportional to the square of the scatter
+of $u$ around its mean value. A more useful  measure of the scatter
+ is given by the square root of the variance,
+\begin{equation}
+{\mit\Delta}^\ast u = \left[\overline{({\mit\Delta} u)^2}\right]^{1/2},
+\end{equation}
+which is usually called the {\em standard deviation} of $u$. The
+standard deviation is essentially the width of the range over which
+$u$ is distributed around its mean value $\bar{u}$.
+
+\section{Application to  Binomial Distribution}
+Let us now apply what we have just learned about  the mean, variance, and
+standard deviation of a general distribution function
+ to the specific case of the 
+binomial distribution function. Recall,
+that if a simple system has just two possible outcomes, 
+denoted 1 and 2, with 
+respective probabilities $p$ and $q=1-p$, 
+then the probability of obtaining $n_1$ 
+occurrences of outcome 1 in $N$ observations is
+\begin{equation}
+P_N(n_1) = \frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,q^{N-n_1}.
+\end{equation}
+Thus, the mean number of occurrences of outcome 1 in $N$ observations
+is given by
+\begin{equation}
+\overline{n_1} = \sum_{n_1=0}^N P_N(n_1)\,n_1 = \sum_{n_1=0}^N
+\frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,q^{N-n_1}\, n_1.
+\end{equation}
+This is a rather nasty looking expression! However, we can see that if the
+final factor 
+$n_1$ were absent, it  would just reduce to the binomial expansion, which we 
+know how to sum. We can take advantage of this fact by using a rather elegant
+mathematical sleight of hand. Observe that since
+\begin{equation}
+n_1\,p^{n_1} \equiv p\,\frac{\partial}{\partial p}\,p^{n_1},
+\end{equation}
+the summation can be rewritten as
+\begin{equation}
+\sum_{n_1=0}^N\frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,q^{N-n_1}\, n_1
+\equiv p\,
+\frac{\partial}{\partial p}\!\left[\sum_{n_1=0}^N
+\frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,q^{N-n_1}
+\right].
+\end{equation}
+This is just algebra, and has nothing to do with probability theory.
+The term in square brackets is the familiar binomial expansion, and 
+can be written more succinctly as $(p+q)^N$.
+Thus, 
+\begin{equation}
+\sum_{n_1=0}^N\frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,q^{N-n_1}\, n_1
+\equiv p\,\frac{\partial}{\partial p} \,(p+q)^N\equiv p\,N\,(p+q)^{N-1}.
+\end{equation}
+However, $p+q=1$ for the case in hand, so
+\begin{equation}
+\overline{n_1} = N\,p.\label{e2.41}
+\end{equation}
+
+In fact, we could  have guessed this result. 
+By definition, the probability $p$ is the number of occurrences of the
+outcome 1 divided by the number of trials, in the limit as the number
+of trials goes to infinity:
+\begin{equation}
+p= ~_{lt\,N\rightarrow\infty~}\frac{n_1}{N}.
+\end{equation}
+If we think carefully, however,
+ we can see  that taking the limit as the number
+of trials goes to infinity is equivalent to taking the mean value,
+so that
+\begin{equation}
+p = \overline{\left(\frac{n_1}{N}\right)} = \frac{\overline{n_1}}{N}.
+\end{equation}
+But, this is just a simple rearrangement of Eq.~(\ref{e2.41}).
+
+Let us now calculate the variance of $n_1$. Recall that
+\begin{equation}
+\overline{({\mit\Delta} n_1)^2}= \overline{(n_1)^2} - (\overline{n_1})^2.
+\end{equation}
+We already know $\overline{n_1}$, 
+so we just need to calculate $\overline{(n_1)^2}$.
+This average is written
+\begin{equation}
+\overline{(n_1)^2}=\sum_{n_1=0}^{N}\frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,
+q^{N-n_1}\,(n_1)^2.
+\end{equation}
+The  sum can be evaluated using a simple extension  of the mathematical trick  
+we used earlier to evaluate $\overline{n_1}$. Since
+\begin{equation}
+(n_1)^2 \,p^{n_1} \equiv \left(p\,\frac{\partial}{\partial p}\right)^2 p^{n_1},
+\end{equation}
+then
+\begin{eqnarray}
+\sum_{n_1=0}^{N}\frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}\,q^{N-n_1}\,(n_1)^2
+&\equiv& \left(p\,\frac{\partial}{\partial p}\right)^2\sum_{n_1=0}^N
+\frac{N!}{n_1!\,(N-n_1)!}\,p^{n_1}q^{N-n_1}\nonumber\\
+&\equiv&  \left(p\,\frac{\partial}{\partial p}\right)^2(p+q)^N
+\\
+&\equiv&\left(p\,\frac{\partial}{\partial p}\right)\left[p\,N\, (p+q)^{N-1}\right]
+\nonumber\\
+&\equiv&p\left[N\,(p+q)^{N-1}+p\,N\,(N-1)\,(p+q)^{N-2}\right].\nonumber
+\end{eqnarray}
+Using  $p+q=1$ yields
+\begin{eqnarray}
+\overline{(n_1)^2}&=& p\left[N+p\,N\,(N-1)\right]= N\,p\left[1+p\,N-p\right]\nonumber\\
+&=& (N\,p)^2 + N\,p\,q = (\overline{n_1})^2 + N\,p\,q,
+\end{eqnarray}
+since $\overline{n_1}= N\,p$. It follows that the variance
+of $n_1$ is given by
+\begin{equation}
+\overline{({\mit\Delta} n_1)^2}= \overline{(n_1)^2}- (\overline{n_1})^2 = N\,p\,q.
+\end{equation}
+
+The standard deviation of $n_1$ is just the square root of the variance, so
+\begin{equation}
+{\mit\Delta}^\ast n_1 = \sqrt{N\,p\,q}.
+\end{equation}
+Recall that this quantity is essentially the width of the range over which
+$n_1$ is distributed around its mean value. The relative width of the
+distribution is characterized by
+\begin{equation}
+\frac{{\mit\Delta}^\ast n_1}{\overline{n_1}}= \frac{\sqrt{N \,p\,q}}{N\,p} =
+\sqrt{\frac{q}{p}}\frac{1}{\sqrt{N}}.
+\end{equation}
+It is clear from this formula that the relative width decreases like
+$N^{-1/2}$ with increasing $N$. So, the greater the number of trials, the
+more likely it is that an observation of $n_1$ will yield a result
+which is relatively close to the mean value $\overline{n_1}$. This
+is a very important result.
+
+\section{Gaussian Distribution}
+Consider a very large number of observations, $N\gg 1$, made on a system
+with  two possible outcomes.
+ Suppose that the probability of outcome 1 is sufficiently large that
+the average number of occurrences  after $N$
+observations is much greater than unity:
+\begin{equation}
+\overline{n_1} = N\,p \gg 1.
+\end{equation}
+In this limit, the standard deviation of $n_1$ is also much greater than unity,
+\begin{equation}
+{\mit\Delta}^\ast n_1 = \sqrt{N\,p\,q}\gg 1,
+\end{equation}
+implying that there are very many probable values of $n_1$ scattered about the
+mean value $\overline{n_1}$. 
+This suggests that the probability of obtaining $n_1$ occurrences
+of outcome 1
+ does not change significantly in going  from one possible value of
+$n_1$ to an adjacent value:
+\begin{equation}
+\frac{|P_N(n_1+1)-P_N(n_1)|}{P_N(n_1)} \ll 1.\label{e2.54}
+\end{equation}
+In this situation, it is useful to regard the probability as a smooth
+function of $n_1$. Let $n$ be a continuous variable which is
+interpreted as  the number of occurrences of outcome 1 (after $N$
+observations) whenever it takes
+on a positive integer value. The probability that $n$ lies between
+$n$ and $n+dn$ is defined 
+\begin{equation}
+P(n, n+dn) = {\cal P}(n)\, dn,
+\end{equation}
+where ${\cal P}(n)$ is called the {\em probability density}, and is independent
+of $dn$. The probability can be written in this form because
+$P(n, n+dn)$ can always be expanded as a Taylor series in $dn$, and must go
+to zero as $dn\rightarrow 0$.
+We can write
+\begin{equation}
+\int_{n_1-1/2}^{n_1+1/2} {\cal P}(n)\, dn = P_N(n_1),
+\end{equation}
+which is equivalent to smearing out the discrete probability $P_N(n_1)$ 
+over the range $n_1\pm 1/2$. Given Eq.~(\ref{e2.54}),  the above relation
+can be approximated 
+\begin{equation}
+{\cal P}(n) \simeq P_N(n) = \frac{N!}{n!\,(N-n)!}\,p^n\,q^{N-n}.\label{e2.57}
+\end{equation}
+
+For large $N$, the {\em relative}\/ width of the probability distribution function
+is small:
+\begin{equation}
+\frac{{\mit\Delta}^\ast n_1}{\overline{n_1}} = \sqrt{\frac{q}{p}}\frac{1}{\sqrt{N}}
+\ll 1.
+\end{equation}
+This suggests that ${\cal P}(n)$ is strongly peaked around the mean value
+$\overline{n}=\overline{n_1}$. Suppose that $\ln{\cal P}(n)$ attains
+its maximum value at $n=\tilde{n}$ (where we expect $\tilde{n}\sim 
+\overline{n}$). Let us Taylor expand $\ln{\cal P}$ around $n=\tilde{n}$.
+Note that we expand the  slowly varying function $\ln{\cal  P}(n)$,
+instead of the rapidly varying function ${\cal P}(n)$,
+because the Taylor expansion of 
+${\cal P}(n)$ does not converge sufficiently rapidly  in the
+vicinity of $n=\tilde{n}$  to be useful. 
+We can write
+\begin{equation}
+\ln {\cal P}(\tilde{n}+\eta) \simeq \ln{\cal P}(\tilde{n}) +\eta\,
+B_1+\frac{\eta^2}{2}\,B_2+\cdots ,
+\end{equation}
+where
+\begin{equation}
+B_k = \left.\frac{d^k \ln {\cal P}}{d n^k}\right|_{n=\tilde{n}}.
+\end{equation}
+By definition, 
+\begin{eqnarray}
+B_1&=& 0,\\
+B_2&<& 0,
+\end{eqnarray}
+if $n=\tilde{n}$ corresponds to the {\em maximum}
+ value of $\ln {\cal P}(n)$.
+
+
+It follows from Eq.~(\ref{e2.57}) that
+\begin{equation}
+\ln {\cal P} = \ln N! - \ln n!- \ln \,(N-n)! +n\ln p +(N-n)\ln q.\label{e2.63}
+\end{equation}
+If $n$ is a large integer, such that $n\gg 1$, then $\ln n!$ is almost a
+continuous function of $n$, since $\ln n!$ changes by only a relatively
+small amount when $n$ is incremented by unity.
+Hence,
+\begin{equation}
+\frac{d\ln n!}{dn} \simeq \frac{\ln\,(n+1)!-\ln n!}{1} =
+\ln\!\left[\frac{(n+1)!}{n!}\right] = \ln\,(n+1),
+\end{equation}
+giving
+\begin{equation}
+\frac{d\ln n!}{d n} \simeq \ln n,
+\end{equation}
+for $n\gg 1$. The integral of this relation
+\begin{equation}
+\ln n! \simeq n\,\ln n - n +{\cal O}(1),\label{e2.65}
+\end{equation}
+valid for $n\gg 1$, is called {\em Stirling's approximation}, after the Scottish
+mathematician James Stirling who first obtained it in 1730.
+
+According to Eq.~(\ref{e2.63}),
+\begin{equation}
+B_1 = -\ln\tilde{n} +\ln\,(N-\tilde{n})+\ln p - \ln q.
+\end{equation}
+Hence, if $B_1=0$ then
+\begin{equation}
+(N-\tilde{n})\, p = \tilde{n}\,q,
+\end{equation}
+giving 
+\begin{equation}
+\tilde{n} = N\,p = \overline{n_1},
+\end{equation}
+since $p+q=1$. Thus, the maximum of $\ln{\cal P}(n)$ occurs {\em exactly}
+at the mean value of $n$, which equals $\overline{n_1}$.
+
+Further differentiation of Eq.~(\ref{e2.63}) yields
+\begin{equation}
+B_2 = -\frac{1}{\tilde{n}}-\frac{1}{N-\tilde{n}} =
+-\frac{1}{Np}-\frac{1}{N\,(1-p)}= - \frac{1}{N\,p\,q},
+\end{equation}
+since $p+q=1$. Note that $B_2<0$, as required. The above relation
+can also be written
+\begin{equation}
+B_2 = -\frac{1}{({\mit\Delta}^\ast n_1)^2}
+\end{equation}
+
+
+It follows from the above that the Taylor expansion of $\ln {\cal P}$ can be written
+\begin{equation}
+\ln{\cal P}(\overline{n_1}+\eta) \simeq \ln{\cal P}(\overline{n_1}) - 
+\frac{\eta^2}{2\,({\mit\Delta}^\ast n_1)^2} +\cdots.
+\end{equation}
+Taking the exponential of both sides yields
+\begin{equation}
+{\cal P}(n)\simeq {\cal P}(\overline{n_1})\exp\!\left[-
+\frac{(n-\overline{n_1})^2}{2\,({\mit\Delta}^\ast n_1)^2}\right].
+\end{equation}
+The constant ${\cal P}(\overline{n_1})$ is most conveniently
+ fixed by making use
+of the normalization condition
+\begin{equation}
+\sum_{n_1=0}^N P_N(n_1)=1,
+\end{equation}
+which translates to
+\begin{equation}
+\int_0^N {\cal P}(n)\,dn \simeq 1
+\end{equation}
+for a continuous distribution function. Since we only expect
+${\cal P}(n)$ to be significant when
+ $n$ lies in the relatively narrow range
+$\overline{n_1}\pm {\mit\Delta}^\ast n_1$, the limits of integration in the above
+expression can be replaced by $\pm \infty$ with negligible error.
+Thus,
+\begin{equation}
+{\cal P}(\overline{n_1})\int_{-\infty}^{\infty}\!\exp\!
+\left[-\frac{(n-\overline{n_1})^2}{2\,({\mit\Delta}^\ast n_1)^2}
+\right]\,dn
+= {\cal P}(\overline{n_1})
+\,\sqrt{2}\,{\mit\Delta}^\ast n_1\int_{-\infty}^{\infty}
+\exp(-x^2)\,dx\simeq 1.\label{e2.76}
+\end{equation}
+
+As is well-known,
+\begin{equation}
+\int_{-\infty}^{\infty}
+\exp(-x^2)\,dx = \sqrt{\pi},\label{e2.79a}
+\end{equation}
+so it  follows from the normalization condition (\ref{e2.76}) that
+\begin{equation}
+{\cal P}(\overline{n_1})\simeq \frac{1}{
+ \sqrt{2\pi} \,{\mit\Delta}^\ast n_1}.
+\end{equation}
+Finally, we obtain
+\begin{equation}\label{e2.79}
+{\cal P}(n) \simeq \frac{1}{\sqrt{2\pi} \,{\mit\Delta}^\ast n_1}\,
+\exp\!\left[-\frac{(n-\overline{n_1})^2}{2\,({\mit\Delta}^\ast n_1)^2}\right].
+\end{equation}
+This is the famous {\em Gaussian distribution function}, named after the
+German mathematician Carl Friedrich  Gauss, who discovered it whilst 
+investigating the distribution of errors in measurements. The Gaussian
+distribution is only valid in the limits $N\gg 1$ and $\overline{n_1}\gg 1$.
+
+Suppose we were to 
+plot the probability $P_N(n_1)$ 
+ against the integer variable $n_1$, and then
+fit a continuous curve through the discrete points thus obtained. This curve
+would be 
+equivalent to the continuous probability density curve ${\cal P}(n)$, where
+$n$ is the continuous version of $n_1$. According to Eq.~(\ref{e2.79}), the
+probability density attains its  {\em maximum}\/ 
+value when $n$ equals the {\em mean}\/ 
+ of $n_1$, and
+is also {\em symmetric}\/  about this point. In fact, when plotted with the
+appropriate ratio of vertical to horizontal scalings, the Gaussian probability
+density curve looks rather like the outline of a
+ {\em bell}\/ centred on $n= \overline{n_1}$. Hence, this curve is sometimes
+called a {\em bell curve}.
+At one standard deviation away from the mean value, {\em i.e.},
+$n=\overline{n_1}\pm {\mit\Delta}^\ast n_1$, the probability density is
+ about 61\% of its peak value. At two standard deviations away from the mean
+value, the probability density is about 13.5\% of its peak value.
+Finally, 
+at three standard deviations away from the mean value, the probability
+density is only about 1\% of its peak value. We conclude
+ that there is
+very little chance indeed that $n_1$ lies more than about three standard deviations
+away from its mean value. In other words, $n_1$ is almost certain to lie in the
+relatively narrow range
+$\overline{n_1}\pm 3\,{\mit\Delta}^\ast n_1$. This is a very well-known result.
+
+In the above analysis, we have gone from a {\em discrete}\/ probability
+function $P_N(n_1)$ to a {\em continuous}\/ probability density ${\cal P}(n)$.
+The normalization condition becomes
+\begin{equation}\label{e2.80}
+1= \sum_{n_1=0}^N P_N(n_1) \simeq \int_{-\infty}^{\infty}{\cal P}(n)\, dn
+\end{equation}
+under this transformation. Likewise, the evaluations of the mean and
+variance of the distribution are written
+\begin{equation}
+\overline{n_1} = \sum_{n_1=0}^N P_N(n_1)\,n_1 \simeq \int_{-\infty}^{\infty}
+{\cal P}(n)\,n\,dn,
+\end{equation}
+and
+\begin{equation}\label{e2.82}
+\overline{({\mit\Delta} n_1)^2}\equiv
+({\mit\Delta}^\ast n_1)^2 = \sum_{n_1=0}^N P_N(n_1)\,
+(n_1-\overline{n_1})^2\simeq \int_{-\infty}^{\infty}{\cal P}(n)
+\,(n-\overline{n_1})^2\,dn,
+\end{equation}
+respectively. These results 
+follow as simple generalizations of previously established results for
+the discrete function $P_N(n_1)$.
+The limits of integration in the above expressions 
+can be approximated as $\pm \infty$ because ${\cal P}(n)$ is only
+non-negligible in a relatively narrow range of $n$.
+Finally, it is easily demonstrated that Eqs.~(\ref{e2.80})--(\ref{e2.82}) are indeed
+true by substituting in the Gaussian probability density,
+Eq.~(\ref{e2.79}), and then performing a few elementary integrals.
+
+\section{Central Limit Theorem}\label{s2.11}
+Now, you may be thinking that we got a little carried away in our discussion of
+the Gaussian distribution function.  
+After all, this distribution  only seems to
+be relevant  to two-state systems. In fact, as we shall see, the Gaussian 
+distribution is of crucial importance to statistical physics because, under certain
+circumstances, it applies to {\em all}\/ systems.
+
+ Let us briefly  review how we
+obtained the Gaussian distribution function in the
+first place. We started from a
+very simple system with only two possible outcomes. Of course, the
+probability distribution function (for $n_1$) for this system did not look
+anything like a Gaussian. However, when we combined very many
+of these  simple systems together, 
+to produce a complicated system with a great number of possible
+outcomes, we found that the resultant probability distribution function 
+(for $n_1$)
+reduced to a
+ Gaussian in the limit as the number of simple systems tended
+ to infinity.
+ We started from a two outcome
+system because it was easy to calculate the final probability
+distribution function  when a {\em finite}\/ number of such systems were
+combined together. Clearly, if we had started  from a more complicated
+ system then this calculation would have been
+far more difficult.
+
+ Let me now tell you something which
+is quite astonishing!  Suppose that we  start from {\em any}\/ system,
+with {\em any}\/ distribution function (for some measurable quantity $x$). If
+  we combine a sufficiently large number of
+such systems together, the resultant distribution function 
+(for $x$) is {\em always}\/ Gaussian.
+This proposition is known as the {\em central limit theorem}. As far as 
+ Physics is concerned, it is one of
+the most important theorems in the whole of mathematics. 
+
+Unfortunately, the central limit theorem is notoriously difficult to prove.
+A somewhat  restricted proof is presented 
+in Sections~1.10 and 1.11 of Reif.
+
+The central limit theorem guarantees that the probability distribution of
+{\em any}\/ measurable quantity
+ is  Gaussian, provided that a sufficiently large number
+of statistically independent observations are made. We can, therefore,
+confidently predict that  Gaussian distributions are going to crop up 
+all over the place in
+statistical thermodynamics. 

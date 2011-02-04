@@ -1,0 +1,2086 @@
+\chapter{Applications of Statistical Thermodynamics}\label{s7}
+
+\section{Introduction}
+In our study
+of classical thermodynamics, we concentrated on the application of statistical
+physics to {\em macroscopic}\/ systems. Somewhat paradoxically,
+statistical arguments did not figure very prominently in this investigation.
+In fact, 
+the only statistical statement we made  was that it was  {\em
+extremely  unlikely}\/ that a macroscopic system could violate the second law of 
+thermodynamics. The resolution of this paradox
+ is, of course, that macroscopic systems
+contain a very large number of particles, and  their statistical fluctuations are,
+therefore, 
+negligible. Let us now apply statistical physics to {\em microscopic}\/ 
+systems,
+such as atoms and molecules. In this study, the underlying statistical nature
+of thermodynamics will become far more apparent. 
+
+\section{Boltzmann Distribution}\label{s7.2}
+We have gained some understanding of the macroscopic properties of the
+air around us. For instance, we know
+something about its internal energy and specific heat capacity. 
+How can we obtain some information about the
+ statistical properties of the molecules which make
+up air? Consider a specific molecule: it constantly collides with
+its immediate neighbour molecules,
+   and occasionally bounces off the walls of the room. These
+interactions ``inform'' it about the macroscopic state of the air,
+ such as its temperature, pressure, and volume. The
+statistical distribution of the molecule over its own particular microstates must
+be consistent with this macrostate. In other words, if we have a large group
+of such molecules with  similar statistical distributions,
+then they must be equivalent to
+air with the appropriate macroscopic properties. So, it ought to be possible
+to calculate the probability distribution of the molecule over its microstates
+from a knowledge of these macroscopic properties.
+
+We can think of the interaction of a molecule with the 
+air in a classroom as
+analogous to the interaction of a small system $A$ in thermal contact with a
+heat reservoir $A'$. The air acts like a heat reservoir  because its energy
+fluctuations  due to any interactions
+ with the molecule are far too small to affect any
+of its macroscopic parameters.   Let us 
+determine  the probability $P_r$ of finding  system $A$ in one particular
+microstate $r$ of energy $E_r$ when it is thermal equilibrium with the heat
+reservoir $A'$. 
+
+As usual, we assume fairly weak interaction between $A$ and $A'$, so that
+the energies of these two systems
+ are additive. The energy of $A$ is not known at this
+stage. In fact, only the  {\em total}\/ energy of the combined system $A^{(0)} = 
+A + A'$ is known. Suppose that the
+total energy lies in the range $E^{(0)}$ to $E^{(0)} + \delta E$. 
+The overall energy is constant in time, since $A^{(0)}$
+is assumed to be an isolated system, so
+\begin{equation}
+E_r + E' = E^{(0)},
+\end{equation}
+where $E'$ denotes the energy of the reservoir $A'$. Let ${\mit\Omega}'(E')$ be the
+number of microstates accessible to the reservoir when its energy lies in the
+range $E'$ to $E' + \delta E$. Clearly, if system $A$ has an energy $E_r$ then
+the reservoir $A'$ must have an energy close to $E'=E^{(0)} - E_r$. Hence,
+since $A$ is in {\em one}\/ definite state ({\em i.e.}, state $r$), and the total
+number of states accessible to $A'$ is ${\mit\Omega}'(E^{(0)} - E_r)$, it
+follows that
+the total number
+of states accessible to the combined system is simply ${\mit\Omega}'(E^{(0)} - E_r)$.
+The principle of equal {\em a priori}\/ probabilities tells us the the probability
+of occurrence of a particular situation is proportional to the number
+of accessible microstates. Thus,
+\begin{equation}
+P_r = C' \,{\mit\Omega}'(E^{(0)} - E_r),
+\end{equation}
+where $C'$ is a constant of proportionality which is independent of $r$.
+This constant can be determined by the normalization condition
+\begin{equation}
+\sum_r P_r = 1,
+\end{equation}
+where the sum is over all possible states of system $A$, irrespective of their energy.
+
+Let us now make use of the fact that system $A$ is far smaller than system $A'$.
+It follows that $E_r\ll E^{(0)}$, so the slowly varying logarithm of $P_r$
+can be Taylor expanded about $E' = E^{(0)}$. Thus,
+\begin{equation}
+\ln P_r = \ln C' +\ln {\mit\Omega}'(E^{(0)}) -\left[\frac{\partial \ln {\mit\Omega}'}
+{\partial E'} \right]_0 E_r +\cdots.\label{e7.4}
+\end{equation}
+Note that we must expand $\ln P_r$, rather than $P_r$ itself, because the latter
+function varies so rapidly with energy
+that the radius of convergence of its Taylor series
+is far too small for the series to be of any practical use. 
+ The higher order terms in Eq.~(\ref{e7.4}) can be safely
+neglected, because $E_r \ll E^{(0)}$. Now the derivative
+\begin{equation}
+\left[\frac{\partial \ln {\mit\Omega}'}{\partial E'} \right]_0 \equiv \beta
+\end{equation}
+is evaluated at the fixed energy $E' = E^{(0)}$, and is, thus, a constant independent
+of the energy $E_r$ of $A$. In fact, we know, from Sect.~\ref{s5}, that this derivative
+ is just the
+ temperature parameter $\beta = (k\,T)^{-1}$ characterizing the heat
+reservoir $A'$. Hence, Eq.~(\ref{e7.4}) becomes
+\begin{equation}
+\ln P_r = \ln C' + \ln {\mit\Omega}'(E^{(0)}) - \beta\, E_r,
+\end{equation}
+giving
+\begin{equation}
+P_r = C \exp(-\beta \,E_r),
+\end{equation}
+where $C$ is a constant independent of $r$. The parameter $C$ is determined by 
+the normalization condition, which gives
+\begin{equation}
+C^{-1} = \sum_r \exp(-\beta \,E_r),
+\end{equation}
+so that the distribution becomes
+\begin{equation}
+P_r = \frac{\exp(-\beta\, E_r)}{\sum_r \exp(-\beta \,E_r)}.
+\end{equation}
+This  is known as the {\em Boltzmann probability distribution}, and is undoubtably
+the most famous result in statistical physics.
+
+The Boltzmann distribution often causes confusion. People who are used to the
+principle of equal {\em a priori}\/ probabilities, which says that all microstates
+are equally probable, are understandably surprised when they come across the
+Boltzmann distribution which says that high energy microstates are markedly less
+probable then low energy states. However, there is  no need for any
+confusion. The principle of equal {\em a priori}\/ probabilities applies to
+the {\em whole}\/ system, whereas the Boltzmann distribution only applies to
+a small part of the system. The two results are perfectly consistent. 
+If the small system is in a microstate with a comparatively high energy $E_r$ then 
+the rest of the system ({\em i.e.}, the reservoir) has a slightly lower energy $E'$ than
+usual (since the overall energy is fixed). The number of accessible microstates
+of the reservoir is a very strongly increasing function of its energy. It
+follows that when the small system has a 
+high energy then significantly less states 
+than usual are accessible to the reservoir,  and so  the number of microstates
+ accessible
+to the overall system is reduced, and, hence, the configuration is comparatively
+unlikely. The strong increase in the number of accessible microstates of the
+reservoir with  increasing $E'$  gives rise to the strong ({\em i.e.}, exponential) decrease
+in the likelihood of a state $r$ of the small system with increasing $E_r$. 
+The exponential factor $\exp(-\beta \,E_r)$ is called the {\em Boltzmann factor}.
+
+The Boltzmann distribution gives the probability of finding the small system $A$
+in {\em one} particular state $r$ of energy $E_r$. The probability
+$P(E)$ that $A$ has an energy in the small range between $E$ and $E + \delta E$ 
+is just the sum of all the probabilities of the states which lie in this
+range. However, since each of these states has approximately the same Boltzmann
+factor this sum can be written
+\begin{equation}
+P(E) = C \,{\mit\Omega}(E)\,\exp(-\beta E),
+\end{equation}
+where ${\mit\Omega}(E)$ is the number of microstates of $A$ whose energies lie 
+in the appropriate 
+ range. Suppose that system $A$ is itself a large system, but still very
+much smaller than system $A'$. For a large system, we expect ${\mit\Omega}(E)$ to
+be a very rapidly increasing function of energy, so the probability $P(E)$
+is the product of a rapidly increasing function  of $E$ and another
+ rapidly decreasing
+function ({\em i.e.}, the Boltzmann factor). This gives  a sharp
+maximum of $P(E)$ at some particular value of the energy. The larger system $A$,
+the sharper this maximum becomes. Eventually, the maximum becomes so sharp
+that the energy of system $A$ is almost bound to lie at the most probable energy.
+As usual, the most probable energy is evaluated by looking for the maximum of
+$\ln P$, so
+\begin{equation}
+\frac{\partial \ln P}{\partial E} = \frac{\partial \ln {\mit\Omega}}{\partial E} 
+-\beta =0,
+\end{equation}
+giving
+\begin{equation}
+\frac{\partial \ln {\mit\Omega}}{\partial E} = \beta.
+\end{equation}
+Of course, this corresponds to the situation in which  the temperature
+of $A$ is the same as that of the reservoir. This is a result which we
+have seen before (see Sect.~\ref{s5}). Note, however, that the Boltzmann 
+distribution is applicable no matter how {\em small}\/ system $A$ is, so 
+it is a far more
+general result than any we have previously obtained. 
+
+\section{Paramagnetism}
+The simplest microscopic system which we can analyze using the Boltzmann distribution
+is one
+which has only two possible states (there would clearly be little point in analyzing
+a system with only one possible state). Most elements, and some compounds, are
+{\em paramagnetic}: {\em i.e.}, their constituent atoms, or molecules,
+ possess a permanent
+magnetic moment due to the presence of one or more unpaired electrons. Consider a
+substance  whose constituent
+particles contain only one unpaired electron. Such particles  have spin
+$1/2$, and consequently possess  an intrinsic magnetic moment $\mu$. 
+According to quantum mechanics, the magnetic moment of a spin $1/2$ particle
+can 
+point either parallel or antiparallel to an external magnetic field ${\bf B}$. 
+Let us determine the mean magnetic moment $\overline{\mu}_B$ (in the direction
+of ${\bf B}$) of the constituent particles of
+the substance when its  absolute temperature is $T$. 
+We assume, for the sake of simplicity,  that each atom (or molecule)
+only interacts weakly
+with its neighbouring atoms. This enables us to  focus attention on a single atom, and
+treat the remaining atoms as a heat bath at temperature $T$.
+
+Our atom can be in one of two possible states: the $(+)$ state in which its spin
+points up ({\em i.e.}, parallel to ${\bf B}$), and the $(-)$ state in which its
+spin points down ({\em i.e.}, antiparallel to ${\bf B}$). In the $(+)$ state,
+the atomic magnetic moment is parallel to the magnetic field, so that
+$\mu_B = \mu$. The magnetic energy of the atom is $\epsilon_{+} = - \mu \, B$. 
+In the $(-)$ state, the atomic magnetic moment is antiparallel to the magnetic
+field, so that $\mu_B = -\mu$. The magnetic energy of the atom is 
+$\epsilon_{-} = \mu \, B$.
+
+According to the Boltzmann distribution, the probability of finding the atom
+in the $(+)$ state is
+\begin{equation}
+P_{+} = C\exp(-\beta\,\epsilon_{+}) = C\exp(\beta\, \mu \,B),
+\end{equation}
+where $C$ is a constant, and $\beta = (k\,T)^{-1}$. 
+Likewise, the probability of finding the atom in the $(-)$ state is
+\begin{equation}
+P_{-} = C\exp(-\beta\,\epsilon_{-}) = C\exp(-\beta\, \mu\, B).
+\end{equation}
+Clearly, the most probable
+state is  the state with the lowest energy [{\em i.e.}, the $(+)$ state].
+Thus, the mean magnetic moment points in the direction of the magnetic field
+({\em i.e.}, the atom is more likely to point parallel to the field than antiparallel).
+
+It is clear that the critical parameter in a paramagnetic system is
+\begin{equation}
+y\equiv \beta\,\mu \,B = \frac{\mu \,B}{k\,T}.
+\end{equation}
+This parameter measures the ratio of the typical magnetic energy of the atom to
+its typical thermal energy. If the thermal energy greatly exceeds the magnetic
+energy then $y\ll 1$, and the probability that the atomic moment points parallel
+to the magnetic field is about the same as the probability that it points
+antiparallel. In this situation, we expect the mean atomic moment to
+be small, so that $\overline{\mu}_B \simeq 0$. On the other hand, if the
+magnetic energy greatly exceeds the thermal energy  then $y\gg 1$, and the atomic
+moment is far more likely to point parallel to the magnetic field than antiparallel.
+In this situation, we expect $\overline{\mu}_B\simeq \mu$. 
+
+Let us calculate the mean atomic moment $\overline{\mu}_B$. The usual
+definition of a mean value gives
+\begin{equation}
+\overline{\mu}_B = \frac{ P_{+}\, \mu + P_{-} \,(-\mu)}{P_{+} + P_{-}}
+= \mu \,\,\frac{ \exp(\beta\, \mu\, B)- \exp(-\beta \,\mu \,B)}
+{ \exp(\beta \,\mu \,B)+ \exp(-\beta \,\mu \,B)}.
+\end{equation}
+This can also be written
+\begin{equation}
+\overline{\mu}_B = \mu \tanh\frac{\mu\, B}{k\,T},
+\end{equation}
+where the hyperbolic tangent is defined
+\begin{equation}
+\tanh y \equiv \frac{ \exp(y) - \exp(-y)}{\exp(y)+\exp(-y)}.
+\end{equation}
+For small arguments, $y \ll 1$,
+\begin{equation}
+\tanh y \simeq y - \frac{y^3}{3} +\cdots,
+\end{equation}
+whereas for large arguments, $y \gg 1$,
+\begin{equation}
+\tanh y \simeq 1.
+\end{equation}
+It follows that at comparatively high temperatures, $k\, T\gg \mu \,B$, 
+\begin{equation}
+\overline{\mu}_B \simeq \frac{\mu^2 B}{k\,T},
+\end{equation}\
+whereas at comparatively low temperatures, $k \,T \ll \mu\, B$,
+\begin{equation}
+\overline{\mu}_B \simeq \mu.
+\end{equation}
+
+Suppose that the substance contains $N_0$ atoms (or molecules) per unit volume.
+The {\em magnetization}\/ is defined as the mean magnetic moment per unit
+volume, and is given by
+\begin{equation}
+\overline{M}_0 = N_0\, \overline{\mu}_B.
+\end{equation} 
+At high temperatures, $k\, T \gg \mu\, B$, the mean magnetic moment, and, hence, the 
+magnetization, is proportional to the applied magnetic field, so we can write
+\begin{equation}
+\overline{M}_0 \simeq \chi\, B,
+\end{equation}
+where $\chi$ is a constant of proportionality known as the 
+{\em magnetic susceptibility}.
+It is clear that the magnetic susceptibility of a spin 1/2 paramagnetic substance
+takes the form
+\begin{equation}
+\chi = \frac{N_0\, \mu^2}{k\,T}.
+\end{equation}
+The fact that $\chi\propto T^{-1}$ is known as {\em Curie's law}, because it
+was discovered experimentally by Pierre Curie at the end of the nineteenth  century. 
+At low temperatures, $k\, T \ll\mu\, B$, 
+\begin{equation}
+\overline{M}_0 \rightarrow N_0 \,\mu,
+\end{equation}
+so the magnetization becomes independent of the applied field. This corresponds to
+the maximum possible magnetization, where all atomic moments are lined up
+parallel to the field. The breakdown of the $\overline{M}_0 \propto B$ law
+at low temperatures (or high magnetic fields) is known as {\em saturation}. 
+
+\begin{figure}
+\epsfysize=4.5in
+\centerline{\rotate[u]{\hbox{\epsffile{Chapter07/eff.eps}}}}
+\caption{\em The magnetization (vertical axis) versus $B/T$ (horizontal axis) curves
+for (I) chromium potassium alum ($J=3/2$), (II) iron ammonium alum ($J=5/2$), and
+(III) gadolinium sulphate ($J=7/2$). The solid lines are the theoretical predictions
+whereas 
+ the data points are experimental measurements. From W.E.~Henry, Phys.\ Rev.\ {\bf 88}, 561 (1952).
+}\label{fspin}
+\end{figure}
+
+The above analysis is only valid for paramagnetic substances made up of
+spin one-half ($J=1/2$) atoms or molecules. However, 
+the analysis can easily be generalized
+to take account of substances whose constituent  particles possess higher spin 
+({\em i.e.}, $J>1/2$). Figure~\ref{fspin} compares
+ the experimental and theoretical magnetization versus
+field-strength curves for three different substances made up of spin $3/2$, spin $5/2$,
+and spin $7/2$ particles, showing the excellent agreement between the two sets of
+curves. Note that, in all cases, the magnetization is proportional to the
+magnetic field-strength at small field-strengths, but saturates at some
+constant value as the field-strength increases. 
+
+The previous analysis completely neglects any interaction between the
+spins of neighbouring atoms or molecules. It turns out that this is
+a fairly good approximation for paramagnetic substances. However, for
+{\em ferromagnetic}\/ substances, in which the spins of neighbouring atoms
+interact very strongly, this approximation breaks down completely. Thus, the
+above analysis {\em does not} apply to ferromagnetic substances. 
+
+\section{Mean Values}
+Consider a
+system in contact with a heat reservoir. The systems in the representative
+ensemble are distributed over their accessible states in accordance with the
+Boltzmann distribution.
+Thus, the probability  of occurrence of some state $r$ with energy $E_r$
+ is given by
+\begin{equation}
+P_r = \frac{\exp(-\beta\,E_r)}{\sum_r \exp(-\beta \,E_r)}.
+\end{equation}
+The mean energy is written
+\begin{equation}
+\overline{E} = \frac{\sum_r \exp(-\beta\, E_r)\, E_r}{\sum_r \exp(-\beta\, E_r)},
+\end{equation}
+where the sum is taken over all states of the system,
+irrespective of their energy. Note that 
+\begin{equation}
+\sum_r \exp(-\beta \,E_r)\,E_r = -\sum_r \frac{\partial}{\partial \beta}
+\exp(-\beta\, E_r)
+= -\frac{\partial Z}{\partial \beta},
+\end{equation}
+where
+\begin{equation}
+Z = \sum_r \exp(-\beta \,E_r).
+\end{equation}
+It follows that
+\begin{equation}
+\overline{E} = - \frac{1}{Z} \frac{\partial Z}{\partial \beta} = - \frac{
+\partial \ln Z}{\partial \beta}.\label{e7.35}
+\end{equation}
+The quantity $Z$, which is defined as the sum of the Boltzmann factor over all 
+states, irrespective of their energy,
+is called the {\em partition function}. 
+We have just demonstrated that it is fairly  easy to work out the
+mean energy of a system using its  partition function. In fact, as we shall
+discover, it is easy
+to calculate virtually any piece of statistical information using the partition
+function. 
+
+Let us evaluate the variance of the energy. We know
+that
+\begin{equation}
+\overline{(\Delta E)^2} = \overline{E^2} - \overline{E}^2\label{e7.36}
+\end{equation}
+(see Sect.~\ref{s2}). 
+Now, according to the Boltzmann distribution,
+\begin{equation}
+\overline{E^2} = \frac{\sum_r \exp(-\beta \,E_r)\, E_r^{~2}}{\sum_r \exp(-\beta \,E_r)}.
+\end{equation}
+However,
+\begin{equation}
+\sum_r \exp(-\beta \,E_r)\,E_r^{~2} = -\frac{\partial}
+{\partial \beta} \!\left[\sum_r \exp(-\beta\, E_r)\,E_r\right]
+=\left(-\frac{\partial}{\partial \beta}\right)^2\! \left[
+\sum_r \exp(-\beta E_r)\right].
+\end{equation}
+Hence,
+\begin{equation}
+\overline{ E^2} = \frac{1}{Z} \frac{\partial^2 Z}{\partial \beta^2}.
+\end{equation}
+We can also write
+\begin{equation}
+\overline{ E^2} = \frac{\partial}{\partial \beta}\!\left(
+\frac{1}{Z} \frac{\partial Z}{\partial \beta}\right) +\frac{1}{Z^2}\!\left(
+\frac{\partial Z}{\partial \beta}\right)^2 = -\frac{\partial \overline{E}}{\partial 
+\beta} + \overline{E}^2,
+\end{equation}
+where use has been made of Eq.~(\ref{e7.35}). It follows from Eq.~(\ref{e7.36}) that
+\begin{equation}
+\overline{(\Delta E)^2} = -\frac{\partial \overline{E}}{\partial \beta}
+= \frac{\partial^2 \ln Z}{\partial \beta^2}.
+\end{equation}
+Thus, the variance of the energy can be worked out from the partition function
+almost as easily as the mean energy. Since, by definition,
+ a variance can never be negative, it
+follows that $\partial \overline{E}/\partial \beta \leq 0$, or, equivalently,
+$\partial \overline{E}/\partial T \geq 0$. Hence, the mean energy of a system
+governed by the Boltzmann distribution always increases with temperature. 
+
+Suppose that the system is characterized by a single external parameter 
+$x$ (such as
+its volume). The generalization to the case where there are several external
+parameters is obvious. Consider a quasi-static change of the external parameter
+from $x$ to $x+ dx$. In this process, the energy of the system in state $r$ changes
+by
+\begin{equation}
+\delta E_r = \frac{\partial E_r}{\partial x} \, dx.
+\end{equation}
+The macroscopic work \/$\dbar W$ done  by the system due to this parameter
+change is
+\begin{equation}
+\dbar W = \frac{ \sum_r \exp(-\beta \,E_r) (-\partial E_r/\partial x\,\, dx)}
+{\sum_r \exp(-\beta \,E_r)}.
+\end{equation}
+In other words, the work done is minus the average  change in internal
+energy of  the system, where the
+average  is calculated using the Boltzmann distribution. We can write
+\begin{equation}\label{e7.45}
+\sum_r \exp(-\beta \,E_r)\,\frac{\partial E_r}{\partial x} = -\frac{1}{\beta}
+\frac{\partial}{\partial x}\!\left[\sum_r \exp(-\beta \,E_r)\right] = -\frac{1}{\beta}
+\frac{\partial Z}{\partial x},
+\end{equation}
+which gives
+\begin{equation}\label{e7.41t}
+\dbar W = \frac{1}{\beta Z}\frac{\partial Z}{\partial x}\,dx = \frac{1}{\beta}
+\frac{\partial \ln Z}{\partial x}\,dx.
+\end{equation}
+We also have the following general expression for the work done by the system
+\begin{equation}
+\dbar W = \overline{X}\,dx,
+\end{equation}
+where
+\begin{equation}
+\overline{X} = - \overline{\frac{\partial E_r}{\partial x}}
+\end{equation}
+is the mean generalized force conjugate to $x$ (see Sect.~\ref{s4}). It follows that 
+\begin{equation}
+\overline{X} = \frac{1}{\beta} \frac{\partial \ln Z}{\partial x}.
+\end{equation}
+
+
+Suppose that  the external parameter is the volume, so $x=V$. It follows that
+\begin{equation}
+\dbar W = \overline{p} \,dV = \frac{1}{\beta} \frac{\partial \ln Z}{\partial V}
+\,dV
+\end{equation}
+and
+\begin{equation}\label{e7.50}
+\overline{p} = \frac{1}{\beta} \frac{\partial \ln Z}{\partial V}.
+\end{equation}
+Since the partition function is a function of $\beta$ and $V$ (the energies
+$E_r$ depend on $V$), it is clear that the above equation relates 
+the mean pressure $\overline{p}$ to $T$
+(via $\beta = 1/k\,T$)  and $V$. In other words, the above expression
+is the {\em equation
+of state}. Hence, we can work out the pressure, and even the equation of state,
+using the partition function. 
+
+\section{Partition Functions}\label{s7.6}
+It is clear that all important macroscopic quantities
+associated with a system  can be expressed in terms
+of its partition function $Z$. Let us investigate how 
+the partition function is related to thermodynamical quantities. 
+Recall that $Z$ is a function of both $\beta$ and $x$ (where $x$ is the single
+external parameter). Hence, $Z= Z(\beta, x)$, and we can write
+\begin{equation}
+d \ln Z = \frac{\partial \ln Z}{\partial x}\,dx + \frac{\partial \ln Z}
+{\partial \beta}\,d\beta.
+\end{equation}
+Consider a quasi-static change by which $x$ and $\beta$ change so slowly that
+the system stays close to equilibrium, and, thus, remains
+ distributed according to the
+Boltzmann distribution. It follows from Eqs.~(\ref{e7.35}) and (\ref{e7.41t}) that
+\begin{equation}
+d\ln Z = \beta\,\, \dbar W - \overline{E}\, d\beta.
+\end{equation}
+The last term can be rewritten
+\begin{equation}
+d \ln Z = \beta\, \,\dbar W - d(\overline{E} \,\beta) +\beta \,d\overline{E},
+\end{equation}
+giving
+\begin{equation}
+d(\ln Z +\beta\, \overline{E}) = \beta (\,
+\dbar W +d\overline{E}) \equiv \beta \,\,\dbar Q.
+\end{equation}
+The above equation shows that although the heat absorbed by the system
+$\dbar Q$ is not
+an exact differential, it becomes one when multiplied by the temperature
+parameter $\beta$. This is essentially the second law of thermodynamics. In fact,
+we know that
+\begin{equation}
+dS = \frac{\dbar Q}{T}.
+\end{equation}
+Hence,
+\begin{equation}
+S  \equiv k\,(\ln Z +\beta\,\overline{E}).\label{e7.56}
+\end{equation}
+This expression  enables us to calculate the entropy of a system
+from its partition function.
+
+Suppose that we are dealing with a system $A^{(0)}$ consisting of
+two systems $A$ and $A'$ which only interact weakly with one another. Let each
+state of $A$ be denoted by an index $r$ and have a  corresponding energy $E_r$. 
+Likewise, let each state of $A'$ be denoted by an index $s$ and have a corresponding
+energy $E_{s}'$. A state of the combined system $A^{(0)}$ is then denoted
+by two indices $r$ and $s$. Since $A$ and $A'$ only interact weakly their
+energies are additive, and the energy of state $rs$ is 
+\begin{equation}
+E_{rs}^{(0)} = E_r +E_s'.
+\end{equation}
+By definition, the partition function of $A^{(0)}$ takes the form
+\begin{eqnarray}
+Z^{(0)} &=& \sum_{r,s} \exp[-\beta \,E_{rs}^{(0)}]\nonumber\\[0.5ex]
+ 	&=& \sum_{r,s} \exp(-\beta\,[E_r+E_s'])\nonumber\\[0.5ex]
+	&=& \sum_{r,s} \exp(-\beta\, E_r) \exp(-\beta \,E_s')\nonumber\\[0.5ex]
+	&=& \left[\sum_r \exp(-\beta \,E_r)\right]\left[\sum_s
+\exp(-\beta\, E_s')\right].
+\end{eqnarray}
+Hence,
+\begin{equation}
+Z^{(0)} = Z\, Z',
+\end{equation}
+giving
+\begin{equation}
+\ln Z^{(0)} = \ln Z + \ln Z',
+\end{equation}
+where $Z$ and $Z'$ are the partition functions of $A$ and $A'$, respectively. 
+It follows from Eq.~(\ref{e7.35}) that the mean energies of $A^{(0)}$, $A$, and $A'$
+are related by
+\begin{equation}
+\overline{E}^{(0)} = \overline{E} +\overline{E}'.
+\end{equation}
+It also follows from Eq.~(\ref{e7.56}) that the respective entropies of these systems
+are related via
+\begin{equation}\label{e7.62}
+S^{(0)} = S + S'.
+\end{equation}
+Hence, the partition function tells us that the extensive thermodynamic
+functions of two weakly interacting systems are simply additive.
+
+It is clear that we can perform statistical thermodynamical calculations using
+the partition function $Z$ instead of the more direct approach in which  we use the
+density of states ${\mit\Omega}$. The former
+approach  is advantageous because the partition function
+is an {\em unrestricted}\/ sum of Boltzmann factors over all 
+accessible states,
+irrespective of their energy, whereas the
+density of states is a {\em restricted}\/ sum over all states whose energies
+lie in some narrow range. In general, it is far easier to perform an unrestricted
+sum than a restricted sum. Thus, it is generally easier to derive
+statistical thermodynamical results using $Z$ rather than ${\mit\Omega}$, although 
+${\mit\Omega}$ has a far more direct physical significance than $Z$. 
+
+\section{Ideal Monatomic Gases}\label{s7.8}
+Let us now practice calculating thermodynamic relations using the partition
+function by considering an example with which we are already quite familiar:
+{\em i.e.}, 
+an ideal monatomic gas. Consider a gas consisting of $N$ identical monatomic
+molecules of mass $m$ enclosed in a container of volume $V$.
+Let us  denote the position and momentum 
+vectors of the $i$th molecule by ${\bf r}_i$ and 
+${\bf p}_i$, respectively.
+ Since the gas is ideal, there are no interatomic forces, and the
+total  energy
+ is simply the sum of the individual kinetic energies of the molecules:
+\begin{equation}
+E = \sum_{i=1}^N \frac{ p_i^{~2}}{2\,m},\label{e7.67}
+\end{equation}
+where $p_i^{~2} = {\bf p}_i\!\cdot \!{\bf p}_i$. 
+
+Let us treat the problem classically. In this approach, we divide up phase-space
+into cells of equal volume $h_0^{~f}$. Here, $f$ is the number of degrees of
+freedom, and $h_0$ is a small constant with dimensions of angular momentum which
+parameterizes the precision to which the positions and momenta of molecules
+are determined (see Sect.~\ref{s3.6}). 
+Each cell in phase-space corresponds to a different state.
+The partition function is the sum of the Boltzmann factor $\exp(-\beta \,E_r)$
+over all possible states, where $E_r$ is the energy of state $r$. 
+Classically, we can approximate the summation over cells in phase-space
+as an integration over all phase-space. Thus,
+\begin{equation}
+Z = \int\cdots \int \exp(-\beta \, E)\, \frac{d^3{\bf r}_1\cdots d^3{\bf r}_N\,
+d^3{\bf p}_1\cdots d^3{\bf p}_N}{h_0^{~3N}},
+\end{equation}
+where $3N$ is the number of degrees of freedom of a monatomic gas containing
+$N$ molecules. Making use of Eq.~(\ref{e7.67}),
+ the above 
+expression reduces to
+\begin{equation}
+Z = \frac{V^N}{h_0^{~3N}}\int\cdots \int \exp[-(\beta/2m)\,p_1^{~2}]\,d^3{\bf p}_1
+\cdots \exp[-(\beta/2m)\,p_N^{~2}]\,d^3{\bf p}_N.\label{e7.69}
+\end{equation}
+Note that the  integral over the coordinates of a given
+molecule simply yields the volume
+of the container, $V$, since the energy $E$ is independent of the 
+locations of the molecules
+ in an ideal gas. There are $N$ such integrals, so we obtain the factor
+$V^N$ in the above expression. Note, also, that 
+ each of the integrals over the molecular momenta in Eq.~(\ref{e7.69})
+are identical: they differ only by irrelevant dummy variables of integration. 
+It follows that the partition function $Z$ of the gas  is made up of the product of
+$N$ identical factors: {\em i.e.}, 
+\begin{equation}
+Z = \zeta^N,
+\end{equation}
+where 
+\begin{equation}
+\zeta = \frac{V}{h_0^{~3}}\int \exp[-(\beta/2m)\,p^2]\,d^3{\bf p}\label{e7.71}
+\end{equation}
+is the partition function for a single molecule. Of course, this
+result is obvious, since we have already shown that the partition function for
+a system made up of a number of weakly interacting subsystems is just the
+product of the partition functions of the subsystems (see Sect.~\ref{s7.6}).
+
+The integral in Eq.~(\ref{e7.71}) is easily evaluated:
+\begin{eqnarray}
+\int \exp[-(\beta/2m)\,p^2]\,d^3{\bf p}
+&=& \int_{-\infty}^{\infty}\exp[-(\beta/2m)\,p_x^{~2}]\,dp_x\,
+\int_{-\infty}^{\infty}\exp[-(\beta/2m)\,p_y^{~2}]\,dp_y\,\nonumber\\[0.5ex]
+&&
+\times \int_{-\infty}^{\infty}\exp[-(\beta/2m)\,p_z^{~2}]\,dp_z\nonumber\\[0.5ex]
+&=& \left(\sqrt{\frac{2\,\pi\,m}{\beta}}\right)^3,
+\end{eqnarray}
+where use has been made of Eq.~(\ref{e2.79a}). Thus,
+\begin{equation}
+\zeta = V \left( \frac{2\,\pi\, m}{h_0^{~2}\,\beta}\right)^{3/2},
+\end{equation}
+and
+\begin{equation}
+\ln Z = N\ln \zeta = N \left[\ln V - \frac{3}{2}\ln \beta +\frac{3}{2}
+\ln\!\left(\frac{2\,\pi\, m}{h_0^{~2}}\right)\right].
+\end{equation}
+
+
+The expression for the mean pressure  (\ref{e7.50}) yields
+\begin{equation}
+\overline{p} = \frac{1}{\beta}\frac{\partial\ln Z}{\partial V} = \frac{1}{\beta}
+\frac{N}{V},
+\end{equation}
+which reduces to the ideal gas equation of state
+\begin{equation}
+\overline{p} \,V = N\, k\, T = \nu \,R \,T,
+\end{equation}
+where use has been made of
+$N = \nu \,N_A$ and $R= N_A\, k$. According to Eq.~(\ref{e7.35}), the mean
+energy of the gas is given by
+\begin{equation}
+\overline{E} = - \frac{\partial \ln Z}{\partial \beta} = \frac{3}{2} \frac{N}{\beta}
+= \nu\,  \frac{3}{2} \,R\,  T.
+\end{equation}
+Note that the internal 
+energy is a function of temperature alone, with no dependence on
+volume. The molar heat capacity at constant volume of the gas is given by
+\begin{equation}
+c_V = \frac{1}{\nu} \left(\frac{\partial \overline{E}}{\partial T} \right)_V 
+= \frac{3}{2}\, R,
+\end{equation}
+ so the mean energy can be written
+\begin{equation}
+\overline{E} = \nu\, c_V \,T.
+\end{equation}
+
+We have seen all of the above results 
+ before. Let us
+now use the partition function to calculate a new result. The entropy of the
+gas can be calculated quite simply from the expression 
+\begin{equation}
+S = k\,(\ln Z + \beta\, \overline{E}).
+\end{equation}
+Thus, 
+\begin{equation}
+S = \nu R \left[ \ln V -\frac{3}{2} \ln \beta + \frac{3}{2}\ln\!
+\left(\frac{2\,\pi\, m }{h_0^{~2}}\right) + \frac{3}{2} \right],
+\end{equation}
+or
+\begin{equation}\label{e7.82}
+S  = \nu R \left[ \ln V + \frac{3}{2}\ln T + \sigma\right],
+\end{equation}
+where
+\begin{equation}
+\sigma = \frac{3}{2} \ln \!\left( \frac{2\,\pi\, m\,k}{h_0^{~2}}\right) + 
+\frac{3}{2}.
+\end{equation}
+The above expression for the entropy of an ideal gas is certainly new. 
+Unfortunately, it is also quite obviously incorrect!
+
+\section{Gibb's Paradox}\label{s7.9}
+What has gone wrong? First of all, let us be clear why Eq.~(\ref{e7.82}) is 
+incorrect.
+
+We can see that $S\rightarrow -\infty$ as $T\rightarrow 0$, which contradicts
+the
+third law of thermodynamics. However,
+this is not a problem. Equation~(\ref{e7.82}) was derived
+using classical physics, which breaks down at low temperatures. Thus, we would
+not expect this equation  to give a sensible answer close to the absolute zero of temperature.
+
+Equation~(\ref{e7.82}) is wrong because it implies that the entropy does not behave 
+properly as an extensive quantity. Thermodynamic quantities can be
+divided into two groups, {\em extensive}\/ and {\em intensive}. 
+Extensive quantities increase
+by a factor $\alpha$ when  the size of the system under consideration is
+increased by the same factor. Intensive quantities  stay the same. Energy and volume
+are typical extensive quantities. Pressure and temperature are typical intensive
+quantities. Entropy is very definitely an extensive quantity. We have shown 
+ [see Eq.~(\ref{e7.62})] that the entropies of two weakly interacting systems
+are additive. Thus, if we  double the size of a system we expect the
+entropy to double as well. Suppose that we have a system of
+volume $V$ containing $\nu$ moles of ideal gas at temperature $T$. Doubling
+the size of the system is like joining two identical systems together to
+form a new system of volume $2\,V$ containing $2\,\nu$ moles of gas at temperature $T$.
+Let 
+\begin{equation}
+S = \nu \,R \left[\ln V + \frac{3}{2} \ln T + \sigma\right]
+\end{equation}
+denote  the entropy of the original system, and let
+\begin{equation}
+S' = 2\,\nu\, R \left[\ln 2\,V + \frac{3}{2} \ln T + \sigma\right]
+\end{equation}
+denote the entropy of the double-sized system. Clearly, if entropy is an extensive
+quantity (which it is!) then we should have
+\begin{equation}
+	S' = 2\, S.
+\end{equation}
+But, in fact, we find that
+\begin{equation}
+S' - 2 \,S = 2\,\nu \,R \,\ln 2.\label{e7.87}
+\end{equation}
+So, the entropy of the double-sized system is {\em more}\/ than double the entropy of the
+original system.
+
+Where does this extra entropy come from? Well, let us consider a little more carefully
+how we might go about doubling the size of our system. Suppose that we put
+another identical system  adjacent to it,  and separate the two
+systems  by a partition.
+Let us now suddenly remove the partition. If entropy is
+a properly extensive quantity then the entropy of the overall system
+should be the same before and after the partition is removed. It is certainly the
+case that the energy (another extensive quantity) of the overall system stays the
+same. However, according to Eq.~(\ref{e7.87}), the overall entropy of the system 
+{\em increases}\/ by
+$2\,\nu\, R\, \ln 2 $ after the partition is removed. Suppose, now, that the second system
+is identical to the first system in all
+respects except that its molecules are in some way slightly
+different to the molecules in the first system, so that the two sets of
+molecules are  {\em distinguishable}. 
+In this case, we would certainly expect an overall
+increase in
+entropy when the partition is removed. Before the partition is removed,
+it separates type 1 molecules from type 2 molecules. 
+After the partition is removed, molecules of both
+types become jumbled together. This is clearly an
+irreversible process. We cannot imagine the molecules spontaneously sorting
+themselves out again. The increase in entropy associated with this jumbling is
+called {\em entropy of mixing}, and is easily calculated. We know that the number
+of accessible states of an ideal gas varies with volume like ${\mit\Omega}\propto
+V^N$. The volume accessible to type 1 molecules clearly doubles after the
+partition is removed, as does the volume accessible to type 2 molecules.
+Using the fundamental formula $S= k\, \ln {\mit\Omega}$, the increase in entropy
+due to mixing is given by
+\begin{equation}
+S = 2\, k\ln \frac{{\mit\Omega}_f}{{\mit\Omega}_i} = 2\,N \,k\ln \frac{V_f}{V_i} =
+ 2\,\nu\, R\, \ln 2.
+\end{equation}
+
+	It is clear that the additional entropy $2\,\nu \,R \,\ln 2$,
+which appears when we
+double the size of an ideal gas
+ system by joining together two identical systems,
+is entropy of mixing of the molecules contained in the  original systems.
+ But, if the 
+molecules in these two systems are {\em indistinguishable}, why should there be any
+entropy of mixing? Well, clearly, there is no entropy of mixing in this case. 
+At this point, we can begin to understand what has gone wrong in our calculation.
+We have calculated the partition function assuming
+that all of the molecules in our system have the
+same mass and temperature, but we have never explicitly taken into account
+the fact that we consider the molecules to be indistinguishable.
+In other words, we have been treating the molecules in our ideal gas as if each
+carried a little license plate, or a social security number, so that we could always
+tell one from another.  In quantum mechanics,
+which is what we really should be using to study microscopic phenomena, the
+essential indistinguishability of atoms and molecules is hard-wired into the
+theory at a very low level. Our problem is that we have been taking the classical
+approach a little too seriously. It is plainly silly to pretend that we can 
+distinguish molecules in a statistical problem, where we do not closely
+follow the motions
+of individual particles. A paradox arises if we try to treat molecules
+as if they were distinguishable. This is called {\em Gibb's paradox}, after 
+the American physicist Josiah Gibbs who first discussed it. The resolution
+of Gibb's paradox is quite simple: treat all molecules of the same species
+as if they were {\em indistinguishable}.
+
+In our previous calculation of the ideal gas partition function,
+we inadvertently treated
+each of the $N$ molecules in  the gas as distinguishable. Because of this,
+ we overcounted the
+number of states of the system. Since the $N!$ possible permutations of the
+molecules amongst themselves do not lead to physically different situations,
+and, therefore, cannot be counted as separate states, the number of actual states of
+the system is a factor $N!$ less than what we initially thought. We can
+easily correct  our partition function by simply dividing by this factor, so that
+\begin{equation}
+Z = \frac{\zeta^N}{N!}.
+\end{equation}
+This gives
+\begin{equation}
+\ln Z = N \ln \zeta - \ln N!,
+\end{equation}
+or
+\begin{equation}
+\ln Z = N \ln \zeta - N \ln N + N,
+\end{equation}
+using Stirling's approximation. Note that our new version of $\ln Z$
+differs from our previous version by an additive term involving the number of 
+particles in the system. This explains why our calculations of the mean pressure
+and mean energy, which depend on partial derivatives of $\ln Z$ with respect to
+the volume and the temperature parameter $\beta$, respectively,
+came out all right. However,
+our expression for the entropy $S$ is modified by this additive term. The new
+expression is
+\begin{equation}
+S = \nu\, R\left[ \ln V - \frac{3}{2} \ln \beta +\frac{3}{2}
+\ln\!\left(\frac{2\,\pi\, m\,k}{h_0^{~2}}\right) + \frac{3}{2}\right]+ k\,(-N\ln N + N).
+\end{equation}
+This gives
+\begin{equation}
+S = \nu \,R \left[ \ln \frac{V}{N} + \frac{3}{2} \ln T + \sigma_0\right]
+\end{equation}
+where
+\begin{equation}
+\sigma_0 = \frac{3}{2}\,\ln\!\left(\frac{2\,\pi\, m\, k}{h_0^{~2}}\right) + \frac{5}{2}.
+\end{equation}
+It is clear that  the entropy behaves properly as
+an extensive quantity in the above
+expression: {\em i.e.}, it is multiplied by a factor $\alpha$ when $\nu$, $V$,
+and $N$ are multiplied by the same factor. 
+
+\section{Equipartition Theorem}\label{s7eq}
+The internal energy of a monatomic ideal gas containing $N$ particles is $(3/2)\,N
+\,k\,T$.
+This means that each particle possess, on average, $(3/2)\,k\,T$ units of energy. 
+Mon\-atomic particles have only three translational degrees
+of freedom, corresponding to
+their motion in three dimensions. They possess no internal 
+rotational or vibrational degrees of freedom. Thus, the mean energy per degree of
+freedom in a monatomic  ideal gas is $(1/2)\,k\,T$. In fact, 
+this is a special case of a rather general result. Let us now try to prove this. 
+
+Suppose that the energy of a
+system is determined  by some $f$ generalized coordinates $q_k$
+and corresponding $f$ generalized momenta $p_k$, so that
+\begin{equation}
+E = E(q_1, \cdots, q_f, p_1,\cdots, p_f).
+\end{equation}
+Suppose further that:
+\begin{enumerate}
+\item The total energy splits additively into the form
+\begin{equation}
+E = \epsilon_i(p_i) + E'(q_1,\cdots, p_f),
+\end{equation}
+where $\epsilon_i$ involves only one variable $p_i$, and the remaining part
+$E'$ does not depend on $p_i$.
+\item The function $\epsilon_i$ is quadratic in $p_i$, so that
+\begin{equation}
+\epsilon_i(p_i) = b\,p_i^{~2},
+\end{equation}
+where $b$ is a constant.
+\end{enumerate}
+The most common situation in which the above assumptions are valid is where 
+$p_i$ is a momentum. This is because the kinetic energy is usually a quadratic
+function of each momentum component, whereas the potential energy does not
+involve the momenta at all. However, if a coordinate $q_i$ were to satisfy 
+assumptions 1 and 2 then the theorem we are about to establish would hold just
+as well.
+
+What is the mean value of $\epsilon_i$ in thermal equilibrium if conditions
+1 and 2 are satisfied? If the system is in equilibrium at absolute temperature
+$T\equiv (k\,\beta)^{-1}$ then it is distributed according to the Boltzmann 
+distribution. In the classical approximation,
+the mean value of $\epsilon_i$ is expressed in terms of
+integrals over all phase-space:
+\begin{equation}
+\overline{\epsilon_i} = \frac{
+\int_{-\infty}^{\infty} \exp[-\beta E(q_1,\cdots, p_f)]\,
+\epsilon_i
+\,dq_1\cdots dp_f}
+{\int_{-\infty}^{\infty} \exp[-\beta E(q_1,\cdots, p_f)]\,
+dq_1\cdots dp_f}.
+\end{equation}
+Condition 1 gives
+\begin{eqnarray}
+\overline{\epsilon}_i&=&\frac{
+\int_{-\infty}^{\infty} \exp[-\beta\,(\epsilon_i + E')]\,
+\epsilon_i
+\,dq_1\cdots dp_f}
+{\int_{-\infty}^{\infty} \exp[-\beta\,(\epsilon_i + E')]\,dq_1\cdots dp_f}\nonumber
+\\[0.5ex]
+&=& \frac{\int_{-\infty}^{\infty} \exp(-\beta \,\epsilon_i)\,\epsilon_i\, dp_i
+\,\int_{-\infty}^{\infty} \exp(-\beta \,E')\,dq_1\cdots dp_f}
+{\int_{-\infty}^{\infty} \exp(-\beta \,\epsilon_i)\, dp_i
+\,\int_{-\infty}^{\infty} \exp(-\beta \,E')\,dq_1\cdots dp_f},
+\end{eqnarray}
+where use has been made of the multiplicative property of the exponential function,
+and where the last integrals in both the numerator and denominator extend over
+all variables
+ $q_k$ and $p_k$ except $p_i$. These integrals are equal and, thus, cancel.
+Hence,
+\begin{equation}
+\overline{\epsilon}_i = \frac{\int_{-\infty}^{\infty} \exp(-\beta \,\epsilon_i)\,\epsilon_i\, dp_i}
+{\int_{-\infty}^{\infty}\exp(-\beta\, \epsilon_i)\, dp_i}.
+\end{equation}
+This expression can be simplified further since
+\begin{equation}
+\int_{-\infty}^\infty
+  \exp(-\beta \,\epsilon_i)\,\epsilon_i\, dp_i \equiv - \frac{\partial }{\partial \beta}
+\left[\int_{-\infty}^\infty \exp(-\beta \,\epsilon_i)\, dp_i\right],
+\end{equation}
+so
+\begin{equation}\label{e7.102}
+\overline{\epsilon}_i = - \frac{\partial}{\partial\beta}
+ \ln\left[\int_{-\infty}^\infty \exp(-\beta \,\epsilon_i)\, 
+dp_i\right].
+\end{equation}
+
+According to condition 2,
+\begin{equation}
+\int_{-\infty}^{\infty} \exp(-\beta\, \epsilon_i)\, dp_i = 
+\int_{-\infty}^{\infty} \exp(-\beta\, b\, p_i^{~2})\, dp_i=
+\frac{1}{\sqrt{\beta}} \int_{-\infty}^{\infty} \exp(- b\, y^2)\, dy,
+\end{equation}
+where $ y = \sqrt{\beta} \,p_i$. Thus,
+\begin{equation}
+\ln \int_{-\infty}^{\infty} \exp(-\beta\, \epsilon_i)\, dp_i = - \frac{1}{2} \ln \beta
++ \ln \int_{-\infty}^{\infty} \exp(- b \,y^2)\, dy.
+\end{equation}
+Note that the integral on the right-hand side does not depend on $\beta$ at all. It follows
+from Eq.~(\ref{e7.102}) that
+\begin{equation}
+\overline{\epsilon}_i = - \frac{\partial}{\partial \beta} \left( - \frac{1}{2}
+\ln \beta\right) = \frac{1}{2\,\beta},
+\end{equation}
+giving
+\begin{equation}
+\overline{\epsilon}_i = \frac{1}{2}\, k\, T.
+\end{equation}
+This is the famous {\em equipartition theorem}\/ of classical physics. 
+It states that the mean value of every independent
+quadratic term in the energy is equal to $(1/2)\, k\,T$. If all terms in the energy are quadratic
+then the mean energy is spread equally over all degrees of freedom (hence the 
+name ``equipartition'').
+
+\section{Harmonic Oscillators}\label{s7.10}
+Our proof of the equipartition theorem depends crucially on the classical approximation. To see how
+quantum effects modify this result, let us examine a particularly simple system
+which we know how to analyze using both classical and quantum physics: {\em i.e.},
+ a
+simple  harmonic oscillator. Consider a one-dimensional harmonic oscillator in equilibrium
+with a heat reservoir at temperature $T$. The energy of the oscillator is given by
+\begin{equation}
+E  = \frac{p^2}{2\,m} + \frac{1}{2}\kappa\, x^2,
+\end{equation}
+where the first term on the right-hand side is the kinetic energy, involving the momentum
+$p$ and mass $m$, and the second term is the potential energy, involving the displacement
+$x$ and the force constant $\kappa$. Each of these terms is quadratic in the respective
+variable. So, in the classical approximation the equipartition theorem yields:
+\begin{eqnarray}
+ \frac{\overline{p^2}}{2\,m}&= &\frac{1}{2}\, k\,T, \\[0.5ex]
+ \frac{1}{2}\kappa \,\overline{x^2}&= &\frac{1}{2} \,k\,T.
+\end{eqnarray}
+That is, the mean kinetic energy of the oscillator is equal
+to the mean potential energy which
+equals $(1/2)\,k\,T$. It follows that the mean total energy is
+\begin{equation}
+\overline{E} = \frac{1}{2}\, k\,T + \frac{1}{2}\, k\,T = k\,T.\label{e7.109}
+\end{equation}
+
+According to quantum mechanics, the energy levels of a harmonic oscillator are equally
+spaced and satisfy 
+\begin{equation}
+E_n = (n + 1/2) \,\hbar \,\omega,\label{e7.110}
+\end{equation}
+where $n$ is a non-negative integer, and
+\begin{equation}
+\omega = \sqrt{\frac{\kappa}{m}}.\label{e7.111}
+\end{equation}
+The partition function for such an oscillator is given by 
+\begin{equation}
+Z  = \sum_{n=0}^\infty \exp(-\beta \,E_n) = \exp[-(1/2)\,\beta \,\hbar \,\omega]
+\sum_{n=0}^\infty \exp(- n\,\beta\, \hbar\,\omega).
+\end{equation}
+Now,
+\begin{equation}
+\sum_{n=0}^\infty \exp(- n\,\beta\, \hbar \,\omega) = 1 + \exp(-\beta\,\hbar\,\omega)
++ \exp(-2\,\beta\,\hbar\,\omega) + \cdots
+\end{equation}
+is simply the sum of an infinite geometric series, and can be evaluated immediately,
+\begin{equation}
+\sum_{n=0}^\infty \exp(- n\,\beta\, \hbar\, \omega) = \frac{1}{1-\exp(-\beta\,\hbar
+\,\omega)}.
+\end{equation}
+Thus, the partition function takes the form
+\begin{equation}
+Z = \frac{ \exp[-(1/2)\,\beta\,\hbar\,\omega]}{1-\exp(-\beta\,\hbar\,\omega)},
+\end{equation}
+and
+\begin{equation}
+\ln Z = - \frac{1}{2}\,\beta\,\hbar\,\omega -\ln [1- \exp(-\beta\,\hbar\,\omega)]
+\end{equation}
+
+The mean energy of the oscillator is given by [see Eq.~(\ref{e7.35})]
+\begin{equation}
+\overline{E} = - \frac{\partial}{\partial \beta} \ln Z = -
+\left[-\frac{1}{2}\,\hbar \,\omega - \frac{\exp(-\beta\,\hbar\,\omega)\,\hbar\,\omega}
+{1-\exp(-\beta\,\hbar\,\omega)}\right],
+\end{equation}
+or
+\begin{equation}
+\overline{E} = \hbar \,\omega \left[ \frac{1}{2} + \frac{1}{\exp(\beta\, \hbar\,
+\omega)-1}
+\right].\label{e7.118}
+\end{equation}
+
+Consider the limit 
+\begin{equation}
+\beta\,\hbar\,\omega = \frac{\hbar\, \omega}{k\,T} \ll 1,
+\end{equation}
+in which the thermal energy $k\,T$ is large compared to the separation $\hbar \,\omega$ between the
+energy levels. In this limit,
+\begin{equation}
+\exp(\beta\,\hbar\,\omega) \simeq 1 + \beta \,\hbar\, \omega,
+\end{equation}
+so
+\begin{equation}
+\overline{E} \simeq  \hbar\,\omega\left[\frac{1}{2} + \frac{1}{\beta\,\hbar\,\omega}\right]
+\simeq \hbar\,\omega\left[ \frac{1}{\beta\,\hbar\,\omega}\right],
+\end{equation}
+giving
+\begin{equation}
+\overline{E} \simeq \frac{1}{\beta} = k\,T.
+\end{equation}
+Thus, the classical result (\ref{e7.109}) holds whenever the thermal energy greatly exceeds the typical
+spacing between quantum energy levels. 
+
+
+Consider the limit 
+\begin{equation}
+\beta\,\hbar\,\omega = \frac{\hbar \,\omega}{k\,T} \gg 1,
+\end{equation}
+in which the thermal energy  is small compared to the separation between
+the energy levels. In this limit,
+\begin{equation}
+\exp(\beta\,\hbar\,\omega) \gg 1,
+\end{equation}
+and so
+\begin{equation}
+\overline{E} \simeq \hbar\,\omega \,[ 1/2 + \exp(-\beta\,\hbar\,\omega)] \simeq
+\frac{1}{2} \,\hbar \,\omega.
+\end{equation}
+Thus, if the thermal energy is much less than the spacing between quantum states then
+the mean energy approaches that of the ground-state (the so-called {\em zero point}
+ energy).
+Clearly, the equipartition theorem is only valid in the former limit, where
+$k\,T \gg \hbar\, \omega$, and the oscillator possess sufficient thermal energy to explore many
+of its possible quantum states. 
+
+\section{Specific Heats}
+We have discussed the internal energies and entropies of 
+substances (mostly ideal gases)
+at some length. Unfortunately, these quantities cannot be directly 
+measured.
+Instead, they must
+be inferred from other information. The thermodynamic property of substances which
+is the easiest to measure is, of course, the heat capacity, or specific heat. In fact,
+once the variation of the specific heat with temperature is known, both the internal
+energy and entropy can  be easily  reconstructed via
+\begin{eqnarray}
+E (T, V) &= &\nu \int_0^T c_V(T, V)\, dT + E(0,V),\\[0.5ex]
+S(T, V) &=& \nu \int_0^T \frac{c_V(T,V)}{T} \,dT.\label{e7.126}
+\end{eqnarray}
+Here, use has been made of $dS = \dbar Q/T$, and the third law of thermodynamics.
+Clearly, the optimum way of verifying the results of statistical thermodynamics
+is to compare the
+theoretically predicted heat capacities with  the experimentally measured values. 
+
+Classical physics, in the guise of the equipartition theorem, says that each 
+independent degree of freedom associated with a quadratic term in the energy
+possesses an average energy $(1/2)\, k\,T$ in thermal equilibrium at temperature
+$T$. Consider a substance made up of $N$ molecules. Every molecular
+degree of freedom  contributes $(1/2)\,N\,k\,T$,
+or $(1/2)\,\nu \,R\, T$, to the mean energy of the substance (with the tacit proviso
+that each degree of freedom is associated with a quadratic term in the energy).
+Thus, the contribution to the molar heat capacity at constant volume (we wish to
+avoid the complications associated with any external work done on the substance) is
+\begin{equation}
+\frac{1}{\nu}\left(
+\frac{\partial \overline{E}}{\partial T}\right)_V = 
+\frac{1}{\nu} \frac{\partial[ (1/2)\, \nu\, R\,T] }{\partial T}= \frac{1}{2}\, R,
+\end{equation}
+per molecular degree of freedom. The total classical heat capacity is
+therefore
+\begin{equation}
+c_V = \frac{g}{2} \,R,\label{e7.128}
+\end{equation}
+where $g$ is the number of molecular degrees of freedom. Since large complicated
+molecules clearly have very many more degrees of freedom than small simple
+molecules, the above formula predicts that the molar
+heat capacities of substances
+made up of the former type of molecules
+should greatly exceed those  of substances made
+up of the latter. In fact, the experimental heat capacities of substances containing
+complicated molecules are generally greater than those of 
+substances containing simple molecules,
+but by nowhere near the large factor predicted by Eq.~(\ref{e7.128}). This  equation also
+implies  that heat capacities are  temperature independent. In fact,
+this is not the case for most substances. 
+Experimental heat capacities  generally increase with
+increasing temperature. These two experimental
+facts pose severe problems for classical physics.
+Incidentally, these problems 
+ were fully appreciated as far back as 1850. Stories that physicists at the end
+ of the nineteenth
+century
+thought that classical physics explained absolutely everything are largely apocryphal.
+
+
+The equipartition theorem (and the whole classical approximation) is only valid
+when the typical thermal energy $k\,T$ greatly exceeds the spacing between quantum
+energy levels. Suppose that the temperature is sufficiently low that this 
+condition is not satisfied for one particular molecular degree of freedom. 
+In fact, suppose that $k\,T$ is much less than the spacing between
+the  energy levels.
+According to Sect.~\ref{s7.10}, in this situation the degree of freedom only contributes
+the ground-state energy, $E_0$, say, to the mean energy of the molecule. The 
+ground-state energy can be  a quite complicated 
+function of the  internal properties of  the
+molecule, but  is certainly not a function of the temperature, since this is
+a collective property of all molecules. It follows that the contribution to
+the molar heat capacity is
+\begin{equation}
+\frac{1}{\nu}\left(
+\frac{\partial [N E_0]}{\partial T}\right)_V = 0.
+\end{equation}
+Thus, if $k\,T$ is much less than the spacing between the energy levels then
+the degree of 
+freedom contributes nothing at all 
+to the molar heat capacity. We say that this particular
+degree of freedom is {\em frozen out}. Clearly, at very low temperatures just about
+all degrees of freedom are frozen out. As the temperature is gradually increased,
+degrees of freedom  successively 
+``kick in,'' and eventually contribute their full $(1/2)\,R$ to
+the molar heat capacity, as $k\,T$ approaches, and then greatly exceeds, the spacing
+between their
+quantum energy levels. We can use these simple ideas to explain the behaviours
+ of  most 
+experimental  heat capacities.
+
+
+To make further progress,  we need to
+estimate  the typical spacing between the quantum energy levels
+associated with various degrees of freedom. 
+We can do this by observing the
+frequency
+ of the electromagnetic radiation emitted and absorbed during transitions between
+these energy levels. If the typical spacing between energy levels is ${\mit\Delta} E$ then
+transitions between the various levels are associated with photons of
+frequency $\nu$, where $h\, \nu = {\mit\Delta} E$. We can define an {\em effective 
+temperature}\/ of the radiation via $h \,\nu = k\, T_{\rm rad}$. If $T\gg T_{\rm rad}$
+then $k\,T \gg {\mit\Delta} E$, and the degree of freedom makes its
+full contribution  to the heat capacity. On the other hand, if $T\ll T_{\rm rad}$
+then $k\,T \ll {\mit\Delta} E$, and the degree of freedom is frozen out. 
+Table~\ref{t2} lists the ``temperatures'' of various different types of radiation.
+It is clear that degrees of freedom which give rise to  emission or absorption
+of radio or  microwave radiation   contribute their  full $(1/2)\, R$
+to the molar heat capacity at room temperature. Degrees of freedom which give rise to
+emission or absorption in the visible, ultraviolet, X-ray, or $\gamma$-ray
+regions of the electromagnetic spectrum are frozen out at room temperature.
+Degrees of freedom which emit or absorb infrared radiation are on the border line.
+\begin{table}
+\centering
+\begin{tabular}{lcc}
+Radiation type & Frequency (Hz) & $T_{\rm rad}$($^\circ$K)  \\[0.5ex] \hline
+Radio & $<10^9$ & $<0.05$ \\
+Microwave & $10^9$ -- $10^{11}$ & $0.05$ -- $5$ \\
+Infrared & $10^{11}$ -- $10^{14}$ & $5$ -- $5000$ \\
+Visible &  $5 \times 10^{14}$ & $2\times 10^4$ \\
+Ultraviolet & $10^{15}$ -- $10^{17}$ & $5\times 10^4$ -- $5\times 10^6$ \\
+X-ray & $10^{17}$ -- $10^{20}$ & $5\times 10^6$ -- $5\times 10^9$ \\
+$\gamma$-ray & $>10^{20}$ & $>5\times 10^9 $ \\
+\end{tabular}
+\caption{\em Effective ``temperatures'' of various types of electromagnetic radiation}
+\label{t2}
+\end{table}
+
+\section{Specific Heats of Gases}
+Let us now investigate the specific heats of gases. Consider, first of all, 
+translational degrees of freedom. Every molecule in a gas is free to move in
+three dimensions. If one particular 
+molecule has mass $m$ and momentum ${\bf p} = m\, {\bf v}$
+then its kinetic energy of translation is
+\begin{equation}
+K = \frac{1}{2\,m} (p_x^{~2}+ p_y^{~2}+p_z^{~2}).\label{e7.130}
+\end{equation}
+The kinetic energy of other molecules does not involve the momentum ${\bf p}$
+of this particular molecule. 
+Moreover, the potential energy of interaction between molecules
+depends only on their position coordinates, and, thus, certainly does not involve
+${\bf p}$. Any internal rotational, vibrational, electronic, or nuclear degrees
+of freedom of the molecule also do not involve ${\bf p}$. Hence, the essential
+conditions of the equipartition theorem are satisfied (at least, in the classical
+approximation). Since Eq.~(\ref{e7.130}) contains three independent
+ quadratic terms, there
+are clearly three degrees of freedom associated with translation (one for each
+ dimension of space), so the translational contribution to the molar heat capacity
+of gases is
+\begin{equation}
+(c_V)_{\rm translation} = \frac{3}{2}\,R.\label{e7.131}
+\end{equation}
+
+Suppose that our gas is contained in a cubic enclosure of dimensions $L$. According
+to Schr\"{o}dinger's equation, the quantized translational 
+energy levels of an individual molecule are given by
+\begin{equation}
+E = \frac{\hbar^2 \pi^2}{2\, m\, L^2} \left(n_1^{~2}+n_2^{~2}+ n_3^{~2}\right),
+\end{equation}
+where $n_1$, $n_2$, and $n_3$ are positive integer quantum numbers. Clearly, the 
+spacing between the energy levels can be made arbitrarily small by increasing the
+size of the enclosure. This implies that translational degrees of freedom can
+ be treated classically, so that
+Eq.~(\ref{e7.131}) is always valid (except very close to absolute zero). 
+We conclude that  all
+gases  possess a minimum molar heat capacity of $(3/2)\,R$ due to the
+translational degrees of freedom of their constituent molecules.
+ 
+The electronic degrees of freedom of gas molecules ({\em i.e.}, the possible
+configurations of  electrons orbiting the atomic nuclei) typically give rise
+to absorption and emission in the
+ultraviolet or visible regions of the spectrum. It follows from Tab.~\ref{t2} that
+electronic degrees of freedom are frozen out at room temperature. Similarly,
+nuclear degrees of freedom ({\em i.e.}, the possible configurations of protons
+and neutrons in the atomic nuclei) are frozen out because they are associated
+with absorption and emission in the X-ray and $\gamma$-ray regions of the
+electromagnetic spectrum. In fact, the only additional degrees of freedom
+we need worry about for gases are rotational and vibrational degrees of freedom.
+These typically give rise to absorption lines in the infrared region of the
+spectrum. 
+
+The rotational kinetic energy of a molecule tumbling in space can be written
+\begin{equation}
+K = \frac{1}{2}\, I_x \,\omega_x^{~2}+\frac{1}{2}\, I_y \,\omega_y^{~2}+
+\frac{1}{2} \,I_z \,\omega_z^{~2},
+\end{equation}
+where the $x$-, $y$-, and $z$-axes are the so called {\em principle axes of inertia}
+of the molecule (these are mutually perpendicular), $\omega_x$, $\omega_y$,
+and $\omega_z$ are the angular velocities of rotation about these axes, and
+$I_x$, $I_y$, and $I_z$ are the moments of inertia of the molecule about these
+axes. No other degrees of freedom depend on the angular velocities of
+rotation. Since the kinetic energy of rotation is the sum of three quadratic
+terms, the rotational contribution to the molar heat capacity of gases
+is
+\begin{equation}
+(c_V)_{\rm rotation} = \frac{3}{2}\, R,
+\end{equation}
+according to the equipartition theorem. Note that the typical magnitude of a
+molecular moment of inertia is $m \,d^2$, where $m$ is the molecular mass, and
+$d$ is  the typical interatomic spacing in the molecule. 
+A special case arises if the molecule is linear
+({\em e.g.,} if the molecule is diatomic). In this case, one of the principle axes lies
+along the line of centers of the atoms. The moment of inertia about this axis
+is of order $m\, a^2$, where $a$ is a typical nuclear dimension
+(remember that nearly all of the mass of an atom resides in the nucleus). Since
+$a \sim 10^{-5}\, d$, it follows that the moment of inertia about the line of
+centres is minuscule compared to the moments of inertia about the other two
+principle axes. In quantum mechanics, angular momentum is quantized in units
+of $\hbar$. The  energy levels of a rigid rotator are written
+\begin{equation}
+E = \frac{\hbar^2}{2 \,I}\, J(J+1),
+\end{equation}
+where $I$ is the moment of inertia and $J$ is
+an integer. Note the inverse dependence of the spacing between energy levels
+on the moment
+of inertia. It is clear that for the case of a linear molecule, the rotational
+degree of freedom associated with spinning along the line of centres of the
+atoms is frozen out at room
+temperature, given the very small moment of inertia along this axis, and, hence,
+the very widely spaced rotational energy levels. 
+
+Classically, the vibrational degrees of freedom of a molecule are studied by 
+standard normal mode analysis of the
+molecular 
+structure. Each normal mode  behaves like an 
+independent harmonic oscillator, and, therefore, 
+contributes $R$  to the molar specific heat of the gas [$(1/2)\,R$ from the
+kinetic energy of vibration and $(1/2)\,R$ from the potential energy of
+vibration]. A molecule containing $n$ atoms has $n-1$ normal modes of vibration.
+For instance, a diatomic molecule has just one normal mode (corresponding to
+periodic stretching of the bond between the two atoms). Thus, the classical
+contribution to the specific heat from vibrational degrees of freedom is
+\begin{equation}
+(c_V)_{\rm vibration} = (n-1)\, R.
+\end{equation}
+ 
+\begin{figure}[ht]
+\epsfysize=3in
+\centerline{\rotate[u]{\hbox{\epsffile{Chapter07/hcl.eps}}}}
+\caption{\em The infrared vibration-absorption spectrum of H\,Cl.}\label{f1}
+\end{figure}
+
+So,  do any of the rotational and vibrational degrees of freedom
+actually make a contribution to the specific heats of gases at room temperature,
+once quantum effects are taken into consideration? We can answer this 
+question by 
+examining just  one piece of data. Figure~\ref{f1} shows the 
+infrared absorption spectrum of Hydrogen Chloride. The absorption lines correspond
+to simultaneous transitions between different vibrational and rotational energy
+levels. Hence, this is usually called a {\em vibration-rotation spectrum}. The missing
+line at about $3.47$ microns corresponds to a pure vibrational transition from the
+ground-state to the first excited state (pure vibrational transitions are
+{\em forbidden}: H\,Cl molecules always have to simultaneously change their rotational energy level if they are to couple effectively to electromagnetic radiation).
+The longer wavelength absorption lines correspond to vibrational transitions in
+which there is a simultaneous decrease in the rotational energy level. 
+Likewise, the
+shorter wavelength absorption lines correspond to vibrational transitions in which
+there is a simultaneous increase in the rotational energy level. It is clear that
+the rotational energy levels are more closely spaced than the vibrational energy
+levels. The pure vibrational transition gives rise to absorption at
+about $3.47$ microns, which corresponds to infrared radiation of frequency
+$8.5\times 10^{11}$ hertz with an associated 
+ radiation ``temperature'' of 4400 degrees kelvin. We
+conclude that
+ the vibrational degrees of freedom of H\,Cl, or any other small molecule,
+are  frozen out at room temperature. The rotational transitions split the
+vibrational lines by about $0.2$ microns. This implies that pure rotational
+transitions would be associated with infrared radiation of frequency
+$5\times 10^{12}$ hertz and  corresponding
+radiation ``temperature'' 260 degrees kelvin. We 
+conclude that the rotational degrees of freedom of H\,Cl, or any other small
+molecule, are not frozen out at room temperature, and probably contribute the
+classical $(1/2)\,R$ to the molar specific heat. There is one proviso, however.
+Linear molecules (like H\,Cl)  effectively only have two rotational degrees of
+freedom (instead of the usual three), because of the very small moment 
+of inertia of such  molecules along the line of centres of the atoms.
+
+We are now in a position to make some predictions regarding the specific heats
+of various gases. Monatomic molecules only possess three translational degrees
+of freedom, so monatomic gases should have a molar heat capacity $(3/2)\,R
+= 12.47$ joules/degree/mole. The ratio of specific heats $\gamma = c_p / c_V
+= (c_V + R)/ c_V$ should be $5/3 = 1.667$. It can be seen from Tab.~\ref{tab1} that both of
+these predictions are borne out pretty well for Helium and Argon. 
+Diatomic molecules possess three translational degrees of freedom and
+two rotational degrees of freedom (all other degrees of freedom are frozen out
+at room temperature). Thus, diatomic gases should have a molar heat capacity
+$(5/2)\,R= 20.8$ joules/degree/mole. The ratio of specific heats should be
+$7/5 = 1.4$. It can be seen from Tab.~\ref{tab1} that these are pretty accurate
+predictions for Nitrogen and Oxygen. The freezing out of vibrational 
+degrees of freedom becomes gradually less effective as molecules become heavier
+and more complex. This is partly because such molecules are generally less 
+stable, so the force constant $\kappa$ is reduced, and partly
+because the molecular mass
+is increased. Both these effect reduce the frequency of vibration of the 
+molecular normal
+modes [see Eq.~(\ref{e7.111})], and, hence, the spacing between vibrational energy levels
+[see Eq.~(\ref{e7.110})]. This accounts for the obviously non-classical [{\em i.e.}, not
+a multiple of $(1/2)\,R$] specific heats of Carbon Dioxide and Ethane in 
+Tab.~\ref{tab1}.
+In both molecules, vibrational degrees of freedom contribute to the molar specific
+heat (but not the full $R$ because the temperature is not high enough).
+
+\begin{figure}[ht]
+\epsfysize=3in
+\centerline{\rotate[u]{\hbox{\epsffile{Chapter07/h2.eps}}}}
+\caption{\em The molar heat capacity at constant volume
+ (in units of $R$) of gaseous
+$H_2$ versus temperature.}\label{fh2}
+\end{figure}
+
+Figure~\ref{fh2} shows the variation of the molar heat capacity at constant volume
+ (in units of $R$) of gaseous hydrogen with temperature. The expected contribution
+from the translational degrees of freedom is $(3/2)\,R$ (there are
+three translational degrees of freedom per molecule). The 
+expected contribution at
+high temperatures from the rotational degrees of freedom is $R$
+(there are effectively
+two rotational degrees of freedom per molecule). Finally, the expected contribution at high temperatures from the vibrational degrees of freedom is $R$ (there
+is one vibrational degree of freedom per molecule). It can be seen that
+as the temperature rises the rotational, and then the vibrational, degrees
+of freedom eventually make their full classical contributions to the heat
+capacity.
+
+\section{Specific Heats of Solids}\label{s7sound}
+Consider a simple solid containing $N$ atoms. Now, atoms in solids cannot
+translate (unlike those in gases), but 
+ are free to vibrate about their equilibrium positions. 
+Such vibrations are  called {\em lattice vibrations}, and  can be thought of
+as sound waves propagating
+through the crystal lattice. Each atom is specified by three independent position
+coordinates, and three conjugate momentum coordinates. Let us 
+only consider small amplitude vibrations.
+In this case, we can expand the potential energy of interaction between the atoms 
+to give an expression which is quadratic in the atomic displacements
+from their equilibrium positions. It is always possible to perform a 
+{\em normal mode analysis}
+of the oscillations. In effect, we can find $3\,N$ independent modes of oscillation of the solid. 
+Each mode has its own particular oscillation frequency, and its own particular pattern
+ of atomic displacements. 
+Any general oscillation can be written as a linear combination of these 
+{\em normal modes}. 
+Let $q_i$ be the (appropriately normalized) amplitude of the $i$th normal mode,
+ and $p_i$ the momentum conjugate to this
+coordinate. In  {\em normal mode coordinates}, the total energy of the lattice vibrations takes the
+particularly simple form
+\begin{equation}
+E = \frac{1}{2}\sum_{i=1}^{3 N} (p_i^{~2} + \omega_i^{~2} q_i^{~2}),\label{e7.137}
+\end{equation}
+where $\omega_i$ is the (angular) oscillation frequency of the $i$th normal mode. It is
+clear that in normal mode coordinates, the linearized lattice vibrations are equivalent to
+$3\,N$ independent harmonic oscillators (of course, each oscillator corresponds to a different normal
+mode).
+
+ The typical value of $\omega_i$ is the (angular) frequency of a sound wave 
+propagating through the lattice. Sound wave frequencies are far lower than the
+typical vibration frequencies of gaseous molecules. In the latter case, the mass involved in the
+vibration is simply that of the molecule, whereas in the former case the mass involved is that
+of very many atoms (since lattice vibrations are non-localized). The strength of
+interatomic bonds in gaseous molecules is similar to those in solids, so we can use the estimate
+$\omega\sim \sqrt{\kappa/m}$ ($\kappa$ is the force constant which measures the strength of
+interatomic bonds, and $m$ is the mass involved in the oscillation) as proof that the typical
+frequencies of lattice vibrations are  very
+much less than the vibration frequencies of simple molecules.
+It follows from ${\mit\Delta} E = \hbar\, \omega$ that the quantum energy levels of lattice vibrations are
+far more closely spaced than the vibrational energy levels of gaseous molecules. Thus, it is
+likely (and is, indeed, the case) that lattice vibrations are not frozen out at room temperature,
+but, instead, make their full classical contribution to the molar specific heat of the solid. 
+
+If the lattice vibrations behave classically then, according to the equipartition theorem,
+each normal mode of oscillation has an associated mean energy $k\,T$ in equilibrium at
+temperature $T$ [$(1/2)\,k\,T$ resides in the kinetic energy of the oscillation,
+and $(1/2)\,k\,T$ resides in the potential energy]. 
+Thus, the mean internal energy per mole of the solid is
+\begin{equation}
+\overline{E} = 3 \,N\,k\,T = 3\,\nu\, R\,T.
+\end{equation}
+It follows that the molar heat capacity at constant volume is
+\begin{equation}
+c_V = \frac{1}{\nu}\left(\frac{\partial\overline{E}}{\partial T}\right)_V = 3\,R
+\end{equation}
+for solids. This gives a value of $24.9$ joules/mole/degree. In fact, at room temperature most
+solids (in particular, metals)
+ have heat capacities which lie remarkably close to this value. This 
+ fact was discovered
+experimentally by Dulong and Petite at the beginning of the nineteenth century, and was used to
+make some of the first 
+crude estimates of the molecular weights of solids (if we know the molar heat capacity 
+of a substance
+ then we can easily work out how much of  it corresponds to one mole, and
+by weighing this amount,   and then dividing the result by Avogadro's number, 
+we can obtain an estimate of the molecular weight). Table~\ref{t3} lists the experimental 
+molar heat
+capacities $c_p$ at constant pressure for various solids. The heat capacity at constant
+volume is somewhat less than the  constant pressure value, but not by much,
+ because solids 
+are fairly incompressible.
+It can be seen that {\em Dulong and Petite's law}\/ ({\em i.e.}, that all solids have a molar heat capacities
+close to $24.9$ joules/mole/degree) holds pretty well for metals. 
+However, the law fails badly for
+diamond. This is not surprising. As is well-known,
+diamond is an extremely hard substance, so its intermolecular bonds must be very strong, suggesting
+that the force constant $\kappa$ is large.
+Diamond is also a fairly low density substance, so the mass $m$ involved in
+lattice vibrations is comparatively small. Both these facts suggest that the typical lattice vibration
+frequency of diamond  ($\omega \sim \sqrt{\kappa/m}$) is high. In fact, the spacing between 
+the different vibration energy
+levels (which scales like $\hbar \,\omega$) is sufficiently large in diamond for the vibrational
+degrees of freedom
+ to be largely frozen out at room temperature. This accounts for  the anomalously low
+heat capacity of diamond in Tab.~\ref{t3}.
+
+\begin{table}
+\centering
+\begin{tabular}{lrlr}\hline
+Solid & $c_p$ & Solid &   $c_p$ \\[0.5ex] \hline
+Copper & 24.5 & Aluminium & 24.4 \\
+Silver & 25.5 & Tin (white) & 26.4 \\
+Lead & 26.4 & Sulphur (rhombic) & 22.4\\
+Zinc & 25.4 & Carbon (diamond) & 6.1\\
+\end{tabular}
+\caption{\em Values of $c_p$ (joules/mole/degree) for some solids at $T= 298^\circ$~K. From Reif.}
+\label{t3}
+\end{table}
+
+Dulong and Petite's law is essentially a high temperature limit. The molar heat capacity cannot
+remain a constant as the temperature approaches absolute zero, since, by
+ Eq.~(\ref{e7.126}), this
+would imply $S\rightarrow \infty$, which violates the third law of thermodynamics. We can make
+a crude model of the behaviour of $c_V$ at low temperatures by assuming that all the normal
+modes oscillate at the same frequency, $\omega$, say. This approximation was first employed by
+Einstein in a paper published in 1907. According to Eq.~(\ref{e7.137}),
+the solid acts like a set
+of $3N$ independent oscillators which, making use of
+Einstein's approximation, all vibrate at the same frequency.
+ We can use the quantum mechanical result (\ref{e7.118}) for a single
+oscillator  to write the mean energy
+of the solid in the form
+\begin{equation}
+\overline{E} = 3\,N \,\hbar\,\omega\left(\frac{1}{2} + 
+\frac{1}{\exp(\beta\,\hbar\,\omega) - 1} \right).
+\end{equation}
+The molar heat capacity is defined
+\begin{equation}
+c_V = \frac{1}{\nu}\left(\frac{\partial \overline{E}}{\partial T}\right)_V = 
+\frac{1}{\nu}\left(\frac{\partial \overline{E}}{\partial\beta}\right)_V \frac{
+\partial\beta}{\partial T} = - \frac{1}{\nu\, k \,T^2} \left(
+\frac{\partial\overline{E}}{\partial \beta}\right)_V,\label{e7.141}
+\end{equation}
+giving
+\begin{equation}
+c_V = - \frac{3 \,N_A \,\hbar \,\omega}{k\, T^2} \left[
+-\frac{\exp(\beta\,\hbar\,\omega)\,\hbar\, \omega}
+{[\exp(\beta\,\hbar\, \omega) - 1]^2} \right],
+\end{equation}
+which reduces to
+\begin{equation}
+c_V = 3\,R \left(\frac{\theta_E}{T}\right)^2 \frac{\exp(\theta_E / T)}
+{[\exp(\theta_E/T) - 1]^2}.\label{e7.143}
+\end{equation}
+Here,
+\begin{equation}
+\theta_E = \frac{\hbar \,\omega}{k}
+\end{equation}
+is called the {\em Einstein temperature}. If the temperature is sufficiently
+ high that
+$T\gg \theta_E$ then $k\,T \gg \hbar \,\omega$, and the above expression reduces to
+$c_V = 3\,R$, after expansion of the exponential functions. Thus, the law of Dulong and
+Petite is recovered for temperatures significantly in excess of the Einstein temperature.
+On the other hand, if the temperature is sufficiently
+low that $T\ll \theta_E$ then the
+exponential factors in Eq.~(\ref{e7.143}) become very much larger than unity, giving
+\begin{equation}
+c_V \sim 3 \,R \left(\frac{\theta_E}{T}\right)^2\,\exp(-\theta_E / T).
+\end{equation}
+So, in this simple model the specific heat approaches zero exponentially as $T\rightarrow 0$. 
+
+In reality, the specific heats of solids do not approach zero quite as  quickly as 
+suggested by Einstein's model when $T\rightarrow 0$. The experimentally observed low temperature
+behaviour is more like $c_V \propto T^3$ (see Fig.~\ref{f2}). The reason for this discrepancy is the crude 
+approximation
+that all normal modes have the same frequency. In fact, long wavelength modes have lower frequencies
+than short wavelength modes, so the former are much harder to freeze out than the latter
+(because the spacing between quantum energy levels, $\hbar\,\omega$, is smaller in the former case). 
+The molar 
+heat capacity does not decrease with temperature as rapidly  as suggested by Einstein's model
+because these long wavelength modes are able to make a significant contribution 
+to the heat capacity even at very low
+temperatures. A more realistic model of lattice vibrations was developed by the Dutch physicist 
+Peter Debye in 1912. 
+In the Debye model, the frequencies of the normal modes of vibration are estimated by treating
+the solid as an isotropic continuous medium. This approach is reasonable because the only modes
+which really matter at low temperatures are the long wavelength modes: {\em i.e.},  those whose
+wavelengths greatly exceed the interatomic spacing. It is plausible that these modes are not
+particularly 
+sensitive to the discrete nature of the solid: {\em i.e.}, the fact that it is  made up of atoms
+rather than being continuous. 
+
+Consider a sound wave propagating through an isotropic continuous medium.
+The  disturbance varies with position vector ${\bf r}$ and time $t$ like
+$\exp[-{\rm i}\,({\bf k}\!\cdot{\bf r} - \omega \,t)]$, where the wave-vector ${\bf k}$ and
+the frequency of oscillation $\omega$ satisfy the dispersion relation for sound waves in
+an isotropic medium:
+\begin{equation}\label{e7.146}
+\omega = k \,c_s.
+\end{equation}
+Here, $c_s$ is the speed of sound in the medium. Suppose, for the sake
+of argument,  that the medium is periodic in
+the $x$-, $y$-, and $z$-directions with periodicity lengths $L_x$, $L_y$, and $L_z$, respectively.
+In order to maintain periodicity we need
+\begin{equation}
+k_x\, (x+ L_x) = k_x\, x + 2\,\pi\, n_x,
+\end{equation}
+where $n_x$ is an integer. There are analogous constraints on $k_y$ and $k_z$. It follows that
+in a periodic medium the components of the wave-vector are quantized, and can only take the
+values
+\begin{eqnarray}
+k_x &=& \frac{2\pi}{L_x} \,n_x, \\[0.5ex]
+k_y &=& \frac{2\pi}{L_y} \,n_y, \\[0.5ex]
+k_z &=& \frac{2\pi}{L_z} \,n_z, 
+\end{eqnarray}
+where $n_x$, $n_y$, and $n_z$ are all integers. It is assumed that $L_x$, $L_y$, and $L_z$ are
+macroscopic lengths, so the allowed values of the components of the wave-vector are very closely
+spaced.
+ For given values of $k_y$ and $k_z$, the number of
+allowed values of $k_x$ which lie in the range $k_x$ to $k_x + d k_x$ is given by
+\begin{equation}
+{\mit\Delta} n_x = \frac{L_x}{2\pi} \,dk_x.
+\end{equation}
+It follows that the number of allowed values of ${\bf k}$ ({\em i.e.}, the number of allowed
+modes) when $k_x$ lies in the range $k_x$ to $k_x + d k_x$,
+ $k_y$ lies in the range $k_y$ to $k_y + d k_y $, and 
+ $k_z$ lies in the range $k_z$ to $k_z + d k_z $, is
+\begin{equation}\label{e7.150}
+\rho\, d^3{\bf k} = \left(\frac{L_x}{2\pi}\,dk_x\right)
+ \left(\frac{L_y}{2\pi}\,dk_y\right) \left(\frac{L_z}{2\pi}\,dk_z\right)= 
+\frac{V}{(2\pi)^3}\, dk_x\, dk_y \,dk_z,
+\end{equation}
+where $V = L_x L_y L_z$ is the periodicity volume, and
+$d^3{\bf k}\equiv dk_x\, dk_y \,dk_z$. The quantity $\rho$ is called the density of modes.
+Note that this density is independent of ${\bf k}$, and proportional to the periodicity
+volume. Thus, the density of modes {\em per unit volume}\/ is a constant independent of the magnitude
+or shape of the periodicity
+volume. The density of modes per unit volume when the {\em magnitude}\/ of ${\bf k}$ lies in
+the range $k$ to $k+dk$ is given by multiplying the density of modes per unit volume by
+the ``volume'' in ${\bf k}$-space of the spherical shell lying between radii $k$ and $k+ dk$.
+Thus,
+\begin{equation}
+\rho_k \,dk = \frac{4\pi k^2\,dk}{(2\pi)^3} = \frac{k^2}{2 \pi^2} \,dk.
+\end{equation}
+
+Consider an isotropic continuous medium of volume $V$. According to the above
+ relation, the
+number of normal modes whose frequencies lie between $\omega$ and $\omega+d \omega$
+(which is equivalent to the number of modes whose $k$ values lie in the range $\omega/c_s$
+to $\omega/c_s + d\omega/c_s$) is 
+\begin{equation}
+\sigma_c(\omega)\,d\omega = 3\, \frac{k^2\,V}{2\pi^2} \, dk = 3 \,\frac{V}
+{2\pi^2 \,c_s^{~3}} \,\omega^2\,d\omega.\label{e7.152}
+\end{equation}
+The factor of $3$ comes from the three possible polarizations of sound waves in solids.
+For every allowed wavenumber (or frequency) there are two independent torsional modes,
+where the displacement is perpendicular to the direction of propagation, and one
+longitudinal mode, where the displacement is parallel to the direction of propagation.
+Torsion waves are vaguely analogous to electromagnetic waves (these also have two
+independent polarizations). The longitudinal mode is very similar to the compressional
+sound wave in gases. Of course, torsion waves can not propagate in gases because gases
+have no resistance to deformation without change of volume. 
+
+The Debye approach consists in approximating the actual density of normal modes
+$\sigma(\omega)$ by the density in a continuous medium $\sigma_c(\omega)$, not
+only at low frequencies (long wavelengths) where these should be nearly the same, but
+also at higher frequencies where they  may differ substantially. Suppose that we are
+dealing with a solid consisting of $N$ atoms.  We know that there are
+only $3 \,N$ independent normal modes. It follows that we must cut off the
+density of states above some critical frequency, $\omega_D$ say, otherwise we
+will have too many modes.  Thus, in the Debye approximation the density
+of normal modes takes the form
+\begin{eqnarray}
+\sigma_D(\omega)= &\sigma_c(\omega) &{\rm for~} \omega<\omega_D \nonumber\\[0.5ex]
+\sigma_D(\omega) =&0&{\rm for~} \omega>\omega_D.\label{e7.153}
+\end{eqnarray}
+Here, $\omega_D$ is the {\em Debye frequency}. This critical frequency is chosen such that
+the total number of normal modes is $3 \,N$, so
+\begin{equation}
+\int_0^\infty \sigma_D(\omega)\, d\omega = \int_0^{\omega_D }\sigma_c(\omega)\, d\omega = 
+3\, N.
+\end{equation}
+
+Substituting Eq.~(\ref{e7.152}) into the previous formula yields
+\begin{equation}
+\frac{3 V}{2\pi^2 \,c_s^{~3}}\int_0^{\omega_D} \omega^2\, d\omega = \frac{V}
+{2\pi^2\, c_s^{~3}}\,\omega_D^{~3} = 3\,N.
+\end{equation}
+This implies that
+\begin{equation}
+\omega_D = c_s\left(6 \pi^2 \,\frac{N}{V}\right)^{1/3}.\label{e7.156}
+\end{equation}
+Thus, the Debye frequency  depends only on the sound velocity in the solid and the number
+of atoms per unit volume. The wavelength corresponding to the Debye frequency
+is $2\pi\,c_s/\omega_D$, which is clearly on the order of the interatomic spacing
+$a\sim (V/N)^{1/3}$. 
+It follows that the cut-off of normal modes whose frequencies  exceed the Debye frequency
+is equivalent to a cut-off of normal modes whose wavelengths are less than the interatomic
+spacing. Of course, it makes physical sense that such modes should be absent. 
+
+\begin{figure}[ht]
+\epsfysize=3.5in
+\centerline{\rotate[u]{\hbox{\epsffile{Chapter07/diamond.eps}}}}
+\caption{\em The true density of normal modes in  diamond compared with
+the density of normal modes predicted by Debye theory. From C.B.~Walker, Phys.\ Rev.\ {\bf 103}, 547 (1956).}\label{fdia}
+\end{figure}
+
+Figure~\ref{fdia} compares  the actual density of normal modes in diamond with
+the density predicted by Debye theory. 
+Not surprisingly, there is not a particularly strong resemblance
+between these two curves, since Debye theory is highly idealized. 
+Nevertheless, both curves exhibit sharp cut-offs at high frequencies, and
+coincide at low frequencies. Furthermore, the areas under both curves are
+the same. As we shall see,
+ this is sufficient to allow Debye theory to correctly account for
+the temperature variation of the specific heat of solids  at low temperatures. 
+
+
+We can  use the quantum mechanical expression for the 
+mean energy of a single oscillator, Eq.~(\ref{e7.118}), to calculate the mean
+energy of lattice vibrations in the Debye approximation. We obtain
+\begin{equation}
+\overline{E} = \int_0^\infty \sigma_D(\omega) \,\hbar\,\omega
+\left(\frac{1}{2} + \frac{1}{\exp(\beta\,\hbar\, \omega)-1}\right)\,d\omega.
+\end{equation}
+According to Eq.~(\ref{e7.141}), the molar heat capacity takes the form
+\begin{equation}
+c_V = \frac{1}{\nu\, k\, T^2} \int_0^\infty \sigma_D (\omega)
+\, \hbar\,\omega\left[\frac{\exp(\beta\,\hbar\, \omega)\,\hbar\,\omega}
+{[\exp(\beta\,\hbar\,\omega)-1]^2}\right]\,d\omega.
+\end{equation}
+Substituting in Eq.~(\ref{e7.153}), we find that
+\begin{equation}
+c_V = \frac{k}{\nu}\int_0^{\omega_D} \frac{\exp(\beta\,\hbar\,\omega)\,(\beta\,
+\hbar\,\omega)^2}
+{[\exp(\beta\,\hbar\,\omega)-1]^2}\,
+\frac{3 \,V}{2\pi^2 \,c_s^{~3}}\,\omega^2\,d\omega,
+\end{equation}
+giving
+\begin{equation}
+c_V = \frac{3\,V\, k}{2\pi^2 \,\nu\,(c_s \,\beta \,\hbar)^3}\int_0^{\beta\,\hbar\,\omega_D} 
+\frac{\exp x}{(\exp x - 1)^2}\,x^4\,dx,
+\end{equation}
+in terms of the dimensionless variable $x=\beta\,\hbar\,\omega$.
+According to Eq.~(\ref{e7.156}), the volume can be written
+\begin{equation}
+V = 6\,\pi^2\, N \left(\frac{c_s}{\omega_D}\right)^3,
+\end{equation}
+so the heat capacity reduces to
+\begin{equation}
+c_V = 3R\,f_D(\beta \,\hbar\,\omega_D)= 3\,R\,f_D(\theta_D/T),
+\end{equation}
+where the {\em Debye function}\/ is defined
+\begin{equation}
+f_D(y) \equiv \frac{3}{y^3}\int_0^y \frac{\exp x}
+{(\exp x -1)^2}\,x^4\,dx.\label{e7.163}
+\end{equation}
+We have also defined the {\em Debye temperature}\/ $\theta_D$ as
+\begin{equation}
+k\,\theta_D = \hbar \,\omega_D.
+\end{equation}
+
+Consider the asymptotic limit in which $T\gg \theta_D$. For small $y$, we can approximate
+$\exp x$ as $1+x$ in the integrand of Eq.~(\ref{e7.163}), so that
+\begin{equation}
+f_D(y) \rightarrow \frac{3}{y^3} \int_0^y x^2\,dx = 1.
+\end{equation}
+Thus, if the temperature greatly exceeds the Debye temperature we recover the law of
+Dulong and Petite that $c_V = 3\,R$. Consider, now, the 
+asymptotic limit in which $T\ll \theta_D$. For large $y$,
+\begin{equation}
+\int_0^y \frac{\exp x}{(\exp x -1)^2}\,x^4 \, dx \simeq
+\int_0^\infty \frac{\exp x}{(\exp x -1)^2}\,x^4 \, dx = \frac{4\pi^4}{15}.
+\end{equation}
+The latter integration is standard (if rather obscure), and can be looked up in any 
+(large) reference book
+on integration. Thus, in the low temperature limit
+\begin{equation}
+f_D(y) \rightarrow \frac{4\pi^4}{5} \frac{1}{y^3}.
+\end{equation}
+This yields
+\begin{equation}
+c_V \simeq \frac{12 \pi^4}{5} R \left(\frac{T}{\theta_D}\right)^3\label{e7.168}
+\end{equation}
+in the limit $T\ll \theta_D$: {\em i.e.}, $c_V$ varies with temperature like $T^3$. 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lll}
+Solid & $\theta_D$ from low temp. & $\theta_D$ from sound speed \nonumber\\[0.5ex] \hline
+Na\,Cl & 308 & 320 \\
+K\,Cl & 230 & 246 \\
+Ag & 225 & 216 \\
+Zn & 308 & 305\\
+\end{tabular}
+\caption{\em Comparison of Debye temperatures (in degrees kelvin) obtained from the
+low temperature behaviour of the heat capacity with those calculated from the 
+sound speed. From C.~Kittel, Introduction to solid-state physics, 2nd Ed.\ (John Wiley \& Sons, New York NY, 1956).}\label{t4}
+\end{table}
+
+The fact that $c_V$ goes like $T^3$ at low temperatures is quite well verified experimentally,
+although it is sometimes necessary to go to temperatures as low as $0.02 \,\theta_D$ to obtain
+this asymptotic behaviour. Theoretically, $\theta_D$ should be calculable from 
+Eq.~(\ref{e7.156})
+in terms of the sound speed in the solid and the molar volume. Table~\ref{t4} shows a
+comparison of Debye temperatures evaluated by this means with temperatures obtained 
+empirically by fitting the law (\ref{e7.168}) to the low temperature variation of the
+heat capacity. It can be seen that there is fairly good agreement between the theoretical and
+empirical Debye temperatures. This suggests that the Debye theory affords a good, thought not
+perfect, representation of the behaviour of $c_V$ in solids over the entire temperature range.
+
+\begin{figure}[ht]
+\epsfysize=3.5in
+\centerline{\rotate[u]{\hbox{\epsffile{Chapter07/heat.eps}}}}
+\caption{\em The molar heat capacity of various solids.}\label{f2}
+\end{figure}
+
+Finally, Fig.~\ref{f2} shows  the actual temperature variation of the molar heat capacities
+of various solids as well as  that predicted by  Debye's theory. The prediction of Einstein's theory
+is also show for the sake of comparison. Note that 24.9 joules/mole/degree is about
+6 calories/gram-atom/degree (the latter  are chemist's units).
+
+\section{Maxwell Velocity Distribution}
+Consider a molecule of mass $m$ in a gas which is sufficiently 
+dilute for the intermolecular forces to be negligible ({\em i.e.},
+ an ideal gas). 
+The energy of the molecule is written
+\begin{equation}
+\epsilon = \frac{{\bf p}^2}{2\,m} + \epsilon^{\rm int},
+\end{equation}
+where $\bf p$ is its momentum vector, and $\epsilon^{\rm int}$ is its
+internal ({\em i.e.}, non-translational)
+ energy.  The latter energy  is due to molecular rotation, vibration, {\em etc}.
+Translational degrees of freedom can be treated classically to an excellent
+approximation, whereas  internal degrees of freedom usually require a quantum
+mechanical approach. 
+Classically, the probability of finding the molecule in  a given internal
+state with a position vector in the range $\bf r$ to ${\bf r} + d{\bf r}$,
+and a momentum vector in the range $\bf p$ to ${\bf p} + d{\bf p}$, is proportional
+to the number of cells (of ``volume'' $h_0$) contained in the corresponding region
+of phase-space, weighted   by the Boltzmann factor. 
+In fact, since classical phase-space is divided up into {\em uniform}\/ cells,
+the number of cells is just proportional to the ``volume'' of
+the region under consideration. This ``volume'' is written $d^3{\bf r}\,d^3{\bf p}$.
+ Thus, the probability of finding the molecule in a given internal state $s$ 
+is
+\begin{equation}
+P_s({\bf r}, {\bf p}) \,d^3{\bf r}\,d^3{\bf p} \propto 
+\exp(-\beta\,p^2/2\,m ) \exp(-\beta\,\epsilon^{\rm int}_s)\,\,d^3{\bf r}\,d^3{\bf p},
+\end{equation}
+where $P_s$ is a probability density defined in the usual manner. The probability
+$P({\bf r}, {\bf p}) \,d^3{\bf r}\,d^3{\bf p}$
+of finding the molecule in {\em any}\/ internal state
+with position and momentum vectors in the
+specified range 
+is obtained by summing the above expression over all possible internal states.
+The sum over $\exp(-\beta\, \epsilon^{\rm int}_s)$ just contributes a constant of
+proportionality (since the internal states do not depend on ${\bf r}$ or
+${\bf p}$), so
+\begin{equation}
+P({\bf r}, {\bf p}) \,d^3{\bf r}\,d^3{\bf p} \propto \exp(-\beta \,p^2/2m)
+\,d^3{\bf r}\,d^3{\bf p}.
+\end{equation}
+Of course, we can multiply this probability by the total number of molecules
+$N$ in order 
+to obtain the mean number of molecules with position and momentum vectors in the
+specified range. 
+
+Suppose that we now want to determine
+ $f({\bf r}, {\bf v})\,d^3{\bf r}\,d^3{\bf v}$: {\em i.e.}, 
+the mean number of molecules with positions between ${\bf r}$ and ${\bf r} +
+d{\bf r}$, and velocities in the range ${\bf v}$ and ${\bf v}+d{\bf v}$. 
+Since ${\bf v} = {\bf p}/m$,  it is easily seen that
+\begin{equation}
+f({\bf r}, {\bf v})\,d^3{\bf r}\,d^3{\bf v} = C \exp(-\beta \, m \,v^2/2)\,
+d^3{\bf r}\,d^3{\bf v},
+\end{equation}
+where $C$ is a constant of proportionality. This constant can be determined by
+the condition
+\begin{equation}
+\int_{({\bf r})} \int_{({\bf v})}  f({\bf r}, {\bf v})\,d^3{\bf r}\,d^3{\bf v} = N:
+\end{equation}
+{\em i.e.}, the sum over molecules with all possible positions and velocities gives
+the total number of molecules, $N$. The integral over the molecular position
+coordinates just gives the volume $V$ of the gas, since the Boltzmann factor
+is independent of position. The integration over the velocity coordinates can
+be reduced to the product of three identical integrals (one for $v_x$, one
+for $v_y$, and one for $v_z$), so we have
+\begin{equation}
+C\, V \left[\int_{-\infty}^{\infty} \exp(-\beta\, m\,v_z^{~2}/2)\, dv_z\right]^3
+= N.
+\end{equation}
+Now,
+\begin{equation}
+\int_{-\infty}^{\infty} \exp(-\beta\, m\,v_z^{~2}/2)\, dv_z = \sqrt{\frac{2}{\beta\, m}}
+\int_{-\infty}^{\infty} \exp(-y^2)\, dy = \sqrt{\frac{2\pi}{\beta\, m}},
+\end{equation}
+so
+$ C =(N/V) (\beta\, m / 2\pi)^{3/2}$. Thus, the properly normalized distribution
+function for molecular velocities is written
+\begin{equation}
+f({\bf v}) \,d^3{\bf r}\,d^3{\bf v} = n \left(\frac{m}{2\pi \,k \,T}\right)^{3/2}
+\, \exp(-m \,v^2/ 2\,k\,T)\, d^3{\bf r}\,d^3{\bf v}.\label{e7.176}
+\end{equation}
+Here, $n=N/V$ is the number density of the molecules. We
+ have omitted the variable ${\bf r}$ in the argument of $f$, since
+$f$ clearly does not depend on position. In other words, the distribution of
+molecular velocities is uniform in space. This is hardly surprising, since there
+is nothing to distinguish one region of space from another in our calculation.
+The above distribution is called the {\em Maxwell velocity  distribution}, 
+because it was discovered by James Clark Maxwell in the middle of the nineteenth century.
+The average number of molecules {\em per unit volume} with velocities in the
+range ${\bf v}$ to ${\bf v} + d{\bf v}$ is obviously
+$f({\bf v}) \,d^3{\bf v}$.
+
+Let us consider the distribution of a given component of velocity: the $z$-component,
+say. Suppose that $g(v_z)\,dv_z$ is the average number of molecules per unit volume
+with the $z$-component of velocity in the range $v_z$ to $v_z+dv_z$, irrespective
+of the values of their other velocity components. It is fairly obvious that
+this distribution is obtained from the Maxwell distribution by summing (integrating
+actually) over all possible values of $v_x$ and $v_y$, with $v_z$ in the specified
+range. Thus,
+\begin{equation}
+g(v_z)\,dv_z = \int_{(v_x)} \int_{(v_y)} f({\bf v})\,d^3{\bf v}.
+\end{equation}
+This gives
+\begin{eqnarray}
+g(v_z)\,dv_z& = &n \left(\frac{m}{2\pi\, k\,T}\right)^{3/2}  
+ \int_{(v_x)} \int_{(v_y)} \exp[- (m/2\, k\,T)(v_x^{~2}+v_y^{~2}+v_z^{~2})]\,
+dv_x\,dv_y\, dv_z
+\nonumber\\[0.5ex]
+&=&n \left(\frac{m}{2\pi \,k\,T}\right)^{3/2} \exp(-m\,v_z^{~2}/ 2\,k\,T)
+\left[\int_{-\infty}^{\infty} \exp(-m\,v_x^{~2}/ 2\,k\,T)\right]^2\nonumber\\[0.5ex]
+&=&n \left(\frac{m}{2\pi \,k\,T}\right)^{3/2}\exp(-m\,v_z^{~2}/ 2\,k\,T)
+\left(\sqrt{\frac{2\pi\,k\,T}{m}}\right)^2,
+\end{eqnarray}
+or
+\begin{equation}
+g(v_z)\,dv_z = n \left(\frac{m}{2\pi \,k\,T} \right)^{1/2} \exp(-m\, v_z^{~2}/2\,k\,T)\,
+dv_z.
+\end{equation}
+Of course, this expression is properly normalized, so that
+\begin{equation}
+\int_{-\infty}^{\infty} g(v_z)\, dv_z = n.
+\end{equation}
+
+It is clear that each component (since there is nothing special about the $z$-component) of the velocity is distributed with a Gaussian probability distribution
+(see Sect.~\ref{s2}),
+centred on a mean value
+\begin{equation}
+\overline{v_z} = 0,\label{e7.181}
+\end{equation}
+with variance
+\begin{equation}
+\overline{v_z^{~2}} = \frac{k\,T}{m}.\label{e7.182}
+\end{equation}
+Equation~(\ref{e7.181}) implies that each molecule is just as likely to be moving in the
+plus $z$-direction as in the minus $z$-direction. Equation~(\ref{e7.182}) can be rearranged
+to give
+\begin{equation}
+\overline{\frac{1}{2}\,m\, v_z^{~2}} = \frac{1}{2}\, k\,T,
+\end{equation}
+in accordance with the equipartition theorem. 
+
+Note that Eq.~(\ref{e7.176}) can be rewritten
+\begin{equation}
+\frac{ f({\bf v}) \, d^3{\bf v}}{n} =\left[\frac{g(v_x)\,dv_x}{n}\right]
+\left[\frac{g(v_y)\,dv_y}{n}\right]\left[\frac{g(v_z)\,dv_z}{n}\right],
+\end{equation}
+where $g(v_x)$ and $g(v_y)$ are defined in an analogous way to $g(v_z)$. 
+Thus, the probability that the velocity lies in the range ${\bf v}$ to
+${\bf v} + d{\bf v}$ is just equal to the product of the probabilities
+that the velocity components lie in their respective ranges.
+In other words, the individual
+velocity components act like statistically independent variables.
+
+Suppose that we now want to calculate $F(v)\, dv$:
+{\em i.e.},  the average number of molecules
+per unit volume with a speed $v=|{\bf v}|$ in the range $v$ to $v+dv$. It is
+obvious that we can obtain this quantity by adding up all molecules with speeds
+in this range, irrespective of the {\em direction}\/ of their velocities. Thus,
+\begin{equation}
+F(v)\,dv = \int f({\bf v})\, d^3{\bf v},
+\end{equation}
+where the integral extends over all velocities satisfying
+\begin{equation}
+v < |{\bf v}| < v + dv.
+\end{equation}
+This inequality is satisfied by  a spherical shell of radius $v$ and thickness $dv$
+in velocity space. Since $f({\bf v})$ only depends on $|v|$,
+so $f({\bf  v})\equiv f(v)$,  the above
+integral is just $f(v)$ multiplied by the volume of the spherical shell in
+velocity space. So,
+\begin{equation}
+F(v)\, dv = 4\pi f(v) \,v^2\,dv,
+\end{equation}
+which gives
+\begin{equation}
+F(v)\,dv = 4\pi\, n\left(\frac{m}{2\pi\, k\,T}\right)^{3/2} v^2\,\exp(-m\,v^2/2\,k\,T)\,dv.
+\end{equation}
+This is  the famous {\em  Maxwell distribution of molecular speeds}.
+Of course, it is properly normalized, so that
+\begin{equation}
+\int_0^\infty F(v)\,dv = n.
+\end{equation}
+ Note that the Maxwell
+distribution exhibits  a maximum at some non-zero value of $v$. The reason for
+this is quite simple. As $v$ increases, the Boltzmann factor {\em decreases},
+but the volume of phase-space available to the molecule (which is
+proportional to $v^2$) {\em increases}: the net result is a distribution
+with a non-zero maximum.
+
+\begin{figure}[ht]
+\epsfysize=3in
+\centerline{\rotate[u]{\hbox{\epsffile{Chapter07/maxw.eps}}}}
+\caption{\em The Maxwell velocity  distribution as a function
+of molecular speed in units of the most probable speed ($v_{\rm mp}$)
+. Also shown are the
+mean speed ($\bar{c}$) and the root mean square speed
+($v_{\rm rms}$).}\label{fmax}
+\end{figure}
+
+The mean molecular speed is given by
+\begin{equation}
+\overline{v} = \frac{1}{n} \int_0^\infty F(v)\,v\,dv.
+\end{equation}
+Thus, we obtain
+\begin{equation}
+\overline{v} = 4\pi \left(\frac{m}{2\pi \,k\,T}\right)^{3/2} 
+\int_0^\infty v^3 \exp
+(-m\,v^2/2\,k\,T)\,dv,
+\end{equation}
+or
+\begin{equation}
+\overline{v} =  4\pi \left(\frac{m}{2\pi \,k\,T}\right)^{3/2} 
+\left(\frac{2\,k\,T}{m}\right)^2 \int_0^\infty y^3 \exp(-y^2)\,dy.
+\end{equation}
+Now
+\begin{equation}
+\int_0^\infty y^3 \exp(-y^2)\,dy = \frac{1}{2},
+\end{equation}
+so
+\begin{equation}
+\overline{v} = \sqrt{\frac{8}{\pi} \frac{k\,T}{m}}.
+\end{equation}
+A similar calculation gives
+\begin{equation}
+v_{\rm rms} = \sqrt{\overline{v^2}} = \sqrt{\frac{3\, k\,T}{m}}.\label{e7.195}
+\end{equation}
+However, this result can also be obtained from the equipartition theorem.
+Since
+\begin{equation}
+\overline{\frac{1}{2}\,m\,v^2} = \overline{\frac{1}{2}\,m\,(v_x^{~2}+v_y^{~2}+v_z^{~2})}
+= 3 \left(\frac{1}{2}\, k\,T\right),
+\end{equation}
+then Eq.~(\ref{e7.195}) follows immediately. It is easily demonstrated that the most probable
+molecular speed ({\em i.e.}, the maximum of the Maxwell distribution function) is
+\begin{equation}
+\tilde{v} = \sqrt{\frac{2\, k\,T}{m}}.
+\end{equation}
+The speed of sound in an ideal gas is given by
+\begin{equation}
+c_s = \sqrt{\frac{\gamma \,p}{\rho}},
+\end{equation}
+where $\gamma$ is the ratio of specific heats. This can also be written
+\begin{equation}
+c_s=\sqrt{\frac{\gamma\, k\,T}{m}},
+\end{equation}
+since $p = n\,k\,T$ and $\rho = n\, m$. It is clear that the various average speeds which
+we have just calculated are all of order the sound speed ({\em i.e.}, a few hundred
+meters per second at room temperature). In ordinary air ($\gamma= 1.4$) the
+sound speed is about 84\% of the most probable molecular speed, and about
+74\% of the mean molecular speed. Since sound waves 
+ultimately propagate via molecular
+motion, it makes sense that they travel at slightly less than the most probable
+and mean
+molecular speeds.
+
+Figure~\ref{fmax} shows the Maxwell velocity distribution as a function
+of molecular speed in units of the most probable speed. Also shown are the
+mean speed and the root mean square speed.
+
+It is difficult to directly verify the Maxwell velocity distribution. However, this
+distribution can be verified indirectly by measuring the velocity distribution
+of atoms exiting from a small hole in an oven. The velocity distribution of
+the escaping atoms is closely related to, but slightly different from, the velocity
+distribution inside the oven, since high velocity atoms escape more readily
+than low velocity atoms. In fact, the predicted velocity distribution of
+the escaping atoms varies like $v^3\,\exp(-m\,v^2/2\,k\,T)$, in contrast
+to the  $v^2\,\exp(-m\,v^2/2\,k\,T)$ variation of the velocity distribution
+inside the oven. Figure~\ref{feff} compares the measured and 
+theoretically predicted
+velocity distributions of potassium atoms escaping from an oven at
+$157^\circ$\,C. There is clearly very good agreement between the two.  
+
+\begin{figure}[ht]
+\epsfysize=3in
+\centerline{\rotate[u]{\hbox{\epsffile{Chapter07/eff.eps}}}}
+\caption{\em Comparison of the measured and theoretically
+predicted velocity distributions of potassium atoms escaping from an oven at
+$157^\circ$\,C. Here, the measured transit time is directly proportional
+to the atomic speed.}\label{feff}
+\end{figure}

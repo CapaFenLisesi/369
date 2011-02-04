@@ -1,0 +1,689 @@
+\chapter{Statistical Mechanics}\label{s3}
+
+\section{Introduction}
+Let us now analyze the internal motions of a many particle  system
+using probability theory. This
+subject area is known as {\em statistical mechanics}.
+ 
+\section{Specification of State of Many Particle System}\label{s3.6}
+How do we determine the state of a many particle system? Well, let us, first
+of all,
+consider the simplest possible many particle system, which consists of a
+single spinless particle moving classically in one dimension. Assuming that we know
+the particle's equation of motion, the state of the system is fully
+specified once we simultaneously measure
+the particle's position $q$ and momentum $p$. 
+In principle, if we know $q$ and $p$ then 
+we can calculate the state of the system at all subsequent times using the
+equation of motion.
+In practice, it is impossible to specify 
+$q$ and $p$ exactly, since there is always an intrinsic error in any experimental
+measurement. 
+
+Consider the time evolution of $q$ and $p$.
+ This can be visualized by plotting
+the point ($q$, $p$)  in the
+$q$-$p$ plane. This plane is generally known as {\em phase-space}. In general,
+the point ($q$, $p$) will trace out some very complicated pattern in
+phase-space.
+Suppose that we divide phase-space  into rectangular cells  of uniform dimensions
+$\delta q$ and $\delta p$. 
+Here, $\delta q$  is the intrinsic error in the position measurement, and 
+$\delta p$
+the intrinsic error in the momentum measurement. The ``area'' of each cell
+ is
+\begin{equation}
+\delta q\, \delta p = h_0,
+\end{equation}
+where $h_0$ is a small constant having the dimensions of angular momentum.
+The  coordinates $q$ and $p$ can now be
+conveniently  specified   by indicating
+ the cell in phase-space into which they plot   at any given time. 
+This procedure automatically ensures that we do not attempt to specify
+$q$ and $p$  to an accuracy greater than our experimental error, which would
+clearly be pointless.
+
+Let us now consider a single spinless particle moving in three dimensions. In order
+to specify the state of the system we now need to know three $q$-$p$ pairs:
+{\em i.e.}, $q_x$-$p_x$, $q_y$-$p_y$, and $q_z$-$p_z$. Incidentally,
+the number of $q$-$p$ pairs needed to specify the state of the
+system is usually called the {\em number of degrees of freedom}\/ of the
+system. Thus, a single particle moving in one dimension constitutes a one
+degree of freedom system, whereas a single particle moving
+in three dimensions constitutes  a three degree of freedom system. 
+
+Consider the time evolution of ${\bf q}$ and ${\bf p}$, where
+${\bf q}=(q_x,q_y,q_z)$, {\em etc}.
+ This can be visualized by plotting
+the point (${\bf q}$, ${\bf p}$)  in the six dimensional 
+${\bf q}$-${\bf p}$ phase-space.
+Suppose that we divide the $q_x$-$p_x$ plane
+into rectangular cells  of uniform dimensions
+$\delta q$ and $\delta p$, and do likewise for the $q_y$-$p_y$ and
+$q_z$-$p_z$ planes. Here, $\delta q$ and $\delta p$ are again the intrinsic
+errors in our measurements of position and momentum, respectively.
+This is equivalent to dividing phase-space up into
+regular six dimensional cells of volume $h_0^{~3}$.  
+The  coordinates ${\bf q}$ and ${\bf p}$ can now be
+conveniently  specified   by indicating
+ the cell in phase-space into which they plot  at any given time. 
+Again, this procedure automatically ensures that we do not attempt to specify
+${\bf q}$ and ${\bf p}$  to an accuracy greater than our experimental error.
+
+Finally, let us consider a system consisting of $N$ spinless particles moving
+classically in three dimensions. 
+ In order to specify
+the state of the system, we need to specify a large number of $q$-$p$ pairs. 
+The requisite
+number is simply the number of degrees of freedom, $f$.
+For
+the present case,
+$f=3\,N$. Thus, phase-space ({\em i.e.}, the space of all the $q$-$p$ pairs)
+now possesses $2\,f=6\,N$ dimensions.
+Consider a particular pair of conjugate coordinates, $q_i$ and
+$p_i$. 
+As before, we divide the $q_i$-$p_i$ 
+plane into rectangular cells  of uniform dimensions
+$\delta q$ and $\delta p$. 
+This is equivalent to dividing phase-space into regular $2\,f$ dimensional cells of volume $h_0^{~f}$. The state of the
+system is specified by indicating which cell it occupies in phase-space
+at any given time.
+
+In principle, we can  specify the state of the system to arbitrary
+accuracy by taking the limit $h_0\rightarrow 0$. In reality, we know from
+quantum mechanics that it is impossible to simultaneously
+measure a coordinate $q_i$ and
+its conjugate momentum $p_i$ to greater accuracy than 
+$\delta q_i\, \delta p_i=\hbar$.
+This implies that 
+\begin{equation}
+h_0\geq \hbar.
+\end{equation} 
+In other words, the uncertainty principle sets a lower limit on how finely 
+we can chop up
+classical phase-space.
+
+In quantum mechanics we can specify the state of
+the system by giving its wave-function at time $t$,
+\begin{equation}
+ \psi(q_1,\cdots, q_f, s_1,\cdots, s_g, t),
+\end{equation}
+ where $f$ is the number of translational degrees of freedom,
+and $g$ the number of internal ({\em e.g.}, spin)
+degrees of freedom. For instance, if the system
+consists of $N$ spin-one-half particles then there will be $3\,N$ translational
+degrees of freedom, and 
+$N$ spin degrees of freedom
+({\em i.e.}, the spin of each particle can either point up or down along the 
+$z$-axis). Alternatively, if the system is in a {\em stationary
+state}\/ ({\em i.e.},  an eigenstate of the Hamiltonian) then we can just
+ specify $f+g$ {\em quantum numbers}. Either way, the future 
+time evolution of the wave-function
+is fully determined by Schr\"{o}dinger's equation.
+
+In reality, this approach does not work because the Hamiltonian of the system is 
+only 
+known approximately. Typically, we are dealing with a system consisting of many
+{\em weakly interacting}\/ particles. We usually know the Hamiltonian for completely
+non-interacting particles, but the component of the Hamiltonian associated 
+with  particle interactions is either impossibly complicated, or not very well
+known (often, it is both!). We can define approximate stationary eigenstates
+using the Hamiltonian for non-interacting particles. The state of the system is
+then specified by the quantum numbers identifying these eigenstates. In the absence
+of particle interactions, if the system starts off 
+in a stationary state then it 
+stays in that state for ever, so its quantum numbers never change. The interactions
+allow the system to make transitions between different ``stationary''
+states, causing its quantum numbers to change in time. 
+
+\section{Principle of Equal {\em a priori}\/ Probabilities}
+We now know how to specify the instantaneous state of a many particle system.
+In principle, such a system is completely 
+deterministic. Once we know the initial state and
+the equations of motion (or the
+Hamiltonian) we can evolve the system forward in time and, thereby, determine all
+future states. In reality, it is quite impossible to specify
+the initial state or the equations of motion  to sufficient accuracy for this method 
+to have any chance of working.
+ Furthermore, even if it were possible, it would still not be a practical 
+proposition to evolve the equations of motion. 
+Remember that we are typically dealing with systems
+containing Avogadro's number of particles: {\em i.e.},  about $10^{24}$ particles.
+We cannot evolve $10^{24}$ simultaneous differential equations! Even if we
+could, we would not want to. After all, we are not particularly
+interested in the motions of 
+{\em individual}
+particles. What we really want is {\em statistical}\/ information regarding the
+motions of {\em all}\/ particles in the system.
+
+Clearly, what is required here is a statistical treatment of the problem.
+Instead of focusing on a single system, let us proceed in the usual
+manner and consider a {\em statistical
+ensemble}\/ consisting of a large number of identical systems. 
+In general, these systems
+ are distributed over many different states at any given time.
+ In order to evaluate the probability
+that the system possesses a particular property, we merely need to  find the number of
+systems in the ensemble which exhibit this property, and then divide by the total
+number of systems, in the limit as the latter number tends to infinity.
+
+We can usually place some general constraints  on the system.
+Typically, we know the total energy $E$, the total volume $V$, and the 
+total number of particles $N$. To be more honest, we can only
+really say that the total energy lies between $E$ and $E+\delta E$, {\em etc}., where
+$\delta E$ is an experimental error. Thus, we only need concern ourselves with
+those systems in the ensemble exhibiting  states which are consistent with the 
+known constraints. We call these the {\em states accessible to the system}. 
+In general, there are a great many such states.
+
+We now need to calculate the probability of the system being found in 
+each  of its accessible states. Well, perhaps ``calculate'' is the wrong word. 
+The only way we could calculate these  probabilities would be to evolve all of the
+systems in the ensemble and observe how long on average they spend in each
+accessible state. But, as we have already mentioned, such a calculation is completely
+out of the question.
+ So what do we do instead? Well,   we effectively {\em guess}\/ the
+probabilities. 
+
+Let us consider an isolated system in {\em equilibrium}. In this situation,
+ we would expect
+ the probability of the system being found in one of its accessible
+states to be independent of time. This implies that the statistical ensemble 
+does not 
+evolve with time. Individual systems in the ensemble will constantly
+ change state, but the
+average number of systems in any given state should remain constant. Thus, all
+macroscopic parameters describing the system, such as the energy
+and the volume,  should also remain constant. There is nothing in the laws of
+mechanics which would lead us to suppose that the system will be found more
+often in one of its accessible states than in another. We assume,
+therefore, that {\em the system is equally likely to be found in any  of
+its accessible states}. This is called the assumption of {\em equal
+a priori probabilities}, and lies at the very heart of statistical mechanics.
+
+In fact, we use assumptions like this all of the time without really thinking
+about them. Suppose that we were asked to pick a card at random from a well-shuffled pack. I think that most people would accept that we have
+an equal probability of picking any card in the pack. There is nothing which
+would favour  one particular card over all of the others. So, since there are fifty-two cards in
+a normal  pack, we would expect the probability of picking the Ace of Spades, say, to
+be $1/52$. We could now place some constraints on the system. 
+For instance, we could only count red cards, in which case the  probability
+of picking the Ace of Hearts, say, would be $1/26$, by the same
+reasoning. In both cases, we have used the principle of equal {\em a priori}
+probabilities. People really believe that this principle applies to games
+of chance such as cards, dice, and  roulette. In fact, if 
+the principle were  found not to apply to a particular game most people would
+assume that the game was ``crooked.''\@ But, imagine trying to prove 
+that the
+principle actually  does apply to a game of cards. This would be very difficult! 
+We would have to show that the way most people shuffle cards is effective
+at randomizing their order. A convincing study would have to  be
+part mathematics and part psychology!
+
+In statistical mechanics, we treat a many particle system a bit like an
+extremely
+large game of cards. Each accessible state corresponds to one of the
+cards in the pack. The interactions between particles cause the system to
+continually change state. This is equivalent to constantly shuffling the
+pack. Finally, an observation of the state of the system is like picking
+a card at random from the pack. The principle of equal {\em a priori}
+probabilities then boils down to saying that we have an equal  chance of
+choosing  any particular card.
+
+It is, unfortunately, {\em impossible}\/ to prove with mathematical rigor that the
+principle of equal {\em a priori}\/ probabilities applies to many-particle systems. Over the years, many people have attempted 
+ this proof, and all have failed miserably. 
+Not surprisingly, therefore, statistical mechanics was greeted with a 
+great deal
+of scepticism when it was first
+proposed just over one hundred years ago. One of the its main proponents, 
+Ludvig Boltzmann, got so fed up with all of the criticism that he eventually
+threw himself off a bridge! 
+Nowadays, statistical mechanics is completely accepted into the cannon
+of physics. The reason for this
+is quite simple: {\em it works!}
+
+It {\em is}\/ actually 
+  possible to formulate a reasonably  convincing scientific case for
+the principle of equal {\em a priori}\/ probabilities. To achieve
+this we  have to make use of the 
+so-called   {\em $H$ theorem}.
+
+\section{$H$ theorem}\label{s3.9}
+Consider a system of weakly interacting particles. In quantum
+mechanics we can write the Hamiltonian for such a system as
+\begin{equation}
+H = H_0 + H_1,
+\end{equation}
+where $H_0$ is the Hamiltonian for completely non-interacting particles, and
+$H_1$ is a small correction due to the particle interactions. We can define
+{\em approximate}\/ stationary eigenstates of the system using $H_0$. Thus,
+\begin{equation}
+H_0 \,{\mit\Psi}_r = E_r \,{\mit\Psi}_r,
+\end{equation}
+where the index $r$ labels a state of energy $E_r$ and eigenstate
+${\mit\Psi}_r$. In general, there are many
+different eigenstates with the same energy: these are called {\em degenerate}
+states. 
+
+For example, consider $N$ non-interacting spinless particles
+of mass $m$
+confined in a cubic box of dimension $L$. According to standard
+wave-mechanics, the
+energy levels of the $i$th particle are given by
+\begin{equation}
+e_i = \frac{\hbar^2 \pi^2}{2\,m \,L^2}\left( n_{i1}^{~2}+n_{i2}^{~2}
++n_{i3}^{~2}\right),
+\end{equation}
+where $n_{i1}$, $n_{i2}$, and $n_{i3}$ are three (positive integer) quantum numbers.
+The overall energy of the system is the sum of the energies of the
+individual particles, so that for a general state $r$
+\begin{equation}
+E_r = \sum_{i=1}^N e_i.
+\end{equation}
+The  overall state of the system is thus specified by $3N$ quantum numbers 
+({\em i.e.},
+three quantum numbers per particle). 
+There are clearly very many different arrangements of these quantum numbers which
+give the same overall energy.
+
+Consider, now, a statistical ensemble of systems made up
+of weakly interacting particles. Suppose that this ensemble
+is initially very far from equilibrium. For instance,
+the systems in the ensemble might only be  distributed
+over a very small subset of their accessible states.
+If each system starts off in a 
+particular stationary state ({\em i.e.}, with a particular set of quantum
+numbers) then, in the absence of particle interactions, it will remain 
+in that state for ever. Hence, the
+ensemble will always stay far from equilibrium, and the principle of
+equal {\em a priori}\/ probabilities will never be applicable. In reality,
+particle interactions  cause each system in the ensemble to make
+transitions between its accessible  ``stationary'' states. This allows the
+overall state of the ensemble to change in time.
+
+Let us label the accessible states of our system by the index $r$. We can
+ascribe a time dependent probability $P_r(t)$ of finding the system 
+in a particular approximate stationary 
+state $r$ at time $t$. Of course, $P_r(t)$ is proportional
+to the number of systems in the ensemble in state $r$ at time $t$. In general,
+$P_r$ is time dependent because the ensemble is evolving towards an
+equilibrium state. We assume that the probabilities are properly
+normalized, so that the sum over all accessible states always yields
+\begin{equation}
+\sum_r P_r(t) =1.
+\end{equation}
+
+Small interactions between particles cause transitions between the approximate
+stationary states of the system. There then exists some transition probability
+per unit time $W_{rs}$ that a system originally in state $r$ ends up in state
+$s$ as a result of these interactions. Likewise, there exists a probability
+per unit time $W_{sr}$ that a system in state $s$ makes a transition to
+state $r$. These transition probabilities are meaningful in quantum mechanics
+provided that the particle interaction strength is sufficiently small, there is
+a nearly continuous distribution of accessible energy levels, and we consider time
+intervals which are not too small. These conditions are easily satisfied for
+the types of systems usually analyzed  via  statistical mechanics ({\em e.g.},
+nearly ideal gases). One important conclusion  of quantum
+mechanics is that the forward and inverse transition probabilities between two
+states are the same, so that
+\begin{equation}
+W_{rs} = W_{sr}\label{e3.9}
+\end{equation}
+for any two states $r$ and $s$. This result 
+follows from the {\em time reversal symmetry}\/ of quantum mechanics. On the
+microscopic scale of individual particles, all fundamental laws of physics
+(in particular, classical and quantum mechanics)
+possess this symmetry. 
+So, if a certain motion of particles satisfies the classical equations of
+motion (or Schr\"{o}dinger's equation)
+then the reversed motion, with all particles starting off from their
+final positions  and then retracing their paths exactly
+until they reach their initial positions, 
+satisfies these  equations just as well.
+
+
+Suppose that we were to ``film'' a microscopic
+process, such as two classical particles approaching one another, colliding,
+and  moving apart. We could then gather an audience together
+ and show them the film. To make things slightly more
+interesting we could play it either forwards or backwards.
+ Because of the time
+reversal symmetry of classical mechanics, the audience would not be able
+to tell which way the film was running (unless we told them!). 
+In both cases, the  film would show completely plausible physical events. 
+
+We can play the same game  for a quantum process. 
+For instance, we could ``film'' a group of photons
+impinging on some atoms. Occasionally, one of the atoms will {\em absorb}\/ a
+photon and make a transition to an ``excited'' state ({\em i.e.},
+a state with higher than
+normal energy). We could easily estimate the rate constant for this process
+by watching the film carefully. If we play the film backwards then it will appear to
+show
+excited atoms occasionally {\em emitting}\/ a photon and
+decaying back to their unexcited state. If quantum mechanics possesses
+time reversal symmetry (which it certainly does!) then both films should appear
+equally plausible. This means that the rate constant for the absorption of
+a photon to produce an excited state must be the same as the rate constant for
+the excited state to decay by the emission of a photon. Otherwise, in the backwards
+film the excited atoms would appear to emit photons at the wrong rate, and we could
+then tell that the film was being played backwards. It follows, therefore, that
+as a consequence of time reversal symmetry, the rate constant for any process in
+quantum mechanics must equal the rate constant for the inverse process.
+
+The probability $P_r$ of finding the systems in the ensemble
+ in a particular state $r$ changes
+with time for two reasons. Firstly, systems in another state $s$ can make transitions
+to the state $r$. The rate at which this occurs is $P_s$, the probability
+that the systems are in the state $s$ to begin with, times the rate constant
+of the transition $W_{sr}$. Secondly, systems in the state $r$ can make
+transitions to other states such as $s$. The rate at which this occurs
+is clearly $P_r$ times $W_{rs}$. We can write a simple differential equation
+for the time evolution of $P_r$:
+\begin{equation}
+\frac{dP_r}{dt} = \sum_{s\neq r} P_s W_{sr} - \sum_{s\neq r} P_r W_{rs},
+\end{equation}
+or
+\begin{equation}
+ \frac{dP_r}{dt} = \sum_{s} W_{rs}(P_s -P_r),\label{e3.11}
+\end{equation}
+where use has been made of the symmetry condition (\ref{e3.9}). The summation
+is over all accessible states.
+
+Consider now the quantity $H$ (from which the $H$ theorem derives its name),
+which is the mean value of $\ln P_r$ over all accessible states:
+\begin{equation}
+H\equiv \overline{\ln P_r} \equiv \sum_r P_r \ln P_r.
+\end{equation}
+This quantity changes as the individual probabilities $P_r$ 
+vary in time. Straightforward differentiation of the above equation
+yields
+\begin{equation}
+\frac{dH}{dt} = \sum_r \left(\frac{d P_r}{dt} \ln P_r +\frac{d P_r}
+{dt}\right) = \sum_r \frac{d P_r}{dt}\,(\ln P_r + 1).
+\end{equation}
+According to Eq.~(\ref{e3.11}), this can be written
+\begin{equation}
+\frac{d H}{dt} = \sum_r\sum_s W_{rs}\, (P_s-P_r)\,(\ln P_r +1).
+\end{equation}
+We can now interchange the dummy summations indices $r$ and $s$ to give
+\begin{equation}
+\frac{d H}{dt} = \sum_r\sum_s W_{sr}\,  (P_r-P_s)\,(\ln P_s +1).
+\end{equation}
+We can write  $d H/dt$  in a more symmetric
+form by adding  the previous two equations and making use of Eq.~(\ref{e3.9}):
+\begin{equation}
+\frac{d H}{dt}= -\frac{1}{2}\sum_r \sum_s W_{rs}\,(P_r-P_s)\,(\ln P_r
+-\ln P_s).\label{e3.16}
+\end{equation}
+Note, however, that $\ln P_r$ is a monotonically increasing function of
+$P_r$. It follows that $\ln P_r > \ln P_s$ whenever $P_r > P_s$, and {\em
+vice versa}. Thus, in general, the right-hand side of the above equation is 
+the sum of many  {\em negative}\/ contributions. Hence, we conclude that
+\begin{equation}
+\frac{d H}{dt} \leq 0.
+\end{equation}
+The equality sign only holds in the special case where all accessible states are
+equally probable, so that $P_r=P_s$ for all $r$ and $s$. This result is 
+called the
+$H$ theorem, and was first proved by the unfortunate Professor Boltzmann.
+
+The $H$ theorem tells us that if an isolated system is initially not in
+equilibrium then it will evolve under the influence of particle interactions in
+such a manner that the quantity $H$ always {\em decreases}. This process will 
+continue until $H$ reaches its minimum possible value, at which point
+$d H/dt=0$, and there is no further evolution of the
+system. According to Eq.~(\ref{e3.16}), in this final equilibrium state 
+the system is equally likely to be found in any one of its accessible 
+states. This is, of course, the situation predicted by  the principle
+of equal {\em a priori}\/ probabilities.
+
+You may be wondering why the above argument does not constitute a mathematically
+rigorous proof that the principle of equal {\em a priori}\/ probabilities
+applies to many particle systems. The answer is that we 
+tacitly made an unwarranted
+assumption: {\em i.e.}, we assumed 
+that the probability of the system making a transition
+from some state $r$ to another state $s$ is {\em  independent}\/ of the past history
+of the system. In general, this is not the case in physical
+systems, although there are many
+situations in which it is a pretty good approximation. Thus, the
+epistemological status of the principle of equal {\em a priori}\/ probabilities is that it
+is {\em plausible}, but remains {\em unproven}. As we have already mentioned,
+the ultimate justification for this principle is {\em empirical}: {\em i.e.},
+it leads to theoretical predictions which are in accordance with
+experimental observations. 
+
+\section{Relaxation Time}\label{s3.10}
+The $H$ theorem guarantees that an isolated  many particle system will eventually
+reach equilibrium, irrespective of its initial state.
+The typical time-scale  for this process
+ is called the {\em relaxation time}, and depends in detail on the nature 
+ of the
+inter-particle interactions. The principle of equal {\em a priori}\/ probabilities is
+only valid for equilibrium states. It follows that we can only safely apply this
+principle to systems which have remained undisturbed for many relaxation times
+since they were  setup, or last interacted with the outside world.
+The relaxation time for the air in a typical classroom is
+ very much less than one second. This suggests that such air is probably in
+equilibrium most of the time, and should, therefore, be governed by the
+principle of  equal {\em a priori}\/ probabilities. In fact, this is known
+to be the case. Consider another example. Our galaxy, the ``Milky Way,'' is
+an isolated  dynamical system made up of about $10^{11}$ stars. In fact, 
+it can be thought
+of as a self-gravitating ``gas'' of stars. At first sight, the 
+``Milky Way'' 
+would seem  to be an ideal system on which 
+to test out the ideas of statistical mechanics. 
+Stars in the Galaxy interact via occasional ``near miss'' events in which they
+exchange energy and momentum. Actual collisions are very rare indeed. Unfortunately,
+such interactions take place very infrequently, because 
+there is an awful lot of empty space between stars. The best estimate for the
+relaxation time of the ``Milky Way'' is about $10^{13}$ years. 
+This should be compared with the estimated age of the Galaxy, which is only
+about $10^{10}$ years. It is clear that, despite its great age, the ``Milky Way''
+has not been around long enough to reach an equilibrium
+state. This suggests that
+the principle of equal {\em a priori}\/ probabilities cannot be used to 
+describe stellar dynamics. Not surprisingly, the observed velocity distribution
+of the stars in the vicinity of the Sun is not governed by this principle.
+
+\section{Reversibility and Irreversibility}\label{s3.11}
+Previously, we mentioned  that on a microscopic level the laws of physics are
+invariant under time reversal. In other words, microscopic phenomena look
+physically plausible when run in reverse. We usually say that these phenomena are
+{\em reversible}. What about macroscopic phenomena? Are they reversible?
+Well, consider an isolated 
+ many particle system which starts off far from equilibrium.
+According to the $H$ theorem,  it will evolve towards 
+equilibrium and, as it does so, the macroscopic
+quantity $H$  will {\em decrease}.
+But, if we run this process backwards the system will
+appear to evolve away from equilibrium, 
+and the quantity $H$ will  {\em increase}.
+This type of behaviour is not physical because it
+violates the $H$ theorem. So, if we saw a film of
+a macroscopic process 
+we could very easily tell if it was being run backwards. 
+For instance, suppose that by some miracle we were able to move all of the
+Oxygen molecules in the air in some classroom to  one side of the room, and
+all of the Nitrogen molecules to the opposite side. We would not expect this
+state to persist for very long. Pretty soon the Oxygen and Nitrogen molecules
+would start to intermingle, and this process would
+continue until they were thoroughly mixed together throughout the room.
+This, of course,  is the equilibrium state for air. In reverse, this process
+looks crazy! We would start off from perfectly normal air, and
+suddenly, for no good reason, the Oxygen and Nitrogen molecules would
+appear to separate and move to opposite sides of the room. This scenario
+is not impossible, but, from everything we know about the world around us,
+it is spectacularly unlikely!
+We conclude, therefore, that 
+macroscopic phenomena are generally {\em irreversible}, because they look ``wrong''
+when run in reverse.
+
+How does the irreversibility of macroscopic phenomena arise? It certainly
+does not come from the fundamental laws of physics, because these laws 
+are all reversible.
+In the previous example, the Oxygen and Nitrogen molecules got mixed up
+by continually scattering off one another. Each individual scattering event
+would look perfectly reasonable viewed in reverse, but when we add them all together
+we obtain a process which would look stupid run backwards. How can this be?
+How can we obtain an irreversible process from  the combined effects of
+very many  reversible
+processes? This is a vitally important question. Unfortunately, we are not
+quite at the stage where we can formulate a convincing answer. Note, however, that the essential irreversibility of macroscopic phenomena is one of the
+key results of statistical thermodynamics. 
+
+\section{Probability Calculations}
+The principle of equal {\em a priori}\/ probabilities is fundamental to all
+statistical mechanics, and allows a complete description of the properties 
+of macroscopic systems in equilibrium. In principle, 
+statistical mechanics calculations are
+very simple. Consider a system in equilibrium which is isolated, so that its
+total energy is known to have a constant value somewhere in the range $E$ to
+$E + \delta E$. In order to make statistical predictions, we focus attention
+on an ensemble of such systems, all of which have their energy in this range.
+Let ${\mit\Omega}(E)$ be the total number of different states of the system with 
+energies in the specified range. Suppose that among these states there are
+a number ${\mit\Omega}(E; y_k)$ for which some parameter $y$ of the system
+assumes the discrete value $y_k$. (This discussion can easily
+be generalized to deal with  a parameter which can assume a continuous range of
+values). The principle of equal {\em a priori}\/ probabilities tells us
+that all the ${\mit\Omega}(E)$ accessible states of the system are equally likely
+to occur in the ensemble. It follows that the probability $P(y_k)$ that the
+parameter $y$ of the system assumes the value $y_k$ is simply
+\begin{equation}
+P(y_k) = \frac{{\mit\Omega}(E; y_k)}{{\mit\Omega}(E)}.
+\end{equation}
+Clearly, the mean value of $y$ for the system is given by
+\begin{equation}
+\bar{y} = \frac{\sum_k {\mit\Omega}(E; y_k) \,y_k}{{\mit\Omega}(E)},
+\end{equation}
+where the sum is over all possible values that $y$ can assume.
+In the above, it is tacitly assumed that ${\mit\Omega}(E)\rightarrow \infty$,
+which is generally the case in thermodynamic systems.
+
+It can be seen that, using  the principle of equal {\em a priori}
+probabilities, all calculations in statistical mechanics
+reduce to simply {\em counting states}, subject to
+various constraints.  In principle, this is fairly straightforward.
+In practice, problems  arise if
+the constraints  become  too complicated. These problems can usually be
+overcome with a little mathematical ingenuity. 
+Nevertheless, there is no doubt that this
+type of calculation is far easier than trying to  solve the classical equations
+of motion 
+(or Schr\"{o}dinger's equation) directly for a many-particle system.
+
+\section{Behaviour of Density of States}\label{s3.13}
+Consider an
+ isolated system in equilibrium whose  volume is $V$, and whose energy  lies in the
+range $E$ to $E+\delta E$.
+Let ${\mit\Omega}(E, V)$ be the total number of microscopic  states which
+satisfy these constraints.
+It would be useful if we could estimate how
+this number  typically varies with the macroscopic parameters of the system.
+The easiest way to do this is to consider a specific example. For instance,
+ an ideal gas made up of spinless monatomic particles. This is a particularly 
+simple example,
+because for such a gas the particles possess translational but no
+ internal ({\em e.g.},  vibrational, rotational, or spin) degrees of freedom.
+By definition, interatomic forces are negligible in an {\em ideal}\/ gas. In other
+words, the individual particles 
+move in an approximately uniform potential.
+It follows that the energy of the gas is just 
+ the total translational kinetic energy of its constituent particles. Thus,
+\begin{equation}
+E = \frac{1}{2\,m}\sum_{i=1}^N {\bf p}_i^{~2},\label{e3.20}
+\end{equation}
+where $m$ is the particle mass, $N$ the total number of particles, 
+and ${\bf p}_i$ the
+vector momentum of the $i$th particle.
+
+Consider the system in the 
+ limit in which the energy $E$ of the gas is 
+much greater than the ground-state energy,  so that all of the
+quantum numbers are large.
+The classical version of statistical mechanics, in which we
+divide up phase-space into cells of equal volume, is valid in this limit. 
+The number of
+states ${\mit\Omega}(E, V)$ lying between the energies $E$ and $E+\delta E$ is simply
+equal to the number of cells in phase-space contained between these energies.
+In other words, ${\mit\Omega}(E, V)$ is proportional to the {\em volume}\/ of 
+phase-space between these two energies:
+\begin{equation}
+{\mit\Omega}(E, V) \propto \int^{E+\delta E}_Ed^3{\bf r}_1\cdots d^3{\bf r}_N\,
+d^3 {\bf p_1}\cdots d^3 {\bf p_N}.\label{e3.21}
+\end{equation}
+Here, the integrand is the element of volume of phase-space, with
+\begin{eqnarray}
+d^3{\bf r}& \equiv & dx_i\,dy_i\,dz_i,\\[0.5ex]
+d^3{\bf p}&\equiv & dp_{i\,x}\,dp_{i\,y} \,dp_{i\,z},
+\end{eqnarray}
+ where  $(x_i$, $y_i$, $z_i)$ and  $(p_{i\,x}$, $p_{i\,y}$, $p_{i\,z})$
+are the Cartesian coordinates and momentum components of the $i$th particle, 
+respectively.
+The integration is over all coordinates and momenta such that the total energy
+of the system lies between $E$ and $E+\delta E$.
+
+For an ideal gas, the total energy $E$ does not depend on the positions of the
+particles  [see Eq.~(\ref{e3.20})]. This means that the integration over the
+ position vectors ${\bf r}_i$
+can be performed immediately. Since each integral over ${\bf r_i}$ extends over
+the volume of the container (the particles are, of course, not allowed to stray 
+outside the container), $\int d^3{\bf r}_i= V$. There
+are $N$ such integrals, so Eq.~(\ref{e3.21}) reduces to
+\begin{equation}
+{\mit\Omega}(E, V) \propto V^N \chi(E),\label{e3.23}
+\end{equation}
+where 
+\begin{equation}
+\chi(E) \propto \int^{E+\delta E}_E d^3 {\bf p_1}\cdots d^3 {\bf p_N}
+\end{equation}
+is a momentum space integral which is independent of the volume.
+
+The energy of the system can be written
+\begin{equation}
+E = \frac{1}{2\,m} \sum_{i=1}^N \sum_{\alpha=1}^3 p_{i\,\alpha}^{~~2},\label{e3.25}
+\end{equation}
+since ${\bf p}_i^{~2} = p_{i\,1}^{~~2}+p_{i\,2}^{~~2}+p_{i\,3}^{~~2}$, 
+denoting the $(x$, $y$,
+$z)$ components by (1, 2, 3), respectively. The above sum contains $3N$ square terms.
+For $E=$ constant, Eq.~(\ref{e3.25}) describes the locus of a
+ sphere of radius $R(E) = (2\,m \,E)^{1/2}$ in
+the $3\,N$-dimensional space of the momentum components. Hence, $\chi(E)$ is
+proportional to the volume of momentum phase-space contained in the spherical
+shell lying between the sphere of radius $R(E)$ and that of slightly larger
+radius $R(E+\delta E)$. This volume is 
+proportional to the {\em area}\/ of the inner sphere multiplied by  $\delta R \equiv
+R(E+\delta E)- R(E)$.
+Since the area varies like $R^{\,3N-1}$, and $\delta  R \propto \delta E/ E^{\,1/2}$,
+we have
+\begin{equation}
+\chi(E) \propto R^{\,3N-1}/E^{\,1/2} \propto E^{\,3N/2-1}.
+\end{equation}
+ Combining this result with
+(\ref{e3.23})  yields 
+\begin{equation}
+{\mit\Omega}(E, V) = B\,V^N E^{\,3N/2},
+\end{equation}
+where $B$ is a constant independent of $V$ or $E$, and we have also
+made use of $N\gg 1$. Note that, since the number of degrees of freedom of the
+system  is $f=3\,N$, the above relation can be very approximately written
+\begin{equation}
+{\mit\Omega}(E, V) \propto V^f E^f.
+\end{equation}
+In other words, the density of states varies like the {\em extensive}\/ 
+macroscopic parameters of the system
+raised to the power of the number of degrees of freedom. An extensive parameter is
+one which scales with the size of the system ({\em e.g.}, the volume).
+Since thermodynamic 
+systems generally possess a very large number of degrees of freedom, this
+result implies that the density of states
+is an exceptionally rapidly increasing function of   
+the energy and  volume.
+This result, which turns out to be quite general, is very useful in statistical
+thermodynamics. 
+
+

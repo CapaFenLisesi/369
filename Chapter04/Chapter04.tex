@@ -1,0 +1,554 @@
+\chapter{Heat and Work}\label{s4}
+
+\section{Brief History of Heat and Work}\label{s4.1}
+In 1789 the French scientist Antoine Lavoisier published a famous treatise
+ on Chemistry
+which, amongst other things, demolished the then 
+prevalent theory of combustion. 
+This theory, known to history as the {\em phlogiston theory}, is so
+extraordinary stupid that it is not even worth describing.
+In place of  phlogiston theory, Lavoisier proposed the first reasonably 
+sensible scientific interpretation  of heat. Lavoisier pictured heat 
+as an invisible, tasteless, odourless, weightless 
+ fluid, which he called {\em calorific fluid}. He postulated that 
+hot bodies 
+contain more of this  fluid than cold bodies. Furthermore, he
+suggested  that the constituent particles 
+of calorific  fluid repel one another, causing  heat to flow from
+hot to cold bodies when they are placed in thermal contact. 
+
+The modern interpretation of heat is, or course,  somewhat different to Lavoisier's
+ {\em calorific theory}. Nevertheless, there is an important subset
+of problems involving heat flow for which Lavoisier's approach is
+rather useful. 
+These problems often crop up as examination questions.
+ For example: ``A clean dry copper
+calorimeter contains 100 grams of water at 30$^\circ$ degrees centigrade.
+A 10 gram block of copper heated to 60$^\circ$ centigrade is added. What is the final
+temperature of the mixture?''. 
+How do we approach this type of problem? Well, 
+according to Lavoisier's theory, there is an 
+analogy between heat flow and incompressible 
+fluid  flow  under gravity. 
+ The same volume of liquid added to 
+containers of different cross-sectional area  fills them  to different heights.
+If the volume is $V$,  and the cross-sectional area is $A$,  then the height is
+$h = V/A$. In a similar manner, the same quantity of heat added to different bodies
+causes them to rise to different temperatures. If $Q$ is the heat and
+$\theta$ is the (absolute) temperature then 
+$\theta = Q/C$, where the constant $C$ is termed the {\em heat capacity}.
+[This is a somewhat oversimplified example. In general, the heat capacity is
+a function of temperature, so that $C=C(\theta)$.]
+ Now, if two containers filled to different heights 
+with a free flowing incompressible fluid
+are connected together at the bottom, via a small pipe, 
+then  fluid will  flow under gravity,
+from one
+to the other, until the two heights are the same. The final height is easily 
+calculated by equating the total fluid volume in the initial and final
+states. Thus,
+\begin{equation}
+h_1 \,A_1 + h_2 \,A_2 = h \,A_1 + h \,A_2,
+\end{equation}
+giving
+\begin{equation}
+h = \frac{h_1 \,A_1 + h_2\, A_2}{A_1 + A_2}.
+\end{equation}
+Here, $h_1$ and $h_2$ are the initial heights in the two containers, $A_1$ and
+$A_2$ are the corresponding cross-sectional areas, and $h$ is the final height.
+Likewise, if two bodies, initially at different temperatures, are brought into
+thermal contact then heat will flow, from one to the other, until the two
+temperatures are the same. The final temperature is calculated by equating the total
+heat in the initial and final states. Thus,
+\begin{equation}
+\theta_1\, C_1 + \theta_2\, C_2 = \theta\, C_1 + \theta\, C_2,
+\end{equation}
+giving
+\begin{equation}
+\theta = \frac{\theta_1 \,C_1 + \theta_2\, C_2}{C_1 + C_2},
+\end{equation}
+where the meaning of the various symbols should be self-evident.
+
+The analogy between heat flow and fluid flow works because in Lavoisier's theory
+heat is a {\em conserved}\/ quantity, just 
+like the volume of an incompressible fluid. In fact,
+Lavoisier postulated that heat was an element. Note that 
+atoms were thought to be indestructible 
+before
+nuclear reactions were discovered, so the 
+total amount of each element in the Universe was assumed to be a constant.
+If Lavoisier had cared to formulate a law of thermodynamics from his calorific
+theory then
+he would have said that the total amount of heat in the Universe was a constant.
+ 
+
+In 1798 Benjamin Thompson, an Englishman who spent his early years in 
+pre-revolutionary
+America, was  minister for war and police in the German state of Bavaria.
+One of his jobs was to oversee the boring of cannons in the state arsenal. 
+Thompson was struck by the
+enormous, and seemingly inexhaustible, amount of heat generated in this process.
+ He simply could not  understand where all this
+heat was coming from. According to Lavoisier's calorific theory,  the heat 
+must flow into the cannon from its immediate surroundings, which should, therefore,
+ become colder.
+The flow should  also  eventually cease when all of the available heat has been
+extracted.
+In fact, Thompson observed that the surroundings of the cannon
+got hotter, not colder,
+and that the heating process  continued unabated  as long as the
+boring machine was operating. Thompson postulated that some of the mechanical
+work done
+on the cannon by the boring machine was being converted into heat. At the time,
+this was quite a revolutionary concept, and most people were not ready to accept it.
+This is somewhat surprising, since by the end of the eighteenth century
+the conversion of heat into
+work, by steam engines, was quite commonplace.
+Nevertheless, the conversion of work into heat did not gain broad acceptance until
+1849, when an English physicist called
+ James Prescott Joule published the results of a long and
+painstaking series of experiments. Joule confirmed that work could  indeed 
+be converted
+into heat. Moreover, he found that the same amount of work always generates
+ the same quantity of
+heat. This is
+ true regardless of the nature of the work ({\em e.g.}, mechanical, electrical,
+{\em etc}.). Joule was able to formulate what became known as
+the {\em work equivalent of heat}. 
+Namely, that 1 newton meter of work is equivalent to $0.241$ calories of heat.
+A calorie is the amount of heat required to raise the temperature of 1 gram of
+water by 1 degree centigrade. Nowadays, we measure both heat and work in the
+same units, so that one newton meter, or joule, of work is equivalent to
+one joule of heat.
+
+In 1850, the German physicist Clausius correctly
+postulated that the essential conserved quantity
+is neither heat nor work, but some combination of the two which quickly became
+known as {\em energy}, from the Greek {\em energia}\/ meaning ``in work.''\@
+According to Clausius, the change in the internal energy of a macroscopic body
+can be written
+\begin{equation}
+{\mit\Delta} E = Q - W,
+\end{equation}
+where $Q$ is the heat {\em absorbed}\/ from the surroundings, and $W$ is the work done 
+ {\em on}\/ the surroundings. This relation is known as {\em the first law of 
+thermodynamics}. 
+
+\section{Macrostates and Microstates}
+In describing a system made up of a great many particles,
+it is usually  possible to specify
+some macroscopically measurable independent parameters $x_1$, $x_2, \cdots, x_n$
+which affect the  particles' equations of motion. 
+These parameters are termed the {\em external parameters}\/ of the system.
+Examples of such parameters are the volume (this gets into the equations
+of motion because the potential energy  becomes infinite when a particle
+strays outside the available volume) and any applied electric and magnetic fields.
+A {\em microstate}\/ of the system is defined as a state for
+which the motions of the individual
+particles are completely specified (subject, of course, 
+ to the unavoidable limitations imposed
+by the uncertainty principle of quantum mechanics).
+In general, the overall energy of a given microstate $r$  is a function
+of the external parameters:
+\begin{equation}
+E_r \equiv E_r(x_1, x_2, \cdots, x_n).\label{e4.6}
+\end{equation}
+A {\em macrostate}\/ of the system is defined by specifying the external parameters,
+and any other constraints to which the system is subject. For example, if we
+are dealing with an isolated system ({\em i.e.}, one that can neither exchange heat with nor
+do work on its surroundings) then the macrostate might be specified by giving the
+values of the volume and the constant total energy. 
+For a many-particle system, there are generally a very great
+number of microstates which are consistent with a given macrostate.
+
+\section{Microscopic Interpretation of Heat and Work}
+Consider a macroscopic system $A$ which is 
+known to be in a given macrostate. To be more exact, 
+consider an ensemble
+of similar macroscopic systems $A$, where  each system in the ensemble
+is in one of the many microstates consistent with the given
+macrostate. There are two fundamentally different ways
+in which the average energy of $A$ can change due to interaction with its 
+surroundings. If the external parameters of the system remain constant then the 
+interaction is termed a purely {\em thermal}\/ interaction. Any change in the average
+energy of the system is attributed to an exchange of {\em heat}\/ with its environment.
+Thus,
+\begin{equation}
+{\mit\Delta} \bar{E} = Q,
+\end{equation}
+where $Q$ is the heat absorbed by the system. On a microscopic level, the
+energies of the individual microstates are  unaffected by the absorption of heat.
+In fact, it is the {\em distribution}\/ of the systems in the ensemble 
+over the various microstates which is modified.
+
+Suppose that the system $A$ is thermally insulated from its environment. This can be
+achieved by surrounding it by an {\em adiabatic}\/ envelope ({\em i.e.}, an envelope 
+fabricated out of a material which is a poor conductor of heat, such a fiber glass).
+Incidentally, the term adiabatic is derived from the Greek {\em adiabatos}\/ which
+means ``impassable.''\@ In scientific terminology, an adiabatic process is one in
+which there is no exchange of heat. The system $A$ is still capable of interacting
+with its environment via its external parameters. This type of interaction is
+termed {\em mechanical}\/ interaction, and any change in the average energy of the
+system is attributed to work done on it by its surroundings. Thus,
+\begin{equation}
+{\mit\Delta} \bar{E} = -W,
+\end{equation}
+where $W$ is the work done by the system on its environment. On a microscopic level,
+the energy of the 
+system changes because the energies of the individual microstates are
+functions of the external parameters [see Eq.~(\ref{e4.6})]. 
+Thus, if the external parameters
+are changed then, in general, the energies of all of the systems in the ensemble
+are modified (since each is in a specific microstate). Such a modification 
+ usually gives rise to a redistribution of the systems in the ensemble over the
+accessible microstates  (without any heat
+exchange with the environment). Clearly, from a microscopic viewpoint, performing
+ work on
+a macroscopic system is quite a complicated process. Nevertheless, macroscopic work
+is a quantity which can be readily measured experimentally. For instance, if
+the system $A$ exerts a force ${\bf F}$ on its immediate surroundings, and 
+the change in external parameters corresponds to a displacement ${\bf x}$ 
+of the center of mass of the system, then the work done {\em by}
+$A$ on its surroundings
+is simply
+\begin{equation}
+W =  {\bf F}\!\cdot \!{\bf x}
+\end{equation}
+{\em i.e.}, the product of the force and the displacement along the line of action
+of the force.
+In a general interaction of the system $A$ with its environment there is both
+heat exchange and work performed. We can write
+\begin{equation}
+Q \equiv {\mit\Delta} \bar{E} + W,\label{e4.10}
+\end{equation}
+which serves as the general definition of the absorbed heat $Q$ (hence, the
+equivalence sign). The quantity $Q$ is
+simply the change in the mean energy of the system
+which is not due to the modification of the
+external parameters. Note that the notion of a quantity of heat has no independent
+meaning apart from Eq.~(\ref{e4.10}). The mean energy $\bar{E}$ and work 
+performed $W$ are
+both physical quantities which can be determined experimentally, whereas 
+$Q$ is merely a derived quantity.
+
+\section{Quasi-Static Processes}\label{s4.4}
+Consider the special case of an interaction of the system $A$ with its surroundings
+which is carried out so slowly that $A$ remains arbitrarily close to equilibrium
+at all times. Such a process is said to be {\em quasi-static}\/ for
+the system $A$. In practice, a quasi-static process must be carried out on
+a time-scale which is much longer than the relaxation time of the system. 
+Recall
+that the relaxation time is the typical time-scale for the  system to return
+to equilibrium after being suddenly disturbed (see Sect.~\ref{s3.10}).
+
+A finite quasi-static change can be built up out of many infinitesimal changes.
+The infinitesimal heat  $\,\dbar Q$ absorbed by the system when infinitesimal work
+$\,\dbar W$ is done on its environment 
+and its average energy changes by $d \bar{E}$ is
+given by
+\begin{equation}
+\dbar Q \equiv d\bar{E} + \dbar W.\label{e4.11}
+\end{equation}
+The special symbols $\,\dbar W$ and $\,\dbar Q$ are introduced to emphasize that the
+work done and heat absorbed are infinitesimal quantities which
+do {\em not}\/ correspond to the 
+difference between two works or two heats. Instead, the work done and heat absorbed
+depend on  the interaction {\em process}\/ itself. Thus, it makes no sense to talk
+about the work in the system before and after the process, or the difference between
+these.
+
+If the external parameters of the system have the values $x_1$, $\cdots, x_n$ then
+the energy of the system in a definite microstate $r$ can be written
+\begin{equation}
+E_r = E_r(x_1,\cdots, x_n).
+\end{equation}
+Hence, if the external parameters are changed by infinitesimal amounts, so that
+$x_\alpha \rightarrow x_\alpha + dx_\alpha$ for $\alpha$ in  the range 1 to $n$, then
+the corresponding change in the energy of the microstate is 
+\begin{equation}
+d E_r = \sum_{\alpha =1}^n \frac{\partial E_r}{\partial x_\alpha}\,dx_\alpha.
+\end{equation}
+The work $\,\dbar W$ done {\em by}\/ the system when it remains in this particular
+state $r$ is 
+\begin{equation}
+\dbar W_r = - d E_r = \sum_{\alpha=1}^n X_{\alpha\,r}\,dx_\alpha,
+\end{equation}
+where 
+\begin{equation}
+X_{\alpha\,r} \equiv -\frac{\partial E_r}{\partial x_\alpha}
+\end{equation}
+is termed the {\em generalized force}\/ (conjugate to the external parameter $x_\alpha$)
+in the state $r$. Note that if $x_\alpha$ is a displacement then $X_{\alpha\,r}$ is
+an ordinary force.
+
+Consider now an ensemble of systems. Provided that the external
+parameters of the system are changed quasi-statically, the generalized forces
+$X_{\alpha\,r}$ have well defined mean values which are calculable from the 
+distribution of systems in the ensemble characteristic of the instantaneous 
+macrostate. 
+The macroscopic work $\,\dbar W$ resulting
+from an infinitesimal quasi-static change of the external parameters is obtained by
+calculating the decrease in the mean energy resulting from the parameter change.
+Thus,
+\begin{equation}
+\dbar W = \sum_{\alpha =1}^n \bar{X}_\alpha\, dx_\alpha,\label{e4.16}
+\end{equation}
+where
+\begin{equation}
+\bar{X}_\alpha \equiv -\overline{ \frac{\partial E_r}{\partial x_\alpha}}\label{e4.17}
+\end{equation}
+is the {\em mean}\/ generalized force conjugate to $x_\alpha$. The mean value is
+calculated from the equilibrium distribution of systems in the ensemble corresponding to the external parameter values $x_\alpha$. The macroscopic work $W$ resulting
+from a finite quasi-static change of external parameters can be obtained by
+integrating Eq.~(\ref{e4.16}).
+
+The most well-known example of quasi-static work in thermodynamics is that done by
+pressure when the volume  changes. For simplicity, suppose that the
+volume $V$ is the only external parameter of any consequence. The work done in 
+changing the volume from $V$ to $V + dV$ is simply the product of the force and
+the displacement (along the line of action of the force). By definition, the mean
+equilibrium pressure $\bar{p}$ 
+ of a given macrostate is equal to the normal force per unit area acting
+on any surface element. Thus, the normal force acting on a surface element 
+$d{\bf S}_i$ is $\bar{p}\,\,d{\bf S}_i$. Suppose that the surface element is subject
+ to a
+displacement $d{\bf x}_i$. The work done by the element is $\bar{p}\,\,d{\bf S}_i
+\!\cdot\! d{\bf x}_i$. 
+The total work done by the system is obtained by summing over all of the surface 
+elements. Thus,
+\begin{equation}
+\dbar W = \bar{p}\, \,dV,
+\end{equation}
+where
+\begin{equation}
+dV = \sum_i d{\bf S}_i\!\cdot\! d{\bf x}_i
+\end{equation}
+is the infinitesimal volume change due to the displacement of the surface.
+It follows from (\ref{e4.17}) that
+\begin{equation}
+\bar{p} = - \frac{ \partial\bar{E} }{\partial V},
+\end{equation}
+so the mean pressure is the generalized force conjugate to the volume $V$.
+
+Suppose that a quasi-static process is carried out in which the volume is changed
+from $V_i$ to $V_f$. In general, the mean pressure is a function of the volume, so
+ $\bar{p} = \bar{p}(V)$. It follows that the macroscopic work done by the
+system is given by
+\begin{equation}
+W_{if} = \int_{V_i}^{V_f} \dbar W = \int_{V_i}^{V_f} \bar{p}(V)\, dV.
+\end{equation}
+This quantity is just the ``area under the curve'' in a plot of $\bar{p}(V)$ versus
+$V$.
+
+\section{Exact and Inexact Differentials}\label{s4.5}
+In our investigation of heat and work we have come across 
+various infinitesimal objects such as $d\bar{E}$ and $\,\dbar W$.
+It is instructive to examine these infinitesimals more closely.
+
+Consider the purely mathematical problem where $F(x, y)$ is some general
+function of two
+independent variables $x$ and $y$. Consider the change in $F$ in
+going from the point $(x$, $y)$ in the $x$-$y$ plane to the neighbouring point
+($x+dx$, $y+dy$). This is given by
+\begin{equation}
+dF = F(x + dx, y+dy)- F(x,y),
+\end{equation}
+which can also be written
+\begin{equation}
+dF = X(x,y) \,dx + Y(x,y)\, dy,\label{e4.23}
+\end{equation}
+where $X= \partial F/\partial x$ and $Y=\partial F/\partial y$. Clearly, $dF$ is
+simply the infinitesimal difference between two adjacent values of the function $F$.
+This type of infinitesimal quantity is termed an {\em exact differential}\/ to
+distinguish it from another type to be discussed presently.
+If we move in the $x$-$y$ plane from an initial point $i\equiv (x_i$, $y_i)$ 
+to a final point  $f \equiv (x_f$, $y_f)$ then the corresponding change in $F$ is
+given by
+\begin{equation}
+{\mit\Delta} F = F_f - F_i = \int_i^f dF= \int_i^f(X\,dx + Y\,dy).
+\end{equation}
+Note that since the difference on the left-hand side depends only on the initial
+and final points, the integral on the right-hand side can only depend on 
+these points as well.
+In other words, the value of the
+integral is independent of the path taken in going from the initial to the final
+point. This is the distinguishing feature of an exact differential. 
+Consider an integral taken around a closed circuit in the $x$-$y$ plane. In this
+case, the initial and final points correspond to the same point, so the difference
+$F_f- F_i$ is clearly zero. It follows that the integral of an exact differential
+over a closed circuit is always zero:
+\begin{equation}
+\oint dF \equiv 0.
+\end{equation}
+
+Of course, not every infinitesimal quantity is an exact differential. Consider
+the infinitesimal object
+\begin{equation}
+\dbar G \equiv X'(x,y)\, dx + Y'(x,y)\, dz,\label{e4.26}
+\end{equation}
+where $X'$ and $Y'$ are two
+general functions of $x$ and $y$. It is easy to test whether or not
+an infinitesimal quantity is an exact differential. Consider the expression 
+(\ref{e4.23}).
+It is clear that since $X= \partial F/\partial x$ and $Y=\partial F/\partial y$
+then
+\begin{equation}
+\frac{\partial X}{\partial y} = \frac{\partial Y}{\partial x}= \frac{\partial^2 F}
+{\partial x \partial y}.
+\end{equation}
+Thus,
+if
+\begin{equation}
+\frac{\partial X'}{\partial y} \neq \frac{\partial Y'}{\partial x}
+\end{equation}
+(as is assumed to be the case), then $\,\dbar G$ cannot be an exact differential, and
+is instead termed an {\em inexact differential}. 
+The special symbol $\,\dbar$ is used to denote an inexact differential.
+Consider the integral of
+$\,\dbar G$ over some path in the $x$-$y$ plane. In general, it is not true
+that
+\begin{equation}
+\int_i^f \dbar G = \int_i^f (X'\, dx + Y' \,dy)
+\end{equation}
+is independent of the  path taken between the initial and final points.
+This is the distinguishing feature of an inexact differential. In particular,
+the integral of an inexact differential around a closed circuit is not necessarily
+zero, so
+\begin{equation}
+\oint \dbar G \neq 0.
+\end{equation}
+
+Consider, for the moment, the solution of 
+\begin{equation}
+\dbar G = 0,
+\end{equation}
+which reduces to the ordinary differential equation
+\begin{equation}
+\frac{dy}{dx} = -\frac{X'}{Y'}.\label{e4.32}
+\end{equation}
+Since the right-hand side is a known function of $x$ and $y$, the above
+equation defines
+a definite direction ({\em i.e.}, gradient) at each point in the $x$-$y$ plane. The
+solution  simply consists of drawing a system of curves in the
+$x$-$y$ plane such that at any point the tangent to the curve is as specified
+in Eq.~(\ref{e4.32}). This defines a set of curves which can be written
+$\sigma (x, y) = c$, where $c$ is a labeling parameter.
+It follows that
+\begin{equation}
+\frac{d\sigma}{d x}\equiv \frac{\partial \sigma}{\partial x}
++\frac{\partial\sigma}{\partial y}\frac{dy}{dx} = 0.\label{e4.33}
+\end{equation}
+The elimination of $dy/dx$ between Eqs.~(\ref{e4.32}) and (\ref{e4.33}) yields
+\begin{equation}
+Y'\, \frac{\partial \sigma}{\partial x} = X'\, \frac{\partial\sigma}{\partial y}
+=\frac{X' \,Y'}{\tau},
+\end{equation}
+where $\tau(x, y)$ is function of $x$ and $y$. The above equation could equally
+well be written
+\begin{equation}
+X' = \tau\, \frac{\partial \sigma}{\partial x},~~~~~Y' = \tau\,
+ \frac{\partial \sigma}
+{\partial y}.\label{e4.35}
+\end{equation}
+Inserting Eq.~(\ref{e4.35}) into Eq.~(\ref{e4.26}) gives
+\begin{equation}
+\dbar G = \tau \left( \frac{\partial \sigma}{\partial x}\,dx + \frac{\partial\sigma}
+{\partial y}\,dy\right)= \tau\,d\sigma,
+\end{equation}
+or
+\begin{equation}
+\frac{\dbar G}{\tau} = d\sigma.
+\end{equation}
+Thus, dividing the inexact differential $\,\dbar G$ by $\tau$ yields the exact
+differential $d\sigma$. A factor $\tau$ which possesses this property is
+termed an {\em integrating factor}. Since the above analysis is quite general,
+it is clear that an inexact differential involving {\em two}\/ independent variables always
+admits of an integrating factor. Note, however, 
+this is not generally the case for inexact
+differentials involving  more than two variables.
+
+After this mathematical excursion, let us return to physical situation of interest.
+The macrostate of a macroscopic system can be specified by the values of the
+external parameters ({\em e.g.}, the volume) and the mean energy $\bar{E}$. This, in
+turn, fixes other parameters such as the mean pressure $\bar{p}$. Alternatively,
+we can specify the external parameters and the mean pressure, which fixes the 
+mean energy. Quantities such as $d\bar{p}$ and $d\bar{E}$ are infinitesimal
+differences between well-defined quantities: {\em i.e.},
+ they are exact differentials.
+For example, $d\bar{E} = \bar{E}_f - \bar{E}_i$ is just the difference between the
+mean energy of the system in the final macrostate $f$ and  the
+initial macrostate $i$, in the limit where these two states are nearly the same.
+It follows that if the system is taken from an initial macrostate $i$ to any
+final macrostate $f$ the mean energy change is given by 
+\begin{equation}
+{\mit\Delta} \bar{E} = \bar{E}_f - \bar{E}_i = \int_{i}^f d\bar{E}.
+\end{equation}
+However, since the mean energy is just a function of the macrostate under consideration, $\bar{E}_f$ and $\bar{E}_i$ depend only on the  initial and final
+states, respectively.
+ Thus, the integral $\int d\bar{E}$ depends only on the initial and final
+states, and not on the particular process  used to get between them.
+
+Consider, now, the infinitesimal work done by the system in going from some
+initial macrostate $i$ to some neighbouring final macrostate $f$. In general, 
+$\,\dbar W = \sum \bar{X}_\alpha\,dx_\alpha$ is {\em not}\/ the difference between two
+numbers referring to the properties of two neighbouring macrostates. Instead,
+it is merely an infinitesimal quantity characteristic of the process of going
+from state $i$ to state $f$. In other words, the work $\,\dbar W$ is in general
+an inexact differential. The total work done by the system in going from any
+macrostate $i$ to some other macrostate $f$ can be written as
+\begin{equation}
+W_{if} = \int_i^f \dbar W,
+\end{equation}
+where the integral represents the sum of the infinitesimal amounts of work
+$\,\dbar W$ performed at each stage of the process. In general, the value of
+the integral {\em does}
+ depend on the particular process used in going from macrostate $i$
+to macrostate $f$. 
+
+Recall that in going from macrostate $i$ to macrostate $f$ the change ${\mit\Delta} \bar{E}$ 
+{\em does not}
+depend on the process used whereas the work $W$, in general, {\em does}. 
+Thus, it follows from
+the first law of thermodynamics, Eq.~(\ref{e4.10}),
+ that the heat $Q$, in general, also depends on the 
+process used. It follows that
+\begin{equation}
+\dbar Q \equiv  d \bar{E} + \dbar W
+\end{equation}
+is an inexact differential. However, by analogy with the mathematical example
+discussed previously, there must exist some integrating factor, $T$, say, which
+converts the inexact differential $\,\dbar Q$ into an exact differential. 
+So,
+\begin{equation}
+\frac{\dbar Q}{T} \equiv dS.
+\end{equation}
+It will be interesting to find out what physical quantities correspond to 
+ the functions $T$ and $S$. 
+
+Suppose that the system is thermally insulated, so that $Q=0$. In this case, the
+first law of thermodynamics implies that
+\begin{equation}
+W_{if} = - {\mit\Delta} \bar{E}.
+\end{equation}
+Thus, in this special case, the work done depends only on the energy 
+difference between the initial and final states, and is independent of the process.
+In fact, when Clausius first formulated the first law in 1850
+this is how he expressed it:
+\begin{quote}
+{\sf If a thermally isolated system is brought from some initial to some final state
+then the work done by the system is independent of the process used.}
+\end{quote}
+
+If the external parameters of the system are kept fixed, so that no work is done,
+then $\,\dbar W=0$,  Eq.~(\ref{e4.11}) reduces
+to
+\begin{equation}
+\dbar Q = d \bar{E},
+\end{equation}
+and $\,\dbar Q$ becomes an exact differential. The amount of heat $Q$ absorbed
+in going from one macrostate to another 
+depends only on the mean energy difference between them, and
+ is independent of the process used to effect the change.  In this situation,
+heat is a conserved quantity, and acts very much like the invisible indestructible
+fluid of Lavoisier's calorific theory.
+

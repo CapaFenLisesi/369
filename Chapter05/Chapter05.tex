@@ -1,0 +1,1355 @@
+\chapter{Statistical Thermodynamics}\label{s5}
+
+\section{Introduction}
+Let us briefly
+review  the material which we have covered so far in this  course.
+We started off 
+by studying the mathematics of probability. We then used probabilistic
+reasoning to analyze the dynamics of many particle systems, a subject area 
+known as {\em statistical mechanics}. Next, we explored the physics of heat and
+work, the study of which is termed {\em thermodynamics}. The final step in our 
+investigation is to
+combine statistical mechanics with thermodynamics: in other words, to
+investigate heat and work  via statistical arguments. This discipline is
+called {\em statistical thermodynamics}, and forms the central subject matter
+of this course.
+This section is devoted to the study of the fundamental concepts
+of statistical thermodynamics. The remaining sections will  then
+explore the application and elucidation of these concepts.
+
+\section{Thermal Interaction Between Macrosystems}\label{s5.2}
+Let us begin our investigation of statistical thermodynamics
+ by examining
+ a purely thermal interaction between two macroscopic
+systems, $A$ and $A'$, from a microscopic point of view. Suppose that the energies of
+these  two systems are $E$ and $E'$, respectively. The external parameters are held 
+fixed, so that $A$ and $A'$  cannot  do work on one another. However, we 
+assume that
+the systems are   free to exchange heat energy ({\em i.e.}, they are in thermal contact).
+It is convenient to divide the energy
+scale into small subdivisions of width $\delta E$. 
+The number of microstates of $A$ consistent with a 
+macrostate in which the energy lies in the range $E$ to $E+\delta E$ is denoted
+${\mit\Omega}(E)$. Likewise, the number of microstates of $A'$ consistent with a
+macrostate in which the energy lies between $E'$  and $E'+\delta E$ is
+denoted ${\mit\Omega}'(E')$.
+
+The combined system $A^{(0)} = A + A'$ is assumed to be
+isolated ({\em i.e.}, it neither does work on
+nor exchanges heat with its surroundings). It follows from the first law of 
+thermodynamics that the total energy $E^{(0)}$ is constant. 
+When
+speaking of thermal contact between two {\em distinct}\/
+systems, we usually assume that the mutual interaction is
+sufficiently weak for  the energies to be additive. Thus, 
+\begin{equation}
+E + E' \simeq E^{(0)} = {\rm constant}.\label{e5.1}
+\end{equation}
+Of course, in the limit of zero
+ interaction the energies are strictly additive. However,
+a small residual interaction is always required to enable the two systems to exchange
+heat energy and, thereby, eventually
+reach thermal equilibrium (see Sect.~\ref{s3.9}). In fact, if
+ the interaction between $A$ and $A'$ is too strong for the energies to be
+additive then it makes little
+sense to consider each system in isolation, since the presence of one system clearly
+strongly perturbs the other, and {\em vice versa}. In  this case, the smallest system
+which can realistically be examined in isolation is $A^{(0)}$.
+
+
+According to Eq.~(\ref{e5.1}), if the energy of $A$ lies in the range $E$ to $E+\delta E$ 
+then the energy of $A'$ must lie between $E^{(0)}- E -\delta E$ and $E^{(0)}- E$.
+Thus, the number of microstates accessible to each system is
+given by ${\mit\Omega}(E)$ and ${\mit\Omega}'(E^{(0)}-E)$, respectively.
+ Since every possible state of $A$ can be 
+combined with every possible state of $A'$ to form a distinct microstate, 
+the total number of distinct states 
+accessible to $A^{(0)}$ when the energy of $A$ lies in the range $E$ to $E+\delta E$
+is 
+\begin{equation}
+{\mit\Omega}^{(0)} = {\mit\Omega}(E)\, {\mit\Omega}'(E^{(0)} - E).\label{e5.2}
+\end{equation}
+
+Consider an ensemble of pairs of thermally interacting systems, 
+$A$ and $A'$, which are left undisturbed
+for many relaxation times so that they can  attain thermal equilibrium.
+The principle of equal {\em a priori} probabilities is applicable to
+this situation (see Sect.~\ref{s3}). 
+According to this principle, the probability of occurrence of a given macrostate
+is proportional to the number of accessible microstates, since all microstates are
+equally likely. Thus, the probability that the system $A$ has an energy lying in
+the range $E$ to $E+\delta E$ can be written
+\begin{equation}
+P(E) = C\, {\mit\Omega}(E) \,{\mit\Omega}'(E^{(0)} - E),\label{e5.3}
+\end{equation}
+where $C$ is a constant which is independent of $E$. 
+
+We know, from Sect.~\ref{s3.13}, that the typical variation of the number of accessible
+states with energy is of the form
+\begin{equation}
+	{\mit\Omega} \propto E^f,\label{e5.4}
+\end{equation}
+where $f$ is the number of degrees of freedom. For a macroscopic system $f$ is
+an exceedingly large number. It follows that the probability
+$P(E)$ in Eq.~(\ref{e5.3}) is the product
+of  an extremely rapidly increasing function of $E$ 
+and an extremely rapidly decreasing 
+function of $E$. Hence, we would expect the probability
+to exhibit a very pronounced 
+maximum at some particular value of the energy.
+
+ Let us
+Taylor expand the logarithm of $P(E)$ in the vicinity of its maximum value, which
+is assumed to occur at $E= \tilde{E}$. We expand the relatively slowly varying
+logarithm, rather than the  function itself, because the latter varies so rapidly
+with the energy that the radius of convergence of its Taylor expansion
+is too small for this expansion to  be of any practical use.
+The expansion of $\ln {\mit\Omega}(E)$ yields
+\begin{equation}
+\ln {\mit\Omega}(E) = \ln{\mit\Omega}(\tilde{E}) + \beta(\tilde{E})\,\eta -
+\frac{1}{2}\,\lambda
+(\tilde{E})\,\eta^2+\cdots,\label{e5.5}
+\end{equation}
+where 
+\begin{eqnarray}
+\eta &=& E - \tilde{E},\\
+\beta &=& \frac{\partial \ln {\mit\Omega}}{\partial E},\\
+\lambda &=& -\frac{\partial ^2 \ln {\mit\Omega}}{\partial E^2}
+= - \frac{\partial\beta}
+{\partial E}.
+\end{eqnarray}
+Now, since  $E' = E^{(0)}-E$, we have
+\begin{equation}
+E' - \tilde{E}' = - (E-\tilde{E}) = -\eta.
+\end{equation}
+It follows that
+\begin{equation}
+\ln{\mit\Omega}'(E') = \ln{\mit\Omega}'(\tilde{E}')+\beta'(\tilde{E}')\,(-\eta) 
+-\frac{1}{2}\,
+\lambda'(\tilde{E}')\,(-\eta)^2
++\cdots,\label{e5.8}
+\end{equation}
+where $\beta'$ and $\lambda'$ are defined in an analogous manner to the parameters
+$\beta$ and $\lambda$.
+Equations (\ref{e5.5}) and (\ref{e5.8}) can be combined to give
+\begin{equation}
+\ln\,[{\mit\Omega}(E)\,{\mit\Omega}'(E')] = \ln\,[{\mit\Omega}(\tilde{E})\,{\mit\Omega}'(\tilde{E}')]
++[\beta(\tilde{E})-\beta'(\tilde{E}')]\,\eta -\frac{1}{2}\,
+[\lambda(\tilde{E})+\lambda'(\tilde{E}')]\,\eta^2+\cdots.
+\end{equation}
+At the maximum of $\ln\,[{\mit\Omega}(E) \,{\mit\Omega}'(E')]$ the linear term in
+the Taylor expansion must vanish, so
+\begin{equation}
+\beta (\tilde{E}) = \beta'(\tilde{E}'),
+\end{equation}
+which enables us to determine $\tilde{E}$. It follows that
+\begin{equation}
+\ln P(E) = \ln P(\tilde{E}) - \frac{1}{2}\,\lambda_0 \,\eta^2,
+\end{equation}
+or
+\begin{equation}
+P(E)=P(\tilde{E}) \exp\left[-\frac{1}{2}\,\lambda_0\, (E-\tilde{E})^2\right],\label{e5.12}
+\end{equation}
+where
+\begin{equation}
+\lambda_0 = \lambda (\tilde{E})+\lambda'(\tilde{E}').
+\end{equation}
+Now, the parameter $\lambda_0$ must be positive, otherwise the probability $P(E)$
+does not exhibit a pronounced maximum value: {\em i.e.}, the combined system $A^{(0)}$
+does not possess a well-defined equilibrium state as, physically, we know it must.
+It is clear that  $\lambda(\tilde{E})$  must also be
+positive, since we could always choose for $A'$ a system with a negligible contribution
+to $\lambda_0$, in which case the constraint $\lambda_0>0$ would 
+effectively correspond to $\lambda(\tilde{E})>0$. [A similar argument can be used to
+show that $\lambda'(\tilde{E}')$ must be
+positive.] The same conclusion also follows from
+the estimate ${\mit\Omega}\propto E^f$, which implies that
+\begin{equation}
+\lambda(\tilde{E}) \sim \frac{f}{\tilde{E}^2}>0.
+\end{equation}
+
+According to Eq.~(\ref{e5.12}), the probability distribution function $P(E)$ is
+a Gaussian. This is hardly surprising, since the central limit theorem ensures that 
+the probability distribution for any macroscopic variable, such as $E$, is Gaussian 
+in
+nature (see Sect.~\ref{s2.11}). It follows that the mean value of $E$ corresponds to
+the situation of maximum probability ({\em i.e.}, the peak of the Gaussian curve), so
+that 
+\begin{equation}
+\bar{E} = \tilde{E}.
+\end{equation}
+The standard deviation of the distribution  is
+\begin{equation}
+{\mit\Delta}^\ast E = \lambda_0^{-1/2}\sim \frac{\bar{E}}{\sqrt{f}},
+\end{equation}
+where use has been made of Eq.~(\ref{e5.4}) (assuming that system $A$ makes the dominant
+contribution to $\lambda_0$). It follows that the fractional width of the
+probability distribution function is given by
+\begin{equation}
+\frac{{\mit\Delta}^\ast E}{\bar{E}}\sim \frac{1}{\sqrt{f}}.
+\end{equation}
+Hence, if $A$ contains 1 mole of particles then $f\sim N_A\simeq 10^{24}$ and
+${\mit\Delta}^\ast E /\bar{E}\sim 10^{-12}$. Clearly, the probability
+distribution for $E$ has an exceedingly sharp maximum. Experimental
+measurements of this energy will almost always yield the mean value,
+ and the underlying
+statistical nature of the distribution may not be apparent.
+
+\section{Temperature}\label{s5.3}
+Suppose that the systems $A$ and $A'$ are initially thermally isolated from one 
+another, with respective energies $E_i$ and $E_i'$. 
+(Since the energy of an isolated system cannot fluctuate, we do not have to
+bother with mean energies here.) If the two systems are
+subsequently placed in thermal contact, so that they are
+ free to exchange heat energy, then,
+in general, the resulting state is an extremely improbable one
+[{\em i.e.}, $P(E_i)$  is much less than the peak probability].  The configuration will,
+therefore, 
+tend to change in time until the two systems attain final mean energies $\bar{E}_f$
+and $\bar{E}_f'$ which are such that
+\begin{equation}
+\beta_f = \beta_f',
+\end{equation}
+where
+$\beta_f\equiv \beta(\bar{E}_f)$ and $\beta_f'\equiv \beta'(\bar{E}_f')$. This
+corresponds to the state of maximum probability (see Sect.~\ref{s5.2}).
+In the special case where the initial energies, $E_i$ and $E_i'$, lie very close to
+the final mean energies, $\bar{E}_f$ and $\bar{E}_f'$, respectively, there is no
+change in the two systems when they are brought into thermal contact, since the
+initial state already corresponds to a state of  maximum probability.
+
+It follows from energy conservation that
+\begin{equation}
+\bar{E}_f +\bar{E}_f' = E_i + E_i'.
+\end{equation}
+The mean energy change in each system is simply the net heat absorbed, so that
+\begin{eqnarray}
+Q&\equiv& \bar{E}_f - E_i,\\
+Q'&\equiv&\bar{E}_f' - E_i'.
+\end{eqnarray}
+The conservation of energy then reduces to
+\begin{equation}
+Q+ Q' =0:\label{e5.21}
+\end{equation}
+{\em i.e.},  the heat given off by one system is equal to the heat absorbed by the other 
+(in our notation absorbed
+heat is positive and  emitted heat is negative).
+
+It is clear that if the systems $A$ and $A'$ are suddenly 
+brought into thermal contact  then they will only exchange heat and evolve towards a
+new equilibrium state if  the final state is
+more probable than the initial one. In other words, if
+\begin{equation}
+P(\bar{E}_f) > P(E_i),
+\end{equation}
+or 
+\begin{equation}
+\ln P(\bar{E}_f)> \ln P(E_i),
+\end{equation}
+since the logarithm is a monotonic  function. The  above inequality can be written
+\begin{equation}
+\ln{\mit\Omega}(\bar{E}_f) + \ln{\mit\Omega}'(\bar{E}_f')>\ln{\mit\Omega}(E_i) + \ln{\mit\Omega}'(E_i'), 
+\end{equation}
+with the aid of Eq.~(\ref{e5.3}). Taylor expansion to first order yields
+\begin{equation}
+\frac{\partial\ln{\mit\Omega}(E_i)}{\partial E}\, (\bar{E}_f- E_i) +
+\frac{\partial\ln{\mit\Omega}'(E_i')}{\partial E'}\,(\bar{E}_f'-E_i') > 0,
+\end{equation}
+which finally gives
+\begin{equation}
+(\beta_i - \beta_i')\,Q >0,\label{e5.26}
+\end{equation}
+where $\beta_i\equiv \beta(E_i)$, $\beta_i'\equiv\beta'(E_i')$,
+and use has been made of Eq.~(\ref{e5.21}).
+
+It is clear, from the above, that the parameter $\beta$, defined
+\begin{equation}
+\beta  =\frac{\partial \ln{\mit\Omega}}{\partial E},\label{e5.27}
+\end{equation}
+has the following properties:
+\begin{enumerate}
+\item {\sf If two systems separately in equilibrium have the same value of $\beta$ then
+the systems will remain in equilibrium when brought into thermal contact with
+one another.}
+\item {\sf If two  systems  separately in equilibrium have different values of
+ $\beta$ then the systems will not remain
+in equilibrium when brought into thermal contact with
+one another. Instead, the system with the {\em higher}\/ value of $\beta$
+will {\em absorb}\/ heat from the other system until the two $\beta$ values are 
+the same [see Eq.~(\ref{e5.26})].}
+\end{enumerate}
+Incidentally,    a  partial derivative is used  in Eq.~(\ref{e5.27}) 
+ because  in a purely thermal interaction the external parameters of the
+system are held constant whilst the energy  changes.
+
+Let us define the dimensionless parameter $T$, such that
+\begin{equation}\label{e5.28}
+\frac{1}{k\,T} \equiv \beta \equiv \frac{\partial \ln{\mit\Omega}}{\partial E},
+\end{equation}
+where $k$ is a positive constant having the dimensions of energy. The parameter $T$
+is termed the {\em thermodynamic temperature}, and controls heat flow in much the
+same manner as a conventional temperature. Thus, if two isolated systems in
+equilibrium possess the same thermodynamic temperature then they will remain in equilibrium
+when brought into thermal contact. However, 
+if the two systems have different thermodynamic  temperatures
+then heat will flow from the system with the higher temperature 
+({\em i.e.}, the ``hotter''
+system) to the system with the lower temperature until the temperatures of the
+two systems are the same. In addition, suppose that we have three systems $A$, $B$,
+and $C$. We know that if $A$ and $B$ remain in equilibrium when brought into thermal
+contact then their temperatures are the same, so that $T_A= T_B$. Similarly, if 
+$B$ and $C$ remain in equilibrium when brought into thermal contact, then
+$T_B = T_C$. But, we can then conclude that $T_A=T_C$, so systems $A$ and $C$
+will also remain in equilibrium when brought into thermal contact. Thus, we arrive at
+the following statement, which is sometimes called the {\em zeroth law of
+thermodynamics}:
+\begin{quote}
+{\sf If two systems are separately in thermal equilibrium with a third system 
+then they must also be
+in thermal equilibrium with one another.}
+\end{quote}
+
+The thermodynamic temperature of a macroscopic body, as defined in Eq.~(\ref{e5.28}), 
+depends 
+only on  the rate of change of
+the number of accessible microstates  with the total energy. Thus, it is possible
+to define   a thermodynamic 
+temperature for systems with radically different microscopic
+structures ({\em e.g.}, matter and radiation).
+The thermodynamic, or {\em absolute}, scale of temperature is measured in
+degrees {\em kelvin}.
+The parameter $k$ is chosen to make this temperature scale 
+accord as much as possible
+with more conventional  temperature scales. The choice
+\begin{equation}
+k = 1.381\times 10^{-23}~~{\rm joules / kelvin},
+\end{equation}
+ensures that there are  100 degrees kelvin  between the freezing and boiling points
+of water at atmospheric pressure (the two temperatures are 
+273.15 and 373.15 degrees kelvin, respectively). 
+The above number is known as the {\em Boltzmann
+constant}.  In fact, the Boltzmann constant is fixed  by international
+convention so as to make the {\em triple point}\/ of water ({\em i.e.}, the unique
+temperature at which the three phases of water co-exist in thermal equilibrium)
+exactly $273.16^\circ\,{\rm K}$. Note that the zero of the thermodynamic scale, the
+so called {\em absolute zero}\/ of temperature, does not correspond to the freezing
+point of water,  but to some far more physically significant temperature which we
+shall discuss presently.
+
+The familiar ${\mit\Omega} \propto E^f$ scaling for translational degrees of freedom yields
+\begin{equation}
+k\,T \sim \frac{\bar{E}}{f},
+\end{equation}
+using Eq.~(\ref{e5.28}),
+so $k\,T$ is a rough measure of the mean energy  associated with
+each degree of freedom in the system. In fact, for a classical system ({\em i.e.},
+one in which
+quantum effects are unimportant) it is possible to show that the mean energy 
+associated with each degree of freedom is
+ {\em exactly}\/ $(1/2)\,k\,T$. This result, which is known as the
+ {\em equipartition theorem}, will be discussed
+in more detail later on in this course. 
+
+The absolute 
+temperature $T$ is usually positive,
+since ${\mit\Omega}(E)$ is ordinarily a very rapidly increasing function of 
+ energy.
+In fact, this is the case for all conventional systems
+where the kinetic energy of the particles is taken into account, because there is
+no upper bound on the possible energy of the system,
+and ${\mit\Omega}(E)$ consequently increases
+roughly like $E^f$. It is, however, possible to envisage a situation in which we
+ignore the translational degrees of freedom of a system, and concentrate only
+on its {\em spin}\/ degrees of freedom. In this case, there is an upper bound to
+the possible energy of the system ({\em i.e.}, all spins lined up anti-parallel to
+an applied magnetic field). Consequently, the total number of states available to
+the system is finite. In this situation, the density of spin states
+${\mit\Omega}_{\rm spin}(E)$ first increases with increasing energy, as in conventional
+systems, but then reaches a maximum and decreases again. Thus, it is possible to
+get absolute spin temperatures which are {\em negative}, as well as positive.
+
+In Lavoisier's calorific theory, the basic mechanism which forces heat
+to flow from hot to cold bodies is the supposed mutual repulsion of the constituent
+particles of calorific fluid. In statistical mechanics,
+the explanation is far less contrived. Heat flow occurs
+ because  statistical systems tend to evolve towards their most
+probable states, subject to the imposed physical constraints.
+When two bodies at different temperatures are suddenly
+placed in thermal contact, the initial state
+corresponds to a spectacularly improbable state of the overall system. For systems
+containing of order 1 mole of particles, the only reasonably probable final 
+equilibrium 
+states are such that the two bodies differ in temperature by less than 1 part in $10^{12}$.
+The evolution of the system towards these final states
+({\em i.e.}, towards thermal equilibrium) is effectively driven by
+{\em probability}. 
+
+\section{Mechanical Interaction Between Macrosystems}
+Let us now examine a purely mechanical interaction between macrostates, where one
+or more of the external parameters is modified, but there is no exchange of 
+heat energy. Consider, for the sake of simplicity, a situation where only
+one external parameter $x$ of the system is free to vary. 
+In general, the number of microstates
+accessible to the system when the overall energy lies between $E$ and $E+\delta E$
+depends  on the particular value of $x$, so we can write 
+${\mit\Omega} \equiv {\mit\Omega}(E, x)$.
+
+When $x$ is changed by the amount $dx$, the energy $E_r(x)$ of a given
+microstate        
+$r$ changes by $(\partial E_r/\partial x)\, dx$. The number of states
+$\sigma(E,x)$ whose energy is changed from a value less than $E$ to a value
+greater than $E$ when the parameter changes from $x$ to $x+dx$ is given by
+the number of microstates per unit energy range multiplied by the {\em average}
+shift in energy  of the microstates. Hence,
+\begin{equation}
+\sigma (E,x) = \frac{{\mit\Omega}(E,x)}{\delta E}\,
+\overline{\frac{\partial E_r}{\partial x}}\,
+\,dx,
+\end{equation}
+where the mean value of $\partial E_r/\partial x$ is taken over all accessible
+microstates  ({\em i.e.}, all states where the energy lies between $E$ and $E+\delta E$ and
+the external parameter takes the value $x$). The above equation can also be written
+\begin{equation}
+\sigma (E,x) = - \frac{{\mit\Omega}(E,x)}{\delta E}\,
+\bar{X}\,\,dx,\label{e5.32}
+\end{equation}
+where 
+\begin{equation}
+\bar{X}(E,x) = -\overline{\frac{\partial E_r}{\partial x}}
+\end{equation}
+is the mean generalized force conjugate to the external parameter $x$ 
+(see Sect.~\ref{s4.4}).
+
+Consider the total number of microstates between $E$ and $E+\delta E$. When the
+external parameter changes from $x$ to $x+dx$, the number of states in this energy
+range changes by $(\partial {\mit\Omega}/\partial x)\,dx$. This change is
+due to the difference between the number of states which {\em enter}\/ the
+range because their energy is changed from a value less than $E$ to one greater than
+$E$ and the number which 
+{\em leave} 
+because their energy is changed from a value less than $E+\delta E$ to one
+greater than $E+\delta E$.
+In symbols,
+\begin{equation}
+\frac{\partial {\mit\Omega}(E,x)}{\partial x}\,dx = \sigma(E)- \sigma(E+\delta E)\simeq
+-\frac{\partial \sigma}{\partial E}\,\delta E,
+\end{equation}
+which yields
+\begin{equation}
+\frac{\partial {\mit\Omega}}{\partial x} = \frac{\partial({\mit\Omega} \bar{X})}{\partial E},
+\end{equation}
+where use has been made of Eq.~(\ref{e5.32}). Dividing both sides by ${\mit\Omega}$ gives
+\begin{equation}
+\frac{\partial \ln {\mit\Omega}}{\partial x} = \frac{\partial \ln {\mit\Omega}}{\partial E}\,
+\bar{X} +\frac{\partial \bar{X}}{\partial E}.
+\end{equation}
+However, according to  the usual estimate ${\mit\Omega}\propto E^f$, the first term on the
+right-hand side is of order $(f/\bar{E})\,\bar{X}$, whereas the second term is only
+of order $\bar{X}/\bar{E}$. 
+Clearly, for a macroscopic system with many degrees of freedom,
+the second term is utterly negligible, so we have
+\begin{equation}
+\frac{\partial\ln {\mit\Omega}}{\partial x} = \frac{\partial \ln {\mit\Omega}}{\partial E}
+\,\bar{X} = \beta \,\bar{X}.
+\end{equation}
+
+When there are several external parameters $x_1, \cdots, x_n$, so that 
+${\mit\Omega}\equiv
+{\mit\Omega}(E, x_1,\cdots,$ $x_n)$, the above derivation is valid for
+ each parameter
+taken in isolation. Thus,
+\begin{equation}\label{e5.38}
+\frac{\partial \ln{\mit\Omega}}{\partial x_\alpha} = \beta\, \bar{X}_\alpha,
+\end{equation}
+where $\bar{X}_\alpha$ is the mean generalized force conjugate to the parameter 
+$x_\alpha$.
+
+\section{General Interaction Between Macrosystems}
+Consider two systems, $A$ and $A'$, which can interact by exchanging heat energy 
+{\em and}
+doing work on one another. Let the  system $A$ have energy $E$ and adjustable external
+parameters $x_1,\cdots, x_n$. Likewise, let the 
+ system $A'$ have energy $E'$ and adjustable
+external parameters $x_1',\cdots, x_n'$. The combined system $A^{(0)}=A + A'$ is
+assumed to be isolated. It follows from the first law of thermodynamics that
+\begin{equation}
+E+E' = E^{(0)} = {\rm constant}.
+\end{equation}
+Thus, the energy $E'$ of system $A'$ is determined once the energy $E$ of
+system $A$ is given, and {\em vice versa}. In fact, $E'$ could be regarded as
+a function of $E$. Furthermore, if the two systems can interact mechanically then,
+in general, the parameters $x'$ are some function of the parameters $x$. As
+a simple example, if the two systems are separated by a movable partition in
+an enclosure  of fixed volume $V^{(0)}$, then
+\begin{equation}
+V + V' = V^{(0)} = {\rm constant},
+\end{equation}
+where $V$  and $V'$ are the volumes of systems $A$ and $A'$, respectively.
+
+The total number of microstates accessible to $A^{(0)}$ is clearly a function of
+$E$ and the parameters $x_\alpha$ (where $\alpha$ runs from 1 to $n$), so
+${\mit\Omega}^{(0)}\equiv {\mit\Omega}^{(0)}(E, x_1, \cdots, x_n)$. 
+We have already demonstrated (in
+Sect.~\ref{s5.2}) that
+${\mit\Omega}^{(0)}$ exhibits a very pronounced maximum at one particular
+value of the energy
+$E=\tilde{E}$ when $E$ is varied but the external parameters are held constant.
+This behaviour comes about because of the very strong,
+\begin{equation}
+	{\mit\Omega} \propto E^f,
+\end{equation}
+increase in the number of accessible microstates of $A$ (or $A'$)
+ with energy. However, according to Sect.~\ref{s3.13}, the number of
+accessible microstates exhibits a similar strong increase with
+ the volume, which is a typical external parameter, so that
+\begin{equation}
+{\mit\Omega} \propto V^f.
+\end{equation}
+It follows that  the variation of ${\mit\Omega}^{(0)}$ with a typical parameter $x_\alpha$,
+when all the other parameters and the energy are held constant,  also exhibits
+ a very
+sharp maximum at some particular
+value $x_\alpha=\tilde{x}_\alpha$. The equilibrium situation
+corresponds to the configuration of maximum probability, in which virtually all
+systems $A^{(0)}$ in the ensemble have values of $E$ and $x_\alpha$ very close
+to $\tilde{E}$ and $\tilde{x}_\alpha$. The mean values of these quantities are
+thus given by $\bar{E}=\tilde{E}$ and $\bar{x}_\alpha= \tilde{x}_\alpha$.
+
+Consider a quasi-static process in which the system $A$ is brought from an equilibrium
+state described by $\bar{E}$ and $\bar{x}_\alpha$ to an infinitesimally different
+equilibrium state described by $\bar{E}+d\bar{E}$ and 
+$\bar{x}_\alpha + d\bar{x}_\alpha$. Let us calculate the resultant change in the
+number of microstates accessible to $A$. Since ${\mit\Omega}\equiv {\mit\Omega}(E, x_1,\cdots,
+x_n)$, the change in $\ln{\mit\Omega}$ follows from standard mathematics:
+\begin{equation}\label{e5.43}
+d \ln {\mit\Omega} = \frac{\partial \ln {\mit\Omega}}{\partial E}\,d\bar{E}+
+\sum_{\alpha=1}^n\frac{\partial \ln {\mit\Omega}}{\partial x_\alpha}\,d\bar{x}_\alpha.
+\end{equation}
+However, we have previously demonstrated that
+\begin{equation}
+\beta = \frac{\partial \ln {\mit\Omega}}{\partial E},~~~~\beta\,\bar{X}_\alpha
+=\frac{\partial\ln {\mit\Omega}}{\partial x_\alpha}
+\end{equation}
+[from Eqs.~(\ref{e5.27}) and (\ref{e5.38})],
+so Eq.~(\ref{e5.43}) can be written
+\begin{equation}\label{e5.45}
+d\ln{\mit\Omega} = \beta\left(d\bar{E} + \sum_\alpha \bar{X}_\alpha\,d\bar{x}_\alpha
+\right).
+\end{equation}
+Note that the temperature parameter $\beta$ and the mean conjugate forces 
+$\bar{X}_\alpha$ are only well-defined for {\em equilibrium}\/ states. This is
+why we are only considering quasi-static changes
+ in which  the two systems are always
+arbitrarily close to equilibrium.
+	
+	Let us rewrite Eq.~(\ref{e5.45}) 
+in terms of the thermodynamic temperature $T$,
+using the relation $\beta\equiv 1/k\,T$. We obtain
+\begin{equation}\label{e5.46}
+d S = \left.\left(d\bar{E} +\sum_\alpha \bar{X}_\alpha\,d\bar{x}_\alpha\right)\right/T,
+\end{equation}
+where
+\begin{equation}
+S = k\ln{\mit\Omega}.\label{e5.47}
+\end{equation}
+Equation~(\ref{e5.46}) is a differential relation which enables us to calculate
+the quantity
+$S$ as a function of the mean energy $\bar{E}$ and the mean external parameters
+$\bar{x}_\alpha$, assuming that we can calculate the temperature $T$ and mean 
+conjugate forces $\bar{X}_\alpha$ for each equilibrium state. The function
+$S(\bar{E}, \bar{x}_\alpha)$ is termed the {\em entropy}\/ of system $A$. The word
+entropy is derived from the Greek {\em en}\,+\,{\em 
+trepien}, which means ``in change.''\@ 
+The reason for this etymology 
+will become apparent presently. It can be seen from Eq.~(\ref{e5.47})
+that the entropy is merely a parameterization 
+of the number of accessible microstates.
+Hence, according to statistical mechanics, $S(\bar{E}, \bar{x}_\alpha)$ is essentially
+ a measure of the relative {\em probability}\/ 
+of a state characterized by values of the mean energy and mean external parameters
+$\bar{E}$ and $\bar{x}_\alpha$, respectively.
+
+According to Eq.~(\ref{e4.16}), the net amount of work performed during a quasi-static
+change is given by
+\begin{equation}
+\dbar W = \sum_\alpha \bar{X}_\alpha\,d\bar{x}_\alpha.
+\end{equation}
+It follows from Eq.~(\ref{e5.46}) that
+\begin{equation}
+d S = \frac{d\bar{E} +\dbar W}{T} =\frac{ \dbar Q}{T}.
+\end{equation}
+Thus, the thermodynamic temperature $T$ is the {\em integrating factor}\/ for the
+first law of thermodynamics,
+\begin{equation}
+\dbar Q = d\bar{E} + \dbar W,
+\end{equation}
+which converts the {\em inexact}\/ differential $\,\dbar Q$ into the {\em exact}\/ 
+differential $dS$ (see Sect.~\ref{s4.5}). 
+It follows that the entropy difference between any two macrostates
+$i$ and $f$  can be written 
+\begin{equation}
+S_f - S_i = \int_i^f dS = \int_i^f \frac{\dbar Q}{T},
+\end{equation}
+where the integral is evaluated for any process through which the system is brought
+{\em quasi-statically}\/ via  a sequence of near-equilibrium configurations
+from its initial to its final macrostate. The process has to  be quasi-static
+because the temperature $T$, which appears in the integrand, is only well-defined
+for an equilibrium state. Since the left-hand side of the above equation only depends
+on the initial and final states, it follows that the integral on the right-hand side
+is independent of the particular sequence of quasi-static changes used to get
+from $i$ to $f$. Thus, $\int_i^f \dbar Q/T$ is independent of the
+process (provided that it is quasi-static).
+
+All of the concepts which we have encountered up to now in this course, such
+as temperature, heat, energy, volume, pressure, {\em etc}., have been fairly
+ familiar to us
+from  other branches of Physics.
+However, entropy, which turns out to be of crucial importance
+in thermodynamics, is something quite new. Let us consider the following
+questions. What does the  entropy of a system actually signify? What use is
+the concept of  entropy?
+ 
+\section{Entropy}\label{s5.6}
+Consider an isolated system whose energy is known to lie in a narrow range.
+Let ${\mit\Omega}$ be the number of accessible microstates. According to the principle
+of equal {\em a priori}\/ probabilities,  the system is equally likely
+to be found in any one of these states when it is in
+thermal equilibrium. The accessible states are just that set
+of microstates which are consistent with the macroscopic constraints imposed on the
+system. These constraints can usually be quantified by specifying the values
+of some parameters  $y_1, \cdots, y_n$ which characterize the
+macrostate. Note that these parameters are not necessarily external: {\em e.g.},
+ we could specify
+either the volume (an external parameter) or the mean pressure 
+(the mean force conjugate to the volume).
+The number of accessible states is clearly a function of the chosen
+parameters, so we can write ${\mit\Omega}\equiv {\mit\Omega}(y_1,\cdots, y_n)$ for the number of
+microstates consistent with a macrostate in which the general parameter 
+$y_\alpha$ lies in the range $y_\alpha$ to $y_\alpha+d y_\alpha$.
+
+Suppose that we start from a system in thermal equilibrium.
+According to statistical mechanics,  each of the ${\mit\Omega}_i$,
+say, accessible states are equally likely. Let us now remove, or relax, some of the
+constraints imposed on the system. Clearly, all of the microstates formally 
+accessible to the system are still accessible, but many additional states will,
+in general, become accessible. Thus, removing or relaxing constraints can only have
+the effect of {\em increasing}, or possibly leaving unchanged, the number of
+microstates accessible to the system. If the final number of accessible states
+is ${\mit\Omega}_f$, then we can write
+\begin{equation}
+{\mit\Omega}_f \geq {\mit\Omega}_i.
+\end{equation}
+{\em Immediately}\/ after the constraints are relaxed, the systems in the ensemble
+ are
+not in any of the microstates from which they were previously excluded. So the
+systems only occupy a fraction
+\begin{equation}
+P_i =\frac{{\mit\Omega}_i}{{\mit\Omega}_f}\label{e5.53}
+\end{equation}
+of the ${\mit\Omega}_f$ states now accessible to them. This is clearly not a equilibrium
+situation. Indeed, if ${\mit\Omega}_f\gg {\mit\Omega}_i$ then the configuration 
+in which  the systems
+are only distributed over the original ${\mit\Omega}_i$ states is an extremely unlikely
+one.
+In fact, its probability of occurrence is given by Eq.~(\ref{e5.53}). According to the
+$H$ theorem (see Sect.~\ref{s3.9}), the ensemble will evolve in time until a more probable
+final state is reached in
+which the systems are evenly distributed  over the ${\mit\Omega}_f$
+available states.
+
+
+As a simple example, consider a system
+consisting of a box divided into two regions of equal volume. Suppose that, 
+initially, one region is filled with gas and the other is empty. The constraint
+imposed on the system is, thus, that the coordinates of all of the molecules must
+lie within the filled region. In other words, the volume accessible to the
+system is $V=V_i$, where $V_i$ is half the volume of  the box. The constraints
+imposed on the system can be relaxed by removing the partition and allowing gas to
+flow into both regions. The volume accessible to the gas is now $V=V_f=2 \,V_i$.
+Immediately after the partition is removed, the system is
+in an extremely improbable state. 
+We know, from Sect.~\ref{s3.13}, that at constant energy the variation of the number
+of accessible states of an ideal gas with the volume is
+\begin{equation}
+{\mit\Omega} \propto V^N,
+\end{equation}
+where $N$ is the number of particles. Thus, the probability of observing the state
+immediately after the partition is removed in an ensemble of equilibrium 
+systems  with
+volume $V=V_f$ is
+\begin{equation}
+P_i = \frac{{\mit\Omega}_i}{{\mit\Omega}_f} = \left(\frac{V_i}{V_f}\right)^N =\left(\frac{1}{2}
+\right)^N.
+\end{equation}
+If the box contains of order 1 mole of molecules then $N\sim 10^{24}$ and this
+probability is {\em fantastically}\/ small:
+\begin{equation}
+P_i \sim \exp\left(-10^{24}\right).
+\end{equation}
+Clearly, the system will evolve towards a more probable state.
+
+This discussion can also be phrased in terms of
+the parameters $y_1, \cdots, y_n$ of the system. 
+Suppose that a constraint is  removed.
+For instance, one of the parameters, $y$, say, which originally had the value
+$y=y_i$, is now allowed to vary. According to statistical mechanics, all states
+accessible to the system are equally likely. So, the probability $P(y)$
+of finding the
+system in equilibrium with the parameter
+ in the range $y$ to $y+\delta y$ is just proportional
+to the number of microstates in this interval: {\em i.e.},
+\begin{equation}
+P(y) \propto {\mit\Omega}(y).
+\end{equation}
+Usually, ${\mit\Omega}(y)$ has a very pronounced maximum at some particular
+value $\tilde{y}$ 
+(see Sect.~\ref{s5.2}). This means that
+ practically all systems in  the final equilibrium ensemble
+ have values of $y$ close to $\tilde{y}$. Thus, if $y_i\neq \tilde{y}$
+initially
+then the parameter $y$ will change until it attains a final
+value close to $\tilde{y}$,
+where ${\mit\Omega}$ is maximum. This discussion can be summed up in a single
+phrase:
+\begin{quote}
+{\sf If some of the constraints of an isolated system are removed then the parameters
+of the system tend to readjust themselves in such a way that}
+\begin{equation}
+{\mit\Omega}(y_1,\cdots, y_n)\rightarrow {\rm maximum}.\label{e5.58}
+\end{equation}
+\end{quote}
+
+Suppose that the final equilibrium state has been reached, so that the systems in the
+ensemble are uniformly distributed over the ${\mit\Omega}_f$ accessible final states.
+If the original constraints are reimposed then the systems 
+in the ensemble  still
+occupy these ${\mit\Omega}_f$ states with equal probability. Thus, if ${\mit\Omega}_f >
+{\mit\Omega}_i$, simply restoring the constraints does not restore the initial situation.
+Once the systems are randomly distributed over the ${\mit\Omega}_f$ states they cannot
+be expected to spontaneously move out of some of these states and occupy a
+more restricted class of states merely in 
+response to the reimposition of a constraint.
+The initial condition can also not be restored by removing further constraints. This
+could only lead to even more states becoming accessible to the system. 
+
+Suppose that some process occurs in which an isolated  system
+goes from some initial configuration to some final configuration. If the
+final configuration is such that the imposition or removal of constraints
+ cannot {\em by itself}\/ restore the initial condition then
+the process is deemed {\em irreversible}. On the other hand, if it is such that the 
+imposition or removal of constraints {\em can}\/ restore the initial condition
+ then the
+process is deemed {\em reversible}. From what we have already said, an irreversible
+process is clearly one in which the removal of constraints leads to a situation
+where ${\mit\Omega}_f > {\mit\Omega}_i$. A reversible process corresponds to the special
+case where the removal of constraints does not change the number of accessible
+states, so that ${\mit\Omega}_f = {\mit\Omega}_i$. In this situation, the systems 
+ remain
+distributed with equal probability over these states irrespective of whether the
+constraints are imposed or not. 
+
+Our {\em microscopic}\/ definition of irreversibility is in accordance with the
+{\em macroscopic}\/ definition discussed in Sect.~\ref{s3.11}. Recall that on a
+macroscopic level an irreversible process is one which ``looks unphysical''
+when viewed in reverse. On a microscopic level it is clearly plausible that a
+system should spontaneously evolve from an improbable to a probable configuration 
+in response to the relaxation of some constraint. However, it is quite clearly
+ implausible that a system should ever spontaneously evolve from a probable
+to an improbable configuration. Let us consider our example again. 
+If a gas is initially
+restricted to one half of a box, via a partition, then the flow of gas
+from one side  of the box to the other when the partition is removed is an
+irreversible process. This process is irreversible on a microscopic level because the
+initial configuration  cannot be  recovered by simply replacing the partition. 
+It is irreversible on a macroscopic level because  it is obviously
+unphysical for the molecules of a gas to spontaneously distribute themselves 
+in such a manner  that
+they only occupy half of the available volume.
+
+It is actually possible to {\em quantify}\/ irreversibility. 
+In other words, in  addition to
+stating  that
+a given process is irreversible, we can also  give some indication
+of how irreversible it is. The parameter which measures irreversibility is
+just  the number of accessible states ${\mit\Omega}$.
+ Thus, if ${\mit\Omega}$ for an isolated
+system spontaneously
+increases then the process is irreversible, the degree of irreversibility
+being proportional to the amount of
+the increase. If ${\mit\Omega}$ stays the same then the process
+is reversible. Of course, it is unphysical for ${\mit\Omega}$ to ever spontaneously
+decrease. In symbols, we can write
+\begin{equation}
+{\mit\Omega}_f -{\mit\Omega}_i \equiv {\mit\Delta} {\mit\Omega}\geq 0,\label{e5.59}
+\end{equation}
+for any physical process operating on an isolated system.
+In practice, ${\mit\Omega}$ itself is a rather unwieldy parameter
+with which  to measure 
+irreversibility. For instance, in the previous
+example, where an ideal gas doubles in 
+volume (at constant energy)
+due to  the removal of a partition, the fractional increase in ${\mit\Omega}$
+is
+\begin{equation}
+\frac{{\mit\Omega}_f}{{\mit\Omega}_i} \simeq 10^{\,2\,\nu\times 10^{23}},
+\end{equation}
+where $\nu$ is the number of moles. This is an extremely large number!
+It is far more convenient to measure irreversibility in terms of $\ln {\mit\Omega}$.
+If Eq.~(\ref{e5.59}) is true  then it is certainly also true that
+\begin{equation}\label{e5.61}
+\ln {\mit\Omega}_f -\ln {\mit\Omega}_i \equiv {\mit\Delta} \ln{\mit\Omega}\geq 0
+\end{equation}
+for any physical process operating on an isolated system. 
+The increase in $\ln {\mit\Omega}$ when an ideal gas doubles
+in volume (at constant energy) is
+\begin{equation}
+\ln {\mit\Omega}_f - \ln {\mit\Omega}_i = \nu\, N_A\,\ln 2,
+\end{equation}
+where $N_A=6\times 10^{23}$. This is a far more manageable
+number! Since we usually  deal with particles by the mole in laboratory
+physics, it makes sense to pre-multiply our measure of irreversibility by a
+number of order $1/N_A$. For historical reasons, the number which is
+generally used for this purpose is the Boltzmann constant $k$, which can be written
+\begin{equation}
+k = \frac{R}{N_A} ~~~{\rm joules/kelvin},
+\end{equation}
+where 
+\begin{equation}
+R= 8.3143 ~~~{\rm joules/kelvin/mole}
+\end{equation}
+is the ideal gas constant  which appears in the well-known equation of state for
+an ideal gas, $P\,V=\nu \,R\,T$. Thus, the final form for our measure of irreversibility
+is 
+\begin{equation}
+S = k \,\ln{\mit\Omega}.
+\end{equation}
+This quantity is termed ``entropy'', and is measured in joules per degree kelvin.
+The increase in entropy when an ideal gas doubles in volume (at constant
+energy) is
+\begin{equation}
+S_f - S_i = \nu \,R\, \ln 2,
+\end{equation}
+which is order unity for laboratory scale systems ({\em i.e.}, those containing about
+one mole of particles).  The essential irreversibility of macroscopic phenomena
+can be summed up as follows:
+\begin{equation}
+S_f - S_i \equiv {\mit\Delta} S \geq 0,
+\end{equation}
+for a process acting on an isolated system [this is equivalent to
+Eqs.~(\ref{e5.58}), (\ref{e5.59}), and (\ref{e5.61})]. Thus, the {\em entropy of an isolated
+system tends to increase with time and can never decrease}. This 
+proposition is known
+as the {\em second law of thermodynamics}.
+
+One way of thinking of the number of accessible states ${\mit\Omega}$ 
+is that it is a measure
+of the {\em disorder}\/ associated with  a macrostate. For a system exhibiting
+a high degree of order we would expect a strong correlation between the motions
+of the individual particles. For instance, in a fluid there might be a strong tendency
+for the particles to move in one particular direction, giving rise to
+ an ordered flow of the
+system in that direction. 
+On the other hand, for a system exhibiting a low degree of order we expect
+far less correlation between the motions of individual particles. It follows that,
+all other things being equal, an ordered system is more constrained than a disordered
+system, since the former is excluded from microstates in which there is not
+a strong correlation between individual particle motions, whereas the latter is not.
+Another way of saying this is that an ordered system has less accessible microstates
+than a corresponding disordered system. Thus, entropy is
+effectively  a measure of the {\em disorder}\/ 
+ in a system (the disorder increases with $S$).
+With this interpretation, the second law of thermodynamics reduces to the statement
+that isolated systems tend to become more disordered with time, and  can never
+become more ordered. 
+
+Note that the second law of thermodynamics only applies to {\em isolated}
+ systems. The
+entropy of a non-isolated system {\em can}\/ decrease. For instance, if a gas expands 
+(at constant energy) to twice its initial  volume 
+after the removal of a partition, we can subsequently recompress
+the gas to its original volume. The energy of the gas will increase because of the
+work done on it during compression, but if we absorb some heat from the gas then we 
+can restore it to its initial state. Clearly, in restoring the gas to its original
+state, we have restored its original  entropy. 
+This appears to violate the second law of thermodynamics because the entropy
+should have increased in what is obviously an irreversible process (just try
+to make a gas spontaneously occupy  half of its original volume!). However,
+ if we consider a new system consisting
+of the gas plus the compression  and heat absorption machinery, then it is still
+true that the entropy of this system (which is assumed to be isolated)
+must increase in time. Thus, the entropy of the gas is only kept the same  at the
+expense of increasing the entropy of the rest of the system, and the total
+entropy is increased. If we consider the system of everything in the Universe, which
+is certainly an isolated system since there is nothing outside it with which it could
+interact, then the second law of thermodynamics becomes:
+\begin{quote}
+{\sf The disorder of the Universe tends to increase with time and can never decrease.}
+\end{quote}
+
+An irreversible process is clearly one which {\em increases}\/ the disorder of the
+Universe, whereas a reversible process neither increases nor decreases disorder. 
+This definition is in accordance with our previous definition of an
+irreversible process as one which ``does not look right'' when viewed backwards.
+One easy way of viewing macroscopic events in reverse is to film them, and then
+play the film backwards through a projector. There is a famous passage in the
+novel ``Slaughterhouse 5,'' by Kurt Vonnegut, in which the hero, Billy Pilgrim, views
+a propaganda film of an American World War~II bombing raid on a German city
+in reverse. This is what the film appeared to show:
+\begin{quote}
+{\sf  ``American planes, full of holes and wounded men and corpses took off backwards
+from an airfield in England. Over France, a few German fighter planes flew at them
+backwards, sucked bullets and shell fragments from some of the planes and crewmen. 
+They did the same for wrecked American bombers on the ground, and those planes flew
+up backwards and joined the formation.
+
+The formation flew backwards over a German city that was in flames. The bombers
+opened their bomb bay doors, exerted a miraculous magnetism which shrunk the fires,
+gathered them into cylindrical steel containers, and lifted the containers into the
+bellies of the planes. The containers were stored neatly in racks. The Germans
+had miraculous devices of their own, which were long steel tubes. They used them
+to suck more fragments from the crewmen and planes. But there were still a few wounded
+Americans, though, and some of the bombers were in bad repair. Over France, though,
+German fighters came up again, made everything and everybody as good as new.''}
+\end{quote}
+Vonnegut's point, I suppose, is that the morality of actions is inverted when you
+view them in reverse. 
+
+
+What is there about this passage which strikes us as surreal and
+fantastic? What is there that immediately tells us that the events shown in  
+the film could never
+happen in reality? It is not so much
+ that the planes appear to fly backwards and
+the bombs appear to fall upwards. After all, given a little
+ingenuity and a sufficiently good pilot,  it is probably possible to
+fly a plane backwards. Likewise,
+if we  were to throw a bomb up in the air with just the right velocity we
+could, in principle,
+ fix it so that the velocity of the bomb matched that of a passing bomber when
+their paths intersected. Certainly, if you had never seen a plane before it would
+not be obvious which way around it was supposed to fly. However, certain events
+are depicted in  the film, ``miraculous'' events in Vonnegut's words, which would
+immediately strike us as  the wrong way around even if we had never 
+seen them before.
+For instance, the film might show 
+thousands of white hot bits of shrapnel approach each other from
+all directions at great velocity,
+compressing an explosive gas in the process, 
+which slows them down such that when they meet they
+fit together exactly to form a metal cylinder  enclosing the gases and 
+moving upwards at great velocity. What strikes us as completely implausible about this
+event is the spontaneous transition from the disordered motion of the gases and
+metal fragments to the ordered upward motion of the bomb. 
+
+\section{Properties of Entropy}\label{s5.7}
+Entropy, as we have defined it, has some dependence on the resolution $\delta E$
+to which the energy of macrostates is measured. Recall that ${\mit\Omega}(E)$ is the
+number of accessible microstates with energy in the range $E$ to $E+\delta E$. 
+Suppose that we choose a new resolution $\delta^\ast E$ and define a new
+density of states ${\mit\Omega}^\ast (E)$ which is the number of states with energy
+in the range $E$ to $E+\delta^\ast E$. It can easily be seen that
+\begin{equation}
+{\mit\Omega}^\ast(E) = \frac{\delta^\ast E}{\delta E}\,{\mit\Omega}(E).
+\end{equation}
+It follows that the new entropy $S^\ast = k\ln{\mit\Omega}^\ast$ is related to the
+previous entropy $S=k\ln {\mit\Omega}$ via
+\begin{equation}
+S^\ast = S + k \ln\frac{\delta^\ast E}{\delta E}.
+\end{equation}
+Now, our usual estimate that ${\mit\Omega} \sim E^f$ gives $S\sim kf$, where
+$f$ is the number of degrees of freedom. It follows that even if $\delta^\ast E$
+were to differ from $\delta E$ by of order $f$ ({\em i.e.}, twenty four orders of
+magnitude), which is virtually inconceivable, the second term on the right-hand
+side of the above equation is still only of order $k\ln f$, which is utterly
+negligible compared to $kf$. It follows that
+\begin{equation}
+S^\ast = S
+\end{equation}
+to an excellent approximation, so our definition of entropy is completely
+insensitive to the resolution to which we measure energy (or any other
+macroscopic parameter).
+
+Note that, like the 
+temperature, the entropy of a macrostate is only well-defined if
+the macrostate is in equilibrium. The crucial point is that
+it only makes sense to talk about the
+number of accessible states if the systems
+in the ensemble are given sufficient time to thoroughly explore all of the possible
+microstates consistent with the known
+macroscopic constraints. In other words, we can only
+be sure that a given microstate is inaccessible when the systems in the ensemble have
+had ample opportunity to move into it, and yet  have not done so. Note that for an
+equilibrium state, the entropy is just as well-defined as more familiar quantities
+such as the temperature and the mean pressure.
+
+
+Consider, again, two systems $A$ and $A'$ which are in thermal contact but can do
+no work on one another (see Sect.~\ref{s5.2}). 
+Let $E$ and $E'$ be the energies of the two systems, 
+and ${\mit\Omega}(E)$ and ${\mit\Omega}'(E')$ the respective densities of states. 
+Furthermore, let $E^{(0)}$
+be the conserved energy of the
+system as a whole and ${\mit\Omega}^{(0)}$ the corresponding density of states.
+ We have from Eq.~(\ref{e5.2}) that
+\begin{equation}
+{\mit\Omega}^{(0)}(E) = {\mit\Omega}(E) \,{\mit\Omega}'(E'),
+\end{equation}
+where $E' = E^{(0)}-E$. In other words, the number of states accessible to the
+whole system is the product of the numbers of states accessible to each subsystem,
+since every microstate of $A$ can be combined with every microstate of
+$A'$ to form a distinct microstate of the whole system. We know, from Sect.~\ref{s5.2},
+that in equilibrium the mean energy of $A$ takes the value $\bar{E}=
+\tilde{E}$ for which ${\mit\Omega}^{(0)}(E)$ is maximum, and the
+{\em temperatures}\/ of $A$ and $A'$ are equal. The distribution of $E$ around the
+mean value is of order ${\mit\Delta}^\ast
+ E = \tilde{E}/\sqrt{f}$, where $f$ is the number of
+degrees of freedom. It follows that the total number of accessible microstates is
+approximately the number of states which lie within ${\mit\Delta}^\ast E$ of $\tilde{E}$. 
+Thus,
+\begin{equation}
+{\mit\Omega}^{(0)}_{\rm tot} \simeq \frac{{\mit\Omega}^{(0)}(\tilde{E})}
+{\delta E}\, {\mit\Delta}^\ast E.
+\end{equation}
+The entropy of the whole system is given by
+\begin{equation}
+S^{(0)} = k \ln {\mit\Omega}^{(0)}_{\rm tot} = k\ln{\mit\Omega}^{(0)}(\tilde{E})+
+k\ln \frac{{\mit\Delta}^\ast E}{\delta E}.
+\end{equation}
+According to our usual estimate, ${\mit\Omega}\sim E^f$, the first term on the
+ right-hand
+ side is of order $kf$ whereas the second term is of order $k\ln(\tilde{E}/\sqrt{f}
+\,\delta E)$. Any reasonable choice for the energy subdivision $\delta E$ should be 
+greater than $\tilde{E}/f$, otherwise there would
+ be less than one microstate per subdivision. It follows that the second term
+is less than or of order $k\ln f$, which is utterly negligible compared to
+$kf$. Thus,
+\begin{equation}
+S^{(0)} = k\ln{\mit\Omega}^{(0)}(\tilde{E}) = k\ln[{\mit\Omega}(\tilde{E})\,
+{\mit\Omega}(\tilde{E}')]
+=k\ln {\mit\Omega}(\tilde{E}) + k\ln {\mit\Omega}'(\tilde{E}')
+\end{equation}
+to an excellent approximation,
+giving
+\begin{equation}
+S^{(0)} = S(\tilde{E}) + S'(\tilde{E}').\label{e5.75}
+\end{equation}
+It can be seen that the probability distribution  for ${\mit\Omega}^{(0)}(E)$
+is so strongly peaked
+around its maximum value that, for the purpose of calculating the entropy, the
+total number of states is equal to the maximum number of states [{\em i.e.}, 
+${\mit\Omega}_{\rm tot}^{(0)}\sim {\mit\Omega}^{(0)}(\tilde{E})$].
+One consequence
+of this is that the entropy has the simple additive property shown in
+Eq.~(\ref{e5.75}). Thus, the total entropy of two thermally interacting systems
+in equilibrium is the sum of the entropies of each system in isolation. 
+
+\section{Uses of Entropy}\label{s5.8}
+We have defined a new function called  entropy,  denoted $S$, 
+ which parameterizes  the amount of disorder in  a macroscopic
+system. The entropy of an equilibrium 
+ macrostate
+is related to the number of accessible microstates ${\mit\Omega}$ via
+\begin{equation}
+S = k \ln {\mit\Omega}.\label{e5.76}
+\end{equation}
+On a macroscopic level, the increase in entropy due to a quasi-static change
+in which an infinitesimal amount of heat $\,\dbar Q$ is absorbed by the system is
+given by
+\begin{equation}
+dS =\frac{\dbar Q}{T},
+\end{equation}
+where $T$ is the absolute temperature of the system.
+The second law of thermodynamics states that the entropy of an isolated system
+can never spontaneously decrease. Let us now briefly examine some  consequences
+of these results.
+
+
+Consider two bodies, $A$ and $A'$,
+ which are in thermal contact but can do no work
+on one another. We know what is supposed to happen here. Heat flows from the 
+hotter to the colder of the two bodies until their temperatures are the same. 
+Consider a quasi-static exchange of heat  between the two bodies. According to the
+first law of thermodynamics, if an infinitesimal amount of heat $\,\dbar Q$ is
+absorbed by $A$ then infinitesimal heat $\,\dbar Q' = - \,\dbar Q$ is absorbed
+by $A'$. The increase in the entropy of system $A$ is $dS=\,\dbar Q/T$ and
+the corresponding increase in the  entropy
+of $A'$ is $dS' = \,\dbar Q'/T'$. Here, $T$ and $T'$ are the temperatures of the two
+systems, respectively. Note that $\,\dbar Q$ is assumed to the sufficiently small
+that the heat transfer does not substantially
+modify the temperatures of either system. The change in entropy of the whole
+system is
+\begin{equation}
+dS^{(0)} = dS + dS' = \left( \frac{1}{T}- \frac{1}{T'}\right)\dbar Q.
+\end{equation}
+ This change must be positive or zero, 
+according to the second law of thermodynamics, so
+$dS^{(0)} \geq 0$. It follows that $\, \dbar Q$ is positive ({\em i.e.}, heat flows from
+$A'$ to $A$) when $T'>T$, and {\em vice versa}. The 
+spontaneous flow of heat  only ceases when $T=T'$. Thus, the direction of
+spontaneous heat flow is a consequence of the second law of thermodynamics.
+ Note that the spontaneous flow of heat between bodies at different temperatures
+is always an irreversible process which 
+ increases the entropy, or disorder, of the
+Universe. 
+
+Consider, now, the  slightly more complicated situation in which the two systems can
+exchange heat and also do work on one another via a movable partition.
+Suppose that the total volume is invariant, so that
+\begin{equation}
+V^{(0)} = V + V' = {\rm constant},\label{e5.79}
+\end{equation}
+where $V$ and $V'$ are the volumes of $A$ and $A'$, respectively.
+ Consider a 
+quasi-static change in which system $A$ absorbs an infinitesimal
+amount of heat $\,\dbar Q$ 
+and its volume simultaneously increases by an infinitesimal amount
+$dV$. The infinitesimal 
+amount of work done by system $A$ is  $\,\dbar W = \bar{p}\,dV$ 
+(see Sect.~\ref{s4.4}), where $\bar{p}$ is the mean pressure of $A$.
+ According to the first law of thermodynamics,
+\begin{equation}
+\dbar Q = d E + \dbar W = dE + \bar{p}\,dV,
+\end{equation}
+where $dE$ is the change in the internal energy of $A$. Since $dS = \dbar Q/T$, 
+the increase in entropy of system $A$  is written
+\begin{equation}
+d S = \frac{ dE + \bar{p}\,dV}{T}.\label{e5.81}
+\end{equation}
+Likewise, the increase  in entropy of system $A'$ is given by
+\begin{equation}
+d S' = \frac{ dE' + \bar{p}'\,dV'}{T'}.
+\end{equation}
+According to Eq.~(\ref{e5.81}),
+\begin{eqnarray}\label{e5.83}
+\frac{1}{T} &=&\left(\frac{\partial S}{\partial E}\right)_V,\\
+\frac{\bar{p}}{T} &=& \left(\frac{\partial S}{\partial V}\right)_{E},\label{e5.83a}
+\end{eqnarray}
+where the subscripts are to remind us what is
+ held constant in the partial derivatives.
+We can write a similar pair of equations for the system $A'$. 
+
+
+The overall system is assumed to be isolated, so conservation of energy
+gives  $ dE + dE' = 0$. Furthermore, Eq.~(\ref{e5.79}) implies that
+$dV + dV' =0$. It follows that the total change in  entropy is given by
+\begin{equation}
+dS^{(0)} = dS + dS' = \left(\frac{1}{T}-\frac{1}{T'}\right)\,dE+
+\left(\frac{\bar{p}}{T}-\frac{\bar{p}'}{T'}\right)\,dV.\label{e5.84}
+\end{equation}
+The equilibrium state is the most  probable state (see Sect.~\ref{s5.2}). 
+According to statistical
+mechanics, this is equivalent to the state with the largest number of accessible
+microstates. Finally, Eq.~(\ref{e5.76}) implies that this  is the
+ maximum entropy state. The system can never spontaneously leave a
+maximum entropy state,
+ since this would imply a spontaneous reduction in 
+entropy, which is forbidden by the second law of thermodynamics.
+A  maximum or minimum
+entropy state must 
+satisfy $dS^{(0)} =0$ for arbitrary small variations of the energy
+and external parameters. 
+It follows from Eq.~(\ref{e5.84})  that
+\begin{eqnarray}
+T&=& T',\\
+\bar{p} &=& \bar{p}',
+\end{eqnarray}
+for such a state. This corresponds to a {\em maximum}\/ entropy state ({\em i.e.},
+an equilibrium state) provided
+\begin{eqnarray}
+\left(\frac{\partial^2 S}{\partial E^2}\right)_V &<& 0,\\[1ex]
+\left(\frac{\partial^2 S}{\partial V^2}\right)_E &<& 0,
+\end{eqnarray}
+with a similar pair of inequalities for system $A'$. The usual estimate ${\mit\Omega}\propto
+E^f V^f$, giving $S = kf\ln E + kf\ln V + \cdots$, ensures that the above inequalities
+are satisfied in conventional macroscopic  systems. In the maximum entropy state
+the systems $A$ and $A'$ have equal temperatures ({\em i.e.}, they are in thermal 
+equilibrium) and equal pressures ({\em i.e.}, they are in mechanical equilibrium). 
+The second law of thermodynamics implies that the two interacting systems will
+evolve towards this state, and will 
+then remain in it
+indefinitely (if left undisturbed).
+
+\section{Entropy and Quantum Mechanics}\label{s5.9}
+The entropy of a system is defined in terms of the number
+${\mit\Omega}$  of accessible microstates
+consistent with an overall energy in the range $E$ to $E+\delta E$ via
+\begin{equation}
+S = k\ln {\mit\Omega}.
+\end{equation}
+We have already demonstrated that this definition is utterly insensitive to the
+resolution $\delta E$ to which the macroscopic energy is measured 
+(see Sect.~\ref{s5.7}).
+In classical mechanics, if a system possesses $f$ degrees of freedom then 
+phase-space is conventionally 
+subdivided into cells of arbitrarily chosen volume $h_0^{~f}$ (see
+Sect.~\ref{s3.6}). The number of accessible microstates is equivalent to the number
+of these cells in the volume of phase-space consistent with an overall energy of
+the system lying in the range $E$ to $E+\delta E$. Thus,
+\begin{equation}
+{\mit\Omega} = \frac{1}{h_0^{~f}} \int \cdots \int dq_1\cdots dq_f\,dp_1\cdots dp_f,
+\end{equation}
+giving
+\begin{equation}
+S = k \ln\left( \int \cdots \int dq_1\cdots dq_f\,dp_1\cdots dp_f\right) -
+kf\ln h_0.\label{e5.89}
+\end{equation}
+Thus, in classical mechanics the {\em entropy is undetermined to an arbitrary
+additive constant}\/ which depends on the size of the cells in phase-space.
+In fact, $S$ increases as the cell size decreases.
+The second law of thermodynamics is only concerned with {\em changes}\/ in entropy,
+and is, therefore, unaffected by an additive constant. Likewise, macroscopic
+thermodynamical quantities, such as the temperature and pressure, which can
+be expressed as partial derivatives of the entropy with respect to various
+macroscopic parameters [see Eqs.~(\ref{e5.83}) and (\ref{e5.83a})] are unaffected by such a constant. 
+So, in classical mechanics the entropy is rather like a gravitational  potential:
+it is undetermined to an additive constant, but this does not affect any 
+physical laws.
+
+The non-unique value of the entropy comes about because
+there is no limit to the precision to which the state of a classical system can be
+specified. In other words, the cell size $h_0$ can be made arbitrarily small, which
+corresponds to specifying the particle coordinates and momenta to arbitrary
+accuracy. However, in quantum mechanics the uncertainty principle sets a
+definite 
+limit to how accurately the particle coordinates and momenta can be specified.
+In general,
+\begin{equation}
+\delta q_i\, \delta p_i \geq h,
+\end{equation}
+where $p_i$ is the momentum conjugate to the generalized coordinate $q_i$,
+and $\delta q_i$, $\delta p_i$ are the uncertainties in these quantities, 
+respectively. In fact, in quantum mechanics the number of accessible 
+quantum states
+with the overall energy in the range $E$ to $E+\delta E$ is completely determined.
+This implies that, in reality,  the entropy 
+of a system has a unique and unambiguous value. Quantum 
+mechanics can often be ``mocked up'' in classical mechanics by setting the 
+cell size in phase-space equal to Planck's constant, so that $h_0 = h$. This
+automatically enforces the most restrictive form of the uncertainty principle,
+$\delta q_i\, \delta p_i = h$. In many systems, the
+substitution   $h_0 \rightarrow h$ in Eq.~(\ref{e5.89}) gives the same,
+unique  value for $S$ as 
+that obtained from a full quantum mechanical calculation.
+
+Consider a simple quantum mechanical system consisting of $N$ non-interacting 
+spinless particles of mass $m$ confined in a cubic box of dimension $L$. 
+The energy levels of the $i$th particle are given by
+\begin{equation}
+e_i = \frac{\hbar^2 \pi^2}{2\,m \,L^2} \left(n_{i1}^{~2}+n_{i2}^{~2}+ n_{i3}^{~2}\right),
+\end{equation}
+where $n_{i1}$, $n_{i2}$, and $n_{i3}$ are three (positive) quantum numbers. The 
+overall energy of the system is the sum of the energies of the individual particles,
+so that for a general state $r$
+\begin{equation}
+E_r = \sum_{i=1}^N e_i.
+\end{equation}
+The overall state of the system is completely
+specified by $3N$ quantum  numbers, so the number
+of degrees of freedom is $f=3\,N$. The classical limit corresponds to the situation
+where all of the quantum numbers are much greater than unity. In this limit, the
+number of accessible states varies with energy according to our usual estimate
+${\mit\Omega} \propto E^f$. The lowest possible energy state of the system, the 
+so-called ground-state, corresponds to the situation where all quantum numbers
+take their lowest possible value, unity. Thus, the ground-state energy $E_0$ is
+given by 
+\begin{equation}
+E_0 = \frac{ f\,\hbar^2 \pi^2}{2\,m\, L^2}.
+\end{equation}
+There is only one accessible microstate at the ground-state energy ({\em i.e.},
+that where all quantum numbers are unity), so by our usual definition of
+entropy
+\begin{equation}
+S(E_0) = k\ln 1 = 0.
+\end{equation}
+In other words, there is no disorder in the system when all the particles are in their
+ground-states. 
+
+Clearly, as the energy approaches  the ground-state energy,
+the number of accessible states becomes far less than
+the usual classical estimate $E^f$. This is true for all quantum mechanical systems.
+In general, the number of microstates
+varies roughly like
+\begin{equation}
+{\mit\Omega}(E) \sim 1 + C \,(E - E_0)^f,
+\end{equation}
+where $C$ is a positive constant.
+According to Eq.~(\ref{e5.28}), the temperature varies approximately like
+\begin{equation}
+T \sim \frac{E - E_0}{k\,f},
+\end{equation}
+provided ${\mit\Omega} \gg 1$. Thus, as the absolute temperature of a system
+approaches zero, the internal energy approaches a limiting value $E_0$ (the
+quantum mechanical ground-state energy), and the entropy approaches the limiting
+value {\em zero}.
+ This proposition is known as {\em the third law of thermodynamics}.
+
+At low temperatures, great care must be taken to ensure that equilibrium 
+thermodynamical arguments are applicable, since the rate of attaining equilibrium may
+be very slow. Another difficulty arises when dealing with a system in which the
+atoms possess nuclear spins. Typically, when such a system is brought to a very
+low temperature the entropy associated with the degrees of freedom not
+involving nuclear spins becomes negligible. Nevertheless, the number of microstates
+${\mit\Omega}_s$ corresponding to the possible nuclear spin orientations may be very
+large. Indeed, it may be just as large as the number of states at 
+room  temperature. The reason for this is that nuclear magnetic moments are extremely small,
+and, therefore, have extremely weak mutual interactions. Thus, 
+it only takes a tiny amount
+of heat energy in the system to completely randomize the spin orientations. 
+Typically, a temperature as small as $10^{-3}$ degrees kelvin above absolute zero
+is sufficient to randomize the spins. 
+
+Suppose that the  system consists of $N$ atoms
+of spin $1/2$. Each spin can have two possible orientations. If there is enough
+residual heat energy in the system to randomize the spins then each orientation
+is equally likely. It follows that there are ${\mit\Omega}_s = 2^N$ accessible spin
+states. The entropy associated with these states is $S_0 = k\ln{\mit\Omega}_s =
+\nu\, R\, \ln 2$. Below some critical temperature, $T_0$, the interaction between the
+nuclear spins  becomes significant, and the system  settles down in
+some unique  quantum mechanical ground-state ({\em e.g.}, with all spins aligned).
+In this situation, $S\rightarrow 0$,
+ in accordance with the third law of thermodynamics. However, for temperatures
+which are small, but not small enough to ``freeze out'' the nuclear spin degrees
+of freedom, the entropy approaches a limiting value $S_0$ which depends only
+on the kinds of atomic nuclei in the system. This limiting value is independent
+of the spatial arrangement of the atoms, or the interactions between them.
+Thus, for most practical purposes the third law of thermodynamics can be written
+\begin{equation}
+{\rm as~} T\rightarrow 0_{+},~~~S\rightarrow S_0,
+\end{equation}
+where $0_{+}$ denotes a temperature which is very close to absolute zero, but
+still much larger than $T_0$. This modification  of the third law is
+useful because it can be applied at temperatures which are not prohibitively low.
+
+\section{Laws of Thermodynamics}
+We have now come to the end of our investigation of the fundamental postulates of
+classical and statistical thermodynamics. The remainder of this course is
+devoted to the application of the ideas  we have just discussed to various situations of
+interest in Physics. Before we proceed, however, it is useful to summarize the
+results of our investigations. Our summary takes the form of a number of
+general statements regarding macroscopic variables
+ which are usually referred to as the {\em laws of thermodynamics}:
+
+\begin{quote}
+{\bf Zeroth Law:} {\sf If two systems are separately 
+in thermal equilibrium with a third
+system  then they must be in equilibrium with one another} (see Sect.~\ref{s5.3}).
+\end{quote}
+
+\begin{quote}
+{\bf First Law:} {\sf The change in internal energy of a system in going from one 
+macrostate to another is the difference between the net heat absorbed 
+by the system from its surroundings and the
+net work done by the system on its surroundings} (see Sect.~\ref{s4.1}).
+\end{quote}
+
+\begin{quote}
+{\bf Second Law:} {\sf The entropy of an isolated system can never spontaneously
+decrease} (see Sect.~\ref{s5.6}). 
+\end{quote} 
+
+\begin{quote}
+{\bf Third Law:} 
+{\sf In the limit as the absolute temperature tends to zero the entropy  
+also tends to zero} (see Sect.~\ref{s5.9}).
+\end{quote} 
+

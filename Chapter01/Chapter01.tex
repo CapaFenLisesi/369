@@ -1,0 +1,304 @@
+\chapter{Introduction}
+\section{Intended Audience}
+These lecture notes outline a single semester course intended for upper
+division undergraduates.
+
+\section{Major Sources}
+The textbooks which I have consulted most frequently whilst developing
+course material are:
+\begin{description}
+\item [{\sf Fundamentals of statistical and thermal physics:}] F.~Reif
+(McGraw-Hill, New York NY, 1965).
+\item [{\sf Introduction to quantum theory:}] D.~Park, 3rd Edition (McGraw-Hill, New York NY, 1992).
+\end{description}
+
+\section{Why Study Thermodynamics?}
+ Thermodynamics is 
+essentially the study  of the internal motions of many body systems. 
+Virtually all substances which we encounter in everyday life
+ are many body systems of some sort or other ({\em e.g.}, solids, liquids, gases, and light).
+Not surprisingly, therefore,
+thermodynamics is a discipline with an exceptionally wide range
+of applicability. 
+Thermodynamics
+is certainly the most ubiquitous subfield of physics outside
+physics departments. 
+Engineers, chemists, and material scientists do not study relativity
+or particle physics,
+but thermodynamics is an integral, and very important, part of their degree courses. 
+
+Many people are drawn to physics because they want to understand why the
+world around us is like it is. For instance, why the sky is blue, why raindrops
+are spherical, why we do not fall through the floor, {\em etc}. It turns
+out that 
+statistical thermodynamics
+can explain more things about the world around us than all of the other 
+physical theories studied in
+the undergraduate 
+physics curriculum put together. For instance, in this course we shall explain 
+why heat flows from hot to cold bodies, why the air becomes thinner and
+colder at higher altitudes,
+why the Sun appears yellow 
+whereas colder 
+stars appear red and hotter stars appear bluish-white, why it is impossible to
+measure
+a temperature below -273$^\circ$ centigrade, why there is a maximum theoretical
+efficiency of a power generation unit which can never be exceeded no matter
+what the design, why high mass stars must ultimately collapse
+to form black-holes, and much more!
+
+\section{Atomic Theory of Matter}
+According to the well-known 
+{\em atomic} theory of matter, the familiar objects which 
+make up the world around us, such as tables and chairs,
+ are themselves made up of a great many 
+microscopic particles.
+
+Atomic theory was invented by the ancient Greek philosophers Leucippus
+and Democritus, who speculated that the world  essentially consists of
+myriads of tiny indivisible particles, which they called {\em atoms}, from the
+Greek {\em atomon}, meaning ``uncuttable.''\@ They speculated, further, that
+the observable properties of everyday 
+materials can be explained either in terms of 
+ the
+different {\em shapes}\/ of the atoms  which they contain, or the
+different {\em motions}\/ of these atoms.
+In some respects modern atomic theory differs substantially from the
+primitive theory of Leucippus and Democritus, but the central ideas
+have remained essentially unchanged. 
+In particular, Leucippus and Democritus were right
+to suppose that the properties of  materials depend not only
+on the nature of the constituent atoms or molecules, 
+but also on the relative motions of these particles.
+
+\section{Thermodynamics}
+In this  course, we shall focus almost exclusively 
+ on those physical properties of everyday materials which are
+associated with the {\em motions} of their
+constituent atoms or molecules. In particular, we shall be
+concerned with the type of motion which we normally
+call ``heat.''\@ We shall try to
+establish what controls the flow of heat from one body to another
+when they are brought into thermal contact. We shall also
+attempt to understand the relationship between heat and mechanical work.
+For instance, does the heat content of a body  increase when mechanical
+work is done on it? More importantly,  can we extract heat from
+a body in order to do useful work? This subject area is called
+``thermodynamics,'' from the Greek roots {\em thermos}, meaning ``heat,'' and
+{\em dynamis}, meaning ``power.''
+
+\section{Need for a Statistical Approach}
+It is necessary to emphasize from the 
+very outset that this is a {\em difficult}\/
+ subject. In fact,
+this subject is so difficult that we are forced to adopt a radically different 
+approach  to that employed in 
+other areas of physics.
+
+ In all of the physics
+courses which you have taken up to now, you were eventually
+able to formulate some
+{\em exact}, or nearly exact, set of equations
+ which governed the system under
+investigation. For instance, Newton's equations of 
+motion, or Maxwell's equations for electromagnetic fields.
+You were then  able to analyze
+the system by solving 
+ these equations, either exactly or approximately. 
+
+In thermodynamics we have no problem formulating the governing
+equations. The motions of atoms and molecules are described {\em exactly}
+ by the
+laws of quantum mechanics. In many cases,  they are also described to a
+reasonable  approximation by the much simpler
+laws of classical mechanics. We shall not be
+dealing with systems sufficiently energetic for  atomic nuclei to be
+disrupted, so we can forget about nuclear forces. Also, in general, 
+the gravitational forces between  atoms and molecules are completely
+negligible. This means that the forces between atoms and molecules are
+predominantly electromagnetic in origin,  and
+are, therefore, very well understood.  So, in principle, we could write down
+the exact laws of motion for a thermodynamical system, including all of
+the inter-atomic
+forces. The problem is the sheer complexity of this type of
+ system. In one mole of
+a substance ({\em e.g.},  in twelve grams of carbon, or eighteen grams
+of water) there are 
+Avagadro's number of atoms or molecules. That is, about
+$$
+N_A = 6 \times 10^{23}
+$$
+particles, which is a {\em gigantic}
+ number of particles! To solve the system exactly we would
+have to write down about $10^{24}$ coupled
+equations of motion, with the same number
+of initial conditions, and then try to integrate the system. 
+Quite plainly,
+ this is impossible. It would also be complete overkill. We are not
+at  all 
+interested in knowing the position and velocity of {\em every}\/ particle in the
+system as a function of time.
+ Instead, we want to know things like the volume of the system, the
+temperature, the pressure, the heat capacity, the coefficient of expansion,
+{\em etc}. We would certainly be hard put to specify more than about fifty,
+say, properties of  a thermodynamic system in which we are  really interested. 
+So, the number of pieces of information we require  
+ is absolutely
+minuscule compared to the number of degrees of freedom of the system.
+ That is,
+the number of pieces of information needed to completely specify the 
+internal motion.
+Moreover, the quantities which we are interested in do not depend on the
+motions of individual particles, or some some small subset of  particles,
+ but, instead, depend on the average motions of {\em all}
+ the particles in the system.
+In other words, these quantities depend on the {\em statistical}
+ properties of the atomic or molecular motion. 
+
+The method adopted in this subject area is essentially dictated by the 
+enormous complexity of thermodynamic systems. We start with some
+statistical information about the motions of the constituent atoms or molecules,
+ such as their average
+kinetic energy, 
+ but we possess virtually
+no information about the motions of individual particles. We then try
+to deduce some other  properties of the system
+from a  statistical treatment of the governing equations. 
+If fact, our approach 
+ {\em has}\/ to be statistical in nature, because we lack most of the
+information required to specify the internal state of the system. The best we
+can do is to provide a few overall constraints, such as the average volume and
+ the
+average energy. 
+
+Thermodynamic systems are ideally suited to a statistical approach because of
+the enormous numbers of particles they contain. As  you probably know
+already, 
+statistical arguments actually 
+get {\em more exact}\/ as the numbers involved get larger.
+For instance, whenever I see an opinion poll published
+in a newspaper, I immediately
+look at the small print  at the bottom where it says how many people
+were interviewed. I know that even if the polling was done without bias,
+which is extremely unlikely,
+the laws of statistics say that there is a intrinsic error of order 
+one over the square root of the number of people questioned.
+ It follows that
+ if a
+ thousand people were interviewed, which is a typical number,
+then  the error is at least three percent. Hence, if the headline
+ says that so and so
+is ahead by one percentage point, and only a thousand people were
+polled, then I know the result is statistically meaningless.
+We  can easily 
+appreciate that if we do statistics on a thermodynamic system containing
+$10^{24}$ particles then we are going to  obtain results which are valid to
+incredible accuracy. In fact, in most situations we can forget that the
+results are statistical at all, and treat them as exact laws of physics.
+	For instance, the familiar equation of state of an ideal gas,
+$$
+P\,V =\nu\, R\,T,
+$$
+is actually a statistical result. In other words, it relates the {\em
+average}\/ pressure and the average volume to the average temperature.
+However, for one mole of gas the statistical deviations from average
+values are only about $10^{-12}$, according to the $1/\sqrt{N}$ law.
+Actually, it is virtually
+impossible to  measure  the pressure, volume, or temperature of a gas
+to such accuracy, so most people just forget about the fact that the above
+expression
+is a statistical result, and treat it as a law of physics interrelating
+the actual pressure, volume, and temperature of an ideal gas.
+
+\section{Microscopic and Macroscopic Systems}
+It is useful, at this stage,
+ to make a distinction between the different sizes of the systems
+that we are going to  examine. We shall call a system {\em microscopic}\/ if it is
+roughly of atomic dimensions, or smaller. On the other hand, we shall call
+a system {\em macroscopic}\/ when it is large enough to be visible in the
+ordinary sense. This is a rather inexact definition. The exact definition
+depends on the number of particles in the system, which we shall call $N$.
+A system is macroscopic if
+$$
+\frac{1}{\sqrt{N}} \ll 1,
+$$
+which means that statistical arguments can be applied to reasonable accuracy.
+For instance, if we wish to keep the statistical error below 
+one percent then a macroscopic system would have to contain more than about
+ten thousand particles. Any system containing less than this number of
+particles would be regarded as essentially microscopic, and, hence,
+statistical arguments could not be applied to such a system without
+unacceptable error. 
+
+\section{Thermodynamics and Statistical Thermodynamics}
+In this course, we are going to develop some machinery for interrelating
+the statistical properties of a system containing a very large number of
+particles, via a
+ statistical treatment of the laws  of atomic or molecular motion.
+It turns out that once we have developed this machinery, we can obtain some very
+general results which do not depend on the exact details of the statistical
+treatment. 
+These results can be described without
+reference to the underlying statistical nature of the system, but their
+validity  depends ultimately on statistical arguments. They
+take the form of general statements regarding heat and work, and are 
+usually referred to as  {\em classical thermodynamics}, or just 
+{\em thermodynamics},
+for short. Historically, classical thermodynamics was the first sort of 
+thermodynamics to be discovered. In fact, for many years  
+the laws of classical
+thermodynamics seemed rather mysterious, because their statistical
+justification had yet to be discovered.
+ The strength of classical
+thermodynamics is its great {\em generality}, 
+which comes about because it does not
+depend on any detailed assumptions about the statistical properties
+of the system under investigation. This   generality 
+is also the principle weakness of classical thermodynamics. Only a relatively
+few statements can be made on such general grounds, so many interesting
+properties of the system remain outside the scope of this theory.
+
+
+If we go beyond classical thermodynamics, and start to investigate the
+statistical machinery which underpins it, then we get all of the
+results of classical
+thermodynamics, plus a large number of other results which enable the 
+macroscopic parameters of the system to be calculated from a knowledge
+of its microscopic constituents. This approach is known as
+{\em statistical thermodynamics}, and is extremely powerful.
+ The only drawback 
+is that the further we delve inside the statistical machinery
+of thermodynamics, the harder it becomes to perform the necessary
+calculations.
+
+Note
+ that both classical and statistical thermodynamics are
+only valid for systems in {\em equilibrium}. 
+If the system is not in equilibrium
+then the problem becomes considerably more difficult. 
+In fact, the thermodynamics of 
+non-equilibrium systems, which
+ is generally called {\em irreversible thermodynamics}, 
+is a graduate level subject.
+
+\section{Classical and Quantum Approaches}
+We mentioned earlier that the 
+motions (by which we really meant the translational motions) 
+of atoms and molecules are described exactly
+by quantum mechanics, and only  approximately by classical mechanics.
+It turns out that the non-translational motions 
+of molecules, such as their rotation
+and vibration, are  very poorly described by classical mechanics.
+So, why bother using classical mechanics at all? Unfortunately, quantum
+mechanics deals with the translational motions of atoms and
+molecules (via wave mechanics) in a rather awkward manner. The
+classical approach is far more straightforward, and, under most
+circumstances, yields the same statistical results. Hence, in the
+bulk of this course,
+we shall use classical mechanics, as much
+as possible, to describe translational motions, and reserve quantum
+mechanics for dealing with  non-translational motions. However, towards
+the end of this course, we shall switch to a purely quantum mechanical
+approach.
+
+
